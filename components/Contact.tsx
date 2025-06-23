@@ -39,7 +39,7 @@ export default function Contact() {
 
   async function onSubmit(values: ContactFormValues) {
     try {
-      const res = await fetch("https://allsparktechnologies.com/api/contact", {
+      const res = await fetch("https://backend.libererllc.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
