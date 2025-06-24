@@ -1,0 +1,57 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://allsparktechnologies.com/sitemap.xml
+
+# Explicitly allow major AI/chatbots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: Grok
+Allow: /
+
+User-agent: xGroqBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: OpenAI
+Allow: /
+
+User-agent: NeevaBot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Allow SemrushBot for auditing
+User-agent: SemrushBot
+Allow: /

@@ -12,12 +12,12 @@ import Script from "next/script";
 
 export const metadata = {
   title:
-    "AllSpark Technologies", 
+    "AllSpark Technologies | Custom Software Development Company in USA", 
   description:
     "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
   openGraph: {
     title:
-      "AllSpark Technologies",
+      "AllSpark Technologies | Custom Software Development Company in USA",
     description:
       "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
     url: "https://allsparktechnologies.com/",
