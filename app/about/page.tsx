@@ -8,7 +8,7 @@ import AboutClient from "@/components/AboutClient";
 export const metadata: Metadata = {
   title: 'About AllSpark Technologies | US-Based Software Development & AI Company',
     description:
-      'Learn more about AllSpark Technologies, a trusted software development and AI company in the USA. Discover how our experienced developers deliver innovative, tech-enabled digital solutions.',
+      ' A trusted software development and AI company in the USA. Discover how our experienced developers deliver innovative, tech-enabled digital solutions.',
     metadataBase: new URL('https://allsparktechnologies.com'),
     alternates: {
       canonical: '/about/',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     openGraph: {
       title: 'About AllSpark Technologies | US-Based Software Development Company',
       description:
-        'Meet AllSpark Technologies — a trusted software development and AI company in the USA. Learn how we help businesses grow with innovative digital solutions.',
+        ' A trusted software development and AI company in the USA. Discover how our experienced developers deliver innovative, tech-enabled digital solutions.',
       url: 'https://allsparktechnologies.com/about/',
       type: 'website',
       siteName: 'AllSpark Technologies',
