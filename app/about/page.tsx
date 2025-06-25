@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     openGraph: {
       title: 'About AllSpark Technologies | US-Based Software Development Company',
       description:
-        ' A trusted software development and AI company in the USA. Discover how our experienced developers deliver innovative, tech-enabled digital solutions.',
+        'A trusted software development and AI company in the USA. Discover how our experienced developers deliver innovative, tech-enabled digital solutions.',
       url: 'https://allsparktechnologies.com/about/',
       type: 'website',
       siteName: 'AllSpark Technologies',

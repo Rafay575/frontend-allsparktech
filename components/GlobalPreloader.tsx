@@ -17,7 +17,7 @@ const GlobalPreloaderWithSuspense = () => {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // 2 seconds for preloader visibility
+    }, 2000); // 2 seconds for preloader visibility
 
     return () => {
       clearTimeout(timer);
