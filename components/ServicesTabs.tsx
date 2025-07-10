@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation"; // Correct import for App Directory
 import HeroSection from "@/components/HeroSection";
 import Card from "./Card";
 import ServiceAccordion from "./ServiceAccordion";
@@ -9,168 +8,162 @@ import WhyChooseSection from "@/components/WhyChooseAST";
 import ServicesContact from "./ServicesContact";
 import TableOfContent from "./TableOfContent";
 import Script from "next/script";
-import {
-  contentData1,
-  contentData2,
-  contentData3,
-  contentData4,
-  contentData5,
-  contentData6,
-  contentData7,
-  contentData8,
-  contentData9,
-  contentData10,
-} from "@/lib/data"; // Import all contentData
-import { motion } from "framer-motion"; // Import framer-motion
+import Head from "next/head";
+import { motion } from "framer-motion";
 
-type ServiceKey =
-  | "custom-software-development"
-  | "web-and-app-development"
-  | "ai-and-machine-learning"
-  | "cloud-and-devops-solutions"
-  | "ui-ux-design"
-  | "ecommerce-development"
-  | "customer-support"
-  | "email-marketing"
-  | "live-chat-support"
-  | "digital-marketing-and-seo";
+// Types
+type Breadcrumb = { label: string; href: string };
+type HeroSectionData = {
+  title: string;
+  backgroundImage: string;
+  mobileBackgroundImage: string;
+  breadcrumbs: Breadcrumb[];
+  subtitle: string;
+};
 
-  
+type ServiceCard = { title: string; content: string };
+type ServicesSectionData = { title: string; cards: ServiceCard[] };
 
-export default function ServicesTabs() {
-  const [contentData, setContentData] = useState(contentData3); // Default to contentData3
-  const [mounted, setMounted] = useState(false); // State to track if mounted on the client
-  const [isClient, setIsClient] = useState(false);
+type ApproachCard = { iconColor: string; title: string; content: string };
+type ApproachSectionData = { title: string; cards: ApproachCard[] };
 
-  const searchParams = useSearchParams(); // Access query params using `useSearchParams`
+type FAQItem = { question: string; answer: string };
+type FAQsSectionData = { title: string; items: FAQItem[] };
+
+type Stat = { id: number; label: string; value: number; suffix: string };
+type WhyChooseData = { title: string; stats: Stat[] };
+
+type Metadata = {
+  title: string;
+  description: string;
+  robots?: { index?: boolean; follow?: boolean };
+  metadataBase?: { href: string };
+  alternates?: { canonical: string };
+  openGraph?: {
+    title?: string;
+    description?: string;
+    url?: string;
+    type?: string;
+    siteName?: string;
+    images?: { url: string; width: number; height: number; alt: string }[];
+  };
+  twitter?: {
+    card?: string;
+    title?: string;
+    description?: string;
+    images?: string[];
+  };
+};
+
+type ContentData = {
+  hero: HeroSectionData;
+  introduction: string;
+  services: ServicesSectionData;
+  approach: ApproachSectionData;
+  faqs: FAQsSectionData;
+  whyChoose: WhyChooseData;
+  metadata?: Metadata;
+  script?: any;
+};
+
+interface ServicesTabsProps {
+  data: ContentData;
+}
+
+export default function ServicesTabs({ data }: ServicesTabsProps) {
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    setIsClient(true); // Set isClient to true once mounted
   }, []);
 
-  useEffect(() => {
-    if (!mounted || !isClient) return; // Skip logic if not yet mounted or not client
+  if (!mounted) return null;
 
-    const service = searchParams.get("service"); // Get the `service` query parameter using `useSearchParams`
-
-    const contentMap: Record<ServiceKey, any> = {
-      "custom-software-development": contentData1,
-      "web-and-app-development": contentData2,
-      "ai-and-machine-learning": contentData3,
-      "cloud-and-devops-solutions": contentData4,
-      "ui-ux-design": contentData5,
-      "ecommerce-development": contentData6,
-      "customer-support": contentData7,
-      "email-marketing": contentData8,
-      "live-chat-support": contentData9,
-      "digital-marketing-and-seo": contentData10,
-    };
-
-    setContentData(contentMap[service as ServiceKey] || contentData3); // Set the appropriate contentData based on the service query
-  }, [searchParams, mounted, isClient]); // Re-run effect when searchParams, mounted or isClient changes
-
-  if (!mounted) return null; // If not mounted, return null
-  console.log(contentData.metadata?.metadataBase?.href);
+  const contentData = data;
 
   return (
     <>
+      <Head>
+        <title>{contentData.metadata?.title || "Default Title"}</title>
+        <meta name="description" content={contentData.metadata?.description || "Default description"} />
+        <meta
+          name="robots"
+          content={`${
+            contentData.metadata?.robots?.index ? "index" : "noindex"
+          },${contentData.metadata?.robots?.follow ? "follow" : "nofollow"}`}
+        />
+        <link
+          rel="canonical"
+          href={
+            contentData.metadata?.metadataBase?.href &&
+            contentData.metadata?.alternates?.canonical
+              ? `${contentData.metadata.metadataBase.href}${contentData.metadata.alternates.canonical}`
+              : "https://default.com/"
+          }
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={contentData.metadata?.openGraph?.title || ""} />
+        <meta property="og:description" content={contentData.metadata?.openGraph?.description || ""} />
+        <meta property="og:url" content={contentData.metadata?.openGraph?.url || ""} />
+        <meta property="og:type" content={contentData.metadata?.openGraph?.type || "website"} />
+        <meta property="og:site_name" content={contentData.metadata?.openGraph?.siteName || ""} />
+        <meta property="og:image" content={contentData.metadata?.openGraph?.images?.[0]?.url || ""} />
+        <meta property="og:image:width" content={`${contentData.metadata?.openGraph?.images?.[0]?.width || 1200}`} />
+        <meta property="og:image:height" content={`${contentData.metadata?.openGraph?.images?.[0]?.height || 630}`} />
+        <meta property="og:image:alt" content={contentData.metadata?.openGraph?.images?.[0]?.alt || ""} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={contentData.metadata?.twitter?.card || "summary_large_image"} />
+        <meta name="twitter:title" content={contentData.metadata?.twitter?.title || ""} />
+        <meta name="twitter:description" content={contentData.metadata?.twitter?.description || ""} />
+        <meta name="twitter:image" content={contentData.metadata?.twitter?.images?.[0] || ""} />
+      </Head>
+
       <div>
         <HeroSection
           title={contentData.hero.title}
           backgroundImage={contentData.hero.backgroundImage}
-          breadcrumbs={[
-            {
-              label: contentData.hero.breadcrumbs[0].label,
-              href: contentData.hero.breadcrumbs[0].href,
-            },
-            {
-              label: contentData.hero.breadcrumbs[1].label,
-              href: contentData.hero.breadcrumbs[1].href,
-            },
-          ]}
+          mobileBackgroundImage={contentData.hero.mobileBackgroundImage}
+          breadcrumbs={contentData.hero.breadcrumbs}
         />
-        <div className="w-full container max-w-7xl mx-auto px-4 md:px-5 grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* First Section: On Load Transition */}
 
-          {/* Other Sections: Transition On View */}
+        <div className="w-full container max-w-7xl mx-auto px-4 md:px-5 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-3">
             <section id="our-services">
-              <motion.div
-                // className="md:col-span-3"
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                layout
-              >
+              <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} layout>
                 <Card services={contentData.services} />
               </motion.div>
             </section>
-            <motion.section
-              id="our-approach"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-              layout
-            >
+
+            <motion.section id="our-approach" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} layout>
               <ApproachSection approach={contentData.approach} />
             </motion.section>
 
-            <motion.section
-              id="why-choose-ast"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-              layout
-            >
+            <motion.section id="why-choose-ast" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} layout>
               <WhyChooseSection whyChoose={contentData.whyChoose} />
             </motion.section>
 
-            <motion.section
-              id="faqs"
-              className="w-full"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-              layout
-            >
+            <motion.section id="faqs" className="w-full" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} layout>
               <ServiceAccordion faqs={contentData.faqs} />
             </motion.section>
 
-            <motion.section
-              id="contact"
-              className="bg-[#2B4EFF] px-4 py-20 mb-5"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-              layout
-            >
+            <motion.section id="contact" className="bg-[#2B4EFF] px-4 py-20 mb-5" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} layout>
               <ServicesContact />
             </motion.section>
           </div>
 
-          {/* Table of Contents: On View Transition */}
-          <motion.aside
-            className="hidden md:block"
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            layout
-          >
+          <motion.aside className="hidden md:block" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} layout>
             <TableOfContent />
           </motion.aside>
-          <Script
-            id="ldjson"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(contentData.script),
-            }}
-          />
+
+          {contentData.script && (
+            <Script
+              id="ldjson"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(contentData.script) }}
+            />
+          )}
         </div>
       </div>
     </>

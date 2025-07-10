@@ -8,8 +8,43 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { baseURL } from "@/API/baseURL";
+
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface FAQData {
+  img1:string,
+  img2:string,
+  img3:string,
+  subtitle: string;
+  title: string;
+  faqs: FAQ[];
+}
 
 export default function FaqSection() {
+  const [faqData, setFaqData] = useState<FAQData | null>(null);
+
+  useEffect(() => {
+    const fetchFAQData = async () => {
+      try {
+        const res = await fetch(`${baseURL}/homedata`);
+        const json = await res.json();
+        const faqSection: FAQData = json.faq; 
+      setFaqData(faqSection); 
+      } catch (error) {
+        console.error("Error fetching FAQ data:", error);
+      }
+    };
+
+    fetchFAQData();
+  }, []);
+
+  if (!faqData) return <p className="text-center py-10">Loading FAQs...</p>;
   return (
     <section className="py-16" id="faq-section">
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
@@ -18,7 +53,7 @@ export default function FaqSection() {
           {/* ───────── main photo ───────── */}
           <div className="relative overflow-hidden rounded-3xl w-full h-auto">
             <Image
-              src="/images/aboutThumb1_1-2.png"
+              src={`${baseURL}/images/home/${faqData.img1}`}
               alt="Team Working"
               width={400}
               height={400}
@@ -30,7 +65,7 @@ export default function FaqSection() {
           {/* ───────── bottom-right overlay ───────── */}
           <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[200px] h-[200px]">
             <Image
-              src="/images/aboutThumb1_1-sub-section-2.png"
+              src={`${baseURL}/images/home/${faqData.img2}`}
               alt="Team Discussion"
               fill
               sizes="100px"
@@ -41,12 +76,11 @@ export default function FaqSection() {
 
           {/* ───────── spinning shape ───────── */}
           <div
-             className="absolute top-0 right-0 w-12 h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16  [@media(min-width:768px)]:w-16 [@media(min-width:768px)]:h-16 [@media(min-width:1024px)]:w-20 [@media(min-width:1024px)]:h-20 [@media(min-width:1280px)]:!w-[80px]  [@media(min-width:1280px)]:!h-[80px]  flex items-center justify-center rounded-full border-2 border-white text-white text-xs uppercase tracking-wide animate-spin"
-
+            className="absolute top-0 right-0 w-12 h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16  [@media(min-width:768px)]:w-16 [@media(min-width:768px)]:h-16 [@media(min-width:1024px)]:w-20 [@media(min-width:1024px)]:h-20 [@media(min-width:1280px)]:!w-[80px]  [@media(min-width:1280px)]:!h-[80px]  flex items-center justify-center rounded-full border-2 border-white text-white text-xs uppercase tracking-wide animate-spin"
             style={{ animationDuration: "4s" }}
           >
             <Image
-              src="/images/projectShape1.png"
+              src={`${baseURL}/images/home/${faqData.img3}`}
               alt="Explore More"
               fill
               sizes="80px"
@@ -60,57 +94,23 @@ export default function FaqSection() {
           {/* FAQ Label */}
           <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
             <ArrowLeft className="h-4 w-4" />
-            <span>FAQ</span>
+            <span>{faqData.title}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
           {/* Main Heading */}
           <h2 className="text-3xl font-bold !leading-relaxed text-gray-900">
-            Frequently Asked Questions
+            {faqData.subtitle}
           </h2>
 
           {/* FAQ Accordion */}
           <Accordion type="single" collapsible className="mt-6 space-y-3">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-               What services does your software house offer?
-
-              </AccordionTrigger>
-              <AccordionContent>
-               We provide custom software development services, mobile and web app development, AI-powered solutions, UI/UX design, full-stack software development, cloud computing, DevOps, and ongoing tech support. As a full-scale software development agency USA, we cater to businesses from startups to large enterprises.
-
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2">
-              <AccordionTrigger>
-               How long does it take to develop a software product?
-              </AccordionTrigger>
-              <AccordionContent>
-               Timelines depend on scope and complexity. A basic MVP may take 3–6 months, while complex enterprise solutions often take 6–12 months. Our team follows agile practices to deliver efficiently and adapt to your evolving needs. As a seasoned AI development company and SaaS development agency, we accelerate delivery with automation and smart integration.
-
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3">
-              <AccordionTrigger>
-               Do you offer post-launch support and maintenance?
-              </AccordionTrigger>
-              <AccordionContent> Absolutely. We provide long-term maintenance, regular security patches, cloud infrastructure support, and performance optimization. As a client-focused software development agency USA, we ensure your digital product evolves with your business.
-
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-4">
-              <AccordionTrigger>
-                What industries do you work with?
-
-              </AccordionTrigger>
-              <AccordionContent>
-                We serve a variety of industries including fintech, healthcare, e-commerce, logistics, real estate, education, and enterprise SaaS. Our clients value our tailored software development solutions that scale with their operations.
-
-              </AccordionContent>
-            </AccordionItem>
+            {faqData.faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </div>

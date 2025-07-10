@@ -2,78 +2,50 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react"; // or any icon you prefer
-import Link from "next/link"; // Make sure you import Link from Next.js
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
+import { baseURL } from "@/API/baseURL";
+
+interface ServiceItem {
+  id: string;
+  title: string;
+  imageUrl: string;
+}
+interface ServicesData {
+  subTitle: string;
+  title: string;
+  allServices: ServiceItem[];
+}
+
+const fetchServices = async (): Promise<ServicesData> => {
+  const res = await axios.get(`${baseURL}/homedata`);
+  return res.data.homeServices;
+};
 
 export default function ServicesSection() {
+  const {
+    data: services,
+    isLoading,
+    isError,
+    error,
+  } = useQuery<ServicesData>({
+    queryKey: ["homeServices"],
+    queryFn: fetchServices,
+  });
 
-  // Example service data
-  const services = [
-    { 
-       id: "custom-software-development",
-      title: "Custom Software Development",
-      imageUrl: "/images/home_services/custom-software-development.webp",
-    },
-    {
-       id: "web-and-app-development",
-      title: "Web App Development",
-      imageUrl: "/images/home_services/web-app-development.webp",
-    },
-    {
-       id: "ai-and-machine-learning",
-      title: "AI & Machine Learning",
-      imageUrl: "/images/home_services/ai-machine-learning.webp",
-    },
-    {
-       id: "cloud-and-devops-solutions",
-      title: "Cloud & DevOps Solutions",
-      imageUrl: "/images/home_services/dev-ops.webp",
-    },
-    {
-       id: "ui-ux-design",
-      title: "UX/UI Design",
-      imageUrl: "/images/home_services/ui-ux-design.webp",
-    },
-    {
-       id: "ecommerce-development",
-      title: "Ecommerce Development",
-      imageUrl: "/images/home_services/ecommerce-development.webp",
-    },
-    {
-       id: "customer-support",
-      title: "Customer Support",
-      imageUrl: "/images/home_services/f3.jpg",
-    },
-    {
-       id: "email-marketing",
-      title: "Email Marketing",
-      imageUrl: "/images/home_services/email-marketing.webp",
-    },
-    // Additional Services
-    {
-       id: "live-chat-support",
-      title: "Live Chat Support",
-      imageUrl: "/images/home_services/f1.jpg",
-    },
-    {
-       id: "digital-marketing-and-seo",
-      title: "Digital Marketing & SEO",
-      imageUrl: "/images/home_services/digital-marketing-seo.webp",
-    },
-  ];
+  const displayedServices = Array.isArray(services?.allServices)
+    ? services.allServices.slice(0, 10)
+    : [];
 
-  // Show first 4 by default, show all if 'showMore' is true
-  const displayedServices =  services.slice(0, 10);
-
-  // Basic animation variants for each card
   const cardVariants = {
     initial: { opacity: 0, y: 50 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 50 },
-    hover: { y: -10 }, // Moves card up on hover
+    hover: { y: -10 },
   };
 
-  // Animation variants for the entire section
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     show: {
@@ -84,6 +56,9 @@ export default function ServicesSection() {
       },
     },
   };
+
+  if (isLoading) return <>Loading...</>;
+  if (isError) return <>Error: {(error as Error).message}</>;
 
   return (
     <motion.section
@@ -97,12 +72,12 @@ export default function ServicesSection() {
         {/* Title Section */}
         <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
           <ArrowLeft className="h-4 w-4" />
-          <span>Our Services</span>
+          <span>{services?.subTitle}</span>
           <ArrowRight className="h-4 w-4" />
         </div>
         <div className="relative">
           <h2 className="mt-3 text-4xl font-semibold text-gray-900">
-            What We Do Best
+            {services?.title}
           </h2>
         </div>
       </div>
@@ -122,20 +97,16 @@ export default function ServicesSection() {
             >
               <Link
                 href={{
-                  pathname: "/services",
-                  query: { service: service.id },
+                  pathname: `/${service.id}`,
                 }}
                 className="w-full h-full"
               >
-                {/* Background Image */}
                 <div
                   className="h-72 bg-cover bg-center"
                   style={{
-                    backgroundImage: `url(${service.imageUrl})`,
+                    backgroundImage: `url(${baseURL}/images/home/${service.imageUrl})`,
                   }}
                 ></div>
-
-                {/* Overlay Text */}
                 <div className="absolute top-0 left-0 w-full h-full flex items-end p-4 bg-gradient-to-t from-black/60 to-transparent">
                   <h3 className="text-white text-lg font-semibold">
                     {service.title}

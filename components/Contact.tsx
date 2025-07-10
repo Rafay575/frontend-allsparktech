@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
 import PhoneField from "./PhoneField";
 import Dropdown from "./Dropdown";
@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {  toast } from "sonner"; // Sonner for toasts
+import { toast } from "sonner"; // Sonner for toasts
+import { baseURL } from "@/API/baseURL";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -39,7 +40,7 @@ export default function Contact() {
 
   async function onSubmit(values: ContactFormValues) {
     try {
-      const res = await fetch("https://backend.libererllc.com/api/contact", {
+      const res = await fetch(`${baseURL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
@@ -54,9 +55,37 @@ export default function Contact() {
       }
     } catch (err) {
       toast.error("Network error");
-      console.log(err)
+      console.log(err);
     }
   }
+  interface ContactMethod {
+    label: string;
+    value: string;
+    href: string;
+    icon: string;
+  }
+
+  interface ContactData {
+    title: string;
+    description: string;
+    methods: ContactMethod[];
+  }
+  const [pagedata, setPageData] = useState<ContactData | null>(null);
+
+  useEffect(() => {
+    const fetchPageData = async () => {
+      try {
+        const res = await fetch(`${baseURL}/contactdata`);
+        if (!res.ok) throw new Error("Failed to fetch page data");
+        const data: ContactData = await res.json();
+        setPageData(data);
+      } catch (error) {
+        console.error("Error fetching page data:", error);
+      }
+    };
+
+    fetchPageData();
+  }, []);
 
   return (
     <>
@@ -72,23 +101,15 @@ export default function Contact() {
           {/* Left Column */}
           <div>
             <h2 className="mb-4 text-2xl font-bold text-gray-900">
-              Ready to Get Started
+              {pagedata?.title}
             </h2>
             <div>
-              <p className="text-sm leading-6">
-                Looking to bring your digital vision to life? Contact AllSpark
-                Technologies today to discuss your project. Whether you&apos;re
-                looking to speak to an AI development expert, schedule a
-                consultation with a software expert, or request a quote for
-                custom software development, we&apos;re here to help. As a
-                leading software development agency in the USA, we offer
-                seamless support for all your tech needs.
-              </p>
+              <p className="text-sm leading-6">{pagedata?.description}</p>
             </div>
             <div className="py-12 pb-20 space-y-6">
               {/* Call Us */}
               <motion.a
-                href="tel:+17627777275"
+                href={pagedata?.methods[0].href}
                 className="flex items-center relative group transition-all"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -101,14 +122,16 @@ export default function Contact() {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">Call Us</h3>
-                  <p className="text-sm">+1(616)308-1863</p>
+                  <h3 className="text-lg font-semibold">
+                    {pagedata?.methods[0].label}
+                  </h3>
+                  <p className="text-sm">{pagedata?.methods[0].value}</p>
                 </div>
               </motion.a>
 
               {/* Get a Quote */}
               <motion.a
-                href="mailto:info@allsparktechnologies.com"
+                href={pagedata?.methods[1].href}
                 className="flex items-center relative group transition-all"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -121,14 +144,16 @@ export default function Contact() {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">Get a Quote</h3>
-                  <p className="text-sm">info@allsparktechnologies.com</p>
+                  <h3 className="text-lg font-semibold">
+                    {pagedata?.methods[1].label}
+                  </h3>
+                  <p className="text-sm">{pagedata?.methods[1].value}</p>
                 </div>
               </motion.a>
 
               {/* Location */}
               <motion.a
-                href="https://www.google.com/maps/search/?api=1&query=638+Knollwood+Road,+Franklin+Lakes+NJ+07417"
+                href={pagedata?.methods[2].href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center relative group transition-all"
@@ -143,10 +168,10 @@ export default function Contact() {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-sm">
-                    638 Knollwood Road, Franklin Lakes NJ 07417
-                  </p>
+                  <h3 className="text-lg font-semibold">
+                    {pagedata?.methods[2].label}
+                  </h3>
+                  <p className="text-sm">{pagedata?.methods[2].value}</p>
                 </div>
               </motion.a>
             </div>
@@ -302,145 +327,6 @@ export default function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </motion.div>
-      {/* <motion.section
-        className="max-w-7xl mx-auto px-4 my-8 py-8"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-       
-          <div>
-            <h2 className="mb-4 text-2xl font-bold text-gray-900">Ready to Get Started</h2>
-            <p className="text-sm leading-6">
-              Looking to bring your digital vision to life? Contact AllSpark Technologies today
-              to discuss your project...
-            </p>
-            <div className="py-12 pb-20 space-y-6">
-              <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-gray-500" />
-                <p className="text-sm text-gray-500">+1 (123) 456-7890</p>
-            </div>
-          </div>
-
-       
-          <div>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-           
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                    Your Name*
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    {...register("name")}
-                    placeholder="Your name"
-                    className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  />
-                  {errors.name && (
-                    <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Your Email*
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    {...register("email")}
-                    placeholder="info@allsparktechnologies.com"
-                    className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-                  )}
-                </div>
-              </div>
-
-            
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Controller
-                    name="phone"
-                    control={control}
-                    render={({ field }) => (
-                      <PhoneField
-                        {...field}
-                        label="Your Phone*"
-                        placeholder="+1 234 567 890"
-                      />
-                    )}
-                  />
-                  {errors.phone && (
-                    <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
-                  )}
-                </div>
-
-                <div>
-                 <Controller
-  name="service"
-  control={control}
-  render={({ field, fieldState }) => (
-    <Dropdown
-      label="Choose a service"
-      items={[
-        "Customer Support",
-        "Digital Marketing & SEO",
-        "Custom Software Development",
-        "Web & App Development",
-        "AI & Machine Learning",
-        "Cloud & DevOps Solutions",
-        "UI/UX Design",
-        "Ecommerce Development",
-        "Email Marketing",
-        "Live Chat Support",
-      ]}
-      value={field.value}
-      onChange={field.onChange}
-      onBlur={field.onBlur}
-      error={fieldState.error?.message}
-    />
-  )}
-/>
-
-                </div>
-
-                <div className="md:col-span-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                    Describe your project*
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={6}
-                    {...register("message")}
-                    placeholder="Describe your project"
-                    className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  />
-                  {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
-                  )}
-                </div>
-              </div>
-
-             
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="flex items-center justify-center rounded-full bg-[#384BFF] px-6 py-2 text-white shadow-md transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-[#384BFF] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-            </form>
-          </div>
-        </div>
-        </div>
-      </motion.section> */}
     </>
   );
 }

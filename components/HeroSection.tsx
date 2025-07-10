@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
+import { baseURL } from "@/API/baseURL";
+
 
 interface BreadcrumbItem {
   label: string;
@@ -9,6 +11,7 @@ interface BreadcrumbItem {
 interface HeroSectionProps {
   title: string;
   backgroundImage: string;
+  mobileBackgroundImage?:string;
   breadcrumbs?: BreadcrumbItem[];
   overlayColor?: string;
   heightClass?: string;
@@ -17,6 +20,7 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   backgroundImage,
+  mobileBackgroundImage,
   overlayColor = 'bg-blue-900/50',
   heightClass = 'h-96',
 }) => {
@@ -33,15 +37,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
-  const imagePath = isMobile
-    ? `/images/service/mobile/${backgroundImage}`
-    : `/images/service/${backgroundImage}`;
+  ;
+const backgroundImageURL = isMobile
+  ? `${baseURL}/images/service/${mobileBackgroundImage}`
+  : `${baseURL}/images/service/${backgroundImage}`;
 
   return (
     <section
       className={`relative w-full ${heightClass} bg-cover bg-center`}
-      style={{ backgroundImage: `url('${imagePath}')` }}
+      style={{ backgroundImage: `url('${backgroundImageURL}')` }}
     >
       <div className={`absolute inset-0 ${overlayColor}`} />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">

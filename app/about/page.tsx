@@ -1,92 +1,48 @@
-// app/about/page.tsx
-import { Metadata } from "next";
-import Script from "next/script";
-
-// Dynamically import the client component
 import AboutClient from "@/components/AboutClient";
+import axios from "axios";
+import { baseURL } from "@/API/baseURL";
 
-export const metadata: Metadata = {
-  title: 'About AllSpark Technologies | US-Based Software Development & AI Company',
-    description:
-      ' A trusted software development and AI company in the USA. Discover how our experienced developers deliver innovative, tech-enabled digital solutions.',
-    metadataBase: new URL('https://allsparktechnologies.com'),
-    alternates: {
-      canonical: '/about/',
-    },
-    openGraph: {
-      title: 'About AllSpark Technologies | US-Based Software Development Company',
-      description:
-        'A trusted software development and AI company in the USA. Discover how our experienced developers deliver innovative, tech-enabled digital solutions.',
-      url: 'https://allsparktechnologies.com/about/',
-      type: 'website',
-      siteName: 'AllSpark Technologies',
-      images: [
-        {
-          url: 'https://allsparktechnologies.com/assets/og-image.jpg',
-          width: 1200,
-          height: 630,
-          alt: 'AllSpark Technologies',
-        },
-      ],
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'About AllSpark Technologies | US-Based Software Development & AI Company',
-      description:
-        'AllSpark Technologies is a leading software development and AI company in the USA. Discover our trusted digital solutions and expert software team.',
-      images: ['https://allsparktechnologies.com/assets/og-image.jpg'],
-    },
-};
+export async function generateMetadata() {
+  try {
+    const res = await axios.get(`${baseURL}/aboutdata`);
+    const metadata = res.data.metadata; 
+
+    return {
+      title: metadata.title,
+      description: metadata.description,
+      metadataBase: new URL(metadata.metadataBase),
+      alternates: {
+        canonical: metadata.alternates?.canonical,
+      },
+      openGraph: {
+        title: metadata.openGraph?.title,
+        description: metadata.openGraph?.description,
+        url: metadata.openGraph?.url,
+        type: metadata.openGraph?.type,
+        siteName: metadata.openGraph?.siteName,
+        images: metadata.openGraph?.images,
+      },
+      robots: {
+        index: metadata.robots?.index,
+        follow: metadata.robots?.follow,
+      },
+      twitter: {
+        card: metadata.twitter?.card,
+        title: metadata.twitter?.title,
+        description: metadata.twitter?.description,
+        images: metadata.twitter?.images,
+      },
+    };
+  } catch (err) {
+    console.error("Metadata fetch failed:", err);
+    return {
+      title: "AllSpark Technologies",
+      description: "No Description Available",
+    };
+  }
+}
+
 
 export default function AboutPage() {
-  return (
-    <>
-      <AboutClient />{" "}
-      <Script
-      id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-           
-                "@type": "Organization",
-                name: "AllSpark Technologies",
-                url: "https://allsparktechnologies.com",
-                logo: "https://allsparktechnologies.com/logo.png",
-                sameAs: [
-                  "https://www.linkedin.com/company/allspark-technologies",
-                  "https://twitter.com/allsparktech",
-                ],
-                description:
-                  "AllSpark Technologies is a US-based software development and AI company offering custom software solutions, cloud systems, and tech-enabled services.",
-                foundingDate: "2010",
-                founders: [
-                  {
-                    "@type": "Person",
-                    name: "AllSpark Founders",
-                  },
-                ],
-                address: {
-                  "@type": "PostalAddress",
-                  addressCountry: "USA",
-                },
-                contactPoint: {
-                  "@type": "ContactPoint",
-                  contactType: "Customer Support",
-                  availableLanguage: ["English"],
-                  email: "info@allsparktechnologies.com",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-    </>
-  );
+ return <AboutClient />
 }

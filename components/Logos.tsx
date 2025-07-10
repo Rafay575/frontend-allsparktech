@@ -1,34 +1,55 @@
-"use client"
-import React from "react"
-import Image from "next/image"
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
+import { baseURL } from "@/API/baseURL";
+
+interface LogoItem {
+  id: number;
+  src: string;
+  alt: string;
+}
+
+// Axios fetcher
+const fetchLogos = async (): Promise<LogoItem[]> => {
+  const response = await axios.get(`${baseURL}/homedata`);
+  const data = response.data;
+  if (!data.logos) throw new Error("Logo data not found");
+  return data.logos;
+};
 
 export default function Logos() {
+  const {
+    data: logos,
+    isLoading,
+    isError,
+    error,
+  } = useQuery<LogoItem[]>({
+    queryKey: ["logos"],
+    queryFn: fetchLogos,
+  });
 
-  const logos = [
-    { id: 1, src: "/images/companies/logo-1.png", alt: "AllSpark Logo 1" },
-    { id: 2, src: "/images/companies/logo-2.png", alt: "AllSpark Logo 2" },
-    { id: 3, src: "/images/companies/logo-3.png", alt: "AllSpark Logo 3" },
-    { id: 4, src: "/images/companies/logo-4.png", alt: "AllSpark Logo 4" },
-    { id: 5, src: "/images/companies/logo-5.png", alt: "AllSpark Logo 5" },
-  ]
+  if (isLoading) return <>Loading...</>;
+  if (isError) return <>Error: {(error as Error).message}</>;
 
   return (
     <section className="py-8 border-b border-gray-400">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-4">
-        {logos.map((logo) => (
+        {logos?.map((logo) => (
           <div key={logo.id} className="flex h-16 w-auto items-center">
             <Image
-              src={logo.src}
+              src={`${baseURL}/images/home/${logo.src}`}
               alt={logo.alt}
               width={150}
               height={50}
               className="object-contain"
-
               unoptimized
             />
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }

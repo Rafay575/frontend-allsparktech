@@ -1,11 +1,38 @@
-"use client"; // Required for Next.js App Router
+"use client";
 
-import { PlayCircle } from "lucide-react"; // Lucide icons
+import { baseURL } from "@/API/baseURL";
+import { PlayCircle } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+
+interface ProcessItem {
+  number: string;
+  title: string;
+  description: string;
+}
+
+const fetchProcessData = async (): Promise<ProcessItem[]> => {
+  const res = await axios.get(`${baseURL}/homedata`);
+  return res.data.process;
+};
 
 export default function ProcessSection() {
+  const {
+    data: processData,
+    isLoading,
+    isError,
+    error,
+  } = useQuery<ProcessItem[]>({
+    queryKey: ["processData"],
+    queryFn: fetchProcessData,
+  });
+
+  if (isLoading) return <p className="text-center py-10">Loading...</p>;
+  if (isError) return <p className="text-center py-10 text-red-500">Error: {(error as Error).message}</p>;
+
   return (
     <section className="relative py-28 mt-10">
-      <div className=" ">
+      <div className="">
         <div className="relative mx-auto max-w-[95%] xl:max-w-6xl">
           <div className="relative overflow-hidden rounded-xl shadow-lg">
             <video
@@ -27,32 +54,7 @@ export default function ProcessSection() {
 
         <div className="mt-[-250px] bg-[#0E0E47] pt-80 pb-32 text-white">
           <div className="mx-auto max-w-7xl grid grid-cols-1 gap-10 px-6 md:grid-cols-2 xl:grid-cols-4">
-            {[
-              {
-                number: "1",
-                title: "Planning & Strategy",
-                description:
-                  "We start by understanding business requirements, defining objectives, and creating a roadmap. This phase includes market research, competitor analysis, and choosing the right tech stack for custom software development.",
-              },
-              {
-                number: "2",
-                title: "Design & Development",
-                description:
-                  "Our team designs intuitive UI/UX and builds scalable software using full-stack software development practices. We follow agile methods, ensure seamless integration, and apply AI development for smarter automation.",
-              },
-              {
-                number: "3",
-                title: "Testing & Quality Assurance",
-                description:
-                  "We perform comprehensive QA—including functionality, performance, security, and user testing. Our mix of automated/manual testing ensures compliance with top software development standards.",
-              },
-              {
-                number: "4",
-                title: "Optimization & Support",
-                description:
-                  "After deployment, we provide ongoing monitoring, updates, and feature enhancements. Our software development agency USA also ensures post-launch support for long-term product success.",
-              },
-            ].map((step, index) => (
+            {processData?.map((step, index) => (
               <div key={index} className="text-start">
                 <h2 className="text-4xl font-bold text-gray-400">
                   {step.number}
