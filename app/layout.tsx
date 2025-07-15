@@ -43,6 +43,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="G1uaovu8fDlyB3-5phzFHMeTubsdrU5pyZmKLe4l7FA"
         />
+        <meta name="msvalidate.01" content="027C18CC1D1B34BBF5B6403C7398A62C" />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7PCVCQV0ZX"
