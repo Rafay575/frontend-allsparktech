@@ -10,13 +10,13 @@ export async function generateMetadata() {
       follow: true,
     },
     alternates: {
-      canonical: "https://allsparktechnologies.com/digital-marketing",
+      canonical: "https://allsparktechnologies.com/digital-marketing-and-seo",
     },
     openGraph: {
       title: "Digital Marketing Services | SEO & Content Marketing Experts",
       description:
         "Boost your online presence with All Spark Technologies' digital marketing services. SEO, content, PPC, and ecommerce strategies for real business growth.",
-      url: "https://allsparktechnologies.com/digital-marketing",
+      url: "https://allsparktechnologies.com/digital-marketing-and-seo",
       type: "website",
       siteName: "AllSpark Technologies",
       images: [

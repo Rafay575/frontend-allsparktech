@@ -10,13 +10,13 @@ export async function generateMetadata() {
       follow: true,
     },
     alternates: {
-      canonical: "https://allsparktechnologies.com/web-app-development",
+      canonical: "https://allsparktechnologies.com/web-and-app-development",
     },
     openGraph: {
       title: "Top Web & App Development Company | All Spark Technologies",
       description:
         "Build scalable, secure web & mobile apps with top web app development experts. Custom PWAs, SaaS, and startup solutions. Get started today.",
-      url: "https://allsparktechnologies.com/web-app-development",
+      url: "https://allsparktechnologies.com/web-and-app-development",
       type: "website",
       siteName: "AllSpark Technologies",
       images: [

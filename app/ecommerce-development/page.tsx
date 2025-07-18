@@ -12,13 +12,13 @@ export async function generateMetadata() {
     },
     alternates: {
       canonical:
-        "https://allsparktechnologies.com/ecommerce-website-development",
+        "https://allsparktechnologies.com/ecommerce-development",
     },
     openGraph: {
       title: "Ecommerce Website Development Services | Custom eCommerce Design",
       description:
         "Boost your online sales with All Spark Technologies' ecommerce website development services. Custom design, SEO, mobile optimization, and secure transactions.",
-      url: "https://allsparktechnologies.com/ecommerce-website-development",
+      url: "https://allsparktechnologies.com/ecommerce-development",
       type: "website",
       siteName: "AllSpark Technologies",
       images: [
