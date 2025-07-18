@@ -10,13 +10,13 @@ export async function generateMetadata() {
       follow: true,
     },
     alternates: {
-      canonical: "https://allsparktechnologies.com/ui-ux-design-services",
+      canonical: "https://allsparktechnologies.com/ui-ux-design",
     },
     openGraph: {
       title: "UI & UX Design Services | Website Interface Design Experts",
       description:
         "Boost engagement with expert UI/UX design. Explore our design case studies, portfolios, and research-driven methods that power seamless digital experiences.",
-      url: "https://allsparktechnologies.com/ui-ux-design-services",
+      url: "https://allsparktechnologies.com/ui-ux-design",
       type: "website",
       siteName: "AllSpark Technologies",
       images: [

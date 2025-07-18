@@ -10,13 +10,13 @@ export async function generateMetadata() {
       follow: true,
     },
     alternates: {
-      canonical: "https://allsparktechnologies.com/cloud-devops-solutions",
+      canonical: "https://allsparktechnologies.com/cloud-and-devops-solutions",
     },
     openGraph: {
       title: "Cloud & DevOps Solutions | CI/CD, Migration & Security Experts – AST",
       description:
         "Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
-      url: "https://allsparktechnologies.com/cloud-devops-solutions",
+      url: "https://allsparktechnologies.com/cloud-and-devops-solutions",
       type: "website",
       siteName: "AllSpark Technologies",
       images: [
