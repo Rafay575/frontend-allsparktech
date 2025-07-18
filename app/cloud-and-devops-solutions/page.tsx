@@ -1,48 +1,45 @@
 import CloudAndDevopsSolutions from "@/components/CloudAndDevopsSolutions"
-import axios from "axios";
-import { baseURL } from "@/API/baseURL";
 
 export async function generateMetadata() {
-  const service = "cloud-and-devops-solutions";
-  try {
-    const res = await axios.post(`${baseURL}/service`, { name: service });
-    const metadata = res.data.metadata;
-    console.log("Title : ",metadata.title)
-    console.log("Description : ",metadata.description)
-
-    return {
-      title: metadata.title,
-      description: metadata.description,
-      robots: {
-        index: metadata.robots?.index,
-        follow: metadata.robots?.follow,
-      },
-      alternates: {
-        canonical: `${metadata.metadataBase}${metadata.alternates?.canonical}`,
-      },
-      openGraph: {
-        title: metadata.openGraph?.title,
-        description: metadata.openGraph?.description,
-        url: metadata.openGraph?.url,
-        type: metadata.openGraph?.type,
-        siteName: metadata.openGraph?.siteName,
-        images: metadata.openGraph?.images,
-      },
-      twitter: {
-        card: metadata.twitter?.card,
-        title: metadata.twitter?.title,
-        description: metadata.twitter?.description,
-        images: metadata.twitter?.images,
-      },
-    };
-  } catch (err) {
-    console.error("Metadata fetch failed:", err);
-    return {
-      title: "Default Title",
-      description: "Default description.",
-    };
-  }
+  return {
+    title: "Cloud & DevOps Solutions | CI/CD, Migration & Security Experts – AST",
+    description:
+      "Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: "https://allsparktechnologies.com/cloud-devops-solutions",
+    },
+    openGraph: {
+      title: "Cloud & DevOps Solutions | CI/CD, Migration & Security Experts – AST",
+      description:
+        "Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
+      url: "https://allsparktechnologies.com/cloud-devops-solutions",
+      type: "website",
+      siteName: "AllSpark Technologies",
+      images: [
+        {
+          url: "https://allsparktechnologies.com/assets/images/cloud-devops.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Cloud & DevOps Services",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Cloud & DevOps Solutions | CI/CD, Migration & Security Experts – AST",
+      description:
+        "Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
+      images: [
+        "https://allsparktechnologies.com/assets/images/cloud-devops.jpg",
+      ],
+    },
+  };
 }
+
 
 export default function page() {
   return <CloudAndDevopsSolutions/>

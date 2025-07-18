@@ -1,46 +1,43 @@
 import ContactPageClient from "../../components/ContactPageClient";
-import axios from "axios";
-import { baseURL } from "@/API/baseURL";
 
 export async function generateMetadata() {
-  try {
-    const res = await axios.get(`${baseURL}/contactdata`);
-    const metadata = res.data.metadata;
-    
-
-    return {
-      title: metadata.title,
-      description: metadata.description,
-      robots: {
-        index: metadata.robots.index,
-        follow: metadata.robots.follow,
-      },
-      alternates: {
-        canonical: `${metadata.metadataBase}${metadata.alternates.canonical}`,
-      },
-      openGraph: {
-        title: metadata.openGraph.title,
-        description: metadata.openGraph.description,
-        url: metadata.openGraph.url,
-        type: metadata.openGraph.type,
-        siteName: metadata.openGraph.siteName,
-        images: metadata.openGraph.images,
-      },
-      twitter: {
-        card: metadata.twitter.card,
-        title: metadata.twitter.title,
-        description: metadata.twitter.description,
-        images: metadata.twitter.images,
-      },
-    };
-  } catch (err) {
-    console.error("Metadata fetch failed:", err);
-    return {
-      title: "Contact Us | AllSpark Technologies",
-      description: "Reach out to us for tailored solutions.",
-    };
-  }
+  return {
+    title: "Contact AllSpark Technologies | Custom Software Development & AI Experts",
+    description:
+      "Get in touch with AllSpark Technologies, a US-based software development company. Call, email, or schedule a consultation with our software and AI experts today.",
+    alternates: {
+      canonical: "https://allsparktechnologies.com/contact",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: "Contact AllSpark Technologies | Custom Software Development & AI Experts",
+      description:
+        "Get in touch with AllSpark Technologies, a US-based software development company. Call, email, or schedule a consultation with our software and AI experts today.",
+      url: "https://allsparktechnologies.com/contact",
+      type: "website",
+      siteName: "AllSpark Technologies",
+      images: [
+        {
+          url: "https://allsparktechnologies.com/assets/contact-og.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Contact AllSpark",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Contact AllSpark Technologies | Custom Software Development & AI Experts",
+      description:
+        "Get in touch with AllSpark Technologies, a US-based software development company. Call, email, or schedule a consultation with our software and AI experts today.",
+      images: ["https://allsparktechnologies.com/assets/contact-og.jpg"],
+    },
+  };
 }
+
 
 export default function ContactPage() {
   return <ContactPageClient />;

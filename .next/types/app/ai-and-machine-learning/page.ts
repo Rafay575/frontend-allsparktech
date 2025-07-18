@@ -1,4 +1,4 @@
-// File: D:\waste\github\rebuild\frontend\frontend\frontend\app\ai-and-machine-learning\page.tsx
+// File: C:\Users\MP\Documents\frontend-allsparktech\app\ai-and-machine-learning\page.tsx
 import * as entry from '../../../../app/ai-and-machine-learning/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

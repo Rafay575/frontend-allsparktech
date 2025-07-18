@@ -107,9 +107,9 @@ export default function AboutSection() {
             <ArrowRight className="h-4 w-4" />
           </div>
 
-          <h1 className="text-4xl font-bold !leading-normal sm:text-4xl">
+          <h2 className="text-4xl font-bold !leading-normal sm:text-4xl">
             {aboutData.mainHeading}
-          </h1>
+          </h2>
 
           <p className="mt-4 text-base text-white/80">
             <span className="mb-5 block">{aboutData.paragraphs[0]}</span>

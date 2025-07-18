@@ -89,7 +89,7 @@ export default function HeroSection() {
           <>
             {/* Animated Headline */}
             <AnimatePresence mode="wait">
-              <motion.h1
+              <motion.h2
                 key={currentTextIndex}
                 variants={textVariants}
                 initial="initial"
@@ -99,7 +99,7 @@ export default function HeroSection() {
               >
                 {data?.texts[currentTextIndex]}
 
-              </motion.h1>
+              </motion.h2>
             </AnimatePresence>
 
             {/* Animated Feature Grid */}
