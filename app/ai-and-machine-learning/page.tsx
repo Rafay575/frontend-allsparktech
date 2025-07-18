@@ -1,47 +1,43 @@
 import AiAndMachineLearning from "@/components/AiAndMachineLearning"
-import axios from "axios";
-import { baseURL } from "@/API/baseURL";
 
 export async function generateMetadata() {
-  const service = "ai-and-machine-learning";
-  try {
-    const res = await axios.post(`${baseURL}/service`, { name: service });
-    const metadata = res.data.metadata;
-    console.log("Title : ",metadata.title)
-    console.log("Description : ",metadata.description)
-
-    return {
-      title: metadata.title,
-      description: metadata.description,
-      robots: {
-        index: metadata.robots?.index,
-        follow: metadata.robots?.follow,
-      },
-      alternates: {
-        canonical: `${metadata.metadataBase}${metadata.alternates?.canonical}`,
-      },
-      openGraph: {
-        title: metadata.openGraph?.title,
-        description: metadata.openGraph?.description,
-        url: metadata.openGraph?.url,
-        type: metadata.openGraph?.type,
-        siteName: metadata.openGraph?.siteName,
-        images: metadata.openGraph?.images,
-      },
-      twitter: {
-        card: metadata.twitter?.card,
-        title: metadata.twitter?.title,
-        description: metadata.twitter?.description,
-        images: metadata.twitter?.images,
-      },
-    };
-  } catch (err) {
-    console.error("Metadata fetch failed:", err);
-    return {
-      title: "Default Title",
-      description: "Default description.",
-    };
-  }
+  return {
+    title: "AI Development Company | Custom AI & ML Solutions USA",
+    description:
+      "Partner with a top AI development company for custom solutions. Discover AI platforms, use cases & ML models tailored to your business needs.",
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: "https://allsparktechnologies.com/ai-and-machine-learning",
+    },
+    openGraph: {
+      title: "AI Development Company | Custom AI & ML Solutions USA",
+      description:
+        " Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
+      url: "https://allsparktechnologies.com/ai-and-machine-learning",
+      type: "website",
+      siteName: "AllSpark Technologies",
+      images: [
+        {
+          url: "https://allsparktechnologies.com/assets/images/ai-og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "AI & ML Solutions",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "AI Development Company | Custom AI & ML Solutions USA",
+      description:
+        "Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
+      images: [
+        "https://allsparktechnologies.com/assets/images/ai-og-image.jpg",
+      ],
+    },
+  };
 }
 
 

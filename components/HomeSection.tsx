@@ -35,6 +35,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <h1 className="hidden">Meta H1 Single</h1>
       <Logos />
       <ServicesSection />
       <AboutSection />

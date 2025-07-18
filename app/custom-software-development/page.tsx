@@ -1,49 +1,42 @@
 import CustomSoftwareDevelopment from"@/components/CustomSoftwareDevelopment"
-import axios from "axios";
-import { baseURL } from "@/API/baseURL";
+
 
 export async function generateMetadata() {
-  const service = "custom-software-development";
-  try {
-    const res = await axios.post(`${baseURL}/service`, { name: service });
-    const metadata = res.data.metadata;
-    console.log("Title : ",metadata.title)
-    console.log("Description : ",metadata.description)
-
-    return {
-      title: metadata.title,
-      description: metadata.description,
-      robots: {
-        index: metadata.robots?.index,
-        follow: metadata.robots?.follow,
-      },
-      alternates: {
-        canonical: `${metadata.metadataBase}${metadata.alternates?.canonical}`,
-      },
-      openGraph: {
-        title: metadata.openGraph?.title,
-        description: metadata.openGraph?.description,
-        url: metadata.openGraph?.url,
-        type: metadata.openGraph?.type,
-        siteName: metadata.openGraph?.siteName,
-        images: metadata.openGraph?.images,
-      },
-      twitter: {
-        card: metadata.twitter?.card,
-        title: metadata.twitter?.title,
-        description: metadata.twitter?.description,
-        images: metadata.twitter?.images,
-      },
-    };
-  } catch (err) {
-    console.error("Metadata fetch failed:", err);
-    return {
-      title: "Default Title",
-      description: "Default description.",
-    };
-  }
+  return {
+    title: "Custom Software Development | Bespoke Dev Services NYC",
+    description: "Custom software solutions tailored to your business. Trusted bespoke development company in NYC delivering scalable, high-performance applications.",
+    alternates: {
+      canonical: "https://allsparktechnologies.com/custom-software-development",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: "Custom Software Development | Bespoke Dev Services NYC",
+      description: "Custom software solutions tailored to your business. Trusted bespoke development company in NYC delivering scalable, high-performance applications.",
+      url: "https://allsparktechnologies.com/custom-software-development",
+      type: "website",
+      siteName: "AllSpark Technologies",
+      images: [
+        {
+          url: "https://allsparktechnologies.com/assets/images/custom-software-og.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Custom Software Development",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Custom Software Development | Bespoke Dev Services NYC",
+      description: "Custom software solutions tailored to your business. Trusted bespoke development company in NYC delivering scalable, high-performance applications.",
+      images: [
+        "https://allsparktechnologies.com/assets/images/custom-software-og.jpg",
+      ],
+    },
+  };
 }
-
 export default function page() {
   return <CustomSoftwareDevelopment/>
 }
