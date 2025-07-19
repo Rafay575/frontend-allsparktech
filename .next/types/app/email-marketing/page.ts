@@ -1,4 +1,4 @@
-// File: D:\waste\github\rebuild\frontend\frontend\frontend\app\email-marketing\page.tsx
+// File: C:\Users\MP\Documents\frontend-allsparktech\app\email-marketing\page.tsx
 import * as entry from '../../../../app/email-marketing/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

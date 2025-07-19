@@ -1,46 +1,43 @@
 import UiUxDesign from '@/components/UiUxDesign'
-import axios from "axios";
-import { baseURL } from "@/API/baseURL";
 
 export async function generateMetadata() {
-  const service = "ui-ux-design";
-  try {
-    const res = await axios.post(`${baseURL}/service`, { name: service });
-    const metadata = res.data.metadata;
-    console.log("Title : ",metadata.title)
-    console.log("Description : ",metadata.description)
-    return {
-      title: metadata.title,
-      description: metadata.description,
-      robots: {
-        index: metadata.robots?.index,
-        follow: metadata.robots?.follow,
-      },
-      alternates: {
-        canonical: `${metadata.metadataBase}${metadata.alternates?.canonical}`,
-      },
-      openGraph: {
-        title: metadata.openGraph?.title,
-        description: metadata.openGraph?.description,
-        url: metadata.openGraph?.url,
-        type: metadata.openGraph?.type,
-        siteName: metadata.openGraph?.siteName,
-        images: metadata.openGraph?.images,
-      },
-      twitter: {
-        card: metadata.twitter?.card,
-        title: metadata.twitter?.title,
-        description: metadata.twitter?.description,
-        images: metadata.twitter?.images,
-      },
-    };
-  } catch (err) {
-    console.error("Metadata fetch failed:", err);
-    return {
-      title: "Default Title",
-      description: "Default description.",
-    };
-  }
+  return {
+    title: "UI & UX Design Services | Website Interface Design Experts",
+    description:
+      "Boost engagement with expert UI/UX design. Explore our design case studies, portfolios, and research-driven methods that power seamless digital experiences.",
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: "https://allsparktechnologies.com/ui-ux-design",
+    },
+    openGraph: {
+      title: "UI & UX Design Services | Website Interface Design Experts",
+      description:
+        "Boost engagement with expert UI/UX design. Explore our design case studies, portfolios, and research-driven methods that power seamless digital experiences.",
+      url: "https://allsparktechnologies.com/ui-ux-design",
+      type: "website",
+      siteName: "AllSpark Technologies",
+      images: [
+        {
+          url: "https://allsparktechnologies.com/assets/ui-ux-design-banner.jpg",
+          width: 1200,
+          height: 630,
+          alt: "UI/UX Design Services",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "UI & UX Design Services | Website Interface Design Experts",
+      description:
+        "Boost engagement with expert UI/UX design. Explore our design case studies, portfolios, and research-driven methods that power seamless digital experiences.",
+      images: [
+        "https://allsparktechnologies.com/assets/ui-ux-design-banner.jpg",
+      ],
+    },
+  };
 }
 
 

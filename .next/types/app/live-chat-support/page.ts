@@ -1,4 +1,4 @@
-// File: D:\waste\github\rebuild\frontend\frontend\frontend\app\live-chat-support\page.tsx
+// File: C:\Users\MP\Documents\frontend-allsparktech\app\live-chat-support\page.tsx
 import * as entry from '../../../../app/live-chat-support/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

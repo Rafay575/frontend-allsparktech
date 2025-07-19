@@ -1,5 +1,5 @@
 // app/layout.tsx
-"use client"
+"use client";
 import GlobalPreloader from "@/components/GlobalPreloader";
 import Script from "next/script";
 import "./globals.css";
@@ -37,7 +37,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>AllSpark Technologies</title>
         <link rel="icon" href="/images/favicon.png" type="image/png" />
         <meta
           name="google-site-verification"
