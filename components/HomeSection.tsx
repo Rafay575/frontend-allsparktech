@@ -36,6 +36,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <h1 className="hidden">Meta H1 Single</h1>
+      <a className="hidden" href="/custom-software-development">Custom Software Development</a>
+      <a className="hidden" href="/ai-and-machine-learning">AI Solutions</a>
+      <a className="hidden" href="/digital-marketing-and-seo">Digital Marketing</a>
       <Logos />
       <ServicesSection />
       <AboutSection />
