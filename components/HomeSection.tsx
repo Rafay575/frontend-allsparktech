@@ -11,50 +11,111 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-import { useQuery } from "@tanstack/react-query";
-import { baseURL } from "@/API/baseURL";
+import {MetaTitle} from "./MetaTitle";
 
-const fetchHomeData = async () => {
-  const res = await fetch(`${baseURL}/homedata`);
-  if (!res.ok) throw new Error("Failed to fetch home data");
-  return res.json();
-};
+export interface HomePageData {
+  hero: {
+    texts: string[];
+    features: string[];
+  };
+  logos: {
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+  homeServices: {
+    subTitle: string;
+    title: string;
+    allServices: {
+      id: string;
+      title: string;
+      imageUrl: string;
+      alt: string;
+    }[];
+  };
+  about: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subheading: string;
+    mainHeading: string;
+    paragraphs: string[];
+    features: {
+      title: string;
+      subtitle: string;
+    }[];
+  };
+  process: {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+  faq: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subtitle: string;
+    title: string;
+    faqs: {
+      question: string;
+      answer: string;
+    }[];
+  };
+  contactBanner: {
+    img: string;
+    alt: string;
+    subTitle: string;
+    title: string;
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    testimonials: {
+      id: number;
+      name: string;
+      role: string;
+      text: string;
+      image: string;
+      rating: number;
+    }[];
+  };
+  metadata: any;
+  script: any;
+}
 
-export default function Home() {
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["homeData"],
-    queryFn: fetchHomeData,
-  });
 
-  if (isLoading) return <div className="text-center py-10">Loading...</div>;
-  if (isError) return <div className="text-center py-10">Failed to load data</div>;
+export default function Home({homeData}:{homeData:HomePageData}) {
 
-  const script = data?.script;
+  console.log(homeData);
 
   return (
     <>
       <Navbar />
-      <Hero />
-      <h1 className="hidden">Meta H1 Single</h1>
-     <a className="sr-only" href="/custom-software-development">Custom Software Development</a>
-<a className="sr-only" href="/ai-and-machine-learning">AI Solutions</a>
-<a className="sr-only" href="/digital-marketing-and-seo">Digital Marketing</a>
 
-      <Logos />
-      <ServicesSection />
-      <AboutSection />
-      <ProcessSection />
-      <FaqSection />
-      <ContactSection />
-      <TestimonialsSection />
+      <MetaTitle />
+      <Hero homeData={homeData}/>
+       <Logos homeData={homeData}/>
+      <ServicesSection homeData={homeData}/>
+     <AboutSection homeData={homeData} />
+      <ProcessSection homeData={homeData} />
+      <FaqSection homeData={homeData} />
+       <ContactSection homeData={homeData} />
+     <TestimonialsSection homeData={homeData} />
+
       <Footer />
 
-      {script && (
+      {homeData.script && (
         <Script
           id="ld-json"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(script),
+            __html: JSON.stringify(homeData.script),
           }}
         />
       )}

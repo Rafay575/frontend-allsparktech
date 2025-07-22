@@ -1,61 +1,104 @@
 "use client";
-
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
-
 import "swiper/css";
 import "swiper/css/pagination";
-
-import { baseURL } from "@/API/baseURL";
 import { useState } from "react";
 
-interface Testimonial {
-  id: number;
-  name: string;
-  role: string;
-  text: string;
-  image: string;
-  rating: number;
+export interface HomePageData {
+  hero: {
+    texts: string[];
+    features: string[];
+  };
+  logos: {
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+  homeServices: {
+    subTitle: string;
+    title: string;
+    allServices: {
+      id: string;
+      title: string;
+      imageUrl: string;
+      alt: string;
+    }[];
+  };
+  about: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subheading: string;
+    mainHeading: string;
+    paragraphs: string[];
+    features: {
+      title: string;
+      subtitle: string;
+    }[];
+  };
+  process: {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+  faq: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subtitle: string;
+    title: string;
+    faqs: {
+      question: string;
+      answer: string;
+    }[];
+  };
+  contactBanner: {
+    img: string;
+    alt: string;
+    subTitle: string;
+    title: string;
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    testimonials: {
+      id: number;
+      name: string;
+      role: string;
+      text: string;
+      image: string;
+      rating: number;
+    }[];
+  };
+  metadata: any;
+  script: any;
 }
 
-interface TestimonialsData {
-  title: string;
-  subtitle: string;
-  testimonials: Testimonial[];
-}
-
-const fetchTestimonials = async (): Promise<TestimonialsData> => {
-  const res = await axios.get(`${baseURL}/homedata`);
-  return res.data.testimonials; // Adjust if structure differs
-};
-
-export default function TestimonialsSection() {
+export default function TestimonialsSection({homeData}:{homeData: HomePageData}) {
   const [active, setActive] = useState(0);
 
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["testimonials"],
-    queryFn: fetchTestimonials,
-  });
-
-  if (isLoading) return <div>Loading testimonials...</div>;
-  if (isError || !data) return <div>Failed to load testimonials.</div>;
-
+  
   return (
     <section className="bg-gray-100 py-24">
       <div className="mx-auto max-w-7xl px-6 mt-8 text-center">
         {/* Section header */}
         <div className="flex items-center justify-center space-x-4 text-sm font-semibold uppercase text-blue-700">
           <ArrowLeft className="h-4 w-4" />
-          <span>{data.subtitle}</span>
+          <span>{homeData.testimonials.subtitle}</span>
           <ArrowRight className="h-4 w-4" />
         </div>
 
         <h2 className="mb-20 mt-5 text-4xl font-bold text-gray-900">
-          {data.title}
+          {homeData.testimonials.title}
         </h2>
 
         {/* Swiper carousel */}
@@ -73,7 +116,7 @@ export default function TestimonialsSection() {
           onSlideChange={(s) => setActive(s.realIndex)}
           className="!pb-8"
         >
-          {data.testimonials.map((t, idx) => (
+          {homeData.testimonials.testimonials.map((t, idx) => (
             <SwiperSlide key={t.id}>
               <div
                 className={`h-[250px] flex flex-col justify-between rounded-xl p-4 shadow-lg transition-colors duration-300 ${

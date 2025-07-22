@@ -37,6 +37,21 @@ export async function generateMetadata() {
     },
   };
 }
-export default function page() {
-  return <CustomSoftwareDevelopment/>
+
+
+import { baseURL } from "@/API/baseURL";
+import axios from "axios";
+async function fetchServiceData() {
+  const service = "custom-software-development";
+  try {
+    const res = await axios.post(`${baseURL}/service`, { name: service }, { headers: { "Cache-Control": "no-store" } });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
+}
+export default async function page() {
+  const serviceData = await fetchServiceData();
+  return <CustomSoftwareDevelopment serviceData={serviceData} />
 }

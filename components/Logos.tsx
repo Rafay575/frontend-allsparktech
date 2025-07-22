@@ -2,42 +2,92 @@
 
 import React from "react";
 import Image from "next/image";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
 import { baseURL } from "@/API/baseURL";
 
-interface LogoItem {
-  id: number;
-  src: string;
-  alt: string;
+export interface HomePageData {
+  hero: {
+    texts: string[];
+    features: string[];
+  };
+  logos: {
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+  homeServices: {
+    subTitle: string;
+    title: string;
+    allServices: {
+      id: string;
+      title: string;
+      imageUrl: string;
+      alt: string;
+    }[];
+  };
+  about: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subheading: string;
+    mainHeading: string;
+    paragraphs: string[];
+    features: {
+      title: string;
+      subtitle: string;
+    }[];
+  };
+  process: {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+  faq: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subtitle: string;
+    title: string;
+    faqs: {
+      question: string;
+      answer: string;
+    }[];
+  };
+  contactBanner: {
+    img: string;
+    alt: string;
+    subTitle: string;
+    title: string;
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    testimonials: {
+      id: number;
+      name: string;
+      role: string;
+      text: string;
+      image: string;
+      rating: number;
+    }[];
+  };
+  metadata: any;
+  script: any;
 }
 
-// Axios fetcher
-const fetchLogos = async (): Promise<LogoItem[]> => {
-  const response = await axios.get(`${baseURL}/homedata`);
-  const data = response.data;
-  if (!data.logos) throw new Error("Logo data not found");
-  return data.logos;
-};
 
-export default function Logos() {
-  const {
-    data: logos,
-    isLoading,
-    isError,
-    error,
-  } = useQuery<LogoItem[]>({
-    queryKey: ["logos"],
-    queryFn: fetchLogos,
-  });
 
-  if (isLoading) return <>Loading...</>;
-  if (isError) return <>Error: {(error as Error).message}</>;
+export default function Logos({homeData}:{homeData: HomePageData}) {
 
   return (
     <section className="py-8 border-b border-gray-400">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-4">
-        {logos?.map((logo) => (
+        {homeData.logos?.map((logo) => (
           <div key={logo.id} className="flex h-16 w-auto items-center">
             <Image
               src={`${baseURL}/images/home/${logo.src}`}

@@ -40,7 +40,20 @@ export async function generateMetadata() {
   };
 }
 
+import { baseURL } from "@/API/baseURL";
+import axios from "axios";
+async function fetchServiceData() {
+  const service = "customer-support";
+  try {
+    const res = await axios.post(`${baseURL}/service`, { name: service }, { headers: { "Cache-Control": "no-store" } });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
+}
 
-export default function page() {
-  return <CustomerSupport/>
+export default async function page() {
+  const serviceData = await fetchServiceData();
+  return <CustomerSupport serviceData={serviceData} />
 }

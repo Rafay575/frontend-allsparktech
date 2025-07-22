@@ -9,25 +9,33 @@ import AboutPageComponent from "@/components/AboutPageComponent";
 import CoreValuesSemiCircle from "@/components/CoreValuesSemiCircle";
 import React, { Suspense } from "react";
 import { baseURL } from "@/API/baseURL";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import Script from "next/script";
 
+export interface aboutData {
+  heroimg: string;
+  img1: string;
+  img2: string;
+  img3: string;
+  img4: string;
+  alt1: string;
+  alt2: string;
+  alt3: string;
+  alt4: string;
+  subheading: string;
+  mainHeading: string;
+  split: string;
+  paragraphs: string[];
+  cards: {
+    title: string;
+    description: string;
+  }[];
+  metadata: any;
+  script: any;
+}
 
 
-// Fetch function using Axios
-const fetchAboutData = async () => {
-  const res = await axios.get(`${baseURL}/aboutdata`);
-  return res.data;
-};
-
-const AboutClient = () => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["aboutdata"],
-    queryFn: fetchAboutData,
-  });
-  if (isLoading  ) return <div>Loading...</div>;
-  if (error ) return <div>Error loading data</div>;
+const AboutClient = ({ aboutData }: { aboutData: aboutData }) => {
+ 
 
   return (
     <>
@@ -35,23 +43,23 @@ const AboutClient = () => {
       <Navbar2 />
       <Hero2Section
         title="About Us"
-        backgroundImage={`${baseURL}/images/about/${data.heroimg}`}
+        backgroundImage={`${baseURL}/images/about/${aboutData.heroimg}`}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us", href: "/About" },
         ]}
       />
-      <ServiceCards />
+      <ServiceCards aboutData={aboutData}/>
       <Suspense fallback={<div>Loading About Page...</div>}>
-        <AboutPageComponent />
+        <AboutPageComponent aboutData={aboutData}/>
       </Suspense>
       <CoreValuesSemiCircle />
-      {data?.script && (
+      {aboutData?.script && (
         <Script
           id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(data.script),
+            __html: JSON.stringify(aboutData.script),
           }}
         />
       )}

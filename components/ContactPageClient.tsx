@@ -8,50 +8,44 @@ import Footer2 from "@/components/Footer2";
 import Contact from "@/components/Contact";
 import Script from "next/script";
 import { baseURL } from "@/API/baseURL";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 
-type ContactData = {
+export interface ContactMethod {
+  label: string;
+  value: string;
+  href: string;
+  icon: string;
+}
+
+export interface ContactPageData {
   heroimg: string;
-  script: string;
-};
+  title: string;
+  description: string;
+  methods: ContactMethod[];
+  metadata: any; // simplified for flexibility
+  script: any;   // simplified for flexibility
+}
 
-const fetchContactData = async (): Promise<ContactData> => {
-  const res = await axios.get(`${baseURL}/contactdata`);
-  return res.data;
-};
 
-const ContactPageClient = () => {
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["contactData"],
-    queryFn: fetchContactData,
-  });
-
-  if (isLoading) return <div className="text-center py-20">Loading...</div>;
-  if (isError || !data)
-    return (
-      <div className="text-center py-20">Failed to load contact data.</div>
-    );
-
+const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) => {
   return (
     <>
       <Topnav />
       <Navbar2 />
       <Hero2Section
         title="Contact Us"
-        backgroundImage={`${baseURL}/images/contact/${data.heroimg}`}
+        backgroundImage={`${baseURL}/images/contact/${contactData.heroimg}`}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact Us", href: "/contact" },
         ]}
       />
-      <Contact />
+      <Contact pagedata={contactData}/>
       <Footer2 />
       <Script
         id="ldjson"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(data.script),
+          __html: JSON.stringify(contactData.script),
         }}
       />
     </>

@@ -2,36 +2,35 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
 import { baseURL } from "@/API/baseURL";
 
-interface AboutData {
+export interface aboutData {
   heroimg: string;
   img1: string;
   img2: string;
   img3: string;
   img4: string;
+  alt1: string;
+  alt2: string;
+  alt3: string;
+  alt4: string;
   subheading: string;
   mainHeading: string;
   split: string;
   paragraphs: string[];
+  cards: {
+    title: string;
+    description: string;
+  }[];
+  metadata: any;
+  script: any;
 }
 
-const fetchAboutData = async (): Promise<AboutData> => {
-  const res = await fetch(`${baseURL}/aboutdata`);
-  if (!res.ok) throw new Error("Failed to fetch about data");
-  return res.json();
-};
 
-export default function AboutPageComponent() {
-  const { data: aboutData, isLoading, isError } = useQuery({
-    queryKey: ["aboutData"],
-    queryFn: fetchAboutData,
-  });
 
-  if (isLoading) return <p className="text-center py-10">Loading...</p>;
-  if (isError || !aboutData)
-    return <p className="text-center py-10 text-red-500">Failed to load content.</p>;
+
+export default function AboutPageComponent({ aboutData }: { aboutData: aboutData }) {
+
 
   return (
     <section className="py-10 md:py-16  lg:py-20 bg-white">
@@ -40,7 +39,7 @@ export default function AboutPageComponent() {
           <div className="relative mb-10 ">
             <Image
               src={`${baseURL}/images/about/${aboutData.img3}`}
-              alt="Decorative shape"
+              alt={aboutData.alt3}
               width={500}
               unoptimized
               height={500}
@@ -49,7 +48,7 @@ export default function AboutPageComponent() {
 
             <Image
               src={`${baseURL}/images/about/${aboutData.img1}`}
-              alt="Team Meeting"
+              alt={aboutData.alt1}
               width={800}
               unoptimized
               height={600}
@@ -60,7 +59,7 @@ export default function AboutPageComponent() {
             <div className="absolute bottom-0 right-0 lg:right-1/4 sm:right-32 border-4 shadow-md border-white transform translate-y-1/4">
               <Image
                 src={`${baseURL}/images/about/${aboutData.img2}`}
-                alt="VR Headset"
+                alt={aboutData.alt2}
                 width={192}
                 unoptimized
                 height={192}
@@ -71,7 +70,7 @@ export default function AboutPageComponent() {
             <div className="flex gap-2 absolute bottom-[-2.5rem] left-4 sm:left-8 bg-blue-600 text-white py-3 px-5">
               <Image
                 src={`${baseURL}/${aboutData.img4}`}
-                alt="Clock Icon"
+                alt={aboutData.alt4}
                 width={30}
                 unoptimized
                 height={30}
@@ -109,3 +108,4 @@ export default function AboutPageComponent() {
     </section>
   );
 }
+

@@ -1,3 +1,4 @@
+import { baseURL } from "@/API/baseURL";
 import HomeSection from "@/components/HomeSection"
 
 export async function generateMetadata() {
@@ -29,8 +30,15 @@ export async function generateMetadata() {
 
 
 
+async function fetchHomeData() {
+  const res = await fetch(`${baseURL}/homedata`, {
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error("Failed to fetch contact data");
+  return res.json();
+}
 
-export default function Home() {
-
-  return <HomeSection/>
+export default async function Home() {
+const homeData = await fetchHomeData();
+  return <HomeSection homeData={homeData}/>
 }
