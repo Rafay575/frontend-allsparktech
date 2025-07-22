@@ -12,11 +12,11 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/customer-support/page": [
+    "/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/customer-support/page.css",
-      "static/chunks/app/customer-support/page.js"
+      "static/css/app/contact/page.css",
+      "static/chunks/app/contact/page.js"
     ]
   }
 }
