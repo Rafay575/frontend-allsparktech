@@ -97,6 +97,7 @@ export default function Home({homeData}:{homeData:HomePageData}) {
   return (
     <>
       <Navbar />
+
       <MetaTitle />
       <Hero homeData={homeData}/>
        <Logos homeData={homeData}/>
@@ -106,6 +107,7 @@ export default function Home({homeData}:{homeData:HomePageData}) {
       <FaqSection homeData={homeData} />
        <ContactSection homeData={homeData} />
      <TestimonialsSection homeData={homeData} />
+
       <Footer />
 
       {homeData.script && (
