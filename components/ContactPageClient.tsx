@@ -31,7 +31,6 @@ const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) =>
     <>
       <Topnav />
       <Navbar2 />
-      heloo
       <Hero2Section
         title="Contact Us"
         backgroundImage={`${baseURL}/images/contact/${contactData.heroimg}`}
