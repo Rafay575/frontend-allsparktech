@@ -1,8 +1,8 @@
 {
-  "components\\WhyChooseAST.tsx -> react-countup": {
-    "id": "components\\WhyChooseAST.tsx -> react-countup",
+  "components\\LazyBlogCard.tsx -> ./BlogCard": {
+    "id": "components\\LazyBlogCard.tsx -> ./BlogCard",
     "files": [
-      "static/chunks/_app-pages-browser_node_modules_react-countup_build_index_js.js"
+      "static/chunks/_app-pages-browser_components_BlogCard_tsx.js"
     ]
   },
   "node_modules\\@tanstack\\query-devtools\\build\\dev.js -> ./DevtoolsComponent/HH7B3BHX.js": {

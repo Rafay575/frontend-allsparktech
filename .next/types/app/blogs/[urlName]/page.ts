@@ -1,8 +1,8 @@
-// File: C:\Users\MP\Documents\frontend-allsparktech\app\customer-support\page.tsx
-import * as entry from '../../../../app/customer-support/page.js'
+// File: D:\waste\github\rebuild\frontend\frontend\frontend\app\blogs\[urlName]\page.tsx
+import * as entry from '../../../../../app/blogs/[urlName]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/customer-support/page.js')
+type TEntry = typeof import('../../../../../app/blogs/[urlName]/page.js')
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }

@@ -2659,8 +2659,11 @@ html {
 }
 
 .prose img {
+  margin: 0 auto;
   margin-top: 5px;
   margin-bottom: 5px;
+  width: 100%;
+
 }
 
 .ql-align-right {
