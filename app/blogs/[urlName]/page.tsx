@@ -10,34 +10,27 @@ import type { Metadata } from "next";
 // ⬅️ ADD THIS LINE!
 export const dynamic = "force-dynamic";
 
-export async function generateMetadata(props: any): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { urlName: string } }): Promise<Metadata> {
   try {
-    const { params } = props;
-    const res = await axios.get(`${baseURL}/blogs/${params.urlName}`);
+     const res = await axios.get(`${baseURL}/blogs/${params.urlName}`);
     const metatitle = res.data.metatitle?.trim();
     const metadescription = res.data.metadescription?.trim();
 
-    const defaultMeta: Metadata = {
-      title: "AllSpark Technologies",
-      description:
-        "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
-    };
-
     return {
-      title: metatitle || defaultMeta.title,
-      description: metadescription || defaultMeta.description,
+      title: metatitle || "AllSpark Technologies",
+      description: metadescription || "AllSpark Technologies builds scalable software development solutions...",
     };
   } catch (err) {
     console.error("Metadata fetch failed:", err);
     return {
       title: "AllSpark Technologies",
-      description:
-        "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
+      description: "AllSpark Technologies builds scalable software development solutions...",
     };
   }
 }
 
-export default async function BlogDetailPage(props: any) {
+
+export default async function BlogDetailPage({ params }: { params: { urlName: string } }) {
   interface BlogData {
     id: number;
     title: string;
@@ -48,10 +41,9 @@ export default async function BlogDetailPage(props: any) {
     content: string;
   }
 
-  const { params } = props;
 
   const res = await fetch(`${baseURL}/blogs/${params.urlName}`, {
-    cache: "no-store", // ensure fresh data
+    cache: "no-store",
   });
 
   if (!res.ok) return <h1>No detail fetch</h1>;

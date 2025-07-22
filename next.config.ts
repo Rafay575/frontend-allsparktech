@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    dynamicParams: true, // ✅ ensure dynamic routes work properly on Vercel
-  },
+  // safe to leave empty or include valid options only
 };
 
 export default nextConfig;
