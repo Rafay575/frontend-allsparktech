@@ -1,5 +1,5 @@
 // app/layout.tsx
-"use client";
+"use client"
 import GlobalPreloader from "@/components/GlobalPreloader";
 import Script from "next/script";
 import "./globals.css";
@@ -37,12 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>AllSpark Technologies</title>
         <link rel="icon" href="/images/favicon.png" type="image/png" />
         <meta
           name="google-site-verification"
           content="G1uaovu8fDlyB3-5phzFHMeTubsdrU5pyZmKLe4l7FA"
         />
-        <meta name="msvalidate.01" content="027C18CC1D1B34BBF5B6403C7398A62C" />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7PCVCQV0ZX"

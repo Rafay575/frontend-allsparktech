@@ -1,34 +1,86 @@
 "use client";
-
-import { baseURL } from "@/API/baseURL";
 import { PlayCircle } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 
-interface ProcessItem {
-  number: string;
-  title: string;
-  description: string;
+
+export interface HomePageData {
+  hero: {
+    texts: string[];
+    features: string[];
+  };
+  logos: {
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+  homeServices: {
+    subTitle: string;
+    title: string;
+    allServices: {
+      id: string;
+      title: string;
+      imageUrl: string;
+      alt: string;
+    }[];
+  };
+  about: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subheading: string;
+    mainHeading: string;
+    paragraphs: string[];
+    features: {
+      title: string;
+      subtitle: string;
+    }[];
+  };
+  process: {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+  faq: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subtitle: string;
+    title: string;
+    faqs: {
+      question: string;
+      answer: string;
+    }[];
+  };
+  contactBanner: {
+    img: string;
+    alt: string;
+    subTitle: string;
+    title: string;
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    testimonials: {
+      id: number;
+      name: string;
+      role: string;
+      text: string;
+      image: string;
+      rating: number;
+    }[];
+  };
+  metadata: any;
+  script: any;
 }
 
-const fetchProcessData = async (): Promise<ProcessItem[]> => {
-  const res = await axios.get(`${baseURL}/homedata`);
-  return res.data.process;
-};
 
-export default function ProcessSection() {
-  const {
-    data: processData,
-    isLoading,
-    isError,
-    error,
-  } = useQuery<ProcessItem[]>({
-    queryKey: ["processData"],
-    queryFn: fetchProcessData,
-  });
+export default function ProcessSection({homeData}:{homeData: HomePageData}) {
 
-  if (isLoading) return <p className="text-center py-10">Loading...</p>;
-  if (isError) return <p className="text-center py-10 text-red-500">Error: {(error as Error).message}</p>;
 
   return (
     <section className="relative py-28 mt-10">
@@ -54,7 +106,7 @@ export default function ProcessSection() {
 
         <div className="mt-[-250px] bg-[#0E0E47] pt-80 pb-32 text-white">
           <div className="mx-auto max-w-7xl grid grid-cols-1 gap-10 px-6 md:grid-cols-2 xl:grid-cols-4">
-            {processData?.map((step, index) => (
+            {homeData.process?.map((step, index) => (
               <div key={index} className="text-start">
                 <h2 className="text-4xl font-bold text-gray-400">
                   {step.number}

@@ -1,4 +1,6 @@
+import { baseURL } from "@/API/baseURL";
 import CloudAndDevopsSolutions from "@/components/CloudAndDevopsSolutions"
+import axios from "axios";
 
 export async function generateMetadata() {
   return {
@@ -40,7 +42,18 @@ export async function generateMetadata() {
   };
 }
 
+async function fetchServiceData() {
+  const service = "cloud-and-devops-solutions";
+  try {
+    const res = await axios.post(`${baseURL}/service`, { name: service }, { headers: { "Cache-Control": "no-store" } });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
+}
 
-export default function page() {
-  return <CloudAndDevopsSolutions/>
+export default async function page() {
+  const serviceData = await fetchServiceData();
+  return <CloudAndDevopsSolutions serviceData={serviceData}/>
 }

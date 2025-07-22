@@ -1,59 +1,88 @@
 "use client";
-
-import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { baseURL } from "@/API/baseURL";
 
-interface Feature {
-  title: string;
-  subtitle: string;
+
+export interface HomePageData {
+  hero: {
+    texts: string[];
+    features: string[];
+  };
+  logos: {
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+  homeServices: {
+    subTitle: string;
+    title: string;
+    allServices: {
+      id: string;
+      title: string;
+      imageUrl: string;
+      alt: string;
+    }[];
+  };
+  about: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subheading: string;
+    mainHeading: string;
+    paragraphs: string[];
+    features: {
+      title: string;
+      subtitle: string;
+    }[];
+  };
+  process: {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+  faq: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subtitle: string;
+    title: string;
+    faqs: {
+      question: string;
+      answer: string;
+    }[];
+  };
+  contactBanner: {
+    img: string;
+    alt: string;
+    subTitle: string;
+    title: string;
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    testimonials: {
+      id: number;
+      name: string;
+      role: string;
+      text: string;
+      image: string;
+      rating: number;
+    }[];
+  };
+  metadata: any;
+  script: any;
 }
 
-interface AboutData {
-  img1: string;
-  img2: string;
-  img3: string;
-  subheading: string;
-  mainHeading: string;
-  paragraphs: string[];
-  features: Feature[];
-}
+export default function AboutSection({homeData}:{homeData: HomePageData}) {
 
-const fetchAboutData = async (): Promise<AboutData> => {
-  const res = await fetch(`${baseURL}/homedata`);
-  const data = await res.json();
-  if (!data.about) {
-    throw new Error("About data not found");
-  }
-  return data.about;
-};
 
-export default function AboutSection() {
-  const {
-    data: aboutData,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["aboutData"],
-    queryFn: fetchAboutData,
-  });
-
-  if (isLoading) {
-    return (
-      <section className="py-28 text-center text-white bg-blue-600">
-        <p>Loading...</p>
-      </section>
-    );
-  }
-
-  if (isError || !aboutData) {
-    return (
-      <section className="py-28 text-center text-white bg-blue-600">
-        <p>Failed to load content.</p>
-      </section>
-    );
-  }
 
   return (
     <section className="relative bg-blue-600 overflow-x-hidden py-28 text-white">
@@ -63,8 +92,8 @@ export default function AboutSection() {
           {/* Main Image */}
           <div className="relative overflow-hidden rounded-3xl w-full h-auto">
             <Image
-              src={`${baseURL}/images/home/${aboutData.img1}`}
-              alt="Main Image"
+              src={`${baseURL}/images/home/${homeData?.about.img1}`}
+              alt={homeData?.about.alt1}
               width={400}
               height={400}
               className="rounded-3xl w-full h-auto"
@@ -75,8 +104,8 @@ export default function AboutSection() {
           {/* Overlapping Image */}
           <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
             <Image
-              src={`${baseURL}/images/home/${aboutData.img2}`}
-              alt="Overlay Image"
+              src={`${baseURL}/images/home/${homeData?.about.img2}`}
+              alt={homeData?.about.alt2}
               fill
               sizes="100px"
               className="object-contain"
@@ -90,8 +119,8 @@ export default function AboutSection() {
             style={{ animationDuration: "4s" }}
           >
             <Image
-              src={`${baseURL}/images/home/${aboutData.img3}`}
-              alt="Floating Shape"
+              src={`${baseURL}/images/home/${homeData?.about.img3}`}
+              alt={homeData?.about.alt3}
               fill
               className="object-cover"
               unoptimized
@@ -103,22 +132,22 @@ export default function AboutSection() {
         <div className="w-full max-w-lg mx-auto lg:text-left">
           <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
-            <span>{aboutData.subheading}</span>
+            <span>{homeData?.about.subheading}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
           <h2 className="text-4xl font-bold !leading-normal sm:text-4xl">
-            {aboutData.mainHeading}
+            {homeData?.about.mainHeading}
           </h2>
 
           <p className="mt-4 text-base text-white/80">
-            <span className="mb-5 block">{aboutData.paragraphs[0]}</span>
-            <span className="mt-5 block">{aboutData.paragraphs[1]}</span>
+            <span className="mb-5 block">{homeData?.about.paragraphs[0]}</span>
+            <span className="mt-5 block">{homeData?.about.paragraphs[1]}</span>
           </p>
 
           {/* Features Section */}
           <div className="flex flex-wrap lg:flex-nowrap space-x-6 mt-10 gap-6 lg:gap-0 justify-center lg:justify-between">
-            {aboutData?.features?.map((feature, index) => (
+            {homeData?.about?.features?.map((feature, index) => (
               <div
                 key={index}
                 className="flex items-center space-x-3 bg-[#5666ff] lg:w-1/3 p-2 rounded-lg"

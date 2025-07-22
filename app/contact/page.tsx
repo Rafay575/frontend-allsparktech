@@ -1,3 +1,4 @@
+import { baseURL } from "@/API/baseURL";
 import ContactPageClient from "../../components/ContactPageClient";
 
 export async function generateMetadata() {
@@ -38,7 +39,15 @@ export async function generateMetadata() {
   };
 }
 
+async function fetchContactData() {
+  const res = await fetch(`${baseURL}/contactdata`, {
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error("Failed to fetch contact data");
+  return res.json();
+}
 
-export default function ContactPage() {
-  return <ContactPageClient />;
+export default async function ContactPage() {
+    const contactData = await fetchContactData();
+  return <ContactPageClient contactData={contactData} />;
 }

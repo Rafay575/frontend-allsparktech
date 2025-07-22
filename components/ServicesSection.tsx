@@ -4,39 +4,91 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
 import { baseURL } from "@/API/baseURL";
 
-interface ServiceItem {
-  id: string;
-  title: string;
-  imageUrl: string;
+export interface HomePageData {
+  hero: {
+    texts: string[];
+    features: string[];
+  };
+  logos: {
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+  homeServices: {
+    subTitle: string;
+    title: string;
+    allServices: {
+      id: string;
+      title: string;
+      imageUrl: string;
+      alt: string;
+    }[];
+  };
+  about: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subheading: string;
+    mainHeading: string;
+    paragraphs: string[];
+    features: {
+      title: string;
+      subtitle: string;
+    }[];
+  };
+  process: {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+  faq: {
+    img1: string;
+    img2: string;
+    img3: string;
+    alt1: string;
+    alt2: string;
+    alt3: string;
+    subtitle: string;
+    title: string;
+    faqs: {
+      question: string;
+      answer: string;
+    }[];
+  };
+  contactBanner: {
+    img: string;
+    alt: string;
+    subTitle: string;
+    title: string;
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    testimonials: {
+      id: number;
+      name: string;
+      role: string;
+      text: string;
+      image: string;
+      rating: number;
+    }[];
+  };
+  metadata: any;
+  script: any;
 }
-interface ServicesData {
-  subTitle: string;
-  title: string;
-  allServices: ServiceItem[];
-}
 
-const fetchServices = async (): Promise<ServicesData> => {
-  const res = await axios.get(`${baseURL}/homedata`);
-  return res.data.homeServices;
-};
 
-export default function ServicesSection() {
-  const {
-    data: services,
-    isLoading,
-    isError,
-    error,
-  } = useQuery<ServicesData>({
-    queryKey: ["homeServices"],
-    queryFn: fetchServices,
-  });
 
-  const displayedServices = Array.isArray(services?.allServices)
-    ? services.allServices.slice(0, 10)
+
+export default function ServicesSection({homeData}:{homeData: HomePageData}) {
+
+  const displayedServices = Array.isArray(homeData.homeServices?.allServices)
+    ? homeData.homeServices.allServices.slice(0, 10)
     : [];
 
   const cardVariants = {
@@ -57,8 +109,6 @@ export default function ServicesSection() {
     },
   };
 
-  if (isLoading) return <>Loading...</>;
-  if (isError) return <>Error: {(error as Error).message}</>;
 
   return (
     <motion.section
@@ -72,12 +122,12 @@ export default function ServicesSection() {
         {/* Title Section */}
         <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
           <ArrowLeft className="h-4 w-4" />
-          <span>{services?.subTitle}</span>
+          <span>{homeData.homeServices?.subTitle}</span>
           <ArrowRight className="h-4 w-4" />
         </div>
         <div className="relative">
           <h2 className="mt-3 text-4xl font-semibold text-gray-900">
-            {services?.title}
+            {homeData.homeServices?.title}
           </h2>
         </div>
       </div>

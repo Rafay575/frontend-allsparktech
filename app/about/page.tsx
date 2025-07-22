@@ -1,3 +1,4 @@
+import { baseURL } from "@/API/baseURL";
 import AboutClient from "@/components/AboutClient";
 
 export async function generateMetadata() {
@@ -39,6 +40,17 @@ export async function generateMetadata() {
 }
 
 
-export default function AboutPage() {
- return <AboutClient />
+async function fetchAboutData() {
+  const res = await fetch(`${baseURL}/aboutdata`, {
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error("Failed to fetch contact data");
+  return res.json();
 }
+
+export default async function AboutPage() {
+    const aboutData = await fetchAboutData();
+
+ return <AboutClient aboutData={aboutData}/>
+}
+

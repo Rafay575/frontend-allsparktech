@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
 import PhoneField from "./PhoneField";
 import Dropdown from "./Dropdown";
@@ -19,8 +19,23 @@ const contactSchema = z.object({
   message: z.string().min(1, "Message is required"),
 });
 type ContactFormValues = z.infer<typeof contactSchema>;
+export interface ContactMethod {
+  label: string;
+  value: string;
+  href: string;
+  icon: string;
+}
 
-export default function Contact() {
+export interface ContactPageData {
+  heroimg: string;
+  title: string;
+  description: string;
+  methods: ContactMethod[];
+  metadata: any; // simplified for flexibility
+  script: any;   // simplified for flexibility
+}
+
+export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
   const {
     register,
     control,
@@ -58,34 +73,7 @@ export default function Contact() {
       console.log(err);
     }
   }
-  interface ContactMethod {
-    label: string;
-    value: string;
-    href: string;
-    icon: string;
-  }
 
-  interface ContactData {
-    title: string;
-    description: string;
-    methods: ContactMethod[];
-  }
-  const [pagedata, setPageData] = useState<ContactData | null>(null);
-
-  useEffect(() => {
-    const fetchPageData = async () => {
-      try {
-        const res = await fetch(`${baseURL}/contactdata`);
-        if (!res.ok) throw new Error("Failed to fetch page data");
-        const data: ContactData = await res.json();
-        setPageData(data);
-      } catch (error) {
-        console.error("Error fetching page data:", error);
-      }
-    };
-
-    fetchPageData();
-  }, []);
 
   return (
     <>

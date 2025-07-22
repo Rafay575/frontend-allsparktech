@@ -1,4 +1,5 @@
-import AiAndMachineLearning from "@/components/AiAndMachineLearning"
+
+import AiAndMachineLearning from "@/components/AiAndMachineLearning";
 
 export async function generateMetadata() {
   return {
@@ -15,7 +16,7 @@ export async function generateMetadata() {
     openGraph: {
       title: "AI Development Company | Custom AI & ML Solutions USA",
       description:
-        " Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
+        "Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
       url: "https://allsparktechnologies.com/ai-and-machine-learning",
       type: "website",
       siteName: "AllSpark Technologies",
@@ -40,7 +41,20 @@ export async function generateMetadata() {
   };
 }
 
+import { baseURL } from "@/API/baseURL";
+import axios from "axios";
+async function fetchServiceData() {
+  const service = "ai-and-machine-learning";
+  try {
+    const res = await axios.post(`${baseURL}/service`, { name: service }, { headers: { "Cache-Control": "no-store" } });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
+}
 
-export default function page() {
-  return<AiAndMachineLearning/>
+export default async function Page() {
+  const serviceData = await fetchServiceData();
+  return <AiAndMachineLearning serviceData={serviceData} />;
 }
