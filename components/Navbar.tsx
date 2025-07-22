@@ -316,12 +316,7 @@ const Navbar = () => {
             >
               Contact Us
             </Link>
-            <Link
-              href="/blogs"
-              className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
-            >
-              Blogs
-            </Link>
+          
           </div>
 
           {/* Right: CTA button */}
@@ -583,14 +578,7 @@ const Navbar = () => {
                         Contact Us
                       </Link>
                     </li>
-                    <li className="border-b pb-3">
-                      <Link
-                        href="/blogs"
-                        onClick={() => setIsSidebarOpen(false)}
-                      >
-                        Blogs
-                      </Link>
-                    </li>
+                  
                   </ul>
                 </nav>
 
