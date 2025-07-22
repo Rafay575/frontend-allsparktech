@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const NotFoundPage = () => {
@@ -26,14 +27,14 @@ const NotFoundPage = () => {
         <h1 className="text-3xl font-bold text-[#284bff] mb-2">Page Not Found</h1>
         <p className="text-gray-700 mb-6 text-center">
           Oops! The page you’re looking for doesn’t exist.<br />
-          Let’s get you back <a href="/" className="text-[#284bff] underline font-medium">home</a>.
+          Let’s get you back <Link href="/" className="text-[#284bff] underline font-medium">home</Link>.
         </p>
-        <a
+        <Link
           href="/"
           className="bg-[#284bff] hover:bg-blue-700 text-white rounded-xl px-6 py-3 text-lg font-semibold transition"
         >
           Go to Homepage
-        </a>
+        </Link>
       </div>
     </div>
   );
