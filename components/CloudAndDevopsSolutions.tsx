@@ -52,7 +52,7 @@ export interface serviceData {
   script: any;
   metadata: any;
 }
-export default function CustomSoftwareDevelopment({serviceData}:{serviceData: serviceData}) {
+export default function CustomSoftwareDevelopment({ serviceData }: { serviceData: serviceData }) {
 
   return (
     <>
@@ -64,7 +64,102 @@ export default function CustomSoftwareDevelopment({serviceData}:{serviceData: se
           id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(serviceData.script),
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebPage",
+                  "@id": "https://allsparktechnologies.com/cloud-devops-solutions",
+                  "url": "https://allsparktechnologies.com/cloud-devops-solutions",
+                  "name": "Cloud & DevOps Solutions | CI/CD, Migration & Security Experts",
+                  "description": "Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
+                  "inLanguage": "en",
+                  "isPartOf": {
+                    "@id": "https://allsparktechnologies.com"
+                  }
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://allsparktechnologies.com/#organization",
+                  "name": "All Spark Technologies",
+                  "url": "https://allsparktechnologies.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://testtest.libererllc.com/images/service/m4.webp"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "638 Knollwood Road",
+                    "addressLocality": "Franklin Lakes",
+                    "addressRegion": "NJ",
+                    "postalCode": "07417",
+                    "addressCountry": "US"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-616-308-1863",
+                    "contactType": "Customer Support",
+                    "areaServed": "US"
+                  }
+                },
+                {
+                  "@type": "Service",
+                  "serviceType": [
+                    "Cloud Strategy Consulting",
+                    "DevOps Consulting",
+                    "Cloud Management Software",
+                    "CI/CD Pipeline Implementation",
+                    "Infrastructure as Code",
+                    "Cloud Security Compliance Services"
+                  ],
+                  "provider": {
+                    "@id": "https://allsparktechnologies.com/#organization"
+                  },
+                  "areaServed": {
+                    "@type": "Country",
+                    "name": "United States"
+                  },
+                  "name": "Cloud & DevOps Solutions",
+                  "description": "All Spark Technologies provides cloud and DevOps solutions including CI/CD pipeline code, cloud migration strategy, security services, and agile development environments.",
+                  "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock"
+                  },
+                  "url": "https://allsparktechnologies.com/cloud-devops-solutions"
+                },
+                {
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "Why should businesses adopt cloud and DevOps solutions?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "They enhance performance, reduce operational costs, and offer automation. AST implements cloud solutions with CI/CD pipeline code and secure DevOps practices."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "What tools are used in your DevOps strategy?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We integrate the latest DevOps tools like Jenkins, Docker, Terraform, and ADO DevOps, ensuring continuous delivery in an agile development environment."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "How do you handle cloud security and compliance?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We use automated audits, encryption, IAM, and meet cloud security compliance standards with our cloud computing security services."
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+            ),
           }}
         />
       )}

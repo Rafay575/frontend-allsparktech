@@ -1,4 +1,4 @@
-// File: C:\Users\MP\Desktop\rebuild-main\frontend\app\blogs\[urlName]\page.tsx
+// File: C:\Users\pc\Desktop\rebuild-main\frontend\app\blogs\[urlName]\page.tsx
 import * as entry from '../../../../../app/blogs/[urlName]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

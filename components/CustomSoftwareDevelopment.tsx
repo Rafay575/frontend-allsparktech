@@ -54,7 +54,7 @@ export interface serviceData {
   metadata: any;
 }
 
-export default function CustomSoftwareDevelopment({serviceData}:{serviceData: serviceData}) {
+export default function CustomSoftwareDevelopment({ serviceData }: { serviceData: serviceData }) {
   return (
     <>
       <Topnav />
@@ -65,7 +65,31 @@ export default function CustomSoftwareDevelopment({serviceData}:{serviceData: se
           id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(serviceData.script),
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Custom Software Development | Bespoke Dev Services NYC",
+              "url": "https://allsparktechnologies.com/services/custom-software-development",
+              "description": "Custom software solutions tailored to your business. Trusted bespoke development company in NYC delivering scalable, high-performance applications.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "AllSpark Technologies",
+                "url": "https://allsparktechnologies.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://allsparktechnologies.com/logo.png"
+                },
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "638 Knollwood Road",
+                  "addressLocality": "Franklin Lakes",
+                  "addressRegion": "NJ",
+                  "postalCode": "07417",
+                  "addressCountry": "US"
+                }
+              }
+            }
+            ),
           }}
         />
       )}
