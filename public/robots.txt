@@ -38,9 +38,8 @@ Allow: /
 User-agent: SemrushBot
 Allow: /
 
-# --- General Rule for All Bots ---
+# --- General Crawlers ---
 User-agent: *
-Disallow:
 
 Sitemap: https://allsparktechnologies.com/sitemap.xml
 Sitemap: https://allsparktechnologies.com/sitemap.html
