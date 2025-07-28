@@ -61,6 +61,8 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
       <Navbar2 />
       <ServicesTabs data={serviceData} />
       
+    
+      <Footer2 />
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -232,8 +234,6 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
             ),
           }}
         />
-    
-      <Footer2 />
     </>
   );
 }
