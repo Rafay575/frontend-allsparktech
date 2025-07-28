@@ -40,13 +40,6 @@ Allow: /
 
 # --- General Crawlers ---
 User-agent: *
-# Disallow Next.js and build files
-Disallow: /_next/
-Disallow: /static/
-Disallow: /*.js$
-Disallow: /*.css$
-# Allow images (important for SEO)
-Allow: /images/
 
 Sitemap: https://allsparktechnologies.com/sitemap.xml
 Sitemap: https://allsparktechnologies.com/sitemap.html
