@@ -60,7 +60,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
       <Topnav />
       <Navbar2 />
       <ServicesTabs data={serviceData} />
-      {serviceData.script && (
+      
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -232,7 +232,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
             ),
           }}
         />
-      )}
+    
       <Footer2 />
     </>
   );
