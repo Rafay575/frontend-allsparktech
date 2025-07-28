@@ -29,7 +29,6 @@ const fetchBlogsdata = async (): Promise<BlogPageData> => {
   return res.data;
 };
 
-
 export default function BlogPage() {
   const [blogs, setBlogs] = useState<Blog[] >([]);
 
