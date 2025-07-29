@@ -111,7 +111,7 @@ export default function Home({homeData}:{homeData:HomePageData}) {
       <Footer />
 
       {homeData.script && (
-        <script
+        <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
