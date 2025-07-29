@@ -112,6 +112,7 @@ export default function Home({homeData}:{homeData:HomePageData}) {
 
       {homeData.script && (
         <Script
+         id="allspark-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
