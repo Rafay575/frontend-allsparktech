@@ -79,32 +79,44 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   "isPartOf": {
                     "@type": "WebSite",
                     "@id": "https://allsparktechnologies.com/#website",
-                    "name": "All Spark Technologies"
-                  },
-                  "breadcrumb": {
-                    "@id": "https://allsparktechnologies.com/digital-marketing-and-seo#breadcrumb"
+                    "name": "All Spark Technologies",
+                    "url": "https://allsparktechnologies.com"
                   },
                   "primaryImageOfPage": {
                     "@type": "ImageObject",
                     "url": "https://testtest.libererllc.com/images/service/m5.webp"
+                  },
+                  "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://allsparktechnologies.com"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Digital Marketing & SEO",
+                        "item": "https://allsparktechnologies.com/digital-marketing-and-seo"
+                      }
+                    ]
                   }
                 },
                 {
-                  "@type": "BreadcrumbList",
-                  "@id": "https://allsparktechnologies.com/digital-marketing-and-seo#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": "https://allsparktechnologies.com"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Digital Marketing & SEO",
-                      "item": "https://allsparktechnologies.com/digital-marketing-and-seo"
-                    }
+                  "@type": "Organization",
+                  "@id": "https://allsparktechnologies.com/#organization",
+                  "name": "All Spark Technologies",
+                  "url": "https://allsparktechnologies.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://allsparktechnologies.com/images/logo.svg"
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/all-spark-technologies",
+                    "https://www.facebook.com/allsparktechnologies.official",
+                    "https://www.instagram.com/allspark_technologies/"
                   ]
                 },
                 {
@@ -112,17 +124,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   "name": "Digital Marketing & SEO Services",
                   "description": "All Spark Technologies offers full-service digital marketing: SEO, content marketing, PPC, ecommerce SEO, social media management, reputation management, and conversion optimization.",
                   "provider": {
-                    "@type": "Organization",
-                    "name": "All Spark Technologies",
-                    "url": "https://allsparktechnologies.com",
-                    "logo": {
-                      "@type": "ImageObject",
-                      "url": "https://allsparktechnologies.com/images/logo.svg"
-                    },
-                    "sameAs": [
-                      "https://www.linkedin.com/company/all-spark-technologies",
-                      "https://www.facebook.com/allsparktechnologies.official"
-                    ]
+                    "@id": "https://allsparktechnologies.com/#organization"
                   },
                   "areaServed": {
                     "@type": "Country",
@@ -193,7 +195,8 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                         }
                       }
                     ]
-                  }
+                  },
+                  "url": "https://allsparktechnologies.com/digital-marketing-and-seo"
                 },
                 {
                   "@type": "FAQPage",
@@ -242,6 +245,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 }
               ]
             }
+
             ),
           }}
         />

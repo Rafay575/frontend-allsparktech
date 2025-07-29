@@ -74,9 +74,30 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   "name": "Cloud & DevOps Solutions | CI/CD, Migration & Security Experts",
                   "description": "Accelerate growth with AST's cloud strategy consulting, CI/CD pipeline code, DevOps tools, and cloud security compliance. Trusted cloud-based provider.",
                   "inLanguage": "en",
+                  "breadcrumb": {
+                    "@id": "https://allsparktechnologies.com/cloud-devops-solutions#breadcrumb"
+                  },
                   "isPartOf": {
                     "@id": "https://allsparktechnologies.com"
                   }
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "@id": "https://allsparktechnologies.com/cloud-devops-solutions#breadcrumb",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://allsparktechnologies.com"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Cloud & DevOps Solutions",
+                      "item": "https://allsparktechnologies.com/cloud-devops-solutions"
+                    }
+                  ]
                 },
                 {
                   "@type": "Organization",
@@ -87,6 +108,11 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                     "@type": "ImageObject",
                     "url": "https://testtest.libererllc.com/images/service/m4.webp"
                   },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/all-spark-technologies",
+                    "https://www.facebook.com/allsparktechnologies.official",
+                    "https://www.instagram.com/allspark_technologies/"
+                  ],
                   "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "638 Knollwood Road",
@@ -121,12 +147,22 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   },
                   "name": "Cloud & DevOps Solutions",
                   "description": "All Spark Technologies provides cloud and DevOps solutions including CI/CD pipeline code, cloud migration strategy, security services, and agile development environments.",
+                  "url": "https://allsparktechnologies.com/cloud-devops-solutions",
                   "offers": {
                     "@type": "Offer",
                     "priceCurrency": "USD",
                     "availability": "https://schema.org/InStock"
                   },
-                  "url": "https://allsparktechnologies.com/cloud-devops-solutions"
+                  "keywords": [
+                    "cloud strategy consulting",
+                    "CI/CD pipeline code",
+                    "DevOps tools",
+                    "cloud migration strategy",
+                    "infrastructure as code",
+                    "cloud security compliance",
+                    "DevOps consulting services",
+                    "cloud management software"
+                  ]
                 },
                 {
                   "@type": "FAQPage",

@@ -68,123 +68,189 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
           id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "name": "Web & App Development Company",
-                "url": "https://allsparktechnologies.com/web-and-app-development",
-                "description": "Build scalable, secure web & mobile apps with top web app development experts. Custom PWAs, SaaS, and startup solutions. Get started today.",
-                "inLanguage": "en-US",
-                "mainEntity": {
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://allsparktechnologies.com/#organization",
+                  "name": "AllSpark Technologies",
+                  "url": "https://allsparktechnologies.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://allsparktechnologies.com/images/logo.svg"
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/all-spark-technologies",
+                    "https://www.facebook.com/allsparktechnologies.official",
+                    "https://www.instagram.com/allspark_technologies/"
+                  ],
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "638 Knollwood Road",
+                    "addressLocality": "Franklin Lakes",
+                    "addressRegion": "NJ",
+                    "postalCode": "07417",
+                    "addressCountry": "US"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-616-308-1863",
+                    "contactType": "Customer Support",
+                    "areaServed": "US",
+                    "availableLanguage": ["English"]
+                  }
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://allsparktechnologies.com/#website",
+                  "url": "https://allsparktechnologies.com",
+                  "name": "AllSpark Technologies",
+                  "publisher": {
+                    "@id": "https://allsparktechnologies.com/#organization"
+                  },
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://allsparktechnologies.com/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://allsparktechnologies.com/web-and-app-development#webpage",
+                  "url": "https://allsparktechnologies.com/web-and-app-development",
+                  "name": "Web & App Development Company",
+                  "description": "Build scalable, secure web & mobile apps with top web app development experts. Custom PWAs, SaaS, and startup solutions. Get started today.",
+                  "inLanguage": "en",
+                  "isPartOf": {
+                    "@id": "https://allsparktechnologies.com/#website"
+                  },
+                  "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": "https://testtest.libererllc.com/images/service/m10.webp"
+                  }
+                },
+                {
                   "@type": "Service",
+                  "@id": "https://allsparktechnologies.com/web-and-app-development#service",
                   "name": "Web & App Development",
-                  "serviceType": "Custom Web App Development, SaaS Solutions, Enterprise App Development, PWAs, E-commerce Platforms",
-                  "areaServed": {
-                    "@type": "Country",
-                    "name": "United States"
-                  },
+                  "serviceType": [
+                    "Web App Development",
+                    "Custom Web Application",
+                    "Enterprise App Development",
+                    "Progressive Web App (PWA) Development",
+                    "SaaS Application Development",
+                    "Mobile App Development",
+                    "E-commerce Web Development"
+                  ],
                   "provider": {
-                    "@type": "Organization",
-                    "name": "All Spark Technologies",
-                    "url": "https://allsparktechnologies.com",
-                    "logo": {
-                      "@type": "ImageObject",
-                      "url": "https://allsparktechnologies.com/images/logo.svg"
-                    },
-                    "contactPoint": {
-                      "@type": "ContactPoint",
-                      "telephone": "+1-616-308-1863",
-                      "contactType": "Customer Service",
-                      "areaServed": "US"
-                    },
-                    "sameAs": [
-                      "https://www.linkedin.com/company/all-spark-technologies",
-                      "https://www.facebook.com/allsparktechnologies.official",
-                      "https://www.instagram.com/allsparktechnologies"
+                    "@id": "https://allsparktechnologies.com/#organization"
+                  },
+                  "areaServed": {
+                    "@type": "Place",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressCountry": "US"
+                    }
+                  },
+                  "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "serviceUrl": "https://allsparktechnologies.com/web-and-app-development",
+                    "availableLanguage": ["English"]
+                  },
+                  "audience": {
+                    "@type": "Audience",
+                    "audienceType": [
+                      "Tech Startups",
+                      "SaaS Companies",
+                      "Ecommerce Brands",
+                      "Enterprises",
+                      "Healthcare Providers"
                     ]
-                  }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "USD",
+                    "priceSpecification": {
+                      "@type": "PriceSpecification",
+                      "price": "Variable",
+                      "priceCurrency": "USD"
+                    },
+                    "availability": "https://schema.org/InStock"
+                  },
+                  "description": "AllSpark Technologies offers end-to-end web and app development services, including custom PWAs, SaaS solutions, enterprise platforms, and mobile apps tailored to your business goals."
+                },
+                {
+                  "@type": "FAQPage",
+                  "@id": "https://allsparktechnologies.com/web-and-app-development#faq",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "What platforms do you develop apps for?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We develop web apps, native Android & iOS apps, and cross-platform solutions including PWAs and SaaS-based platforms."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "How much does a custom web or app project cost?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Costs vary depending on features, complexity, and technology. We offer customized quotes after a detailed requirement analysis."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Do you offer maintenance after app launch?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we provide full lifecycle support including maintenance, updates, and feature scaling post-deployment."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Can I request only front-end or back-end development?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. Our developers can work on front-end (React, Vue), back-end (Node.js, Laravel), or full-stack depending on your needs."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "What industries do you serve with app development?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We serve ecommerce, fintech, healthcare, SaaS, education, logistics, and more."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://allsparktechnologies.com/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Services",
+                      "item": "https://allsparktechnologies.com/#services"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Web & App Development",
+                      "item": "https://allsparktechnologies.com/web-and-app-development"
+                    }
+                  ]
                 }
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "Why should I choose a custom web application over a template-based solution?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Custom web applications offer unmatched flexibility, seamless integration, superior performance, security, and long-term scalability tailored to your business."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How long does it take to develop a web application?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Timelines depend on complexity, design, integrations, and testing. We offer a detailed roadmap outlining each phase and expected duration."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What factors influence the cost of web app development?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Key cost factors include the technology stack, number of features, UI/UX complexity, integrations, and security requirements. We provide transparent estimates."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Will my web application be mobile-friendly?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes. All our web apps are responsive and optimized for seamless performance across all devices."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Can I request features after launch?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Absolutely. Our applications are designed to be scalable, allowing post-launch feature updates and enhancements."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How do you ensure transparency during development?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "We follow Agile methodology with regular sprint demos, open communication, and milestone tracking to keep you informed."
-                    }
-                  }
-                ]
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://allsparktechnologies.com"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Services",
-                    "item": "https://allsparktechnologies.com/services/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Web & App Development",
-                    "item": "https://allsparktechnologies.com/web-and-app-development"
-                  }
-                ]
-              }
-            ]
+              ]
+            }
             ),
           }}
         />

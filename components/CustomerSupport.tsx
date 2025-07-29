@@ -74,17 +74,20 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   "@id": "https://allsparktechnologies.com/customer-support",
                   "url": "https://allsparktechnologies.com/customer-support",
                   "name": "Customer Support Services | AI Chatbots & Helpdesk Solutions",
-                  "description": "AST provides expert customer support services including AI chatbots, live chat, CRM integration, ecommerce order support, and multilingual helpdesk solutions.",
+                  "description": "All Spark Technologies delivers expert customer support services including AI chatbots, live chat, CRM integration, ecommerce support, and multilingual helpdesk solutions.",
+                  "inLanguage": "en-US",
                   "isPartOf": {
                     "@type": "WebSite",
-                    "name": "All Spark Technologies",
-                    "url": "https://allsparktechnologies.com"
+                    "url": "https://allsparktechnologies.com",
+                    "name": "All Spark Technologies"
                   },
-                  "inLanguage": "en-US"
+                  "breadcrumb": {
+                    "@id": "https://allsparktechnologies.com/customer-support#breadcrumb"
+                  }
                 },
                 {
                   "@type": "Service",
-                  "name": "Customer Support Services",
+                  "@id": "https://allsparktechnologies.com/customer-support#service",
                   "serviceType": [
                     "Customer Support",
                     "Customer Care Outsourcing",
@@ -96,20 +99,28 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                     "Knowledge Management",
                     "Technical Support"
                   ],
+                  "name": "Customer Support Services",
+                  "description": "Boost customer satisfaction with All Spark Technologies’ multichannel support: live chat, AI chatbots, ecommerce support, CRM integration, and multilingual helpdesk solutions.",
                   "provider": {
                     "@type": "Organization",
                     "name": "All Spark Technologies",
-                    "url": "https://allsparktechnologies.com"
+                    "url": "https://allsparktechnologies.com",
+                    "logo": "https://allsparktechnologies.com/logo.png",
+                    "sameAs": [
+                      "https://www.linkedin.com/company/all-spark-technologies",
+                      "https://www.facebook.com/allsparktechnologies.official",
+                      "https://www.instagram.com/allspark_technologies/"
+                    ]
                   },
                   "areaServed": {
                     "@type": "Country",
                     "name": "United States"
                   },
-                  "description": "Boost customer satisfaction with AST’s support services: live chat, AI chatbots, ecommerce support, CRM integration & more. Multichannel & multilingual.",
                   "url": "https://allsparktechnologies.com/customer-support"
                 },
                 {
                   "@type": "BreadcrumbList",
+                  "@id": "https://allsparktechnologies.com/customer-support#breadcrumb",
                   "itemListElement": [
                     {
                       "@type": "ListItem",
@@ -127,6 +138,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 },
                 {
                   "@type": "FAQPage",
+                  "@id": "https://allsparktechnologies.com/customer-support#faq",
                   "mainEntity": [
                     {
                       "@type": "Question",

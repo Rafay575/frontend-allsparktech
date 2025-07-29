@@ -70,19 +70,47 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
               "@graph": [
                 {
                   "@type": "WebPage",
-                  "@id": "https://allsparktechnologies.com/ecommerce-development",
+                  "@id": "https://allsparktechnologies.com/ecommerce-development#webpage",
                   "url": "https://allsparktechnologies.com/ecommerce-development",
                   "name": "Ecommerce Website Development Services | Custom eCommerce Design",
                   "description": "All Spark Technologies offers ecommerce website development services including mobile-first design, SEO optimization, ecommerce security, custom features, and multi-vendor platforms.",
                   "isPartOf": {
-                    "@type": "WebSite",
-                    "url": "https://allsparktechnologies.com",
-                    "name": "All Spark Technologies"
+                    "@id": "https://allsparktechnologies.com/#website"
                   },
                   "inLanguage": "en-US"
                 },
                 {
+                  "@type": "Organization",
+                  "@id": "https://allsparktechnologies.com/#organization",
+                  "name": "All Spark Technologies",
+                  "url": "https://allsparktechnologies.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://allsparktechnologies.com/images/logo.svg"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "638 Knollwood Road",
+                    "addressLocality": "Franklin Lakes",
+                    "addressRegion": "NJ",
+                    "postalCode": "07417",
+                    "addressCountry": "US"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-616-308-1863",
+                    "contactType": "Customer Support",
+                    "areaServed": "US"
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/all-spark-technologies",
+                    "https://www.facebook.com/allsparktechnologies.official",
+                    "https://www.instagram.com/allspark_technologies/"
+                  ]
+                },
+                {
                   "@type": "Service",
+                  "@id": "https://allsparktechnologies.com/ecommerce-development#service",
                   "name": "Ecommerce Website Development Services",
                   "serviceType": [
                     "Ecommerce Website Development",
@@ -95,20 +123,28 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                     "Ecommerce Optimization",
                     "Ecommerce Security"
                   ],
-                  "description": "Launch and scale your ecommerce business with All Spark Technologies. From custom storefronts to SEO, mobile-first design, security, and CRM integrations. we build ecommerce websites designed to convert.",
+                  "description": "Launch and scale your ecommerce business with All Spark Technologies. From custom storefronts to SEO, mobile-first design, security, and CRM integrations, we build ecommerce websites designed to convert.",
                   "provider": {
-                    "@type": "Organization",
-                    "name": "All Spark Technologies",
-                    "url": "https://allsparktechnologies.com"
+                    "@id": "https://allsparktechnologies.com/#organization"
                   },
                   "areaServed": {
                     "@type": "Country",
                     "name": "United States"
                   },
+                  "keywords": [
+                    "custom ecommerce development",
+                    "ecommerce website development company",
+                    "ecommerce design agency",
+                    "multi-vendor ecommerce solutions",
+                    "mobile-first ecommerce sites",
+                    "ecommerce seo experts",
+                    "headless ecommerce platforms"
+                  ],
                   "url": "https://allsparktechnologies.com/ecommerce-development"
                 },
                 {
                   "@type": "BreadcrumbList",
+                  "@id": "https://allsparktechnologies.com/ecommerce-development#breadcrumb",
                   "itemListElement": [
                     {
                       "@type": "ListItem",
@@ -126,6 +162,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 },
                 {
                   "@type": "FAQPage",
+                  "@id": "https://allsparktechnologies.com/ecommerce-development#faq",
                   "mainEntity": [
                     {
                       "@type": "Question",
@@ -180,7 +217,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       "name": "Can you help optimize my store for better conversions and SEO?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. Our ecommerce development services include experto SEO, UX/UI optimization, conversion rate optimization (CRO), and marketing automation tools to increase traffic and sales."
+                        "text": "Yes. Our ecommerce development services include expert SEO, UX/UI optimization, conversion rate optimization (CRO), and marketing automation tools to increase traffic and sales."
                       }
                     }
                   ]

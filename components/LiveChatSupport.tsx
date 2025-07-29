@@ -72,14 +72,15 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 {
                   "@type": "WebPage",
                   "@id": "https://allsparktechnologies.com/live-chat-support#webpage",
-                  "url": "https://allsparktechnologies.com/live-chat-support/",
+                  "url": "https://allsparktechnologies.com/live-chat-support",
                   "name": "Live Chat Support Services | 24/7 AI & Human Chat Solutions",
                   "description": "Enhance engagement with AST’s live chat services: 24/7 support, AI chatbots, CRM integration, and ecommerce chat. Secure, fast, and cost-effective.",
                   "inLanguage": "en-US",
                   "isPartOf": {
                     "@type": "WebSite",
                     "@id": "https://allsparktechnologies.com/#website",
-                    "name": "All Spark Technologies"
+                    "name": "All Spark Technologies",
+                    "url": "https://allsparktechnologies.com"
                   },
                   "primaryImageOfPage": {
                     "@type": "ImageObject",
@@ -103,8 +104,23 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       "@type": "ListItem",
                       "position": 2,
                       "name": "Live Chat Support",
-                      "item": "https://allsparktechnologies.com/live-chat-support/"
+                      "item": "https://allsparktechnologies.com/live-chat-support"
                     }
+                  ]
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://allsparktechnologies.com/#organization",
+                  "name": "All Spark Technologies",
+                  "url": "https://allsparktechnologies.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://allsparktechnologies.com/images/logo.svg"
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/all-spark-technologies",
+                    "https://www.facebook.com/allsparktechnologies.official",
+                    "https://www.instagram.com/allspark_technologies/"
                   ]
                 },
                 {
@@ -112,23 +128,6 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   "@id": "https://allsparktechnologies.com/live-chat-support#service",
                   "name": "Live Chat Support Services",
                   "description": "24/7 live chat support with AI chatbots and human agents. Ecommerce-ready website chat, CRM integrations, multilingual support, and scalable pricing.",
-                  "provider": {
-                    "@type": "Organization",
-                    "name": "All Spark Technologies",
-                    "url": "https://allsparktechnologies.com",
-                    "logo": {
-                      "@type": "ImageObject",
-                      "url": "https://allsparktechnologies.com/images/logo.svg"
-                    },
-                    "sameAs": [
-                      "https://www.linkedin.com/company/all-spark-technologies",
-                      "https://www.facebook.com/allsparktechnologies.official"
-                    ]
-                  },
-                  "areaServed": {
-                    "@type": "Country",
-                    "name": "United States"
-                  },
                   "serviceType": [
                     "Live Chat Support",
                     "24/7 Customer Chat",
@@ -141,6 +140,13 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                     "Affordable Live Chat Software",
                     "HIPAA, GDPR, PCI DSS Compliant Live Chat"
                   ],
+                  "provider": {
+                    "@id": "https://allsparktechnologies.com/#organization"
+                  },
+                  "areaServed": {
+                    "@type": "Country",
+                    "name": "United States"
+                  },
                   "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": "Live Chat Solutions",

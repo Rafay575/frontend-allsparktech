@@ -60,9 +60,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
       <Topnav />
       <Navbar2 />
       <ServicesTabs data={serviceData} />
-      
-    
-      <Footer2 />
+      {serviceData.script && (
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -81,7 +79,8 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   },
                   "sameAs": [
                     "https://www.linkedin.com/company/all-spark-technologies",
-                    "https://www.facebook.com/allsparktechnologies.official"
+                    "https://www.facebook.com/allsparktechnologies.official",
+                    "https://www.instagram.com/allspark_technologies/"
                   ],
                   "address": {
                     "@type": "PostalAddress",
@@ -100,11 +99,25 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   }
                 },
                 {
+                  "@type": "WebSite",
+                  "@id": "https://allsparktechnologies.com/#website",
+                  "url": "https://allsparktechnologies.com",
+                  "name": "AllSpark Technologies",
+                  "publisher": {
+                    "@id": "https://allsparktechnologies.com/#organization"
+                  },
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://allsparktechnologies.com/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                },
+                {
                   "@type": "WebPage",
                   "@id": "https://allsparktechnologies.com/custom-software-development#webpage",
                   "url": "https://allsparktechnologies.com/custom-software-development",
                   "name": "Custom Software Development | Bespoke Dev Services NYC",
-                  "description": "Custom software solutions tailored to your business. Trusted bespoke development company in NYC delivering scalable, high-performance applications.",
+                  "description": "AllSpark Technologies delivers bespoke software development in NYC scalable, high-performance digital solutions for enterprises, startups, and SMEs.",
                   "inLanguage": "en",
                   "isPartOf": {
                     "@id": "https://allsparktechnologies.com/#website"
@@ -112,10 +125,33 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   "primaryImageOfPage": {
                     "@type": "ImageObject",
                     "url": "https://testtest.libererllc.com/images/service/m3.webp"
+                  },
+                  "breadcrumb": {
+                    "@id": "https://allsparktechnologies.com/custom-software-development#breadcrumb"
                   }
                 },
                 {
+                  "@type": "BreadcrumbList",
+                  "@id": "https://allsparktechnologies.com/custom-software-development#breadcrumb",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://allsparktechnologies.com"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Custom Software Development",
+                      "item": "https://allsparktechnologies.com/custom-software-development"
+                    }
+                  ]
+                },
+                {
                   "@type": "Service",
+                  "@id": "https://allsparktechnologies.com/#customsoftware",
+                  "name": "Custom Software Development",
                   "serviceType": [
                     "Custom Software Development",
                     "Bespoke Software Development",
@@ -126,8 +162,13 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                     "Digital Transformation",
                     "Agile Software Development"
                   ],
+                  "description": "Custom software solutions tailored to your business goals. AllSpark Technologies specializes in scalable applications and digital innovation for diverse industries across the U.S.",
                   "provider": {
                     "@id": "https://allsparktechnologies.com/#organization"
+                  },
+                  "areaServed": {
+                    "@type": "Country",
+                    "name": "United States"
                   },
                   "audience": {
                     "@type": "Audience",
@@ -138,13 +179,6 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       "Fintech Startups",
                       "SaaS Companies"
                     ]
-                  },
-                  "areaServed": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressCountry": "US"
-                    }
                   },
                   "availableChannel": {
                     "@type": "ServiceChannel",
@@ -164,13 +198,14 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 },
                 {
                   "@type": "FAQPage",
+                  "@id": "https://allsparktechnologies.com/custom-software-development#faq",
                   "mainEntity": [
                     {
                       "@type": "Question",
                       "name": "Why should I opt for custom software instead of ready-made solutions?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Custom software aligns precisely with your workflows, offering better performance, flexibility, and cost-efficiency over time. AST’s custom development ensures unique features tailored to your business—ideal for industries like finance, retail, healthcare, and more."
+                        "text": "Custom software aligns precisely with your workflows, offering better performance, flexibility, and cost-efficiency over time. AllSpark’s custom development ensures unique features tailored to your business—ideal for industries like finance, retail, healthcare, and more."
                       }
                     },
                     {
@@ -178,7 +213,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       "name": "How long does custom software development take?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Project timelines vary. A small MVP might take 3–4 months, while enterprise-grade software for retail shops or SaaS platforms may require 6–12 months. AST provides a clear roadmap at the start of every project."
+                        "text": "Project timelines vary. A small MVP might take 3–4 months, while enterprise-grade software may require 6–12 months. AllSpark provides a clear roadmap at the start of every project."
                       }
                     },
                     {
@@ -202,7 +237,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       "name": "Will I have control over the development process?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. With AST, you’ll work alongside your dedicated software developer in NYC and participate in every sprint. Our client-first approach ensures complete visibility from design to delivery."
+                        "text": "Yes. With AllSpark, you’ll work alongside your dedicated software developer in NYC and participate in every sprint. Our client-first approach ensures complete visibility from design to delivery."
                       }
                     },
                     {
@@ -214,26 +249,14 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       }
                     }
                   ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://allsparktechnologies.com/#website",
-                  "url": "https://allsparktechnologies.com",
-                  "name": "AllSpark Technologies",
-                  "publisher": {
-                    "@id": "https://allsparktechnologies.com/#organization"
-                  },
-                  "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://allsparktechnologies.com/search?q={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                  }
                 }
               ]
             }
             ),
           }}
         />
+      )}
+      <Footer2 />
     </>
   );
 }

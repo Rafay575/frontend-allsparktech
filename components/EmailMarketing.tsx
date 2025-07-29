@@ -69,19 +69,18 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
               "@graph": [
                 {
                   "@type": "WebPage",
-                  "@id": "https://allsparktechnologies.com/email-marketing",
+                  "@id": "https://allsparktechnologies.com/email-marketing#webpage",
                   "url": "https://allsparktechnologies.com/email-marketing",
                   "name": "Email Marketing Services | Automation, Strategy & Analytics",
                   "description": "Boost ROI with AST's email marketing. Automated emails, ecommerce flows, analytics, and deliverability best practices that drive real business results.",
                   "inLanguage": "en-US",
                   "isPartOf": {
-                    "@type": "WebSite",
-                    "name": "All Spark Technologies",
-                    "url": "https://allsparktechnologies.com"
+                    "@id": "https://allsparktechnologies.com/#website"
                   }
                 },
                 {
                   "@type": "Service",
+                  "@id": "https://allsparktechnologies.com/email-marketing#service",
                   "name": "Email Marketing Services",
                   "serviceType": [
                     "Email Marketing",
@@ -94,20 +93,48 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                     "Mailing Templates",
                     "AI Email Personalization"
                   ],
+                  "description": "High-performance email campaigns with automation, analytics, segmentation, ecommerce flows, and mobile-optimized templates by AST.",
                   "provider": {
-                    "@type": "Organization",
-                    "name": "All Spark Technologies",
-                    "url": "https://allsparktechnologies.com"
+                    "@id": "https://allsparktechnologies.com/#organization"
                   },
                   "areaServed": {
                     "@type": "Country",
                     "name": "United States"
                   },
-                  "description": "High-performance email campaigns with automation, analytics, segmentation, ecommerce flows, and mobile-optimized templates by AST.",
-                  "url": "https://allsparktechnologies.com/email-marketing"
+                  "url": "https://allsparktechnologies.com/email-marketing",
+                  "keywords": [
+                    "email marketing",
+                    "email automation",
+                    "ecommerce email flows",
+                    "email campaign design",
+                    "email deliverability",
+                    "email marketing for small business"
+                  ]
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://allsparktechnologies.com/#organization",
+                  "name": "All Spark Technologies",
+                  "url": "https://allsparktechnologies.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://allsparktechnologies.com/images/logo.svg"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-616-308-1863",
+                    "contactType": "Customer Service",
+                    "areaServed": "US"
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/company/all-spark-technologies",
+                    "https://www.facebook.com/allsparktechnologies.official",
+                    "https://www.instagram.com/allspark_technologies/"
+                  ]
                 },
                 {
                   "@type": "BreadcrumbList",
+                  "@id": "https://allsparktechnologies.com/email-marketing#breadcrumb",
                   "itemListElement": [
                     {
                       "@type": "ListItem",
@@ -125,6 +152,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 },
                 {
                   "@type": "FAQPage",
+                  "@id": "https://allsparktechnologies.com/email-marketing#faqs",
                   "mainEntity": [
                     {
                       "@type": "Question",
@@ -178,7 +206,6 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 }
               ]
             }
-
             ),
           }}
         />

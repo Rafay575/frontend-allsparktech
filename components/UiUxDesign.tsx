@@ -70,6 +70,33 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
               "@context": "https://schema.org",
               "@graph": [
                 {
+                  "@type": "WebPage",
+                  "@id": "https://allsparktechnologies.com/ui-ux-design#webpage",
+                  "url": "https://allsparktechnologies.com/ui-ux-design",
+                  "name": "UI/UX Design Services | Website Interface Design Experts",
+                  "description": "Boost engagement with expert UI/UX design. Explore our design case studies, portfolios, and research-driven methods that power seamless digital experiences.",
+                  "inLanguage": "en-US",
+                  "isPartOf": {
+                    "@id": "https://allsparktechnologies.com/#website"
+                  },
+                  "breadcrumb": {
+                    "@id": "https://allsparktechnologies.com/ui-ux-design#breadcrumb"
+                  },
+                  "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": "https://testtest.libererllc.com/images/service/m9.webp"
+                  }
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://allsparktechnologies.com/#website",
+                  "url": "https://allsparktechnologies.com",
+                  "name": "All Spark Technologies",
+                  "publisher": {
+                    "@id": "https://allsparktechnologies.com/#organization"
+                  }
+                },
+                {
                   "@type": "Organization",
                   "@id": "https://allsparktechnologies.com/#organization",
                   "name": "All Spark Technologies",
@@ -94,52 +121,8 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   },
                   "sameAs": [
                     "https://www.linkedin.com/company/allsparktechnologies",
-                    "https://www.facebook.com/allsparktechnologies"
-                  ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://allsparktechnologies.com/#website",
-                  "url": "https://allsparktechnologies.com",
-                  "name": "All Spark Technologies",
-                  "publisher": {
-                    "@id": "https://allsparktechnologies.com/#organization"
-                  }
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://allsparktechnologies.com/ui-ux-design#webpage",
-                  "url": "https://allsparktechnologies.com/ui-ux-design",
-                  "name": "UI/UX Design Services | Website Interface Design Experts",
-                  "description": "Boost engagement with expert UI/UX design. Explore our design case studies, portfolios, and research-driven methods that power seamless digital experiences.",
-                  "inLanguage": "en-US",
-                  "isPartOf": {
-                    "@id": "https://allsparktechnologies.com/#website"
-                  },
-                  "breadcrumb": {
-                    "@id": "https://allsparktechnologies.com/ui-ux-design#breadcrumb"
-                  },
-                  "primaryImageOfPage": {
-                    "@type": "ImageObject",
-                    "url": "https://testtest.libererllc.com/images/service/m9.webp"
-                  }
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "https://allsparktechnologies.com/ui-ux-design#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": "https://allsparktechnologies.com/"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "UI/UX Design",
-                      "item": "https://allsparktechnologies.com/ui-ux-design"
-                    }
+                    "https://www.facebook.com/allsparktechnologies.official",
+                    "https://www.instagram.com/allspark_technologies/"
                   ]
                 },
                 {
@@ -152,16 +135,21 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                     "@id": "https://allsparktechnologies.com/#organization"
                   },
                   "areaServed": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Franklin Lakes",
-                      "addressRegion": "NJ",
-                      "addressCountry": "US"
-                    }
+                    "@type": "Country",
+                    "name": "United States"
                   },
-                  "serviceType": "UI/UX Design",
+                  "serviceType": "User Experience & User Interface Design",
                   "category": "UI/UX Design",
+                  "keywords": [
+                    "ui ux design services",
+                    "ux design company",
+                    "user interface design",
+                    "web and mobile app design",
+                    "ux audits",
+                    "wireframing and prototyping",
+                    "branding and design systems",
+                    "interaction design"
+                  ],
                   "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": "UI/UX Design Solutions",
@@ -218,6 +206,24 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                   }
                 },
                 {
+                  "@type": "BreadcrumbList",
+                  "@id": "https://allsparktechnologies.com/ui-ux-design#breadcrumb",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://allsparktechnologies.com/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "UI/UX Design",
+                      "item": "https://allsparktechnologies.com/ui-ux-design"
+                    }
+                  ]
+                },
+                {
                   "@type": "FAQPage",
                   "mainEntity": [
                     {
@@ -272,6 +278,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 }
               ]
             }
+
             ),
           }}
         />

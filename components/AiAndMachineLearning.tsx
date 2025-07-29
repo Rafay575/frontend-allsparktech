@@ -75,13 +75,13 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                 "@graph": [
                   {
                     "@type": "WebPage",
-                    "@id": "https://allsparktechnologies.com/ai-and-machine-learning/",
-                    "url": "https://allsparktechnologies.com/ai-and-machine-learning/",
+                    "@id": "https://allsparktechnologies.com/ai-and-machine-learning#webpage",
+                    "url": "https://allsparktechnologies.com/ai-and-machine-learning",
                     "name": "AI Development Company | Custom AI & ML Solutions USA",
                     "description": "Partner with a top AI development company for custom solutions. Discover AI platforms, use cases & ML models tailored to your business needs.",
-                    "inLanguage": "en",
+                    "inLanguage": "en-US",
                     "isPartOf": {
-                      "@id": "https://allsparktechnologies.com"
+                      "@id": "https://allsparktechnologies.com/#website"
                     }
                   },
                   {
@@ -91,7 +91,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                     "url": "https://allsparktechnologies.com",
                     "logo": {
                       "@type": "ImageObject",
-                      "url": "https://testtest.libererllc.com/images/service/m1.webp"
+                      "url": "https://allsparktechnologies.com/images/logo.svg"
                     },
                     "address": {
                       "@type": "PostalAddress",
@@ -106,10 +106,25 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       "telephone": "+1-616-308-1863",
                       "contactType": "Customer Support",
                       "areaServed": "US"
-                    }
+                    },
+                    "sameAs": [
+                      "https://www.linkedin.com/company/all-spark-technologies",
+                      "https://www.facebook.com/allsparktechnologies.official",
+                      "https://www.instagram.com/allspark_technologies/"
+                    ]
                   },
                   {
                     "@type": "Service",
+                    "@id": "https://allsparktechnologies.com/ai-and-machine-learning#service",
+                    "name": "AI & Machine Learning Development Services",
+                    "description": "All Spark Technologies is an AI development company building scalable AI platforms, ML models, NLP, and automation across industries. Get secure and intelligent solutions from an experienced artificial intelligence consulting firm.",
+                    "provider": {
+                      "@id": "https://allsparktechnologies.com/#organization"
+                    },
+                    "areaServed": {
+                      "@type": "Country",
+                      "name": "United States"
+                    },
                     "serviceType": [
                       "Custom AI Development",
                       "AI & ML Consulting",
@@ -119,15 +134,6 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       "Predictive Analytics",
                       "AI Chatbots & Speech Recognition"
                     ],
-                    "provider": {
-                      "@id": "https://allsparktechnologies.com/#organization"
-                    },
-                    "areaServed": {
-                      "@type": "Country",
-                      "name": "United States"
-                    },
-                    "name": "AI & Machine Learning Development Services",
-                    "description": "All Spark Technologies is an AI development company building scalable AI platforms, ML models, NLP, and automation across industries. Get secure and intelligent solutions from an experienced artificial intelligence consulting firm.",
                     "keywords": [
                       "artificial intelligence use cases",
                       "artificial intelligence consulting firm",
@@ -140,10 +146,11 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                       "apply machine learning",
                       "types of machine learning models"
                     ],
-                    "url": "https://allsparktechnologies.com/ai-and-machine-learning/"
+                    "url": "https://allsparktechnologies.com/ai-and-machine-learning"
                   },
                   {
                     "@type": "FAQPage",
+                    "@id": "https://allsparktechnologies.com/ai-and-machine-learning#faq",
                     "mainEntity": [
                       {
                         "@type": "Question",
@@ -192,6 +199,24 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
                           "@type": "Answer",
                           "text": "Absolutely. As a dedicated artificial intelligence consulting firm, we offer full lifecycle support from ideation to deployment and ongoing optimization."
                         }
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://allsparktechnologies.com/ai-and-machine-learning#breadcrumb",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://allsparktechnologies.com"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "AI & Machine Learning",
+                        "item": "https://allsparktechnologies.com/ai-and-machine-learning"
                       }
                     ]
                   }
