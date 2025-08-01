@@ -26,9 +26,6 @@ export interface aboutData {
   script: any;
 }
 
-
-
-
 export default function AboutPageComponent({ aboutData }: { aboutData: aboutData }) {
 
 
