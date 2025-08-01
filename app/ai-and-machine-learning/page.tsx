@@ -3,7 +3,6 @@ import AiAndMachineLearning from "@/components/AiAndMachineLearning";
 
 import { baseURL } from "@/API/baseURL";
 import axios from "axios";
-import  Script from "next/script";
 
 export async function generateMetadata() {
   return {
