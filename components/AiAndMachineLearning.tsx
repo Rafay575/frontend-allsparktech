@@ -5,7 +5,6 @@ import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
 import Footer2 from "@/components/Footer2";
 import ServicesTabs from "@/components/ServicesTabs";
-import Script from "next/script";
 
 export interface serviceData {
   hero: {

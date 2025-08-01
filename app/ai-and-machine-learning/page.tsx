@@ -1,6 +1,10 @@
 
 import AiAndMachineLearning from "@/components/AiAndMachineLearning";
 
+import { baseURL } from "@/API/baseURL";
+import axios from "axios";
+import  Script from "next/script";
+
 export async function generateMetadata() {
   return {
     title: "AI Development Company | Custom AI & ML Solutions USA",
@@ -41,9 +45,6 @@ export async function generateMetadata() {
   };
 }
 
-import { baseURL } from "@/API/baseURL";
-import axios from "axios";
-import  Script from "next/script";
 async function fetchServiceData() {
   const service = "ai-and-machine-learning";
   try {
