@@ -43,4 +43,4 @@ User-agent: *
 Disallow:
 
 Sitemap: https://allsparktechnologies.com/sitemap.xml
-Sitemap: https://allsparktechnologies.com/sitemap.html
+
