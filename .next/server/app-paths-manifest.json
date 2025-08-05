@@ -1,6 +1,4 @@
 {
   "/page": "app/page.js",
-  "/subservice/page": "app/subservice/page.js",
-  "/custom-software-development/page": "app/custom-software-development/page.js",
-  "/cloud-and-devops-solutions/page": "app/cloud-and-devops-solutions/page.js"
+  "/subservice/page": "app/subservice/page.js"
 }

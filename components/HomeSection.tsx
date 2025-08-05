@@ -96,7 +96,7 @@ export default function Home({homeData}:{homeData:HomePageData}) {
 
   return (
     <>
-      <Navbar />
+  
 
       <MetaTitle />
       <Hero homeData={homeData}/>

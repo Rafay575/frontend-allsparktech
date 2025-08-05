@@ -17,18 +17,6 @@
       "static/chunks/main-app.js",
       "static/css/app/subservice/page.css",
       "static/chunks/app/subservice/page.js"
-    ],
-    "/custom-software-development/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/custom-software-development/page.css",
-      "static/chunks/app/custom-software-development/page.js"
-    ],
-    "/cloud-and-devops-solutions/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/cloud-and-devops-solutions/page.css",
-      "static/chunks/app/cloud-and-devops-solutions/page.js"
     ]
   }
 }
