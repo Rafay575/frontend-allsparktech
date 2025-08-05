@@ -17,6 +17,60 @@
       "static/chunks/main-app.js",
       "static/css/app/custom-software-development/page.css",
       "static/chunks/app/custom-software-development/page.js"
+    ],
+    "/web-and-app-development/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/web-and-app-development/page.css",
+      "static/chunks/app/web-and-app-development/page.js"
+    ],
+    "/ai-and-machine-learning/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/ai-and-machine-learning/page.css",
+      "static/chunks/app/ai-and-machine-learning/page.js"
+    ],
+    "/cloud-and-devops-solutions/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/cloud-and-devops-solutions/page.css",
+      "static/chunks/app/cloud-and-devops-solutions/page.js"
+    ],
+    "/ui-ux-design/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/ui-ux-design/page.css",
+      "static/chunks/app/ui-ux-design/page.js"
+    ],
+    "/ecommerce-development/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/ecommerce-development/page.css",
+      "static/chunks/app/ecommerce-development/page.js"
+    ],
+    "/customer-support/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/customer-support/page.css",
+      "static/chunks/app/customer-support/page.js"
+    ],
+    "/email-marketing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/email-marketing/page.css",
+      "static/chunks/app/email-marketing/page.js"
+    ],
+    "/live-chat-support/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/live-chat-support/page.css",
+      "static/chunks/app/live-chat-support/page.js"
+    ],
+    "/digital-marketing-and-seo/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/digital-marketing-and-seo/page.css",
+      "static/chunks/app/digital-marketing-and-seo/page.js"
     ]
   }
 }
