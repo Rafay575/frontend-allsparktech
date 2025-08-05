@@ -64,6 +64,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
       <div>
         <Topnav />
         <Navbar2 />
+      <h1 className="hidden">AI & Machine Learning</h1>
         <ServicesTabs data={serviceData} />
         {serviceData.script && (
           <Script

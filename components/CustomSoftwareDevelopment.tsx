@@ -59,6 +59,7 @@ export default function CustomSoftwareDevelopment({ serviceData }: { serviceData
     <>
       <Topnav />
       <Navbar2 />
+      <h1 className="hidden">Custom Software Development Solutions</h1>
       <ServicesTabs data={serviceData} />
       {serviceData.script && (
         <Script
