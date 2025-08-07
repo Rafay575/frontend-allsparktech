@@ -11,7 +11,7 @@ export async function generateMetadata() {
       follow: true,
     },
     alternates: {
-      canonical: "https://allsparktechnologies.com/about/",
+      canonical: "https://allsparktechnologies.com/about",
     },
     openGraph: {
       title: "About AllSpark Technologies | US-Based Software Development Company",
