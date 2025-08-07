@@ -1,7 +1,5 @@
 {
-  "/ecommerce-development/page": "app/ecommerce-development/page.js",
-  "/live-chat-support/page": "app/live-chat-support/page.js",
-  "/digital-marketing-and-seo/page": "app/digital-marketing-and-seo/page.js",
-  "/email-marketing/page": "app/email-marketing/page.js",
-  "/customer-support/page": "app/customer-support/page.js"
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/custom-software-development/page": "app/custom-software-development/page.js"
 }
