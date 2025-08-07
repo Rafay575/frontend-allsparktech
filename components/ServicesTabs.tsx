@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import HeroSection from "@/components/HeroSection";
 import Card from "./Card";
 import ServiceAccordion from "./ServiceAccordion";
@@ -70,13 +69,7 @@ interface ServicesTabsProps {
 }
 
 export default function ServicesTabs({ data }: ServicesTabsProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
+ 
 
   const contentData = data;
 
