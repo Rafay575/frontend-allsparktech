@@ -907,6 +907,9 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mt-\[70px\] {
+  margin-top: 70px;
+}
 .block {
   display: block;
 }
@@ -1529,6 +1532,9 @@ video {
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1);
 }
+.bg-\[\] {
+  background-color: ;
+}
 .bg-opacity-90 {
   --tw-bg-opacity: 0.9;
 }
@@ -1693,6 +1699,14 @@ video {
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.py-\[\] {
+  padding-top: ;
+  padding-bottom: ;
+}
+.py-\[70px\] {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .\!pb-8 {
   padding-bottom: 2rem !important;

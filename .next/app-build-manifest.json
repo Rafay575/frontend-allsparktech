@@ -12,17 +12,17 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/custom-software-development/page": [
+    "/subservice/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/custom-software-development/page.css",
-      "static/chunks/app/custom-software-development/page.js"
+      "static/css/app/subservice/page.css",
+      "static/chunks/app/subservice/page.js"
     ],
-    "/about/page": [
+    "/customer-support/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/about/page.css",
-      "static/chunks/app/about/page.js"
+      "static/css/app/customer-support/page.css",
+      "static/chunks/app/customer-support/page.js"
     ]
   }
 }

@@ -15,6 +15,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import Image from 'next/image'
+import ServicesContact from '@/components/ServicesContact'
 
 
 export default function Hello() {
@@ -227,15 +228,8 @@ export default function Hello() {
                 <div className='container flex flex-col lg:flex-row '>
                     <div className='flex flex-col gap-[30px] w-full lg:w-[50%]'>
                         <p className='font-bold text-[30px] text-[#1F2937]  lg:text-[35px]  lg:leading-[40px]  '>What you get with DOOR3 custom software development</p>
-                        {data2.map((item, index) => (
-                            <div key={index} >
-                                <h3 className="font-semibold text-[24px] text-[#1F2937]">{item.title}</h3>
-                                <div className="-mt-3">
-                                    <div className="w-10 border-b-4 border-blue-500 inline-block"></div>
-                                </div>
-                                <p className="text-[15px] text-[#6f798b]">{item.description}</p>
-                            </div>
-                        ))}
+                        <p className="text-[15px] text-[#6f798b]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi rerum officia pariatur et assumenda cum eligendi, inventore modi minus odit, doloribus repudiandae? Explicabo tenetur inventore esse ex, omnis illo doloremque, dignissimos ipsum veniam in unde, at repellat doloribus sed saepe delectus quam eum. Odio officiis quo veniam omnis, facilis sed deserunt sit tempora ipsa eligendi, quod similique a adipisci laudantium qui explicabo, recusandae fugiat accusantium tenetur! Sunt ipsam, veritatis cumque, nobis fugiat quasi earum, libero quibusdam nesciunt ducimus deserunt ullam ab corporis. Magnam ipsum, harum unde natus expedita aut quis repellendus rerum earum dicta illo, assumenda doloribus? Velit fuga excepturi tempora omnis commodi? Quos, tenetur velit aliquam ea quod corporis illo mollitia tempora dolor repellendus, repudiandae architecto quam. Quidem magni magnam ipsa neque voluptates, porro repellendus culpa similique amet quibusdam ipsam sint harum blanditiis voluptatem esse temporibus aliquam, quaerat sunt. Cupiditate impedit iste corporis reprehenderit consectetur unde nulla numquam voluptatibus. Veniam officiis recusandae consequuntur a cumque libero maxime id cupiditate laudantium vero non earum corrupti vitae cum aperiam enim quasi, accusamus blanditiis quo? Accusantium doloremque perspiciatis, similique nam fugiat, at inventore rerum enim eius eum ratione quibusdam ipsum et? Dicta eum veniam, odio quos doloribus accusantium sunt cupiditate sapiente consectetur!</p>
+                           
                     </div>
                     <div className='w-full lg:w-[50%] lg:pl-[20px] lg:pl-[40px] '>
                         <Image src={img5} alt='img5' className='w-full mt-[30px] lg:mt-[0px]' />
@@ -268,7 +262,7 @@ export default function Hello() {
                 </div>
 
                 {/* Faq  */}
-                <div className="container mb-[60px]">
+                <div className="container ">
                     <p className='font-bold text-[30px] lg:text-[35px]  lg:leading-[40px] mb-[20px] text-[#1F2937]' >Your questions answered</p>
                     <Accordion type="single" collapsible>
                         {
@@ -283,6 +277,10 @@ export default function Hello() {
                         }
 
                     </Accordion>
+                </div>
+
+                <div className="container bg-[#2B4EFF] py-[70px]">
+                        <ServicesContact />
                 </div>
 
             </div>
