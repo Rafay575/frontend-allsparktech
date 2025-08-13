@@ -14,9 +14,17 @@ import {
 } from "@/components/ui/accordion"
 import Image from 'next/image'
 import ServicesContact from '@/components/ServicesContact'
+import { title } from 'process'
 
 
 export default function Hello() {
+    const json=[{
+        title:"Custom Software Development Solutions",
+        section2:{
+            title:"Transform Your Business with Enterprise Software Solutions",
+
+        }
+    }]
     const data = [
         {
             "title": "Custom-Built Solutions",
@@ -43,8 +51,6 @@ export default function Hello() {
             "description": "We don't just deliver software. We provide ongoing updates, maintenance, and feature enhancements through complete enterprise software development services."
         }
     ]
-
-
     const data3 = [
         {
             "title": "Industry Expertise",
@@ -113,7 +119,7 @@ export default function Hello() {
                 className="bg-cover bg-no-repeat h-[50vh]"
                 style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${demo.src})`, }}>
                 <div className="container flex flex-col justify-center items-center h-full">
-                    <p className='text-white text-[30px] lg:text-[40px] font-bold'>Custom Software Development Solutions</p>
+                    <p className='text-white text-[30px] lg:text-[40px] font-bold'>{json[0].title}</p>
                 </div>
             </section>
 
@@ -123,7 +129,7 @@ export default function Hello() {
                 {/* Title  */}
                 <div className="container">
                     <div className="mb-[30px]">
-                        <p className=' w-full lg:w-[65%] font-bold text-[30px] text-[#1F2937] lg:text-[35px]  lg:leading-[40px]'>Transform Your Business with Enterprise Software Solutions</p>
+                        <p className=' w-full lg:w-[65%] font-bold text-[30px] text-[#1F2937] lg:text-[35px]  lg:leading-[40px]'>{json[0].section2.title}</p>
                     </div>
                     <div className=' w-full lg:w-[65%] text-[#6f798b]'>
                         <p >Discover how our customized enterprise software solutions solve your biggest challenges and help your business thrive in a competitive world. As a leading enterprise software development company, we bring innovation, security, and scalability to the forefront of your digital transformation journey.</p>
