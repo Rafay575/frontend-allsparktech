@@ -42,11 +42,11 @@ const AboutClient = ({ aboutData }: { aboutData: aboutData }) => {
       <Topnav />
       <Navbar2 />
       <Hero2Section
-        title="About Us"
+        title="About"
         backgroundImage={`${baseURL}/images/about/${aboutData.heroimg}`}
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "About Us", href: "/About" },
+          { label: "About", href: "/About" },
         ]}
       />
       <ServiceCards aboutData={aboutData}/>

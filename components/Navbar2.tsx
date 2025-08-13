@@ -78,7 +78,7 @@ export default function Navbar2() {
                 href="/about"
                 className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
-                About Us
+                About 
               </Link>
             </li>
             <div className=" group">
@@ -395,7 +395,7 @@ export default function Navbar2() {
                   </li>
                   <li className="border-b pb-3">
                     <Link href="/about" onClick={() => setIsSidebarOpen(false)}>
-                      About Us
+                      About
                     </Link>
                   </li>
 
@@ -558,7 +558,7 @@ export default function Navbar2() {
                       href="/contact"
                       onClick={() => setIsSidebarOpen(false)}
                     >
-                      Contact Us
+                      Contact
                     </Link>
                   </li>
                   <li className="border-b pb-3">

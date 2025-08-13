@@ -1,5 +1,7 @@
 "use client";
+import Link from 'next/link';
 import React from 'react';
+
 
 const ServicesContact = () => {
   return (
@@ -16,12 +18,12 @@ const ServicesContact = () => {
         </h2>
 
         {/* Button */}
-        <a
+        <Link
           href="/contact"
           className="inline-block bg-white text-[#2B4EFF] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
         >
           Get in Touch
-        </a>
+        </Link>
       </div>
     </section>
   );

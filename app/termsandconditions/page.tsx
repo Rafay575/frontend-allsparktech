@@ -64,8 +64,8 @@ export default function page() {
               These Terms and Conditions (Terms) govern your use of our
               website located at{" "}
               <a
-                href="http://www.allsparktechnologies.com"
-                className="text-[#384BFF] underline"
+                href="https://www.allsparktechnologies.com"
+                className="text-[#384BFF] underline" target="_blank"
               >
                 www.allsparktechnologies.com
               </a>{" "}
