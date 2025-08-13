@@ -32,11 +32,11 @@ const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) =>
       <Topnav />
       <Navbar2 />
       <Hero2Section
-        title="Contact Us"
+        title="Contact"
         backgroundImage={`${baseURL}/images/contact/${contactData.heroimg}`}
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Contact Us", href: "/contact" },
+          { label: "Contact", href: "/contact" },
         ]}
       />
       <Contact pagedata={contactData}/>

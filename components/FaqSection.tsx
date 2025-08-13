@@ -90,7 +90,7 @@ export interface HomePageData {
 
 export default function FaqSection({homeData}:{homeData: HomePageData}) {
   return (
-    <section className="py-16" id="faq-section">
+    <section className="py-16" id="faqs">
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Image Section */}
         <div className="relative w-full max-w-md">

@@ -100,7 +100,7 @@ const Navbar = () => {
               href="/about"
               className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
             >
-              About Us
+              About
             </Link>
 
             {/* Services Mega Menu */}
@@ -314,7 +314,7 @@ const Navbar = () => {
               href="/contact"
               className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
             >
-              Contact Us
+              Contact
             </Link>
             <Link
               href="/blogs"
@@ -418,7 +418,7 @@ const Navbar = () => {
                         href="/about"
                         onClick={() => setIsSidebarOpen(false)}
                       >
-                        About Us
+                        About
                       </Link>
                     </li>
 
@@ -580,7 +580,7 @@ const Navbar = () => {
                         href="/contact"
                         onClick={() => setIsSidebarOpen(false)}
                       >
-                        Contact Us
+                        Contact
                       </Link>
                     </li>
                     <li className="border-b pb-3">
