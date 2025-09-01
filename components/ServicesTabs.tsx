@@ -64,14 +64,19 @@ type ContentData = {
   script?: any;
 };
 
-interface ServicesTabsProps {
-  data: ContentData;
+export interface subservices{
+  id:number,
+  slug:string,
+  service:string,
+  json:any,
 }
-
-export default function ServicesTabs({ data }: ServicesTabsProps) {
- 
-
+interface ServicesTabsComponentProps {
+  data: ContentData;
+  subServices: subservices[];
+}
+export default function ServicesTabs({ data, subServices }: ServicesTabsComponentProps){
   const contentData = data;
+  console.log("contentData :",contentData)
 
   return (
     <>
@@ -124,7 +129,7 @@ export default function ServicesTabs({ data }: ServicesTabsProps) {
           <div className="md:col-span-3">
             <section id="our-services">
               <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} layout>
-                <Card services={contentData.services} />
+                <Card subServices={subServices} introduction={contentData.introduction}  />
               </motion.div>
             </section>
 

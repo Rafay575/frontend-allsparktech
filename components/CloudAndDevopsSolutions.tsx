@@ -52,14 +52,26 @@ export interface serviceData {
   script: any;
   metadata: any;
 }
-export default function CustomSoftwareDevelopment({ serviceData }: { serviceData: serviceData }) {
+export interface subservices{
+  id:number,
+  slug:string,
+  service:string,
+  json:any,
+} 
+
+interface ServicesTabsComponentProps {
+  serviceData: serviceData;
+  subServices: subservices[];
+}
+
+export default function CustomSoftwareDevelopment({serviceData,subServices}:ServicesTabsComponentProps) {
 
   return (
     <>
-      <Topnav />
+      <Topnav /> 
       <Navbar2 />
       <h1 className="hidden">Cloud & DevOps Solutions</h1>
-      <ServicesTabs data={serviceData} />
+      <ServicesTabs data={serviceData} subServices={subServices} />
       {serviceData.script && (
         <Script
           id="structured-data"

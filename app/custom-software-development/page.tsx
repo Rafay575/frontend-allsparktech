@@ -1,4 +1,4 @@
-import CustomSoftwareDevelopment from"@/components/CustomSoftwareDevelopment"
+import CustomSoftwareDevelopment from "@/components/CustomSoftwareDevelopment"
 
 
 export async function generateMetadata() {
@@ -50,8 +50,21 @@ async function fetchServiceData() {
     console.error("Failed to fetch service data", error);
     throw new Error("Failed to fetch service data");
   }
+ 
+}
+async function fetchServiceData2() {
+  const service = "custom-software-development";
+  try {
+    const res = await axios.post(`${baseURL}/getbyservice`, { service: service });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
 }
 export default async function page() {
   const serviceData = await fetchServiceData();
-  return <CustomSoftwareDevelopment serviceData={serviceData} />
+  const subServices = await fetchServiceData2()
+  return <CustomSoftwareDevelopment serviceData={serviceData} subServices={subServices} />
 }
+

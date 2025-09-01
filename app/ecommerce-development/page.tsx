@@ -55,7 +55,21 @@ async function fetchServiceData() {
 }
 
 
+
+async function fetchServiceData2() {
+  const service = "ecommerce-development";
+  try {
+    const res = await axios.post(`${baseURL}/getbyservice`, { service: service });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
+}
+
 export default async function page() {
   const serviceData = await fetchServiceData();
-  return<EcommerceDevelopment serviceData={serviceData} />
+  const subServices = await fetchServiceData2()
+
+  return <EcommerceDevelopment serviceData={serviceData}  subServices={subServices} />
 }

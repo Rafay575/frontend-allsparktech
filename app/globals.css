@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 .hide-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 @layer base {
@@ -39,6 +42,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -75,6 +79,7 @@ html {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -84,48 +89,56 @@ html {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
 .swiper-pagination {
   display: none;
 }
 
 
-.blogcontent h1 {
+.h1 {
   font-size: 32px;
   margin-top: 15px;
   margin-bottom: 10px;
   font-weight: 900;
 }
-.blogcontent h2 {
+
+.h2 {
   font-size: 24px;
   margin-top: 14px;
   margin-bottom: 8px;
   font-weight: 800;
 
 }
-.blogcontent h3 {
+
+.h3 {
   font-size: 20px;
   font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 7px;
 
 }
-.blogcontent h3 ,.blogcontent ul,.blogcontent ol{
+
+
+
+.ul,
+.ol {
   margin-top: 12px;
   margin-bottom: 7px;
   font-weight: 700;
 
 }
-.blogcontent h4 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.blogcontent strong {
+
+.strong {
   margin-top: 9px;
   margin-bottom: 5px;
 }
-.blogcontent p,.blogcontent h5,.blogcontent li, .blogcontent a{
+
+.p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -138,21 +151,63 @@ html {
 .ql-align-right {
   text-align: right;
 }
+
 .ql-align-center {
   text-align: center;
 }
+
 .ql-align-justify {
   text-align: justify;
 }
+
 .ql-align-left {
   text-align: left;
 }
 
 
-.blogcontent{
+.blogcontent {
   width: 100%;
 }
 
-.container{
-  @apply w-[95%] lg:w-[80%] mx-auto 
+.container {
+  @apply w-[92%] lg:w-[80%] mx-auto
+}
+
+@media screen and (max-width:1023px) {
+  .steps {
+    margin-top: 0px !important;
+  }
+}
+
+.blogcontent ul {
+  list-style-type: disc;
+  /* bullets */
+  padding-left: 1.5rem;
+  /* indentation */
+  margin-bottom: 1rem;
+}
+
+
+ul {
+  list-style-type: disc;
+  /* bullets */
+  padding-left: 1.5rem;
+  /* indentation */
+  margin-bottom: 1rem;
+}
+
+ol {
+  list-style-type: decimal;
+  /* numbers */
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.serviceprocess{
+  background-image: url("../public/images/servicebg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.active{
+  @apply bg-[#384bff]
 }

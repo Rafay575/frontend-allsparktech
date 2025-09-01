@@ -1,5 +1,6 @@
 import WebAndAppDevelopment from '@/components/WebAndAppDevelopment'
-
+import { baseURL } from "@/API/baseURL";
+import axios from "axios";
 export async function generateMetadata() {
   return {
     title: "Top Web & App Development Company | All Spark Technologies",
@@ -33,15 +34,13 @@ export async function generateMetadata() {
       title: "Top Web & App Development Company | All Spark Technologies",
       description:
         "Build scalable, secure web & mobile apps with top web app development experts. Custom PWAs, SaaS, and startup solutions. Get started today.",
-      images: [
+      images: [ 
         "https://allsparktechnologies.com/assets/webapp-og.jpg",
       ],
     },
   };
 }
 
-import { baseURL } from "@/API/baseURL";
-import axios from "axios";
 async function fetchServiceData() {
   const service = "web-and-app-development";
   try {
@@ -53,7 +52,21 @@ async function fetchServiceData() {
   }
 }
 
+
+async function fetchServiceData2() {
+  const service = "web-and-app-development";
+  try {
+    const res = await axios.post(`${baseURL}/getbyservice`, { service: service });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
+}
+
 export default async function page() {
   const serviceData = await fetchServiceData();
-  return <WebAndAppDevelopment serviceData={serviceData} />
+  const subServices = await fetchServiceData2()
+
+  return <WebAndAppDevelopment serviceData={serviceData}  subServices={subServices} />
 }

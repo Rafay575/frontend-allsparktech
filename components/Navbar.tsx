@@ -62,19 +62,17 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`${plusJakartaSans.className} ${
-          isSticky
-            ? "fixed top-0 py-2 shadow-lg transition-all duration-300 left-0 w-full z-50 bg-white"
-            : "relative"
-        } transition-all `}
+        className={`${plusJakartaSans.className} ${isSticky
+          ? "fixed top-0 py-2 shadow-lg transition-all duration-300 left-0 w-full z-50 bg-white"
+          : "relative"
+          } transition-all `}
         style={{ zIndex: 100 }}
       >
         <div
-          className={`mx-auto bg-white relative transition-all duration-300 lg:max-w-4xl xl:max-w-6xl ${
-            isSticky
-              ? "max-w-[100%]"
-              : "max-w-[80%] rounded-full border-4 border-t-0 border-gray-400"
-          } px-4 py-3 flex items-center justify-between`}
+          className={`mx-auto bg-white relative transition-all duration-300 lg:max-w-4xl xl:max-w-6xl ${isSticky
+            ? "max-w-[100%]"
+            : "max-w-[80%] rounded-full border-4 border-t-0 border-gray-400"
+            } px-4 py-3 flex items-center justify-between`}
         >
           {/* Left: Logo / Brand */}
           <div className="flex items-center space-x-2">
@@ -125,7 +123,7 @@ const Navbar = () => {
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         Software Development & AI
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
+                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
                         <Link
                           href={{
                             pathname: "/custom-software-development"
@@ -218,14 +216,14 @@ const Navbar = () => {
                           />{" "}
                           Ecommerce Development
                         </Link>
-                      </ul>
+                      </div>
                     </div>
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         BPO & Tech-Enabled Services
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
-                        <li>
+                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
+                        <div>
                           <Link
                             href={{
                               pathname: "/customer-support"
@@ -241,8 +239,8 @@ const Navbar = () => {
                             />
                             Customer Support
                           </Link>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
                           <Link
                             href={{
                               pathname: "/email-marketing"
@@ -258,8 +256,8 @@ const Navbar = () => {
                             />
                             Email Marketing
                           </Link>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
                           <Link
                             href={{
                               pathname: "/live-chat-support"
@@ -275,18 +273,18 @@ const Navbar = () => {
                             />
                             Live Chat Support
                           </Link>
-                        </li>
+                        </div>
 
                         {/* Add more as needed */}
-                      </ul>
+                      </div>
                     </div>
                     {/* Column 2 */}
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         Marketing & Engagement
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
-                        <li>
+                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
+                        <div>
                           <Link
                             href={{
                               pathname: "/digital-marketing-and-seo",
@@ -302,8 +300,8 @@ const Navbar = () => {
                             />
                             Digital Marketing & SEO
                           </Link>
-                        </li>
-                      </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -407,23 +405,23 @@ const Navbar = () => {
                 </div>
                 <hr className="mt-3 " />
                 <nav className="flex flex-col mx-5 mt-10 h-full">
-                  <ul className="space-y-2 text-gray-900">
-                    <li className="border-b pb-3">
+                  <div className="space-y-2 text-gray-900 !list-unstyled">
+                    <div className="border-b pb-3">
                       <Link href="/" onClick={() => setIsSidebarOpen(false)}>
                         Home
                       </Link>
-                    </li>
-                    <li className="border-b pb-3">
+                    </div>
+                    <div className="border-b pb-3">
                       <Link
                         href="/about"
                         onClick={() => setIsSidebarOpen(false)}
                       >
                         About
                       </Link>
-                    </li>
+                    </div>
 
                     {/* Services with smooth dropdown */}
-                    <li className="border-b pb-3">
+                    <div className="border-b pb-3">
                       <button
                         className="flex items-center text-gray-700 font-semibold"
                         onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -431,9 +429,8 @@ const Navbar = () => {
                         Services
                         {/* Replace with your ChevronDown component/icon */}
                         <svg
-                          className={`ml-1 h-4 w-4 transition-transform duration-300 ${
-                            isServicesOpen ? "rotate-180" : ""
-                          }`}
+                          className={`ml-1 h-4 w-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""
+                            }`}
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -455,8 +452,8 @@ const Navbar = () => {
                             className="overflow-hidden pl-2 text-xs text-gray-700"
                           >
                             <div className="mt-2">
-                              <ul className="space-y-2">
-                                <li>
+                              <div className="space-y-2 !list-unstyled">
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/custom-software-development"
@@ -466,8 +463,8 @@ const Navbar = () => {
                                   >
                                     Custom Software Development
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/web-and-app-development"
@@ -477,8 +474,8 @@ const Navbar = () => {
                                   >
                                     Web &amp; App Development
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/ai-and-machine-learning",
@@ -488,8 +485,8 @@ const Navbar = () => {
                                   >
                                     AI &amp; Machine Learning
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/cloud-and-devops-solutions",
@@ -499,8 +496,8 @@ const Navbar = () => {
                                   >
                                     Cloud &amp; DevOps Solutions
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/ui-ux-design",
@@ -510,8 +507,8 @@ const Navbar = () => {
                                   >
                                     UI/UX Design
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/ecommerce-development"
@@ -521,9 +518,9 @@ const Navbar = () => {
                                   >
                                     Ecommerce Development
                                   </Link>
-                                </li>
+                                </div>
 
-                                <li>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/customer-support",
@@ -533,8 +530,8 @@ const Navbar = () => {
                                   >
                                     Customer Support
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/email-marketing"
@@ -544,8 +541,8 @@ const Navbar = () => {
                                   >
                                     Email Marketing
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/live-chat-support",
@@ -555,9 +552,9 @@ const Navbar = () => {
                                   >
                                     Live Chat Support
                                   </Link>
-                                </li>
+                                </div>
 
-                                <li>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/digital-marketing-and-seo",
@@ -567,31 +564,31 @@ const Navbar = () => {
                                   >
                                     Digital Marketing &amp; SEO
                                   </Link>
-                                </li>
-                              </ul>
+                                </div>
+                              </div>
                             </div>
                           </motion.div>
                         )}
                       </AnimatePresence>
-                    </li>
+                    </div>
 
-                    <li className="border-b pb-3">
+                    <div className="border-b pb-3">
                       <Link
                         href="/contact"
                         onClick={() => setIsSidebarOpen(false)}
                       >
                         Contact
                       </Link>
-                    </li>
-                    <li className="border-b pb-3">
+                    </div>
+                    <div className="border-b pb-3">
                       <Link
                         href="/blogs"
                         onClick={() => setIsSidebarOpen(false)}
                       >
                         Blogs
                       </Link>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                 </nav>
 
                 <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2  ">
@@ -614,3 +611,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

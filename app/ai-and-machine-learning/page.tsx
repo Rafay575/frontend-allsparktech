@@ -37,7 +37,7 @@ export async function generateMetadata() {
       images: [
         "https://allsparktechnologies.com/assets/images/ai-og-image.jpg",
       ],
-    },
+    }, 
   };
 }
 
@@ -54,7 +54,22 @@ async function fetchServiceData() {
   }
 }
 
+async function fetchServiceData2() {
+  const service = "ai-and-machine-learning";
+  try {
+    const res = await axios.post(`${baseURL}/getbyservice`, { service: service });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
+}
+
 export default async function Page() {
   const serviceData = await fetchServiceData();
-  return <AiAndMachineLearning serviceData={serviceData} />;
+  const subServices = await fetchServiceData2()
+
+  return <AiAndMachineLearning serviceData={serviceData} subServices={subServices} />;
 }
+
+

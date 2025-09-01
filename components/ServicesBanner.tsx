@@ -1,0 +1,51 @@
+import Image from 'next/image'
+import React from 'react'
+import img from "@/public/images/ctaThumb1_1.png"
+import arrow from "@/public/images/icons/arrow2.png"
+import rightarrow from "@/public/images/rightarrow.png"
+import leftarrow from "@/public/images/leftarrow.png"
+import contactoverlay from "@/public/images/contactoverlay.png"
+import { StaticImageData } from "next/image";
+
+interface ServiceBanner {
+  image: StaticImageData;
+  Subtitle: string;
+  title: string;
+  des: string;
+  btnText: string;
+}
+export default function ServicesBanner() {
+    const serviceBanner:ServiceBanner={
+        image:img,
+        Subtitle:"About Company",
+        title:"Start Your Software Development Journey Today",
+        des:"Partner with AllSpark Technologies for secure, scalable, custom web development solutions that drive long-term business growth.",
+        btnText:"Talk To Specialist"
+    }
+    return (
+        <div className='my-[50px] lg:my-[70px] py-[50px] container flex flex-col md:flex-row items-center flex-wrap py-[20px]  px-[30px] lg:px-[40px] rounded-[10px] bg-[#384bff] text-white gap-[30px] relative'>
+            <div className='w-full md:w-[22%] relative z-10'>
+                <Image src={serviceBanner.image} alt='img' />
+            </div>
+            <div className='w-full md:w-[73%]  flex gap-[10px] flex-wrap items-center  relative z-10'>
+                <div className='w-full 2xl:w-[74%]'>
+                    <div className="mb-2 flex items-center space-x-4 text-xs font-semibold uppercase tracking-wide text-white">
+                        <Image src={leftarrow} alt="img" className=" w-[40px]" />
+                        <span>{serviceBanner.Subtitle}</span>
+                        <Image src={rightarrow} alt="img" className=" w-[40px]" />
+                    </div>
+                    <h2 className="text-2xl font-bold !leading-normal sm:text-3xl">
+                        {serviceBanner.title}
+                    </h2>
+                    <p className="mt-4 text-base text-white/80">
+                        <span className="mb-5 block">{serviceBanner.des}</span>
+                    </p>
+                </div>
+                <div className='w-full 2xl:w-[24%] flex items-center'>
+                    <button className='bg-white text-black flex items-center gap-[10px] py-[7px] px-[25px] rounded-[25px]'>{serviceBanner.btnText}<Image src={arrow} alt='img' /></button>
+                </div>
+            </div>
+            <Image src={contactoverlay} alt='contactoverlay' className=' z-[2] absolute right-[30%] bottom-0'/>
+        </div>
+    )
+}

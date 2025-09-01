@@ -6,6 +6,7 @@ import Footer2 from "@/components/Footer2";
 import ServicesTabs from "@/components/ServicesTabs";
 import Script from "next/script";
 
+
 export interface serviceData {
   hero: {
     title: string;
@@ -53,17 +54,25 @@ export interface serviceData {
   metadata: any;
 }
 
+export interface subservices{
+  id:number,
+  slug:string,
+  service:string,
+  json:any,
+} 
 
+interface ServicesTabsComponentProps {
+  serviceData: serviceData;
+  subServices: subservices[];
+}
 
-export default function CustomSoftwareDevelopment({ serviceData }: { serviceData: serviceData }) {
-
-
+export default function CustomSoftwareDevelopment({serviceData,subServices}:ServicesTabsComponentProps) {
   return (
     <>
-      <Topnav />
+      <Topnav /> 
       <Navbar2 />
       <h1 className="hidden">Web & App Development</h1>
-      <ServicesTabs data={serviceData} />
+      <ServicesTabs data={serviceData} subServices={subServices} />
       {serviceData.script && (
         <Script
           id="structured-data"

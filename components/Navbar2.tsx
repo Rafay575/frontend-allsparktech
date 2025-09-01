@@ -64,23 +64,23 @@ export default function Navbar2() {
           </div>
 
           {/* Middle: Nav links (Desktop) */}
-          <ul className="hidden space-x-4 items-center font-medium text-gray-700 lg:flex">
-            <li>
+          <div className="hidden space-x-4 items-center font-medium text-gray-700 lg:flex !list-unstyled">
+            <div>
               <Link
                 href="/"
                 className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
                 Home
               </Link>
-            </li>
-            <li>
+            </div>
+            <div>
               <Link
                 href="/about"
                 className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
                 About 
               </Link>
-            </li>
+            </div>
             <div className=" group">
               <button className="flex items-center text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white">
                 Services
@@ -102,7 +102,7 @@ export default function Navbar2() {
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         Software Development & AI
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
+                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
                         <Link
                           href={{
                             pathname: "/custom-software-development",
@@ -195,14 +195,14 @@ export default function Navbar2() {
                           />{" "}
                           Ecommerce Development
                         </Link>
-                      </ul>
+                      </div>
                     </div>
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         BPO & Tech-Enabled Services
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
-                        <li>
+                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
+                        <div>
                           <Link
                             href={{
                               pathname: "/customer-support",
@@ -218,8 +218,8 @@ export default function Navbar2() {
                             />
                             Customer Support
                           </Link>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
                           <Link
                             href={{
                               pathname: "/email-marketing",
@@ -235,8 +235,8 @@ export default function Navbar2() {
                             />
                             Email Marketing
                           </Link>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
                           <Link
                             href={{
                               pathname: "/live-chat-support",
@@ -252,18 +252,18 @@ export default function Navbar2() {
                             />
                             Live Chat Support
                           </Link>
-                        </li>
+                        </div>
 
                         {/* Add more as needed */}
-                      </ul>
+                      </div>
                     </div>
                     {/* Column 2 */}
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         Marketing & Engagement
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
-                        <li>
+                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
+                        <div>
                           <Link
                             href={{
                               pathname: "/digital-marketing-and-seo",
@@ -279,31 +279,31 @@ export default function Navbar2() {
                             />
                             Digital Marketing & SEO
                           </Link>
-                        </li>
-                      </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <li>
+            <div>
               <Link
                 href="/contact"
                 className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
                 Contact
               </Link>
-            </li>
-            <li>
+            </div>
+            <div>
               <Link
                 href="/blogs"
                 className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
                 Blogs
               </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
 
           {/* Hamburger Button (Mobile) */}
           <button
@@ -387,20 +387,20 @@ export default function Navbar2() {
               </div>
               <hr className="mt-3 " />
               <nav className="flex flex-col mx-5 mt-10 h-full">
-                <ul className="space-y-2 text-gray-900">
-                  <li className="border-b pb-3">
+                <div className="space-y-2 text-gray-900 !list-unstyled">
+                  <div className="border-b pb-3">
                     <Link href="/" onClick={() => setIsSidebarOpen(false)}>
                       Home
                     </Link>
-                  </li>
-                  <li className="border-b pb-3">
+                  </div>
+                  <div className="border-b pb-3">
                     <Link href="/about" onClick={() => setIsSidebarOpen(false)}>
                       About
                     </Link>
-                  </li>
+                  </div>
 
                   {/* Services with smooth dropdown */}
-                  <li className="border-b pb-3">
+                  <div className="border-b pb-3">
                     <button
                       className="flex items-center text-gray-700 font-semibold"
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -432,8 +432,8 @@ export default function Navbar2() {
                           className="overflow-hidden pl-2 text-xs text-gray-700"
                         >
                           <div className="mt-2">
-                            <ul className="space-y-2">
-                              <li>
+                            <div className="space-y-2 !list-unstyled">
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/custom-software-development",
@@ -443,8 +443,8 @@ export default function Navbar2() {
                                 >
                                   Custom Software Development
                                 </Link>
-                              </li>
-                              <li>
+                              </div>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/web-and-app-development",
@@ -455,8 +455,8 @@ export default function Navbar2() {
                                 >
                                   Web &amp; App Development
                                 </Link>
-                              </li>
-                              <li>
+                              </div>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/ai-and-machine-learning",
@@ -466,8 +466,8 @@ export default function Navbar2() {
                                 >
                                   AI &amp; Machine Learning
                                 </Link>
-                              </li>
-                              <li>
+                              </div>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/cloud-and-devops-solutions",
@@ -477,8 +477,8 @@ export default function Navbar2() {
                                 >
                                   Cloud &amp; DevOps Solutions
                                 </Link>
-                              </li>
-                              <li>
+                              </div>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/ui-ux-design",
@@ -488,8 +488,8 @@ export default function Navbar2() {
                                 >
                                   UI/UX Design
                                 </Link>
-                              </li>
-                              <li>
+                              </div>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/ecommerce-development",
@@ -499,9 +499,9 @@ export default function Navbar2() {
                                 >
                                   Ecommerce Development
                                 </Link>
-                              </li>
+                              </div>
 
-                              <li>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/customer-support",
@@ -511,8 +511,8 @@ export default function Navbar2() {
                                 >
                                   Customer Support
                                 </Link>
-                              </li>
-                              <li>
+                              </div>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/email-marketing",
@@ -522,8 +522,8 @@ export default function Navbar2() {
                                 >
                                   Email Marketing
                                 </Link>
-                              </li>
-                              <li>
+                              </div>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/live-chat-support",
@@ -533,9 +533,9 @@ export default function Navbar2() {
                                 >
                                   Live Chat Support
                                 </Link>
-                              </li>
+                              </div>
 
-                              <li>
+                              <div>
                                 <Link
                                   href={{
                                     pathname: "/digital-marketing-and-seo",
@@ -545,28 +545,28 @@ export default function Navbar2() {
                                 >
                                   Digital Marketing &amp; SEO
                                 </Link>
-                              </li>
-                            </ul>
+                              </div>
+                            </div>
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </li>
+                  </div>
 
-                  <li className="border-b pb-3">
+                  <div className="border-b pb-3">
                     <Link
                       href="/contact"
                       onClick={() => setIsSidebarOpen(false)}
                     >
                       Contact
                     </Link>
-                  </li>
-                  <li className="border-b pb-3">
+                  </div>
+                  <div className="border-b pb-3">
                     <Link href="/blogs" onClick={() => setIsSidebarOpen(false)}>
                       Blogs
                     </Link>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </nav>
               <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2  ">
                 <div className="max-w-[75%] mx-auto mt-3 text-center">

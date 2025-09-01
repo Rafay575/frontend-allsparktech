@@ -48,7 +48,7 @@ export default function BlogPage() {
       }
     };
 
-    fetchBlogs(); // Don't forget to call the async function
+    fetchBlogs(); 
   }, []);
 
   if (isLoading) return <div className="text-center py-10">Loading...</div>;

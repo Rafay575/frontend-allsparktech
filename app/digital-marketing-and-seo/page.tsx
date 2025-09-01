@@ -52,7 +52,22 @@ async function fetchServiceData() {
     throw new Error("Failed to fetch service data");
   }
 }
+
+async function fetchServiceData2() {
+  const service = "digital-marketing-and-seo";
+
+  try {
+    const res = await axios.post(`${baseURL}/getbyservice`, { service: service });
+    return res.data;
+  } catch (error) {
+    console.error("Failed to fetch service data", error);
+    throw new Error("Failed to fetch service data");
+  }
+}
+
 export default async function page() {
   const serviceData = await fetchServiceData();
-  return <DigitalMarketingAndSeo serviceData={serviceData} />
+  const subServices = await fetchServiceData2()
+
+  return <DigitalMarketingAndSeo serviceData={serviceData}  subServices={subServices} />
 }

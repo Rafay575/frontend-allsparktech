@@ -1,7 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // safe to leave empty or include valid options only
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "5000",
+        pathname: "/images/blogs/**",
+      },
+    ],
+  },
+
 };
 
 export default nextConfig;
