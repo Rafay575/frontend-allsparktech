@@ -15,6 +15,7 @@ import React from 'react'
 import {ServicePageDataProps} from "@/lib/types"
 
 export default function NewServicePage({servicePageData}:ServicePageDataProps) {
+    console.log(servicePageData)
     return (
         <>
             <ServiceHero serviceHero={servicePageData.serviceHero} />

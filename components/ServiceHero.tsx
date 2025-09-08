@@ -56,7 +56,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                             <label htmlFor="name">Your Message*</label>
                             <textarea placeholder='Enter Message' className='mt-[10px] min-h-[150px] placeholder-white text-white w-full border bg-transparent py-[10px] px-[8px]'></textarea>
                         </div>
-                        <button className='px-[20px] py-[10px] font-[500] bg-white text-black rounded-[25px] text-center'>Get In Touch</button>
+                        <button className='px-[20px] py-[10px] font-[500] bg-white text-black rounded-[25px] text-center'>{serviceHero.btnText3}</button>
                     </div>
                 </div>
             </div>
