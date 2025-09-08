@@ -1,24 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/404/page": "app/404/page.js",
-  "/ai-and-machine-learning/page": "app/ai-and-machine-learning/page.js",
-  "/about/page": "app/about/page.js",
-  "/blogs/page": "app/blogs/page.js",
-  "/digital-marketing/page": "app/digital-marketing/page.js",
-  "/cloud-and-devops-solutions/page": "app/cloud-and-devops-solutions/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/customer-support/page": "app/customer-support/page.js",
-  "/email-marketing/page": "app/email-marketing/page.js",
-  "/ecommerce-development/page": "app/ecommerce-development/page.js",
-  "/mobile-app-development/page": "app/mobile-app-development/page.js",
-  "/live-chat-support/page": "app/live-chat-support/page.js",
-  "/page": "app/page.js",
-  "/privacypolicy/page": "app/privacypolicy/page.js",
-  "/newservice/page": "app/newservice/page.js",
-  "/seo/page": "app/seo/page.js",
-  "/subservice/[slug]/page": "app/subservice/[slug]/page.js",
-  "/website-development/page": "app/website-development/page.js",
-  "/blogs/[urlName]/page": "app/blogs/[urlName]/page.js",
-  "/ui-ux-design/page": "app/ui-ux-design/page.js",
-  "/termsandconditions/page": "app/termsandconditions/page.js"
+  "/website-development/page": "app/website-development/page.js"
 }
