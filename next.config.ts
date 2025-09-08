@@ -4,14 +4,12 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "5000",
-        pathname: "/images/blogs/**",
+        protocol: 'https',
+        hostname: 'vercel.libererllc.com',
+        pathname: '/images/**', // Optionally restrict to specific paths
       },
     ],
   },
-
 };
 
 export default nextConfig;

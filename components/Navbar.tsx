@@ -126,22 +126,7 @@ const Navbar = () => {
                       <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
                         <Link
                           href={{
-                            pathname: "/custom-software-development"
-                          }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300"
-                        >
-                          <Image
-                            className="mr-2"
-                            src={"/images/development-01.svg"}
-                            alt="icon"
-                            width={30}
-                            height={30}
-                          />
-                          Custom Software Development
-                        </Link>
-                        <Link
-                          href={{
-                            pathname: "/web-and-app-development"
+                            pathname: "/website-development"
                           }}
                           className="flex items-center hover:text-[#384BFF] transition duration-300"
                         >
@@ -152,7 +137,22 @@ const Navbar = () => {
                             width={30}
                             height={30}
                           />
-                          Web & App Development
+                          Website Development
+                        </Link>
+                        <Link
+                          href={{
+                            pathname: "/mobile-app-development"
+                          }}
+                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                        >
+                          <Image
+                            className="mr-2"
+                            src={"/images/development-01.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />
+                          Mobile App Development
                         </Link>
                         <Link
                           href={{
@@ -287,7 +287,7 @@ const Navbar = () => {
                         <div>
                           <Link
                             href={{
-                              pathname: "/digital-marketing-and-seo",
+                              pathname: "/seo",
                             }}
                             className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
                           >
@@ -298,7 +298,24 @@ const Navbar = () => {
                               width={30}
                               height={30}
                             />
-                            Digital Marketing & SEO
+                            SEO
+                          </Link>
+                        </div>
+                        <div>
+                          <Link
+                            href={{
+                              pathname: "/digital-marketing",
+                            }}
+                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                          >
+                            <Image
+                              className="mr-2"
+                              src={"/images/digital-marketing-icon-01.svg"}
+                              alt="icon"
+                              width={30}
+                              height={30}
+                            />
+                            Digital Marketing
                           </Link>
                         </div>
                       </div>
@@ -456,23 +473,23 @@ const Navbar = () => {
                                 <div>
                                   <Link
                                     href={{
-                                      pathname: "/custom-software-development"
+                                      pathname: "/website-development"
                                     }}
                                     onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center hover:text-blue-600 transition duration-300"
                                   >
-                                    Custom Software Development
+                                    Website Development
                                   </Link>
                                 </div>
                                 <div>
                                   <Link
                                     href={{
-                                      pathname: "/web-and-app-development"
+                                      pathname: "/mobile-app-development"
                                     }}
                                     onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center hover:text-blue-600 transition duration-300"
                                   >
-                                    Web &amp; App Development
+                                    Mobile App Development
                                   </Link>
                                 </div>
                                 <div>
@@ -557,12 +574,23 @@ const Navbar = () => {
                                 <div>
                                   <Link
                                     href={{
-                                      pathname: "/digital-marketing-and-seo",
+                                      pathname: "/seo",
                                     }}
                                     onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center hover:text-blue-600 transition duration-300"
                                   >
-                                    Digital Marketing &amp; SEO
+                                    SEO
+                                  </Link>
+                                </div>
+                                <div>
+                                  <Link
+                                    href={{
+                                      pathname: "/digital-marketing",
+                                    }}
+                                    onClick={() => setIsSidebarOpen(false)}
+                                    className="flex items-center hover:text-blue-600 transition duration-300"
+                                  >
+                                    Digital Marketing
                                   </Link>
                                 </div>
                               </div>

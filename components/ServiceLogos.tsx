@@ -1,22 +1,17 @@
 "use client";
-
 import React from "react";
-import Image, { StaticImageData } from "next/image";
-import logo1 from "@/public/images/companies/logo-1.png";
-import logo2 from "@/public/images/companies/logo-2.png";
-import logo3 from "@/public/images/companies/logo-3.png";
-import logo4 from "@/public/images/companies/logo-4.png";
-import logo5 from "@/public/images/companies/logo-5.png";
+import Image from "next/image";
+import { baseURL } from "@/API/baseURL";
+import { StaticImageData } from "next/image";
 
-// ✅ Interface
 interface serviceLogos {
-  logos: StaticImageData[];
+  logos: (string | StaticImageData)[];
 }
-
-export default function Logos() {
-  const serviceLogos: serviceLogos = {
-    logos: [logo1, logo2, logo3, logo4, logo5],
-  };
+interface ServiceLogosProps {
+  serviceLogos: serviceLogos;
+}
+export default function Logos({ serviceLogos }: ServiceLogosProps) {
+  
 
   return (
     <section className="py-8 border-gray-400">
@@ -27,7 +22,7 @@ export default function Logos() {
             className="flex w-[50%] md:w-[20%] items-center justify-center"
           >
             <Image
-              src={logo}
+              src={`${baseURL}/images/services/${logo}`}
               alt={`logo-${index + 1}`}
               width={150}
               height={50}

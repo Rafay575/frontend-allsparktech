@@ -37,19 +37,16 @@ export default function Navbar2() {
   return (
     <>
       <nav
-        className={`${
-          plusJakartaSans.className
-        } bg-white relative flex items-center shadow-md transition-all duration-300 ${
-          isSticky
+        className={`${plusJakartaSans.className
+          } bg-white relative flex items-center shadow-md transition-all duration-300 ${isSticky
             ? "sticky top-0 left-0 w-full z-50 shadow-lg"
             : " w-full z-50 shadow-lg sticky"
-        }`}
+          }`}
         style={{ zIndex: 100 }}
       >
         <div
-          className={`flex-1 flex py-3 items-center justify-around ${
-            isSticky ? "max-w-[100%]" : ""
-          }`}
+          className={`flex-1 flex py-3 items-center justify-around ${isSticky ? "max-w-[100%]" : ""
+            }`}
         >
           {/* Left: Logo */}
           <div className="flex items-center space-x-2">
@@ -78,7 +75,7 @@ export default function Navbar2() {
                 href="/about"
                 className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
-                About 
+                About
               </Link>
             </div>
             <div className=" group">
@@ -105,22 +102,7 @@ export default function Navbar2() {
                       <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
                         <Link
                           href={{
-                            pathname: "/custom-software-development",
-                          }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300"
-                        >
-                          <Image
-                            className="mr-2"
-                            src={"/images/development-01.svg"}
-                            alt="icon"
-                            width={30}
-                            height={30}
-                          />
-                          Custom Software Development
-                        </Link>
-                        <Link
-                          href={{
-                            pathname: "/web-and-app-development",
+                            pathname: "/website-development",
                           }}
                           className="flex items-center hover:text-[#384BFF] transition duration-300"
                         >
@@ -131,7 +113,22 @@ export default function Navbar2() {
                             width={30}
                             height={30}
                           />
-                          Web & App Development
+                          Website Development
+                        </Link>
+                        <Link
+                          href={{
+                            pathname: "/mobile-app-development",
+                          }}
+                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                        >
+                          <Image
+                            className="mr-2"
+                            src={"/images/development-01.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />
+                          Mobile App Development
                         </Link>
                         <Link
                           href={{
@@ -266,7 +263,7 @@ export default function Navbar2() {
                         <div>
                           <Link
                             href={{
-                              pathname: "/digital-marketing-and-seo",
+                              pathname: "/seo",
                             }}
                             className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
                           >
@@ -277,7 +274,24 @@ export default function Navbar2() {
                               width={30}
                               height={30}
                             />
-                            Digital Marketing & SEO
+                            SEO
+                          </Link>
+                        </div>
+                        <div>
+                          <Link
+                            href={{
+                              pathname: "/digital-marketing",
+                            }}
+                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                          >
+                            <Image
+                              className="mr-2"
+                              src={"/images/digital-marketing-icon-01.svg"}
+                              alt="icon"
+                              width={30}
+                              height={30}
+                            />
+                            Digital Marketing
                           </Link>
                         </div>
                       </div>
@@ -408,9 +422,8 @@ export default function Navbar2() {
                       Services
                       {/* Replace with your ChevronDown component/icon */}
                       <svg
-                        className={`ml-1 h-4 w-4 transition-transform duration-300 ${
-                          isServicesOpen ? "rotate-180" : ""
-                        }`}
+                        className={`ml-1 h-4 w-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""
+                          }`}
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -436,24 +449,24 @@ export default function Navbar2() {
                               <div>
                                 <Link
                                   href={{
-                                    pathname: "/custom-software-development",
+                                    pathname: "/website-development",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
                                   className="flex items-center hover:text-blue-600 transition duration-300"
                                 >
-                                  Custom Software Development
+                                  Website Development
                                 </Link>
                               </div>
                               <div>
                                 <Link
                                   href={{
-                                    pathname: "/web-and-app-development",
+                                    pathname: "/mobile-app-development",
 
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
                                   className="flex items-center hover:text-blue-600 transition duration-300"
                                 >
-                                  Web &amp; App Development
+                                  Mobile App Development
                                 </Link>
                               </div>
                               <div>
@@ -538,12 +551,23 @@ export default function Navbar2() {
                               <div>
                                 <Link
                                   href={{
-                                    pathname: "/digital-marketing-and-seo",
+                                    pathname: "/seo",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
                                   className="flex items-center hover:text-blue-600 transition duration-300"
                                 >
-                                  Digital Marketing &amp; SEO
+                                  SEO
+                                </Link>
+                              </div>
+                              <div>
+                                <Link
+                                  href={{
+                                    pathname: "/digital-marketing",
+                                  }}
+                                  onClick={() => setIsSidebarOpen(false)}
+                                  className="flex items-center hover:text-blue-600 transition duration-300"
+                                >
+                                  Digital Marketing
                                 </Link>
                               </div>
                             </div>

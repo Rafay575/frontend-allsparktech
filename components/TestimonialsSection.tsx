@@ -85,7 +85,6 @@ export interface HomePageData {
 
 export default function TestimonialsSection({homeData}:{homeData: HomePageData}) {
   const [active, setActive] = useState(0);
-  console.log(homeData.testimonials);
   
 
   

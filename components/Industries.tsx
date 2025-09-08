@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import industry1 from "@/public/images/industry1.png"
+import Image, { StaticImageData } from 'next/image'
 import {
     Carousel,
     CarouselContent,
@@ -9,10 +8,10 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import arrow from "@/public/images/arrow.png"
-import { StaticImageData } from "next/image";
+import { baseURL } from '@/API/baseURL';
 
 interface IndustryItem {
-    image: StaticImageData;
+    image: string | StaticImageData;
     title: string;
     des: string;
     btnText: string;
@@ -23,49 +22,30 @@ interface ServiceIndustries {
     letters?: string[];
     industries: IndustryItem[];
 }
-export default function Industries() {
-    const serviceIndustries: ServiceIndustries = {
-        title: "Industries We Serve",
-        letters: ["Serve"],
-        industries: [
-            {
-                image: industry1,
-                title: "Healthcare Software Development",
-                des: "We build secure, compliant, and scalable healthcare applications integrating medical systems, improving patient management, analytics, and overall outcomes.",
-                btnText: "Explore More"
-            },
-            {
-                image: industry1,
-                title: "E-commerce Solutions",
-                des: "Robust e-commerce platforms with payment integration, scalable infrastructure, and personalized shopping experiences for customers.",
-                btnText: "Explore More"
-            },
-            {
-                image: industry1,
-                title: "Fintech Applications",
-                des: "Secure fintech apps with fraud detection, digital wallets, and real-time transaction analytics for the finance industry.",
-                btnText: "Explore More"
-            }
-        ]
-    }
+interface ServiceIndustriesProps {
+    serviceIndustries: ServiceIndustries;
+}
+export default function Industries({ serviceIndustries }: ServiceIndustriesProps) {
+
     const renderTitle = (title: string, highlights: string[] = []) => {
-        return title.split(" ").map((word, i) => {
-            const cleanWord = word.replace(/[^a-zA-Z]/g, "");
-            if (highlights.includes(cleanWord)) {
-                return (
-                    <span key={i} className="text-[#384bff]">
-                        {word}{" "}
-                    </span>
-                );
-            }
-            return word + " ";
-        });
-    };
+    return title.split(" ").map((word, i, words) => {
+        const cleanWord = word.replace(/[^a-zA-Z]/g, "");
+        const isLastWord = i === words.length - 1;
+        if (highlights.some(highlight => highlight.trim() === cleanWord)) {
+            return (
+                <span key={i} className="text-[#384bff]">
+                    {word}{isLastWord ? "" : " "}
+                </span>
+            );
+        }
+        return word + (isLastWord ? "" : " ");
+    });
+};
 
 
     return (
         <div className='container border my-[50px] lg:my-[80px] py-[50px] lg:py-[80px] px-[30px] bg-[#f3f7fb] rounded-[20px]'>
-            <p className='text-[35px] lg:text-[40px] font-[700] text-center'>
+            <p className='text-[29px] lg:text-[35px] 2xl:text-[40px] font-[700] text-center w-full lg:w-[70%] xl:w-[55%] mx-auto'>
                 {renderTitle(serviceIndustries.title, serviceIndustries.letters)}
             </p>
 
@@ -76,13 +56,15 @@ export default function Industries() {
                             <div className='w-full md:w-[49%] '>
                                 <div className="w-full h-full">
                                     <Image
-                                        src={industry.image}
+                                        src={`${baseURL}/images/services/${industry.image}`}
                                         alt={industry.title}
-                                        className="w-full h-full object-cover rounded-[25px]"
+                                        width={400}
+                                        height={400}
+                                        className="!w-full !h-full object-cover rounded-[25px]"
                                     />
                                 </div>
                             </div>
-                            <div className='w-full md:w-[49%] bg-white rounded-[25px] p-[20px] flex flex-col items-start justify-center'>
+                            <div className='w-full md:w-[49%] bg-white rounded-[25px] p-[20px] flex flex-col items-center sm:items-start justify-center text-center sm:text-start'>
                                 <h3 className="text-[20px] font-[600] mb-2">{industry.title}</h3>
                                 <p className="text-[14px] text-gray-600">{industry.des}</p>
                                 <button className='bg-[#384BFF] text-white mt-[20px] flex items-center gap-[10px] py-[7px] px-[25px] text-[15px] rounded-[25px]'>{industry.btnText} <Image src={arrow} alt='img' /></button>
@@ -90,8 +72,8 @@ export default function Industries() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className=' absolute !left-[-30px] lg:!left-[-60px]' />
+                <CarouselNext className=' absolute !right-[-30px] lg:!right-[-60px]' />
             </Carousel>
         </div>
     )
