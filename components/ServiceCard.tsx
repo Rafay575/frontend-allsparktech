@@ -7,21 +7,21 @@ import { baseURL } from '@/API/baseURL';
 import { StaticImageData } from 'next/image';
 
 interface ServiceCardItem {
-  icon: string | StaticImageData;
-  number: number | string;
-  text: string;
-  symbol?: string;
+    icon: string | StaticImageData;
+    number: number | string;
+    text: string;
+    symbol?: string;
 }
 
 interface ServiceCardData {
-  title: string;
-  cards: ServiceCardItem[];
+    title: string;
+    cards: ServiceCardItem[];
 }
 interface ServiceCardProps {
-  serviceCard: ServiceCardData;
+    serviceCard: ServiceCardData;
 }
-export default function ServiceCard({serviceCard}:ServiceCardProps) {
-    
+export default function ServiceCard({ serviceCard }: ServiceCardProps) {
+
     return (
         <div>
             <div className="container flex flex-wrap bg-[#f4f7fb] my-[50px] relative overflow-hidden">
@@ -31,13 +31,29 @@ export default function ServiceCard({serviceCard}:ServiceCardProps) {
                     <p className='relative z-[50] text-center text-[25px] lg:text-[25px] xl:text-[27px] 2xl:text-[30px] w-full md:w-[70%] lg:w-full' dangerouslySetInnerHTML={{ __html: serviceCard.title }} ></p>
                 </div>
                 <div className='w-full py-[20px] overflow-hidden lg:w-[55%] flex items-start md:items-center justify-center lg:justify-start '>
-                    <div className='grid grid-cols-2 gap-y-[40px]  mt-[10px] md:mt-[20px] w-[89%] mx-auto '>
+                    <div className="grid grid-cols-2 gap-6 md:gap-10 p-[10pxcd a] md:p-[20px] xl:p-[40px] w-[90%] mx-auto">
                         {serviceCard.cards.map((card, index) => (
-                            <div key={index} className='flex items-center justify-center gap-[10px] '>
-                                <Image src={`${baseURL}/images/services/${card.icon}`} alt='img' width={600} height={400} className='bg-white p-[10px] !w-[60px] md:!w-[70px] rounded-[10px]' />
-                                <div>
-                                    <p className='text-[20px] md:text-[25px] xl:text-[30px] text-[#384bff] font-[700]'>{`${card.number}${card.symbol}`}</p>
-                                    <p className='text-[10px] md:text-[12px] w-[120px]  relative z-20'>{card.text}</p>
+                            <div
+                                key={index}
+                                className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-3"
+                            >
+                                {/* Icon */}
+                                <Image
+                                    src={`${baseURL}/images/services/${card.icon}`}
+                                    alt="icon"
+                                    width={60}
+                                    height={60}
+                                    className="bg-white p-3 w-[50px] md:w-[70px] rounded-xl shadow-sm"
+                                />
+
+                                {/* Text */}
+                                <div className="text-center sm:text-left">
+                                    <p className="text-lg md:text-xl xl:text-2xl text-[#384bff] font-bold">
+                                        {`${card.number}${card.symbol}`}
+                                    </p>
+                                    <p className="text-xs md:text-sm text-gray-600 leading-snug">
+                                        {card.text}
+                                    </p>
                                 </div>
                             </div>
                         ))}

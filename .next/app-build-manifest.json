@@ -6,11 +6,29 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
+    "/ui-ux-design/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+      "static/css/app/ui-ux-design/page.css",
+      "static/chunks/app/ui-ux-design/page.js"
+    ],
+    "/ecommerce-development/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/ecommerce-development/page.css",
+      "static/chunks/app/ecommerce-development/page.js"
+    ],
+    "/website-development/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/website-development/page.css",
+      "static/chunks/app/website-development/page.js"
+    ],
+    "/mobile-app-development/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/mobile-app-development/page.css",
+      "static/chunks/app/mobile-app-development/page.js"
     ],
     "/ai-and-machine-learning/page": [
       "static/chunks/webpack.js",
@@ -18,10 +36,23 @@
       "static/css/app/ai-and-machine-learning/page.css",
       "static/chunks/app/ai-and-machine-learning/page.js"
     ],
-    "/_not-found/page": [
+    "/cloud-and-devops-solutions/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/css/app/cloud-and-devops-solutions/page.css",
+      "static/chunks/app/cloud-and-devops-solutions/page.js"
+    ],
+    "/seo/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/seo/page.css",
+      "static/chunks/app/seo/page.js"
+    ],
+    "/digital-marketing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/digital-marketing/page.css",
+      "static/chunks/app/digital-marketing/page.js"
     ]
   }
 }
