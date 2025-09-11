@@ -14,7 +14,7 @@ interface ServiceLogosData {
 
 interface ServiceCardItem {
     icon: string;
-     number: number | string;
+    number: number | string;
     text: string;
     symbol?: string;
 }
@@ -53,19 +53,23 @@ interface ServiceProcessData {
     letters: string[];
     process: ServiceProcessStep[];
 }
-
+// Interface for individual technology items (unchanged, matches JSON)
 interface ServiceTechnologiesItem {
     name: string;
     Icon: string;
 }
 
+// New interface for each technology category (e.g., Frontend, Backend)
+interface ServiceTechnologyCategory {
+    name: string; // e.g., "Frontend", "Backend"
+    techs: ServiceTechnologiesItem[]; // Array of technologies like { name: "React.js", Icon: "react.png" }
+}
+
+// Updated interface for the technologies section
 interface ServiceTechnologiesData {
-    title: string;
-    des: string;
-    frontend: ServiceTechnologiesItem[];
-    backend: ServiceTechnologiesItem[];
-    database: ServiceTechnologiesItem[];
-    others: ServiceTechnologiesItem[];
+    title: string; // e.g., "Technologies We Use for Custom Software Development"
+    des: string; // Description
+    technologies: ServiceTechnologyCategory[]; // Array of categories like Frontend, Backend, etc.
 }
 
 interface ServiceOfferingCard {

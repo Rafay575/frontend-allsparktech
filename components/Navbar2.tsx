@@ -6,7 +6,8 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { FaSearchengin } from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
@@ -87,19 +88,34 @@ export default function Navbar2() {
               {/* Full-width dropdown with smooth open/close */}
               {/* Full-width dropdown with smooth open/close */}
               <div
-                className={` absolute left-48 w-[80%] mx-auto top-full z-10 mt-2 
+                className={` absolute left-[30%] xl:left-[34%] 2xl:left-[39%] top-full z-10 mt-[3px] 
                  transform-gpu origin-top 
                 scale-y-0 group-hover:scale-y-100 
                 transition-transform duration-300 ease-out `}
               >
-                <div className="bg-white shadow-lg py-6 pb-20 rounded-xl px-20">
-                  <div className="mx-auto max-w-6xl px-6 grid grid-cols-3 gap-8">
+                <div className="bg-white w-full shadow-lg py-6 pb-10 rounded-xl px-10 relative">
+                  <div className="mx-auto w-full px-2 grid grid-cols-2 gap-4">
                     {/* Column 1 */}
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         Software Development & AI
                       </h3>
                       <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
+                        <Link
+                          href={{
+                            pathname: "/custom-software-development",
+                          }}
+                          className="flex items-center hover:text-[#384BFF] transition duration-300 "
+                        >
+                          <Image
+                            className="mr-2"
+                            src={"/images/development-01.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />{" "}
+                          Custom Software Development
+                        </Link>
                         <Link
                           href={{
                             pathname: "/website-development",
@@ -121,13 +137,8 @@ export default function Navbar2() {
                           }}
                           className="flex items-center hover:text-[#384BFF] transition duration-300"
                         >
-                          <Image
-                            className="mr-2"
-                            src={"/images/development-01.svg"}
-                            alt="icon"
-                            width={30}
-                            height={30}
-                          />
+                          <FaMobileAlt className="text-[27px] mr-[7px] text-[#6b7cff]" />
+
                           Mobile App Development
                         </Link>
                         <Link
@@ -146,21 +157,7 @@ export default function Navbar2() {
                           AI & Machine Learning
                         </Link>
 
-                        <Link
-                          href={{
-                            pathname: "/cloud-and-devops-solutions",
-                          }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300 "
-                        >
-                          <Image
-                            className="mr-2"
-                            src={"/images/devops-icon.svg"}
-                            alt="icon"
-                            width={30}
-                            height={30}
-                          />{" "}
-                          Cloud & DevOps Solutions
-                        </Link>
+
                         <Link
                           href={{
                             pathname: "/ui-ux-design",
@@ -194,66 +191,7 @@ export default function Navbar2() {
                         </Link>
                       </div>
                     </div>
-                    <div>
-                      <h3 className="mb-3 text-base font-bold text-gray-800">
-                        BPO & Tech-Enabled Services
-                      </h3>
-                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
-                        <div>
-                          <Link
-                            href={{
-                              pathname: "/customer-support",
-                            }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
-                          >
-                            <Image
-                              className="mr-2"
-                              src={"/images/customer-support-icon-01.svg"}
-                              alt="icon"
-                              width={30}
-                              height={30}
-                            />
-                            Customer Support
-                          </Link>
-                        </div>
-                        <div>
-                          <Link
-                            href={{
-                              pathname: "/email-marketing",
-                            }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
-                          >
-                            <Image
-                              className="mr-2"
-                              src={"/images/email-marketing-icon-01.svg"}
-                              alt="icon"
-                              width={30}
-                              height={30}
-                            />
-                            Email Marketing
-                          </Link>
-                        </div>
-                        <div>
-                          <Link
-                            href={{
-                              pathname: "/live-chat-support",
-                            }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
-                          >
-                            <Image
-                              className="mr-2"
-                              src={"/images/live-chat-icon-01.svg"}
-                              alt="icon"
-                              width={30}
-                              height={30}
-                            />
-                            Live Chat Support
-                          </Link>
-                        </div>
-
-                        {/* Add more as needed */}
-                      </div>
-                    </div>
+                    
                     {/* Column 2 */}
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
@@ -267,13 +205,7 @@ export default function Navbar2() {
                             }}
                             className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
                           >
-                            <Image
-                              className="mr-2"
-                              src={"/images/digital-marketing-icon-01.svg"}
-                              alt="icon"
-                              width={30}
-                              height={30}
-                            />
+                            <FaSearchengin className="text-[30px] mr-[7px] text-[#6b7cff]" />
                             SEO
                           </Link>
                         </div>
@@ -449,6 +381,17 @@ export default function Navbar2() {
                               <div>
                                 <Link
                                   href={{
+                                    pathname: "/custom-software-development",
+                                  }}
+                                  onClick={() => setIsSidebarOpen(false)}
+                                  className="flex items-center hover:text-blue-600 transition duration-300"
+                                >
+                                  Custom Software Development
+                                </Link>
+                              </div>
+                              <div>
+                                <Link
+                                  href={{
                                     pathname: "/website-development",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
@@ -480,17 +423,7 @@ export default function Navbar2() {
                                   AI &amp; Machine Learning
                                 </Link>
                               </div>
-                              <div>
-                                <Link
-                                  href={{
-                                    pathname: "/cloud-and-devops-solutions",
-                                  }}
-                                  onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:text-blue-600 transition duration-300"
-                                >
-                                  Cloud &amp; DevOps Solutions
-                                </Link>
-                              </div>
+
                               <div>
                                 <Link
                                   href={{
@@ -514,7 +447,7 @@ export default function Navbar2() {
                                 </Link>
                               </div>
 
-                              <div>
+                              {/* <div>
                                 <Link
                                   href={{
                                     pathname: "/customer-support",
@@ -546,7 +479,7 @@ export default function Navbar2() {
                                 >
                                   Live Chat Support
                                 </Link>
-                              </div>
+                              </div> */}
 
                               <div>
                                 <Link

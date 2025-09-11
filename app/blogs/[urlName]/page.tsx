@@ -143,7 +143,7 @@ export default async function BlogDetailPage(props: any) {
           </div>
 
           {/* Main Image  */}
-          <Image src={`${baseURL}/images/blogs/${blog.image}`} className="rounded-[10px] !w-[100%]" alt="MainImg " />
+          <Image src={`${baseURL}/images/blogs/${blog.image}`} width={400} height={400} className="rounded-[10px] !w-[100%]" alt="MainImg " />
 
           {/* Description  */}
           <p className="text-[16px] text-[#1f2937]">
@@ -152,7 +152,8 @@ export default async function BlogDetailPage(props: any) {
 
 
           {/* Items  */}
-          {itemsWithIds.map((item: any, index: number) => (
+          <div className="blogsdata">
+            {itemsWithIds.map((item: any, index: number) => (
               <div key={index}>
                 {item.type === "h1" && <h1 className="h1">{item.value}</h1>}
                 {item.type === "h2" &&
@@ -247,7 +248,9 @@ export default async function BlogDetailPage(props: any) {
 
               </div>
             ))
-          }
+            }
+          </div>
+
 
 
 

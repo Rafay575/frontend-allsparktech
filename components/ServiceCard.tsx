@@ -31,7 +31,7 @@ export default function ServiceCard({ serviceCard }: ServiceCardProps) {
                     <p className='relative z-[50] text-center text-[25px] lg:text-[25px] xl:text-[27px] 2xl:text-[30px] w-full md:w-[70%] lg:w-full' dangerouslySetInnerHTML={{ __html: serviceCard.title }} ></p>
                 </div>
                 <div className='w-full py-[20px] overflow-hidden lg:w-[55%] flex items-start md:items-center justify-center lg:justify-start '>
-                    <div className="grid grid-cols-2 gap-6 md:gap-10 p-[10pxcd a] md:p-[20px] xl:p-[40px] w-[90%] mx-auto">
+                    <div className="grid grid-cols-2 gap-6 md:gap-10 p-[10px] md:p-[20px] xl:p-[40px] w-[90%] mx-auto">
                         {serviceCard.cards.map((card, index) => (
                             <div
                                 key={index}

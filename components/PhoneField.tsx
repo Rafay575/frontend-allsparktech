@@ -43,10 +43,10 @@ export default function PhoneField({
         }}
         placeholder={placeholder}
         enableSearch
-        containerClass="w-full"
-        inputClass="w-full h-10 text-base px-3 rounded-md border border-gray-300"
-        buttonClass="border border-gray-300 rounded-l-md"
-        dropdownClass="rounded-md"
+        containerClass=" w-full rounded-md border border-gray-300  shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+        inputClass="w-full text-base py-[20px] rounded-md border border-gray-300"
+        buttonClass="border border-gray-300 rounded-l-md "
+        dropdownClass="rounded-md "
       />
 
       {error && <p className="text-red-500 text-sm mt-1">{error}</p>}

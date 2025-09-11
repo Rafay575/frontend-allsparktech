@@ -1,4 +1,4 @@
-import {ServicePageData} from "@/lib/types"
+import { ServicePageData } from "@/lib/types"
 
 export const homePage = {
   "hero": {
@@ -5685,8 +5685,364 @@ export const digitalMarketingAndSeo = [
   }
 ]
 
-
-export const WebDevelopment:ServicePageData = {
+// these are services pages content 
+export const CustomSoftwareDevelopment: ServicePageData = {
+  "serviceHero": {
+    "btnText": "Enterprise Software Solutions",
+    "btnText2": "GET STARTED",
+    "btnText3": "Get In Touch",
+    "title": "Enterprise Software Development Solutions",
+    "description": "Smart enterprise software development services in the USA to streamline workflows, enhance security, and drive growth.",
+    "formSubtitle": "TALK TO US",
+    "formTitle": "Book a Free Consultation"
+  },
+  "serviceLogos": {
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
+  },
+  "serviceCard": {
+    "title": "10 Years of Experience Delivering Innovative Custom Software Solutions",
+    "cards": [
+      {
+        "icon": "serviceicon1.png",
+        "number": "100",
+        "text": "Developed Custom Solutions",
+        "symbol": "+"
+      },
+      {
+        "icon": "serviceicon2.png",
+        "number": "3",
+        "text": "Years’ Client Engagement",
+        "symbol": "+"
+      },
+      {
+        "icon": "serviceicon3.png",
+        "number": "70",
+        "text": "Senior Engineer",
+        "symbol": "%"
+      },
+      {
+        "icon": "serviceicon4.png",
+        "number": "98",
+        "text": "Satisfaction Rate",
+        "symbol": "%"
+      }
+    ]
+  },
+  "serviceAbout": {
+    "image1": "serviceimg2.png",
+    "image2": "serviceimg3.png",
+    "image3": "aboutShape2.png",
+    "subTitle": "About Company",
+    "title": "Future-Ready Custom Software Solutions",
+    "des": "AllSpark Technologies is a trusted custom software development company in the USA, delivering secure, scalable, and innovative solutions tailored to business needs. Our expert custom software developers help organizations achieve efficiency and growth through next-generation software development services.",
+    "features": [
+      {
+        "icon": "serviceicon5.png",
+        "title": "Secure"
+      },
+      {
+        "icon": "serviceicon6.png",
+        "title": "Scalable"
+      },
+      {
+        "icon": "serviceicon7.png",
+        "title": "Agile"
+      }
+    ]
+  },
+  "serviceProcess": {
+    "title": "Our Proven Custom Software Development Process",
+    "letters": ["Software"],
+    "des": "We follow a structured, transparent, and efficient software development process that ensures custom software solutions are delivered with quality, speed, and scalability.",
+    "process": [
+      {
+        "image": "process1.png",
+        "heading": "Requirement Study",
+        "des": "We define goals, features, and functions for custom software development.",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "process2.png",
+        "heading": "UI/UX Design",
+        "des": "Our software design company creates user-friendly, efficient interfaces.",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "process3.png",
+        "heading": "Development Stage",
+        "des": "Custom Software Developers build secure, scalable solutions.",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "process4.png",
+        "heading": "Testing & Launch",
+        "des": "We ensure flawless delivery with quality software development services."
+      }
+    ]
+  },
+  "serviceTechnologies": {
+    "title": "Technologies We Use for Custom Software Development",
+    "des": "We provide custom software development services in the USA using advanced frontend, backend, mobile, and cloud technologies. Our experts deliver secure, scalable, high-performance applications designed around your unique business needs.",
+    "technologies": [
+      {
+        "name": "Frontend",
+        "techs": [
+          {
+            "name": "React.js",
+            "Icon": "react.png"
+          },
+          {
+            "name": "Angular",
+            "Icon": "angular.png"
+          },
+          {
+            "name": "Vue.js",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Svelte",
+            "Icon": "js.png"
+          },
+          {
+            "name": "HTML5",
+            "Icon": "bootstrap.png"
+          },
+          {
+            "name": "CSS3",
+            "Icon": "bootstrap.png"
+          },
+          {
+            "name": "JavaScript (ES6+)",
+            "Icon": "js.png"
+          }
+        ]
+      },
+      {
+        "name": "Backend",
+        "techs": [
+          {
+            "name": "Node.js",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Laravel (PHP)",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Django (Python)",
+            "Icon": "js.png"
+          },
+          {
+            "name": ".NET Core",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Ruby on Rails",
+            "Icon": "js.png"
+          }
+        ]
+      },
+      {
+        "name": "Cross-Platform",
+        "techs": [
+          {
+            "name": "Flutter",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "React Native",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Swift (iOS)",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Kotlin (Android)",
+            "Icon": "js.png"
+          }
+        ]
+      },
+      {
+        "name": "Databases & Cloud",
+        "techs": [
+          {
+            "name": "MySQL",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "PostgreSQL",
+            "Icon": "js.png"
+          },
+          {
+            "name": "MongoDB",
+            "Icon": "js.png"
+          },
+          {
+            "name": "AWS / Azure",
+            "Icon": "js.png"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceOffering": {
+    "title": "Explore Our Core Software Development Offerings",
+    "letters": ["Software", "Development"],
+    "des": "We offer custom software development service in USA, delivering secure, scalable, and innovative solutions tailored to meet unique business requirements.",
+    "cards": [
+      {
+        "icon": "csdicon1.png",
+        "heading": "Enterprise Software Development Service",
+        "des": "Enterprise software services in USA designed to improve operations, security, and scalability for businesses.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon2.png",
+        "heading": "Bespoke Application Development Services",
+        "des": "Custom application development tailored to unique workflows, boosting efficiency and business growth.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon3.png",
+        "heading": "Digital Product Development Services",
+        "des": "We design, build, and launch innovative digital products with seamless user experiences.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon4.png",
+        "heading": "System Integration Services",
+        "des": "Integrating applications, platforms, and cloud solutions into one secure, streamlined ecosystem.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon5.png",
+        "heading": "API Development Services in USA",
+        "des": "API development in USA ensures seamless communication, secure integration, and efficient data sharing.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon6.png",
+        "heading": "Future-Ready Software Solutions (AI, Cloud, IoT)",
+        "des": "We create future-ready software using AI, cloud, and IoT for competitive advantage.",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceBanner": {
+    "image": "ctaThumb1_1.png",
+    "Subtitle": "CONTACT US",
+    "title": "Start Your Software Development Journey Today",
+    "des": "Partner with AllSpark Technologies for secure, scalable, custom web development solutions that drive long-term business growth.",
+    "btnText": "TALK TO A SPECIALIST"
+  },
+  "serviceIndus": {
+    "image1": "indusimg1.png",
+    "image2": "indusimg2.png",
+    "image3": "shape.png",
+    "title": "Industries We Serve in Custom Software Development",
+    "letters": ["Development"],
+    "des1": "AllSpark Technologies provides custom software development services designed to fit the unique needs of every industry. Our solutions support businesses in healthcare, finance, retail, education, logistics, eCommerce, and technology, ensuring seamless operations and future-ready growth. From enterprise software development to secure web and mobile applications, we build software that solves real problems and integrates with existing systems.",
+    "des2": "As a leading custom software development company in the USA, AllSpark Technologies delivers secure, enterprise-grade, and scalable software services. Our team of custom software developers ensures your business gains competitive advantage with future-ready solutions."
+  },
+  "serviceIndustries": {
+    "title": "Industries We Serve",
+    "letters": ["Serve"],
+    "industries": [
+      {
+        "image": "industry1.png",
+        "title": "Healthcare Software Development",
+        "des": "We build secure, compliant, and scalable healthcare applications integrating medical systems, improving patient management, analytics, and overall outcomes.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "E-commerce",
+        "des": "Develop scalable e-commerce platforms with a focus on smooth user experiences, secure transactions, and a streamlined checkout process. Our solutions help your online store grow efficiently while maximizing customer satisfaction.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Education",
+        "des": "Creating interactive websites for educational institutions that enhance the learning experience. We build engaging platforms that support students, teachers, and administrators for seamless communication and effective online learning.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Finance",
+        "des": "Secure and reliable websites for financial services, ensuring robust solutions for online banking and financial transactions. We design platforms with top-tier security to meet the needs of both your business and your clients.",
+        "btnText": "Explore More"
+      }
+    ]
+  },
+  "serviceClient": {
+    "image1": "clientimg1.png",
+    "image2": "clientimg2.png",
+    "image3": "shape.png",
+    "image4": "hugicon.png",
+    "imageText": "Quality, Trust, Growth.",
+    "title": "Why Do Our Clients Love Us?",
+    "letters": ["Clients"],
+    "des1": "AllSpark Technologies, a leading USA-based custom software development company in USA, delivers secure, scalable, and innovative solutions for enterprises and growing businesses.",
+    "des2": "We specialize in enterprise software, web apps, and AI-driven solutions, ensuring projects stay on time and within budget. With over a decade of proven expertise, we design adaptable technology that improves agility, drives growth, and delivers measurable results.",
+    "lis": [
+      "Recognized for reliable and secure web application development with 5-star client ratings",
+      "92% of our customers report complete satisfaction with our services.",
+      "A large part of our talented team has been with us for more than 5 years.",
+      "Businesses choose us for scalable custom web application development across healthcare, eCommerce, finance, and more"
+    ]
+  },
+  "serviceFAQs": {
+    "image1": "servicefaq1.png",
+    "image2": "servicefaq2.png",
+    "image3": "servicefaq3.png",
+    "subTitle": "FAQ",
+    "title": "Prioritizing Your Website’s Security and Safety",
+    "faqs": [
+      {
+        "question": "How does your web development company ensure my website’s security?",
+        "answer": "At our web development agency, we prioritize your website’s safety by implementing enterprise-grade security measures. From SSL encryption for end-to-end data protection to secure coding practices that follow industry standards, we ensure your website is built with security at its core. Regular security audits and vulnerability assessments are conducted to proactively identify and address potential risks."
+      },
+      {
+        "question": "Will my business data be safe with your web development services?",
+        "answer": "Absolutely. As a trusted website development company, we take data protection seriously. We use advanced backup and recovery systems to safeguard your sensitive business information. Our team ensures that your data is stored and managed securely, giving you peace of mind while focusing on your business growth."
+      },
+      {
+        "question": "Do you offer security features for WordPress websites?",
+        "answer": "Yes, as experienced WordPress website developers, we integrate robust security features into every WordPress site we create. From secure plugins to regular updates, we ensure your WordPress website is protected against vulnerabilities and cyber threats."
+      },
+      {
+        "question": "How do you handle security for e-commerce websites?",
+        "answer": "For e-commerce websites, we implement advanced security protocols, including SSL encryption, secure payment gateways, and fraud prevention measures. Our website creation services are designed to protect your customers’ data and provide a safe shopping experience."
+      },
+      {
+        "question": "Are your website design services affordable while maintaining security?",
+        "answer": "Yes, we offer affordable website design packages without compromising on security. Our website building services are tailored to meet your needs, ensuring a balance between cost-effectiveness and top-notch security."
+      },
+      {
+        "question": "What makes your web application development services reliable?",
+        "answer": "Our web application development services are built on secure coding practices and industry-standard protocols. We focus on creating scalable, secure, and user-friendly applications that align with your business goals while keeping your data safe."
+      },
+      {
+        "question": "Can I rely on your website maintenance services for ongoing security?",
+        "answer": "Absolutely. Our website maintenance and building services include regular updates, performance optimization, and security monitoring. We ensure your website remains secure and up-to-date, so you can focus on growing your business. By choosing our web development company, you’re partnering with a team that prioritizes your site’s security and safety at every step. Let us help you build a secure, reliable, and successful online presence."
+      }
+    ]
+  },
+  "serviceContact": {
+    "image": "man.png",
+    "subTitle": "TALK TO US",
+    "title": "Let’s Build Your Custom Software Solution",
+    "btnText": "Get In Touch"
+  }
+}
+export const WebDevelopment: ServicePageData = {
   "serviceHero": {
     "btnText": "Enterprise Software Solutions",
     "btnText2": "GET STARTED",
@@ -5781,27 +6137,97 @@ export const WebDevelopment:ServicePageData = {
     ]
   },
   "serviceTechnologies": {
-    "title": "Advanced Web and Application Development Technologies",
-    "des": "At AllSpark Technologies, we use modern frameworks, cloud platforms, and secure programming languages to deliver scalable, user-focused,enterprise-ready web and application development solutions.",
-    "frontend": [
-      { "name": "react", "Icon": "react.png" },
-      { "name": "angular", "Icon": "angular.png" },
-      { "name": "vue", "Icon": "vue.png" },
-      { "name": "js", "Icon": "js.png" },
-      { "name": "bootstrap", "Icon": "bootstrap.png" },
-      { "name": "bootstrap", "Icon": "bootstrap.png" }
-    ],
-    "backend": [
-      { "name": "vue", "Icon": "vue.png" },
-      { "name": "js", "Icon": "js.png" }
-    ],
-    "database": [
-      { "name": "js", "Icon": "js.png" },
-      { "name": "js", "Icon": "js.png" }
-    ],
-    "others": [
-      { "name": "bootstrap", "Icon": "bootstrap.png" },
-      { "name": "bootstrap", "Icon": "bootstrap.png" }
+    "title": "Website Development Company Leveraging Modern Technologies",
+    "des": "At AllSpark Technologies, we craft powerful web development solutions using modern frameworks and cloud platforms, ensuring secure, scalable, and user-friendly websites tailored to meet your business goals.",
+    "technologies": [
+      {
+        "name": "Frontend",
+        "techs": [
+          {
+            "name": "React.js",
+            "Icon": "react.png"
+          },
+          {
+            "name": "Angular",
+            "Icon": "angular.png"
+          },
+          {
+            "name": "Vue.js",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Next.js",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Tailwind CSS",
+            "Icon": "js.png"
+          }
+        ]
+      },
+      {
+        "name": "Backend",
+        "techs": [
+          {
+            "name": "Node.js",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Express.js",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Django",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Laravel",
+            "Icon": "js.png"
+          }
+        ]
+      },
+      {
+        "name": "Database",
+        "techs": [
+          {
+            "name": "MySQL",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "PostgreSQL",
+            "Icon": "js.png"
+          },
+          {
+            "name": "MongoDB",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Firebase",
+            "Icon": "vue.png"
+          }
+        ]
+      },
+      {
+        "name": "Other",
+        "techs": [
+          {
+            "name": "WordPress Development",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Shopify Development",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "AWS / Google Cloud",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Docker & Kubernetes",
+            "Icon": "vue.png"
+          }
+        ]
+      }
     ]
   },
   "serviceOffering": {
@@ -5954,7 +6380,7 @@ export const WebDevelopment:ServicePageData = {
     "btnText": "Get In Touch"
   }
 }
-export const MobileAppDevelopment:ServicePageData ={
+export const MobileAppDevelopment: ServicePageData = {
   "serviceHero": {
     "btnText": "Mobile App Solutions",
     "btnText2": "GET STARTED",
@@ -6004,18 +6430,9 @@ export const MobileAppDevelopment:ServicePageData ={
     "title": "Leading Mobile App Development Agency in USA",
     "des": "As a premier mobile app development company in the USA, Allspark Technologies transforms innovative business ideas into powerful, user-friendly, and scalable digital solutions that drive growth, boost customer engagement, strengthen brand presence, and create measurable impact across industries.",
     "features": [
-      {
-        "icon": "serviceicon5.png",
-        "title": "Innovative"
-      },
-      {
-        "icon": "serviceicon6.png",
-        "title": "Robust"
-      },
-      {
-        "icon": "serviceicon7.png",
-        "title": "Future-Ready"
-      }
+      { "icon": "serviceicon5.png", "title": "Innovative" },
+      { "icon": "serviceicon6.png", "title": "Robust" },
+      { "icon": "serviceicon7.png", "title": "Future-Ready" }
     ]
   },
   "serviceProcess": {
@@ -6049,27 +6466,93 @@ export const MobileAppDevelopment:ServicePageData ={
     ]
   },
   "serviceTechnologies": {
-    "title": "Advanced Web and Application Development Technologies",
-    "des": "At AllSpark Technologies, we use modern frameworks, cloud platforms, and secure programming languages to deliver scalable, user-focused,enterprise-ready web and application development solutions.",
-    "frontend": [
-      { "name": "react", "Icon": "react.png" },
-      { "name": "angular", "Icon": "angular.png" },
-      { "name": "vue", "Icon": "vue.png" },
-      { "name": "js", "Icon": "js.png" },
-      { "name": "bootstrap", "Icon": "bootstrap.png" },
-      { "name": "bootstrap", "Icon": "bootstrap.png" }
-    ],
-    "backend": [
-      { "name": "vue", "Icon": "vue.png" },
-      { "name": "js", "Icon": "js.png" }
-    ],
-    "database": [
-      { "name": "js", "Icon": "js.png" },
-      { "name": "js", "Icon": "js.png" }
-    ],
-    "others": [
-      { "name": "bootstrap", "Icon": "bootstrap.png" },
-      { "name": "bootstrap", "Icon": "bootstrap.png" }
+    "title": "Mobile App Development Services for iOS, Android & Cross-Platform",
+    "des": "AllSpark Technologies is a trusted mobile app development agency delivering secure, scalable, and engaging apps through Flutter, React Native, and native technologies tailored to your business needs.",
+    "technologies": [
+      {
+        "name": "Frontend",
+        "techs": [
+          {
+            "name": "Flutter",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "React Native",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Swift",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Kotlin",
+            "Icon": "js.png"
+          }
+        ]
+      },
+      {
+        "name": "Backend",
+        "techs": [
+          {
+            "name": "Node.js",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Django",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Laravel",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Firebase Backend Services",
+            "Icon": "vue.png"
+          }
+        ]
+      },
+      {
+        "name": "Database",
+        "techs": [
+          {
+            "name": "MySQL",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "PostgreSQL",
+            "Icon": "js.png"
+          },
+          {
+            "name": "MongoDB",
+            "Icon": "js.png"
+          },
+          {
+            "name": "SQLite",
+            "Icon": "vue.png"
+          }
+        ]
+      },
+      {
+        "name": "Other",
+        "techs": [
+          {
+            "name": "Xcode",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Android Studio",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "AWS Mobile Services",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Google Cloud / Firebase",
+            "Icon": "js.png"
+          }
+        ]
+      }
     ]
   },
   "serviceOffering": {
@@ -6117,7 +6600,7 @@ export const MobileAppDevelopment:ServicePageData ={
   },
   "serviceBanner": {
     "image": "ctaThumb1_1.png",
-    "Subtitle": "About Company",
+    "Subtitle": "CONTACT US",
     "title": "Ready to Build Your Dream App?",
     "des": "Let’s turn your app idea into a reality. Get in touch with our expert team to start your development journey.",
     "btnText": "Start Project"
@@ -6222,7 +6705,900 @@ export const MobileAppDevelopment:ServicePageData ={
     "btnText": "Get In Touch"
   }
 }
-export const seo:ServicePageData = {
+export const AiAndMachineLearning: ServicePageData = {
+  "serviceHero": {
+    "btnText": "Enterprise Software Solutions",
+    "btnText2": "GET STARTED",
+    "btnText3": "Get In Touch",
+    "title": "Premier AI & Machine Learning Services",
+    "description": "Unlock your business's true potential with our AL & ML services. We are a leading AI company in the USA delivering bespoke machine learning and artificial intelligence solutions that drive tangible results and innovation.",
+    "formSubtitle": "TALK TO US",
+    "formTitle": "Book a Free Consultation"
+  },
+  "serviceLogos": {
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "service_1757356768612.png"
+    ]
+  },
+  "serviceCard": {
+    "title": "Trusted Expertise Backed by Results",
+    "cards": [
+      {
+        "icon": "serviceicon1.png",
+        "number": "150",
+        "text": "Successful AI Projects",
+        "symbol": "+"
+      },
+      {
+        "icon": "serviceicon2.png",
+        "number": "98",
+        "text": "Client Satisfaction",
+        "symbol": "%"
+      },
+      {
+        "icon": "serviceicon3.png",
+        "number": "10",
+        "text": "Years of Industry Experience",
+        "symbol": "+"
+      },
+      {
+        "icon": "serviceicon4.png",
+        "number": "50",
+        "text": "Certified AI & ML Experts",
+        "symbol": "+"
+      }
+    ]
+  },
+  "serviceAbout": {
+    "image1": "serviceimg2.png",
+    "image2": "serviceimg3.png",
+    "image3": "aboutShape2.png",
+    "subTitle": "About Company",
+    "title": "The AI Agency Powering Next-Gen Enterprises",
+    "des": "As a top-tier machine learning company in USA, we specialize in translating complex challenges into growth opportunities. Our team of experts delivers cutting-edge AI services designed to enhance efficiency, unlock insights, and create a sustainable competitive advantage for your business. We are recognized among the best AI companies for our commitment to innovation and client success, partnering with you to navigate the future of technology and achieve remarkable outcomes.",
+    "features": [
+      {
+        "icon": "serviceicon5.png",
+        "title": "Custom AI Models"
+      },
+      {
+        "icon": "serviceicon6.png",
+        "title": "DataOps"
+      },
+      {
+        "icon": "serviceicon7.png",
+        "title": "Scalable ML"
+      }
+    ]
+  },
+  "serviceProcess": {
+    "title": "Our Strategic AI Implementation Process",
+    "letters": ["AI", "Implementation"],
+    "des": "We follow a proven four-step methodology to ensure your AI solution is seamlessly integrated and delivers maximum impact from day one.",
+    "process": [
+      {
+        "image": "process1.png",
+        "heading": "Discovery & Strategy",
+        "des": "We analyze your business goals and data to create a custom AI roadmap that aligns perfectly with your objectives.",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "process2.png",
+        "heading": "Model Development & Training",
+        "des": "We create and fine-tune machine learning models built around your data, ensuring superior accuracy and performance.",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "process3.png",
+        "heading": "Integration & Deployment",
+        "des": "We integrate the AI solution into your existing workflows, ensuring a smooth transition with minimal disruption to your operations.",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "service_1757356783381.png",
+        "heading": "Optimization & Support",
+        "des": "We continuously monitor and refine your AI systems, providing ongoing support to ensure long-term success and optimal performance."
+      }
+    ]
+  },
+  "serviceTechnologies": {
+    "title": "Top AI & Machine Learning Services by All Spark Technologies",
+    "des": "We deliver future-ready artificial intelligence services and machine learning solutions that empower enterprises to scale, automate, and innovate with confidence, partnering with the world’s best AI companies.",
+    "technologies": [
+      {
+        "name": "AI Frameworks & Libraries",
+        "techs": [
+          {
+            "name": "TensorFlow",
+            "Icon": "js.png"
+          },
+          {
+            "name": "PyTorch",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Scikit-learn",
+            "Icon": "js.png"
+          },
+          {
+            "name": "Keras",
+            "Icon": "js.png"
+          }
+        ]
+      },
+      {
+        "name": "Natural Language Processing",
+        "techs": [
+          {
+            "name": "OpenAI API",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Hugging Face Transformers",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "spaCy",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Rasa",
+            "Icon": "vue.png"
+          }
+        ]
+      },
+      {
+        "name": "Computer Vision & Deep Learning",
+        "techs": [
+          {
+            "name": "OpenCV",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Detectron2",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "YOLO",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "FastAI",
+            "Icon": "vue.png"
+          }
+        ]
+      },
+      {
+        "name": "MLOps & Deployment",
+        "techs": [
+          {
+            "name": "MLflow",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Kubeflow",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Amazon SageMaker",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Google Vertex AI",
+            "Icon": "vue.png"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceOffering": {
+    "title": "AI & ML Services Driving Business Growth",
+    "letters": ["Services", "Driving"],
+    "des": "Take your digital presence to the next level with our web development services. We create custom, user-friendly, and scalable solutions designed to meet the unique needs of modern businesses. We're here to help you achieve your goals.",
+    "cards": [
+      {
+        "icon": "csdicon1.png",
+        "heading": "Custom AI Solutions",
+        "des": "Develop bespoke AI applications tailored to your specific operational needs, delivering a unique competitive edge and maximizing efficiency.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon2.png",
+        "heading": "Machine Learning Services",
+        "des": "Leverage our advanced machine learning services to build predictive models that uncover hidden patterns and forecast future trends.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon3.png",
+        "heading": "AI Consulting",
+        "des": "Partner with an expert AI consultant from our team to craft a strategic AI roadmap and identify high-impact opportunities.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon4.png",
+        "heading": "Natural Language Processing (NLP)",
+        "des": "We build advanced NLP solutions that understand text and speech, streamline communication, and uncover meaningful insights from raw data.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon5.png",
+        "heading": "Computer Vision",
+        "des": "Utilize state-of-the-art computer vision technology to interpret and process visual data, automating tasks and enhancing security.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon6.png",
+        "heading": "AI-Powered Automation",
+        "des": "Streamline your business processes with intelligent automation, reducing manual effort, minimizing errors, and boosting overall productivity.",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceBanner": {
+    "image": "ctaThumb1_1.png",
+    "Subtitle": "CONTACT US",
+    "title": "Join Hands With the AI Agency That Puts Your Growth First",
+    "des": "Ready to transform your operations with leading-edge technology? Let's discuss how our custom AI solutions can drive your business to the next level.",
+    "btnText": "Let's Schedule"
+  },
+  "serviceIndus": {
+    "image1": "indusimg1.png",
+    "image2": "indusimg2.png",
+    "image3": "shape.png",
+    "title": "Unlocking Competitive Advantage Through AI & ML Intelligence",
+    "letters": ["AI", "&", "ML", "Competitive"],
+    "des1": "We empower businesses across various sectors to harness the power of artificial intelligence. Our expertise as a premier ML agency allows us to build industry-specific solutions that tackle unique challenges and create new avenues for growth. From optimizing supply chains in manufacturing to personalizing customer experiences in retail, our AI services deliver measurable value.",
+    "des2": "We are one of the leading AI development companies committed to turning your industry-specific data into a powerful strategic asset."
+  },
+  "serviceIndustries": {
+    "title": "Where AI & ML Drive Impact",
+    "letters": ["AI", "&", "ML"],
+    "industries": [
+      {
+        "image": "industry1.png",
+        "title": "Healthcare & Life Sciences",
+        "des": "We develop predictive diagnostic tools and personalized treatment models to improve patient outcomes and streamline clinical operations.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Finance & Banking",
+        "des": "Our team builds fraud detection systems and algorithmic trading solutions that enhance security and maximize investment returns.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Retail & E-commerce",
+        "des": "We create AI-powered recommendation engines and demand forecasting systems to boost sales and optimize inventory management.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Manufacturing & Logistics",
+        "des": "Implement predictive maintenance and supply chain optimization solutions to reduce downtime and increase operational efficiency.",
+        "btnText": "Explore More"
+      }
+    ]
+  },
+  "serviceClient": {
+    "image1": "clientimg1.png",
+    "image2": "clientimg2.png",
+    "image3": "shape.png",
+    "image4": "hugicon.png",
+    "imageText": "Quality, Trust, Growth.",
+    "title": "Success Stories That Speak Volumes",
+    "letters": ["Success", "Stories"],
+    "des1": "Our reputation as a leading AI agency is built on the success of our clients. We are dedicated to forging long-term partnerships, providing the strategic guidance and technical expertise needed to turn ambitious goals into reality.",
+    "des2": "By collaborating closely with businesses, we deliver solutions that not only solve immediate problems but also pave the way for future innovation and sustained growth. We pride ourselves on being more than just a vendor; we are your dedicated AI partner.",
+    "lis": [
+      "Unmatched ROI",
+      "Seamless Integration",
+      "Scalable Growth",
+      "Dedicated Support"
+    ]
+  },
+  "serviceFAQs": {
+    "image1": "servicefaq1.png",
+    "image2": "servicefaq2.png",
+    "image3": "servicefaq3.png",
+    "subTitle": "FAQ",
+    "title": "Your Security, Our Constant Commitment",
+    "faqs": [
+      {
+        "question": "Why should we choose your AI company over other artificial intelligence companies?",
+        "answer": "As a top-tier machine learning company, we combine deep technical expertise with a strategic, business-focused approach. Unlike other AI development companies, we deliver truly customized solutions that integrate seamlessly and provide a clear, measurable return on investment, making us one of the best ai companies for results-driven partnerships."
+      },
+      {
+        "question": "What types of machine learning services do you offer?",
+        "answer": "Our comprehensive machine learning services include predictive analytics, natural language processing (NLP), computer vision, and deep learning. We build custom models for forecasting, classification, and anomaly detection to solve your specific business challenges. An expert AI consultant from our team can help you identify the best approach."
+      },
+      {
+        "question": "How does your ML agency ensure project success?",
+        "answer": "Our proven process involves deep discovery, agile development, rigorous testing, and continuous optimization. We maintain transparent communication throughout the project lifecycle and provide ongoing support post-deployment to ensure your AI solution delivers sustained value and adapts to your evolving needs."
+      },
+      {
+        "question": "How do you differ from other AI services providers?",
+        "answer": "Our key differentiator is our commitment to partnership. We don't just deliver technology; we provide end-to-end strategic guidance. Our focus on custom solutions, combined with our experience across multiple industries, ensures our AI services are not just advanced, but also practical and impactful for your unique environment."
+      }
+    ]
+  },
+  "serviceContact": {
+    "image": "man.png",
+    "subTitle": "TALK TO US",
+    "title": "Let’s Build Your Custom Software Solution",
+    "btnText": "Get In Touch"
+  }
+}
+export const UiAndUxDesign: ServicePageData = {
+  "serviceHero": {
+    "btnText": "Enterprise Software Solutions",
+    "btnText2": "GET STARTED",
+    "btnText3": "Get In Touch",
+    "title": "UI/UX Design Services in USA for Business Growth",
+    "description": "Designing digital experiences that drive impact and uplift enterprise brands. Partner with an innovative UI UX design agency in the USA for measurable results.",
+    "formSubtitle": "TALK TO US",
+    "formTitle": "Book a Free Consultation"
+  },
+  "serviceLogos": {
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
+  },
+  "serviceCard": {
+    "title": "Elevating Enterprise Futures with Data-Driven UI/UX Brilliance",
+    "cards": [
+      {
+        "icon": "serviceicon1.png",
+        "number": "40",
+        "text": "Avg. Conversion Rate Increase",
+        "symbol": "%"
+      },
+      {
+        "icon": "serviceicon2.png",
+        "number": 500,
+        "text": "Projects Successfully Delivered",
+        "symbol": "+"
+      },
+      {
+        "icon": "serviceicon3.png",
+        "number": 98,
+        "text": "Client Satisfaction",
+        "symbol": "%"
+      },
+      {
+        "icon": "serviceicon4.png",
+        "number": "15",
+        "text": "Industries Transformed",
+        "symbol": "+"
+      }
+    ]
+  },
+  "serviceAbout": {
+    "image1": "serviceimg2.png",
+    "image2": "serviceimg3.png",
+    "image3": "aboutShape2.png",
+    "subTitle": "About Company",
+    "title": "The Powerhouse Behind World-Class UI/UX Excellence",
+    "des": "We are a leading UI UX design company in the USA dedicated to solving complex business challenges through intuitive, user-centric solutions. Our cross-functional team merges technical precision with creative excellence, delivering value as a trusted user experience agency for enterprise clients seeking industry-leading results.",
+    "features": [
+      {
+        "icon": "serviceicon5.png",
+        "title": "Data-driven"
+      },
+      {
+        "icon": "serviceicon6.png",
+        "title": "Cross-Platform"
+      },
+      {
+        "icon": "serviceicon7.png",
+        "title": "Innovation"
+      }
+    ]
+  },
+  "serviceProcess": {
+    "title": "Crafting Transformative Journeys With Innovative Methodology",
+    "letters": ["Innovative", "Methodology"],
+    "des": "Our methodology ensures every client receives scalable, high-impact UI UX design services tailored for market advantage.",
+    "process": [
+      {
+        "image": "process1.png",
+        "heading": "Discovery & Research",
+        "des": "Deep-dive user research and market insight drive initial discovery phase.",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "process2.png",
+        "heading": "Strategy & Ideation",
+        "des": "Define objectives, prioritize features, and set user experience goals.",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "process3.png",
+        "heading": "Design & Prototyping",
+        "des": "Create seamless, engaging journeys with interactive design prototypes.",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "process4.png",
+        "heading": "User Testing & Validation",
+        "des": "Collect practical insights through thorough user and usability testing."
+      }
+    ]
+  },
+  "serviceTechnologies": {
+    "title": "Creative UI/UX Design Services for Engaging Digital Experiences",
+    "des": "AllSpark Technologies is a leading UI/UX design agency creating intuitive, user-centered interfaces. Our design specialists craft seamless experiences that elevate engagement, strengthen brand identity, and drive measurable customer satisfaction.",
+    "technologies": [
+      {
+        "name": "Platforms & Tools",
+        "techs": [
+          {
+            "name": "Figma",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Sketch",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Adobe XD",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "InVision Studio",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Maze",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Axure RP",
+            "Icon": "vue.png"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceOffering": {
+    "title": "Driving Enterprise Value Through Transformative UI/UX Services",
+    "letters": ["Transformative", "UI/UX"],
+    "des": "Enterprise-grade UI UX USA agency solutions tailored for your success. We help clients thrive in digital markets with powerful, targeted experiences.\nService Cards:\n",
+    "cards": [
+      {
+        "icon": "csdicon1.png",
+        "heading": "User Experience Strategy",
+        "des": "Align business goals with user needs for clear results.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon2.png",
+        "heading": "Interface Design",
+        "des": "Engaging, beautiful UIs that improve brand perception and usability.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon3.png",
+        "heading": "Mobile App Design",
+        "des": "Native and cross-platform apps delivering intuitive user journeys.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon4.png",
+        "heading": "Web Application Design",
+        "des": "High-conversion web products for seamless multi-device experience.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon5.png",
+        "heading": "Design Systems",
+        "des": "Cohesive libraries for consistent cross-platform design.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon6.png",
+        "heading": "Usability Testing",
+        "des": "Data-backed insights to maximize satisfaction and reduce friction.",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceBanner": {
+    "image": "ctaThumb1_1.png",
+    "Subtitle": "CONTACT US",
+    "title": "Elevate Your Brand With Our UI UX Experts in USA",
+    "des": "Our UI UX agency crafts results-driven digital experiences. Connect with a leading user experience agency and discover the impact of specialized UI UX design services.\nOur ux design firm helps businesses unlock the power of user-centric strategy.",
+    "btnText": "Schedule Your Consultation"
+  },
+  "serviceIndus": {
+    "image1": "indusimg1.png",
+    "image2": "indusimg2.png",
+    "image3": "shape.png",
+    "title": "Trusted by Leaders Across Industries",
+    "letters": ["Leaders", "Industries"],
+    "des1": "As one of the most innovative ux design agencies, our team provides tailored UI UX services for diverse industries across the U.S. We help clients address evolving compliance standards, deliver sector leading innovation, and meet unique user expectations.",
+    "des2": "From healthcare to fintech and enterprise solutions, our UI UX services empower businesses to achieve meaningful engagement, market differentiation, and measurable value across every digital touchpoint."
+  },
+  "serviceIndustries": {
+    "title": "Visionary Impact Across Transformative Digital Frontiers",
+    "letters": ["Transformative", "Digital", "Frontiers"],
+    "industries": [
+      {
+        "image": "industry1.png",
+        "title": "Healthcare Innovation",
+        "des": "Empower patient journeys and optimize healthcare workflows with tailored, compliant solutions that maximize engagement and digital health outcomes.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Financial Evolution",
+        "des": "Enhance security, build client confidence, and accelerate financial digital transformation with intuitive, high-performance user experience design expertise.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "E-commerce Growth",
+        "des": "Increase brand loyalty and sales conversion with optimized e-commerce solutions that create seamless, high-impact shopping journeys every visit.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Enterprise Digitalization",
+        "des": "Unlock scalable enterprise solutions that strengthen productivity, fuel digital transformation, and streamline complex business operations for lasting results.",
+        "btnText": "Explore More"
+      }
+    ]
+  },
+  "serviceClient": {
+    "image1": "clientimg1.png",
+    "image2": "clientimg2.png",
+    "image3": "shape.png",
+    "image4": "hugicon.png",
+    "imageText": "Quality, Trust, Growth.",
+    "title": "Is A Complicated Process Driving Customers Away?",
+    "letters": ["Process", "Customers"],
+    "des1": "User experience makes or breaks digital success. When interfaces are confusing or inefficient, businesses lose valuable revenue and customer loyalty. As a leading UX design agency in the USA, we transform complicated processes into seamless journeys that captivate users, cut friction, and maximize conversion for lasting business impact.",
+    "des2": "",
+    "lis": [
+      "Streamline user flows to boost customer satisfaction and brand reputation.",
+      "Accelerate digital adoption by simplifying every step of the user journey.",
+      "Increase revenue with intuitive interfaces designed for high engagement and conversion rates.",
+      "Strengthen retention and referrals with UI/UX that keeps clients coming back."
+    ]
+  },
+  "serviceFAQs": {
+    "image1": "servicefaq1.png",
+    "image2": "servicefaq2.png",
+    "image3": "servicefaq3.png",
+    "subTitle": "FAQ",
+    "title": "Prioritizing Your Website’s Security and Safety",
+    "faqs": [
+      {
+        "question": "What sets your digital product design services apart from other agencies?",
+        "answer": "We combine user research, analytics, and creative UX strategies to deliver meaningful results and memorable client experiences."
+      },
+      {
+        "question": "What’s the typical turnaround time for a design project?",
+        "answer": "Most projects are completed within 6–16 weeks, based on your unique goals and requirements."
+      },
+      {
+        "question": "Do you work with both emerging startups and established companies?",
+        "answer": "Yes! Our scalable, flexible methods are tailored for startups, SMEs, and enterprise-level organizations alike."
+      },
+      {
+        "question": "How do you measure the effectiveness of your interface and experience design solutions?",
+        "answer": "We provide detailed reports tracking growth in engagement, customer retention, and overall satisfaction after implementation."
+      }
+    ]
+  },
+  "serviceContact": {
+    "image": "man.png",
+    "subTitle": "TALK TO US",
+    "title": "Let’s Build Your Custom Software Solution",
+    "btnText": "Get In Touch"
+  }
+}
+export const EcommerceDevelopment: ServicePageData = {
+  "serviceHero": {
+    "btnText": "Enterprise Software Solutions",
+    "btnText2": "GET STARTED",
+    "btnText3": "Get In Touch",
+    "title": "Leading Ecommerce Development Company in USA",
+    "description": "We deliver tailored ecommerce development services in the USA, specializing in Shopify and WooCommerce to scale your online business effectively.",
+    "formSubtitle": "TALK TO US",
+    "formTitle": "Book a Free Consultation"
+  },
+  "serviceLogos": {
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
+  },
+  "serviceCard": {
+    "title": "Unmatched Excellence in Delivering Transformative Digital Solutions for Over a Decade",
+    "cards": [
+      {
+        "icon": "serviceicon1.png",
+        "number": "100",
+        "text": "Successful Projects",
+        "symbol": "+"
+      },
+      {
+        "icon": "serviceicon2.png",
+        "number": "50",
+        "text": "Skilled Developers",
+        "symbol": "+"
+      },
+      {
+        "icon": "serviceicon3.png",
+        "number": "10",
+        "text": "Years of Experience",
+        "symbol": "+"
+      },
+      {
+        "icon": "serviceicon4.png",
+        "number": "100",
+        "text": "Happy Clients Across the USA",
+        "symbol": "+"
+      }
+    ]
+  },
+  "serviceAbout": {
+    "image1": "serviceimg2.png",
+    "image2": "serviceimg3.png",
+    "image3": "aboutShape2.png",
+    "subTitle": "About Company",
+    "title": "Expert Ecommerce Development Services in USA for Scalable Growth",
+    "des": "Our ecommerce development company in the USA helps brands build powerful, conversion-driven online stores. From Shopify development services in the USA to WooCommerce solutions, we provide end-to-end support tailored to your needs. Even if you are starting fresh or upgrading an existing store, our team ensures secure, fast, and fully optimized ecommerce platforms designed to maximize sales and deliver long-term business success.\n",
+    "features": [
+      {
+        "icon": "serviceicon5.png",
+        "title": "Ingenious"
+      },
+      {
+        "icon": "serviceicon6.png",
+        "title": "Adaptive"
+      },
+      {
+        "icon": "serviceicon7.png",
+        "title": "Transformative"
+      }
+    ]
+  },
+  "serviceProcess": {
+    "title": "A Proven Ecommerce Development Process Designed to Deliver Results Quickly and Efficiently",
+    "letters": ["Ecommerce", "Development"],
+    "des": "We follow a structured ecommerce development process that ensures smooth execution, reliable performance, and long-term growth for every Shopify or WooCommerce project.",
+    "process": [
+      {
+        "image": "process1.png",
+        "heading": "Requirement Analysis",
+        "des": "Requirement analysis and project planning with business goals.",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "process2.png",
+        "heading": "Custom Development",
+        "des": "Custom ecommerce design and development for high conversions.",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "process3.png",
+        "heading": "Testing & Optimization",
+        "des": "Rigorous testing and optimization to ensure flawless performance.",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "process4.png",
+        "heading": "Ongoing Support",
+        "des": "Ongoing support and growth-focused ecommerce maintenance services."
+      }
+    ]
+  },
+  "serviceTechnologies": {
+    "title": "Ecommerce Development Services for Scalable Online Growth",
+    "des": "AllSpark Technologies provides result-driven Ecommerce development services that transform retail potential into powerful digital storefronts. Recognized for reliable Ecommerce services in USA, we craft personalized, conversion-focused platforms that inspire trust and long-term growth.",
+    "technologies": [
+      {
+        "name": "Platforms & Tools",
+        "techs": [
+          {
+            "name": "Shopify",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "WooCommerce",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Magento",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "BigCommerce",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "OpenCart",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Wix eCommerce",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Square Online",
+            "Icon": "vue.png"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceOffering": {
+    "title": "Full-Suite Ecommerce Solutions Tailored to Your Business Goals",
+    "letters": ["Ecommerce", "Solutions", "Tailored"],
+    "des": "We offer specialized ecommerce development services in USA, covering Shopify, WooCommerce, and other platforms for businesses of every size.",
+    "cards": [
+      {
+        "icon": "csdicon1.png",
+        "heading": "Shopify Development",
+        "des": "Custom Shopify stores built with advanced integrations and optimized features for improved sales, conversions, and seamless user experience.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon2.png",
+        "heading": "WooCommerce Development",
+        "des": "Flexible WooCommerce solutions offering scalability, customization, and powerful functionality tailored for small to large online businesses.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon3.png",
+        "heading": "Custom Ecommerce Development",
+        "des": "Tailored ecommerce development solutions beyond Shopify and WooCommerce, built to match unique business needs and growth goals.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon4.png",
+        "heading": "Magento Development",
+        "des": "Enterprise-grade Magento development for feature-rich, scalable, and secure ecommerce platforms with complete customization options.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon5.png",
+        "heading": "Ecommerce App Development",
+        "des": "Mobile-friendly ecommerce apps that deliver seamless shopping experiences, driving customer engagement and higher online sales.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "csdicon6.png",
+        "heading": "Ecommerce Website Design",
+        "des": "User-focused ecommerce design with responsive layouts and optimized interfaces that attract visitors and convert them into loyal buyers.",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceBanner": {
+    "image": "ctaThumb1_1.png",
+    "Subtitle": "CONTACT US",
+    "title": "Scale Your Ecommerce Business with Expert Developers in USA",
+    "des": "Partner with our ecommerce development company in the USA to build, optimize, and grow your online store. Get a free consultation today and start selling more.",
+    "btnText": "Let's Build"
+  },
+  "serviceIndus": {
+    "image1": "indusimg1.png",
+    "image2": "indusimg2.png",
+    "image3": "shape.png",
+    "title": "Comprehensive Ecommerce Development Services in USA",
+    "letters": ["Ecommerce", "Development", "USA"],
+    "des1": "We understand that building a successful ecommerce store requires more than just design. Our ecommerce development services in the USA combine strategy, technology, and creativity to deliver seamless customer experiences.",
+    "des2": "With expertise in Shopify and WooCommerce, we develop secure, scalable, and high-performing stores that help businesses grow in the competitive online marketplace. From product management and integrations to payment gateways and advanced features, we ensure your store is fully optimized to attract customers, boost conversions, and maximize ROI."
+  },
+  "serviceIndustries": {
+    "title": "Sectors We Deliver Solutions For",
+    "letters": ["Solutions"],
+    "industries": [
+      {
+        "image": "industry1.png",
+        "title": "Fashion & Apparel",
+        "des": "Modern ecommerce solutions for clothing and accessories.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Health & Beauty",
+        "des": "Optimized online stores for wellness and beauty brands.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Food & Beverages",
+        "des": "Ecommerce stores built for seamless food ordering and delivery.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "industry1.png",
+        "title": "Electronics & Gadgets",
+        "des": "Scalable solutions for tech and electronics businesses.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "service_1757422923117.png",
+        "title": "Home & Furniture",
+        "des": "Feature-rich ecommerce for furniture and lifestyle brands.",
+        "btnText": "Explore More"
+      },
+      {
+        "image": "service_1757422943129.png",
+        "title": "Sports & Fitness",
+        "des": "Engaging platforms for sports, fitness, and lifestyle products.",
+        "btnText": "Explore More"
+      }
+    ]
+  },
+  "serviceClient": {
+    "image1": "clientimg1.png",
+    "image2": "clientimg2.png",
+    "image3": "shape.png",
+    "image4": "hugicon.png",
+    "imageText": "Quality, Trust, Growth.",
+    "title": "Our Professional Team Helps You Overcome Ecommerce Challenges with Confidence",
+    "letters": ["Ecommerce", "Challenges"],
+    "des1": "Many businesses struggle with poorly developed ecommerce websites that fail to convert visitors into buyers. Slow loading times, weak integrations, and lack of scalability often prevent growth. Our professional ecommerce development company in USA ensures you never face these problems. With Shopify development services in USA and WooCommerce expertise, we create robust online stores designed to engage customers and increase sales.",
+    "des2": "From technical issues to strategic optimization, our team supports you at every step, giving you the competitive edge your business needs to thrive in today’s digital marketplace.",
+    "lis": []
+  },
+  "serviceFAQs": {
+    "image1": "servicefaq1.png",
+    "image2": "servicefaq2.png",
+    "image3": "servicefaq3.png",
+    "subTitle": "FAQ",
+    "title": "Prioritizing Your Website’s Security and Safety",
+    "faqs": [
+      {
+        "question": "Why choose your ecommerce development company in the USA?",
+        "answer": "We provide end-to-end Shopify and WooCommerce development services with proven expertise, fast delivery, and scalable ecommerce solutions for long-term growth."
+      },
+      {
+        "question": "Do you provide Shopify development services in USA for startups?",
+        "answer": "Yes. Our Shopify development company in USA helps startups build affordable, scalable, and growth-ready online stores."
+      },
+      {
+        "question": "What industries do you provide ecommerce development services for?",
+        "answer": "We serve fashion, beauty, electronics, food, home décor, fitness, and other industries needing professional online stores."
+      },
+      {
+        "question": "Can I hire a Shopify developer in USA from your team?",
+        "answer": "Absolutely. We provide certified Shopify developers in USA for full-time, part-time, or project-based requirements."
+      },
+      {
+        "question": "Do you also provide WooCommerce development services in USA?",
+        "answer": "Yes. As a WooCommerce development company in USA, we deliver tailored WooCommerce stores, plugins, and integrations."
+      },
+      {
+        "question": "How long does ecommerce development take?",
+        "answer": "Timelines vary by project complexity, but most Shopify and WooCommerce projects take between 4-8 weeks."
+      }
+    ]
+  },
+  "serviceContact": {
+    "image": "man.png",
+    "subTitle": "TALK TO US",
+    "title": "Let’s Build Your Custom Software Solution",
+    "btnText": "Get In Touch"
+  }
+}
+export const seo: ServicePageData = {
   "serviceHero": {
     "btnText": "SEO Solutions",
     "btnText2": "GET STARTED",
@@ -6233,7 +7609,13 @@ export const seo:ServicePageData = {
     "formTitle": "Book a Free Consultation"
   },
   "serviceLogos": {
-    "logos": ["logo-1.png", "logo-2.png", "logo-3.png", "logo-4.png", "logo-5.png"]
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
   },
   "serviceCard": {
     "title": "Turn Your Online Vision Into <br> Reality With SEO Solutions<br> in USA",
@@ -6316,6 +7698,45 @@ export const seo:ServicePageData = {
       }
     ]
   },
+  "serviceTechnologies": {
+    "title": "Result-Driven SEO Services in USA for Organic Traffic",
+    "des": "AllSpark Technologies is a results-driven SEO company in the USA, blending advanced on-page, off-page, and local SEO strategies with AI-powered insights to deliver measurable growth, brand authority, and lasting digital visibility.",
+    "technologies": [
+      {
+        "name": "Platforms & Tools",
+        "techs": [
+          {
+            "name": "Google Search Console",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Ahrefs",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Semrush",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Screaming Frog",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Moz Pro",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "SurferSEO",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Yoast SEO",
+            "Icon": "vue.png"
+          }
+        ]
+      }
+    ]
+  },
   "serviceOffering": {
     "title": "Our Core SEO Marketing Services in USA",
     "letters": ["SEO", "Services", "Marketing"],
@@ -6361,7 +7782,7 @@ export const seo:ServicePageData = {
   },
   "serviceBanner": {
     "image": "ctaThumb1_1.png",
-    "Subtitle": "About Company",
+    "Subtitle": "CONTACT US",
     "title": "Ready to Dominate Search Engines?",
     "des": "Partner with a trusted SEO agency that understands your business needs and delivers measurable results.",
     "btnText": "Start Transform"
@@ -6413,7 +7834,7 @@ export const seo:ServicePageData = {
     "imageText": "Quality, Trust, Growth.",
     "title": "SEO Agency Delivering Proven Results Across USA",
     "letters": ["SEO", "Results"],
-    "des1": " As a leading SEO company in USA, we are committed to helping businesses grow through customized SEO marketing services. From startups to enterprises, our SEO specialists design strategies that drive lasting success.",
+    "des1": "As a leading SEO company in USA, we are committed to helping businesses grow through customized SEO marketing services. From startups to enterprises, our SEO specialists design strategies that drive lasting success.",
     "des2": "Our clients have seen remarkable improvements in rankings, traffic, and sales after working with our SEO services in the USA. Whether it’s on-page SEO services, off-page SEO services, or support from a local SEO company, the results speak for themselves.",
     "lis": [
       "Transparent Reporting | Detailed insights into your SEO marketing progress",
@@ -6454,7 +7875,7 @@ export const seo:ServicePageData = {
     "btnText": "Get In Touch"
   }
 }
-export const DigitalMarketing:ServicePageData = {
+export const DigitalMarketing: ServicePageData = {
   "serviceHero": {
     "btnText": "Digital Marketing Solutions",
     "btnText2": "GET STARTED",
@@ -6465,7 +7886,13 @@ export const DigitalMarketing:ServicePageData = {
     "formTitle": "Book a Free Consultation"
   },
   "serviceLogos": {
-    "logos": ["logo-1.png", "logo-2.png", "logo-3.png", "logo-4.png", "logo-5.png"]
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
   },
   "serviceCard": {
     "title": "Digital Marketing Expertise Backed by a Decade's <br> Success",
@@ -6548,6 +7975,41 @@ export const DigitalMarketing:ServicePageData = {
       }
     ]
   },
+  "serviceTechnologies": {
+    "title": "Digital Marketing Services to Drive Engagement & Conversions",
+    "des": "AllSpark Technologies is a digital marketing company specializing in PPC, social media, and automation, helping small businesses and enterprises achieve measurable growth through innovative, data-driven online marketing strategies.",
+    "technologies": [
+      {
+        "name": "Platforms & Tools",
+        "techs": [
+          {
+            "name": "Google Ads",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Meta Ads",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "LinkedIn Ads",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "HubSpot",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "Mailchimp",
+            "Icon": "vue.png"
+          },
+          {
+            "name": "GA4",
+            "Icon": "vue.png"
+          }
+        ]
+      }
+    ]
+  },
   "serviceOffering": {
     "title": "Comprehensive Digital Marketing Services in USA",
     "letters": ["Digital", "Services", "Marketing"],
@@ -6593,7 +8055,7 @@ export const DigitalMarketing:ServicePageData = {
   },
   "serviceBanner": {
     "image": "ctaThumb1_1.png",
-    "Subtitle": "About Company",
+    "Subtitle": "CONTACT US",
     "title": "Elevate Growth with Strategic Digital Solutions",
     "des": "Empowering businesses through innovative digital marketing services, driving impactful results, and unlocking untapped potential across online platforms.",
     "btnText": "Start Transform"
@@ -6686,3 +8148,4 @@ export const DigitalMarketing:ServicePageData = {
     "btnText": "Get In Touch"
   }
 }
+

@@ -7,8 +7,9 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'vercel.libererllc.com',
         pathname: '/images/**', // Optionally restrict to specific paths
-      },
+      }
     ],
+    
   },
 };
 

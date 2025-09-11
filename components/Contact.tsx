@@ -240,16 +240,15 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                       <Dropdown
                         label="Choose a service"
                         items={[
-                          "Customer Support",
-                          "Digital Marketing & SEO",
                           "Custom Software Development",
-                          "Web & App Development",
+                          "Website Development",
+                          "Mobile App Development",
                           "AI & Machine Learning",
-                          "Cloud & DevOps Solutions",
                           "UI/UX Design",
                           "Ecommerce Development",
-                          "Email Marketing",
-                          "Live Chat Support",
+                          "SEO",
+                          "Digital Marketing",
+
                         ]}
                         value={field.value}
                         onChange={field.onChange}

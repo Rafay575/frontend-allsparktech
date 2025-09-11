@@ -11,7 +11,7 @@ export default function WebDevelopment({ servicePageData }: ServicePageDataProps
         <>
             <Topnav />
             <Navbar2 />
-            <h1 className="hidden">Web Development.</h1>
+            <h1 className="hidden">Website Development.</h1>
             <NewServicePage servicePageData={servicePageData} />
             <Footer2 />
         </>

@@ -68,9 +68,10 @@ export default function Footer() {
            <ul className="space-y-4 text-sm">
   {[
     { service: "Custom Software Development", icon: "/images/development-01.svg", query: "custom-software-development" },
-    { service: "Web & App Development", icon: "/images/web-app-development-01.svg", query: "web-and-app-development" },
+    { service: "Website Development", icon: "/images/web-app-development-01.svg", query: "website-development" },
+    { service: "Mobile App Development", icon: "/images/web-app-development-01.svg", query: "mobile-app-development" },
     { service: "AI & Machine Learning", icon: "/images/ai-machine-learning-01.svg", query: "ai-and-machine-learning" },
-    { service: "Digital Marketing & SEO", icon: "/images/digital-marketing-seo-01.svg", query: "digital-marketing-and-seo" },
+    { service: "Digital Marketing", icon: "/images/digital-marketing-seo-01.svg", query: "digital-marketing" },
   ].map((serviceItem, index) => (
     <li key={index} className="flex items-center space-x-2">
       <ChevronsRight className="h-4 w-4 text-white" />
