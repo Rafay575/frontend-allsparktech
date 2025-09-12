@@ -20,7 +20,7 @@ interface ServiceBannerProps {
 export default function ServicesBanner({ serviceBanner }: ServiceBannerProps) {
 
     return (
-        <div className='my-[50px] lg:my-[70px] py-[50px] container flex flex-col md:flex-row items-center flex-wrap py-[20px]  px-[30px] lg:px-[40px] rounded-[10px] bg-[#384bff] text-white gap-[30px] relative'>
+        <div className=' lg:my-[20px] py-[50px] container flex flex-col md:flex-row items-center flex-wrap py-[20px]  px-[30px] lg:px-[40px] rounded-[10px] bg-[#384bff] text-white gap-[30px] relative'>
             <div className='w-full md:w-[22%] relative z-10 flex flex-col  items-center sm:items-start '>
                 <Image src={`${baseURL}/images/services/${serviceBanner.image}`} width={200}
                     height={101} alt='img' />

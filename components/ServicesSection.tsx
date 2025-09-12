@@ -132,7 +132,7 @@ export default function ServicesSection({homeData}:{homeData: HomePageData}) {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <AnimatePresence>
           {displayedServices.map((service) => (
             <motion.div

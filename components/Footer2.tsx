@@ -121,13 +121,13 @@ export default function Footer2() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:pl-[60px]">
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-4 text-sm">
               {[
-                { name: "About Us", href: "/about" },
+                { name: "About", href: "/about" },
                 { name: "FAQ'S", href: "/#faqs" },
-                { name: "Contact Us", href: "/contact" },
+                { name: "Contact", href: "/contact" },
                 { name: "Blogs", href: "/blogs" },
               ].map((linkItem, index) => (
                 <li key={index} className="flex items-center space-x-2">

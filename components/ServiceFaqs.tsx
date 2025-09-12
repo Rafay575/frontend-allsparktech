@@ -59,7 +59,7 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               alt="img"
               width={400}
               height={400}
-              className="absolute top-[0px] right-[40px] md:right-[35px] !w-[18%] animate-spin"
+              className="absolute top-[0px] right-[23px] md:right-[35px] !w-[18%] animate-spin"
               style={{ animationDuration: "4s" }}
             />
           </div>

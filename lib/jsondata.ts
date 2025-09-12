@@ -17,92 +17,33 @@ export const homePage = {
     ]
   },
   "logos": [
-    {
-      "id": 1,
-      "src": "logo-1.png",
-      "alt": "AllSpark Logo 1"
-    },
-    {
-      "id": 2,
-      "src": "logo-2.png",
-      "alt": "AllSpark Logo 2"
-    },
-    {
-      "id": 3,
-      "src": "logo-3.png",
-      "alt": "AllSpark Logo 3"
-    },
-    {
-      "id": 4,
-      "src": "logo-4.png",
-      "alt": "AllSpark Logo 4"
-    },
-    {
-      "id": 5,
-      "src": "logo-5.png",
-      "alt": "AllSpark Logo 5"
-    }
+    { "id": 1, "src": "logo-1.png", "alt": "AllSpark Logo 1" },
+    { "id": 2, "src": "logo-2.png", "alt": "AllSpark Logo 2" },
+    { "id": 3, "src": "logo-3.png", "alt": "AllSpark Logo 3" },
+    { "id": 4, "src": "logo-4.png", "alt": "AllSpark Logo 4" },
+    { "id": 5, "src": "logo-5.png", "alt": "AllSpark Logo 5" }
   ],
   "homeServices": {
     "subTitle": "OUR SERVICES",
     "title": "What We Do Best",
     "allServices": [
-      {
-        "id": "custom-software-development",
-        "title": "Custom Software Development",
-        "imageUrl": "custom-software-development.webp"
-      },
-      {
-        "id": "web-and-app-development",
-        "title": "Web App Development",
-        "imageUrl": "web-app-development.webp"
-      },
-      {
-        "id": "ai-and-machine-learning",
-        "title": "AI & Machine Learning",
-        "imageUrl": "ai-machine-learning.webp"
-      },
-      {
-        "id": "cloud-and-devops-solutions",
-        "title": "Cloud & DevOps Solutions",
-        "imageUrl": "dev-ops.webp"
-      },
-      {
-        "id": "ui-ux-design",
-        "title": "UX/UI Design",
-        "imageUrl": "ui-ux-design.webp"
-      },
-      {
-        "id": "ecommerce-development",
-        "title": "Ecommerce Development",
-        "imageUrl": "ecommerce-development.webp"
-      },
-      {
-        "id": "customer-support",
-        "title": "Customer Support",
-        "imageUrl": "f3.jpg"
-      },
-      {
-        "id": "email-marketing",
-        "title": "Email Marketing",
-        "imageUrl": "email-marketing.webp"
-      },
-      {
-        "id": "live-chat-support",
-        "title": "Live Chat Support",
-        "imageUrl": "f1.jpg"
-      },
-      {
-        "id": "digital-marketing-and-seo",
-        "title": "Digital Marketing & SEO",
-        "imageUrl": "digital-marketing-seo.webp"
-      }
+      { "id": "custom-software-development", "title": "Custom Software Development", "imageUrl": "custom-software-development.webp", "alt": "service1" },
+      { "id": "website-development", "title": "Website Development", "imageUrl": "web-app-development.webp", "alt": "service2" },
+      { "id": "mobile-app-development", "title": "Mobile App Development", "imageUrl": "web-app-development.webp", "alt": "service3" },
+      { "id": "ai-and-machine-learning", "title": "AI & Machine Learning", "imageUrl": "ai-machine-learning.webp", "alt": "service4" },
+      { "id": "ui-ux-design", "title": "UX/UI Design", "imageUrl": "ui-ux-design.webp", "alt": "service5" },
+      { "id": "ecommerce-development", "title": "Ecommerce Development", "imageUrl": "ecommerce-development.webp", "alt": "service6" },
+      { "id": "seo", "title": "Seo", "imageUrl": "f3.jpg", "alt": "service7" },
+      { "id": "digital-marketing", "title": "Digital Marketing", "imageUrl": "digital-marketing-seo.webp", "alt": "service8" }
     ]
   },
   "about": {
     "img1": "aboutThumb1_1.png",
     "img2": "aboutThumb1_1-sub-section.png",
     "img3": "aboutShape2.png",
+    "alt1": "img1",
+    "alt2": "img2",
+    "alt3": "img3",
     "subheading": "ABOUT COMPANY",
     "mainHeading": "Innovating the Future with AI & Technology",
     "paragraphs": [
@@ -110,18 +51,9 @@ export const homePage = {
       "Our team of experienced developers, engineers, and AI specialists work collaboratively to deliver enterprise software development solutions that are intelligent, scalable, and user-centric."
     ],
     "features": [
-      {
-        "title": "Creative",
-        "subtitle": "Innovation"
-      },
-      {
-        "title": "Team",
-        "subtitle": "Collaboration"
-      },
-      {
-        "title": "Sustainable",
-        "subtitle": "Growth"
-      }
+      { "title": "Creative", "subtitle": "Innovation" },
+      { "title": "Team", "subtitle": "Collaboration" },
+      { "title": "Sustainable", "subtitle": "Growth" }
     ]
   },
   "process": [
@@ -150,6 +82,9 @@ export const homePage = {
     "img1": "faq1.png",
     "img2": "faq2.png",
     "img3": "faq3.png",
+    "alt1": "faq1",
+    "alt2": "faq2",
+    "alt3": "faq3",
     "subtitle": "Frequently Asked Questions",
     "title": "FAQs",
     "faqs": [
@@ -173,6 +108,7 @@ export const homePage = {
   },
   "contactBanner": {
     "img": "img1.png",
+    "alt": "Contact Us",
     "subTitle": "CONTACT US",
     "title": "Get a Free Consultation"
   },
@@ -180,62 +116,13 @@ export const homePage = {
     "title": "Our Latest Client Feedback",
     "subtitle": "Testimonials",
     "testimonials": [
-      {
-        "id": 1,
-        "name": "Jonathan Carter",
-        "role": "Startup Founder",
-        "text": "AllSpark transformed our business with its AI-powered solutions. Their team built a scalable, efficient system that automated our operations. Highly recommend!",
-        "image": "/images/testimonials/avatar.png",
-        "rating": 5
-      },
-      {
-        "id": 2,
-        "name": "David Thompson",
-        "role": "CTO, FinTech Company",
-        "text": "Their cloud-based software development helped us migrate to a high-performance, secure setup. Exceptional technical expertise!",
-        "image": "/images/testimonials/avatar.png",
-        "rating": 5
-      },
-      {
-        "id": 3,
-        "name": "Emily Roberts",
-        "role": "AI Researcher",
-        "text": "The AI automation tools AllSpark delivered saved our team countless hours. Their machine learning knowledge is unmatched.",
-        "image": "/images/testimonials/avatar-2.png",
-        "rating": 5
-      },
-      {
-        "id": 4,
-        "name": "Michael Lee",
-        "role": "SaaS Product Manager",
-        "text": "Seamless collaboration with AllSpark. Their innovative development improved our app’s performance and security.",
-        "image": "/images/testimonials/avatar.png",
-        "rating": 5
-      },
-      {
-        "id": 5,
-        "name": "Rachel Green",
-        "role": "Healthcare IT Specialist",
-        "text": "AllSpark developed a secure telehealth platform with complex integrations. Their enterprise software development firm experience really stood out.",
-        "image": "/images/testimonials/avatar-2.png",
-        "rating": 5
-      },
-      {
-        "id": 6,
-        "name": "James Wilson",
-        "role": "Logistics Operations Manager",
-        "text": "The custom ERP they built streamlined our supply chain. Fast delivery and excellent responsiveness from a skilled software development agency.",
-        "image": "/images/testimonials/avatar.png",
-        "rating": 5
-      },
-      {
-        "id": 7,
-        "name": "Natalie Cooper",
-        "role": "Digital Marketing Consultant",
-        "text": "Their automation features supercharged our ad campaigns. Truly a tech-enabled software development company worth partnering with.",
-        "image": "/images/testimonials/avatar-2.png",
-        "rating": 5
-      }
+      { "id": 1, "name": "Jonathan Carter", "role": "Startup Founder", "text": "AllSpark transformed our business with its AI-powered solutions. Their team built a scalable, efficient system that automated our operations. Highly recommend!", "image": "/images/testimonials/avatar.png", "rating": 5 },
+      { "id": 2, "name": "David Thompson", "role": "CTO, FinTech Company", "text": "Their cloud-based software development helped us migrate to a high-performance, secure setup. Exceptional technical expertise!", "image": "/images/testimonials/avatar.png", "rating": 5 },
+      { "id": 3, "name": "Emily Roberts", "role": "AI Researcher", "text": "The AI automation tools AllSpark delivered saved our team countless hours. Their machine learning knowledge is unmatched.", "image": "/images/testimonials/avatar-2.png", "rating": 5 },
+      { "id": 4, "name": "Michael Lee", "role": "SaaS Product Manager", "text": "Seamless collaboration with AllSpark. Their innovative development improved our app’s performance and security.", "image": "/images/testimonials/avatar.png", "rating": 5 },
+      { "id": 5, "name": "Rachel Green", "role": "Healthcare IT Specialist", "text": "AllSpark developed a secure telehealth platform with complex integrations. Their enterprise software development firm experience really stood out.", "image": "/images/testimonials/avatar-2.png", "rating": 5 },
+      { "id": 6, "name": "James Wilson", "role": "Logistics Operations Manager", "text": "The custom ERP they built streamlined our supply chain. Fast delivery and excellent responsiveness from a skilled software development agency.", "image": "/images/testimonials/avatar.png", "rating": 5 },
+      { "id": 7, "name": "Natalie Cooper", "role": "Digital Marketing Consultant", "text": "Their automation features supercharged our ad campaigns. Truly a tech-enabled software development company worth partnering with.", "image": "/images/testimonials/avatar-2.png", "rating": 5 }
     ]
   },
   "metadata": {
@@ -257,10 +144,7 @@ export const homePage = {
     "alternates": {
       "canonical": "https://allsparktechnologies.com/"
     },
-    "robots": {
-      "index": true,
-      "follow": true
-    }
+    "robots": { "index": true, "follow": true }
   },
   "script": {
     "@context": "https://schema.org",
@@ -279,19 +163,14 @@ export const homePage = {
             ],
             "description": "AllSpark Technologies is a leading software development company and AI development agency in the USA, offering custom software, cloud, DevOps, and full-stack solutions.",
             "foundingDate": "2010",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "US"
-            }
+            "address": { "@type": "PostalAddress", "addressCountry": "US" }
           },
           {
             "@type": "WebSite",
             "@id": "https://allsparktechnologies.com/#website",
             "url": "https://allsparktechnologies.com",
             "name": "AllSpark Technologies",
-            "publisher": {
-              "@id": "https://allsparktechnologies.com/#organization"
-            },
+            "publisher": { "@id": "https://allsparktechnologies.com/#organization" },
             "potentialAction": {
               "@type": "SearchAction",
               "target": "https://allsparktechnologies.com/search?q={search_term_string}",
@@ -305,12 +184,8 @@ export const homePage = {
             "name": "Custom Software Development Company & AI Solutions | AllSpark Technologies",
             "description": "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
             "inLanguage": "en-US",
-            "isPartOf": {
-              "@id": "https://allsparktechnologies.com/#website"
-            },
-            "about": {
-              "@id": "https://allsparktechnologies.com/#organization"
-            }
+            "isPartOf": { "@id": "https://allsparktechnologies.com/#website" },
+            "about": { "@id": "https://allsparktechnologies.com/#organization" }
           },
           {
             "@type": "FAQPage",
@@ -354,6 +229,7 @@ export const homePage = {
     ]
   }
 }
+
 export const aboutPage = {
   "heroimg": "hero.webp",
   "img1": "1.webp",
@@ -5697,41 +5573,15 @@ export const CustomSoftwareDevelopment: ServicePageData = {
     "formTitle": "Book a Free Consultation"
   },
   "serviceLogos": {
-    "logos": [
-      "logo-1.png",
-      "logo-2.png",
-      "logo-3.png",
-      "logo-4.png",
-      "logo-5.png"
-    ]
+    "logos": ["logo-1.png", "logo-2.png", "logo-3.png", "logo-4.png", "logo-5.png"]
   },
   "serviceCard": {
     "title": "10 Years of Experience Delivering Innovative Custom Software Solutions",
     "cards": [
-      {
-        "icon": "serviceicon1.png",
-        "number": "100",
-        "text": "Developed Custom Solutions",
-        "symbol": "+"
-      },
-      {
-        "icon": "serviceicon2.png",
-        "number": "3",
-        "text": "Years’ Client Engagement",
-        "symbol": "+"
-      },
-      {
-        "icon": "serviceicon3.png",
-        "number": "70",
-        "text": "Senior Engineer",
-        "symbol": "%"
-      },
-      {
-        "icon": "serviceicon4.png",
-        "number": "98",
-        "text": "Satisfaction Rate",
-        "symbol": "%"
-      }
+      { "icon": "serviceicon1.png", "number": "100", "text": "Developed Custom Solutions", "symbol": "+" },
+      { "icon": "serviceicon2.png", "number": "3", "text": "Years’ Client Engagement", "symbol": "+" },
+      { "icon": "serviceicon3.png", "number": "70", "text": "Senior Engineer", "symbol": "%" },
+      { "icon": "serviceicon4.png", "number": "98", "text": "Satisfaction Rate", "symbol": "%" }
     ]
   },
   "serviceAbout": {
@@ -5742,18 +5592,9 @@ export const CustomSoftwareDevelopment: ServicePageData = {
     "title": "Future-Ready Custom Software Solutions",
     "des": "AllSpark Technologies is a trusted custom software development company in the USA, delivering secure, scalable, and innovative solutions tailored to business needs. Our expert custom software developers help organizations achieve efficiency and growth through next-generation software development services.",
     "features": [
-      {
-        "icon": "serviceicon5.png",
-        "title": "Secure"
-      },
-      {
-        "icon": "serviceicon6.png",
-        "title": "Scalable"
-      },
-      {
-        "icon": "serviceicon7.png",
-        "title": "Agile"
-      }
+      { "icon": "serviceicon5.png", "title": "Secure" },
+      { "icon": "serviceicon6.png", "title": "Scalable" },
+      { "icon": "serviceicon7.png", "title": "Agile" }
     ]
   },
   "serviceProcess": {
@@ -5761,29 +5602,10 @@ export const CustomSoftwareDevelopment: ServicePageData = {
     "letters": ["Software"],
     "des": "We follow a structured, transparent, and efficient software development process that ensures custom software solutions are delivered with quality, speed, and scalability.",
     "process": [
-      {
-        "image": "process1.png",
-        "heading": "Requirement Study",
-        "des": "We define goals, features, and functions for custom software development.",
-        "dir": "dir1.png"
-      },
-      {
-        "image": "process2.png",
-        "heading": "UI/UX Design",
-        "des": "Our software design company creates user-friendly, efficient interfaces.",
-        "dir": "dir2.png"
-      },
-      {
-        "image": "process3.png",
-        "heading": "Development Stage",
-        "des": "Custom Software Developers build secure, scalable solutions.",
-        "dir": "dir3.png"
-      },
-      {
-        "image": "process4.png",
-        "heading": "Testing & Launch",
-        "des": "We ensure flawless delivery with quality software development services."
-      }
+      { "image": "process1.png", "heading": "Requirement Study", "des": "We define goals, features, and functions for custom software development.", "dir": "dir1.png" },
+      { "image": "process2.png", "heading": "UI/UX Design", "des": "Our software design company creates user-friendly, efficient interfaces.", "dir": "dir2.png" },
+      { "image": "process3.png", "heading": "Development Stage", "des": "Custom Software Developers build secure, scalable solutions.", "dir": "dir3.png" },
+      { "image": "process4.png", "heading": "Testing & Launch", "des": "We ensure flawless delivery with quality software development services.", "dir": "dir4.png" }
     ]
   },
   "serviceTechnologies": {
@@ -5793,101 +5615,41 @@ export const CustomSoftwareDevelopment: ServicePageData = {
       {
         "name": "Frontend",
         "techs": [
-          {
-            "name": "React.js",
-            "Icon": "react.png"
-          },
-          {
-            "name": "Angular",
-            "Icon": "angular.png"
-          },
-          {
-            "name": "Vue.js",
-            "Icon": "vue.png"
-          },
-          {
-            "name": "Svelte",
-            "Icon": "js.png"
-          },
-          {
-            "name": "HTML5",
-            "Icon": "bootstrap.png"
-          },
-          {
-            "name": "CSS3",
-            "Icon": "bootstrap.png"
-          },
-          {
-            "name": "JavaScript (ES6+)",
-            "Icon": "js.png"
-          }
+          { "name": "React.js", "Icon": "react.png" },
+          { "name": "Angular", "Icon": "angular.png" },
+          { "name": "Vue.js", "Icon": "vue.png" },
+          { "name": "Svelte", "Icon": "js.png" },
+          { "name": "HTML5", "Icon": "bootstrap.png" },
+          { "name": "CSS3", "Icon": "service_1757600999752.png" },
+          { "name": "Javascript (ES6+)", "Icon": "service_1757601525005.png" }
         ]
       },
       {
         "name": "Backend",
         "techs": [
-          {
-            "name": "Node.js",
-            "Icon": "vue.png"
-          },
-          {
-            "name": "Laravel (PHP)",
-            "Icon": "js.png"
-          },
-          {
-            "name": "Django (Python)",
-            "Icon": "js.png"
-          },
-          {
-            "name": ".NET Core",
-            "Icon": "js.png"
-          },
-          {
-            "name": "Ruby on Rails",
-            "Icon": "js.png"
-          }
+          { "name": "Node.js", "Icon": "vue.png" },
+          { "name": "Laravel (PHP)", "Icon": "js.png" },
+          { "name": "Django (Python)", "Icon": "js.png" },
+          { "name": ".NET Core", "Icon": "js.png" },
+          { "name": "Ruby on Rails", "Icon": "js.png" }
         ]
       },
       {
         "name": "Cross-Platform",
         "techs": [
-          {
-            "name": "Flutter",
-            "Icon": "vue.png"
-          },
-          {
-            "name": "React Native",
-            "Icon": "js.png"
-          },
-          {
-            "name": "Swift (iOS)",
-            "Icon": "js.png"
-          },
-          {
-            "name": "Kotlin (Android)",
-            "Icon": "js.png"
-          }
+          { "name": "Flutter", "Icon": "vue.png" },
+          { "name": "React Native", "Icon": "js.png" },
+          { "name": "Swift (iOS)", "Icon": "js.png" },
+          { "name": "Kotlin (Android)", "Icon": "js.png" }
         ]
       },
       {
         "name": "Databases & Cloud",
         "techs": [
-          {
-            "name": "MySQL",
-            "Icon": "vue.png"
-          },
-          {
-            "name": "PostgreSQL",
-            "Icon": "js.png"
-          },
-          {
-            "name": "MongoDB",
-            "Icon": "js.png"
-          },
-          {
-            "name": "AWS / Azure",
-            "Icon": "js.png"
-          }
+          { "name": "MySQL", "Icon": "vue.png" },
+          { "name": "PostgreSQL", "Icon": "js.png" },
+          { "name": "MongoDB", "Icon": "js.png" },
+          { "name": "AWS / Azure", "Icon": "js.png" }
         ]
       }
     ]
@@ -5897,42 +5659,12 @@ export const CustomSoftwareDevelopment: ServicePageData = {
     "letters": ["Software", "Development"],
     "des": "We offer custom software development service in USA, delivering secure, scalable, and innovative solutions tailored to meet unique business requirements.",
     "cards": [
-      {
-        "icon": "csdicon1.png",
-        "heading": "Enterprise Software Development Service",
-        "des": "Enterprise software services in USA designed to improve operations, security, and scalability for businesses.",
-        "btnText": "Read more"
-      },
-      {
-        "icon": "csdicon2.png",
-        "heading": "Bespoke Application Development Services",
-        "des": "Custom application development tailored to unique workflows, boosting efficiency and business growth.",
-        "btnText": "Read more"
-      },
-      {
-        "icon": "csdicon3.png",
-        "heading": "Digital Product Development Services",
-        "des": "We design, build, and launch innovative digital products with seamless user experiences.",
-        "btnText": "Read more"
-      },
-      {
-        "icon": "csdicon4.png",
-        "heading": "System Integration Services",
-        "des": "Integrating applications, platforms, and cloud solutions into one secure, streamlined ecosystem.",
-        "btnText": "Read more"
-      },
-      {
-        "icon": "csdicon5.png",
-        "heading": "API Development Services in USA",
-        "des": "API development in USA ensures seamless communication, secure integration, and efficient data sharing.",
-        "btnText": "Read more"
-      },
-      {
-        "icon": "csdicon6.png",
-        "heading": "Future-Ready Software Solutions (AI, Cloud, IoT)",
-        "des": "We create future-ready software using AI, cloud, and IoT for competitive advantage.",
-        "btnText": "Read more"
-      }
+      { "icon": "csdicon1.png", "heading": "Enterprise Software Development Service", "des": "Enterprise software services in USA designed to improve operations, security, and scalability for businesses.", "btnText": "Read more" },
+      { "icon": "csdicon2.png", "heading": "Bespoke Application Development Services", "des": "Custom application development tailored to unique workflows, boosting efficiency and business growth.", "btnText": "Read more" },
+      { "icon": "csdicon3.png", "heading": "Digital Product Development Services", "des": "We design, build, and launch innovative digital products with seamless user experiences.", "btnText": "Read more" },
+      { "icon": "csdicon4.png", "heading": "System Integration Services", "des": "Integrating applications, platforms, and cloud solutions into one secure, streamlined ecosystem.", "btnText": "Read more" },
+      { "icon": "csdicon5.png", "heading": "API Development Services in USA", "des": "API development in USA ensures seamless communication, secure integration, and efficient data sharing.", "btnText": "Read more" },
+      { "icon": "csdicon6.png", "heading": "Future-Ready Software Solutions (AI, Cloud, IoT)", "des": "We create future-ready software using AI, cloud, and IoT for competitive advantage.", "btnText": "Read more" }
     ]
   },
   "serviceBanner": {
@@ -5955,30 +5687,10 @@ export const CustomSoftwareDevelopment: ServicePageData = {
     "title": "Industries We Serve",
     "letters": ["Serve"],
     "industries": [
-      {
-        "image": "industry1.png",
-        "title": "Healthcare Software Development",
-        "des": "We build secure, compliant, and scalable healthcare applications integrating medical systems, improving patient management, analytics, and overall outcomes.",
-        "btnText": "Explore More"
-      },
-      {
-        "image": "industry1.png",
-        "title": "E-commerce",
-        "des": "Develop scalable e-commerce platforms with a focus on smooth user experiences, secure transactions, and a streamlined checkout process. Our solutions help your online store grow efficiently while maximizing customer satisfaction.",
-        "btnText": "Explore More"
-      },
-      {
-        "image": "industry1.png",
-        "title": "Education",
-        "des": "Creating interactive websites for educational institutions that enhance the learning experience. We build engaging platforms that support students, teachers, and administrators for seamless communication and effective online learning.",
-        "btnText": "Explore More"
-      },
-      {
-        "image": "industry1.png",
-        "title": "Finance",
-        "des": "Secure and reliable websites for financial services, ensuring robust solutions for online banking and financial transactions. We design platforms with top-tier security to meet the needs of both your business and your clients.",
-        "btnText": "Explore More"
-      }
+      { "image": "industry1.png", "title": "Healthcare Software Development", "des": "We build secure, compliant, and scalable healthcare applications integrating medical systems, improving patient management, analytics, and overall outcomes.", "btnText": "Explore More" },
+      { "image": "industry1.png", "title": "E-commerce", "des": "Develop scalable e-commerce platforms with a focus on smooth user experiences, secure transactions, and a streamlined checkout process. Our solutions help your online store grow efficiently while maximizing customer satisfaction.", "btnText": "Explore More" },
+      { "image": "industry1.png", "title": "Education", "des": "Creating interactive websites for educational institutions that enhance the learning experience. We build engaging platforms that support students, teachers, and administrators for seamless communication and effective online learning.", "btnText": "Explore More" },
+      { "image": "industry1.png", "title": "Finance", "des": "Secure and reliable websites for financial services, ensuring robust solutions for online banking and financial transactions. We design platforms with top-tier security to meet the needs of both your business and your clients.", "btnText": "Explore More" }
     ]
   },
   "serviceClient": {
@@ -6053,7 +5765,13 @@ export const WebDevelopment: ServicePageData = {
     "formTitle": "Book a Free Consultation"
   },
   "serviceLogos": {
-    "logos": ["logo-1.png", "logo-2.png", "logo-3.png", "logo-4.png", "logo-5.png"]
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
   },
   "serviceCard": {
     "title": "Unmatched Excellence in <br> Delivering Transformative <br> Digital Solutions for<br>Over a Decade",
@@ -6108,7 +5826,10 @@ export const WebDevelopment: ServicePageData = {
   },
   "serviceProcess": {
     "title": "Pioneering Web Development Company Excellence",
-    "letters": ["Web", "Development"],
+    "letters": [
+      "Web",
+      "Development"
+    ],
     "des": "Allspark Technologies delivers transformative digital solutions with over 10 years of proven web development expertise, propelling businesses forward through innovative technology.",
     "process": [
       {
@@ -6232,7 +5953,11 @@ export const WebDevelopment: ServicePageData = {
   },
   "serviceOffering": {
     "title": "Core Web Development Services Tailored for Business Excellence ",
-    "letters": ["Web", "Services", "Development"],
+    "letters": [
+      "Web",
+      "Services",
+      "Development"
+    ],
     "des": "Take your digital presence to the next level with our web development services. We create custom, user-friendly, and scalable solutions designed to meet the unique needs of modern businesses. We're here to help you achieve your goals.",
     "cards": [
       {
@@ -6285,13 +6010,19 @@ export const WebDevelopment: ServicePageData = {
     "image2": "indusimg2.png",
     "image3": "shape.png",
     "title": "Transforming Industries with Expert Web Development",
-    "letters": ["Expert", "Web", "Development"],
+    "letters": [
+      "Expert",
+      "Web",
+      "Development"
+    ],
     "des1": "Allspark Technologies provides innovative and customized web development solutions for a wide range of industries, helping businesses stay ahead in their digital transformation journey. Whether you're in healthcare, finance, education, or e-commerce, we have the expertise to create impactful, tailored websites that meet your unique needs.",
     "des2": "We deliver specialized website creation services across diverse sectors, understanding unique industry challenges and opportunities."
   },
   "serviceIndustries": {
     "title": "Industries We Serve",
-    "letters": ["Serve"],
+    "letters": [
+      "Serve"
+    ],
     "industries": [
       {
         "image": "industry1.png",
@@ -6326,7 +6057,10 @@ export const WebDevelopment: ServicePageData = {
     "image4": "hugicon.png",
     "imageText": "Quality, Trust, Growth.",
     "title": "Why Do Our Clients Love Us?",
-    "letters": ["Clients", "Our"],
+    "letters": [
+      "Clients",
+      "Our"
+    ],
     "des1": "Discover what makes Allspark Technologies the preferred web development agency for businesses seeking exceptional digital solutions.",
     "des2": "Our commitment to excellence, transparent communication, and innovative problem-solving approach ensures every client receives outstanding value and results that exceed expectations.",
     "lis": [
@@ -6391,7 +6125,13 @@ export const MobileAppDevelopment: ServicePageData = {
     "formTitle": "Book a Free Consultation"
   },
   "serviceLogos": {
-    "logos": ["logo-1.png", "logo-2.png", "logo-3.png", "logo-4.png", "logo-5.png"]
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
   },
   "serviceCard": {
     "title": "8+ Years Delivering <br> Excellence",
@@ -6430,14 +6170,26 @@ export const MobileAppDevelopment: ServicePageData = {
     "title": "Leading Mobile App Development Agency in USA",
     "des": "As a premier mobile app development company in the USA, Allspark Technologies transforms innovative business ideas into powerful, user-friendly, and scalable digital solutions that drive growth, boost customer engagement, strengthen brand presence, and create measurable impact across industries.",
     "features": [
-      { "icon": "serviceicon5.png", "title": "Innovative" },
-      { "icon": "serviceicon6.png", "title": "Robust" },
-      { "icon": "serviceicon7.png", "title": "Future-Ready" }
+      {
+        "icon": "serviceicon5.png",
+        "title": "Innovative"
+      },
+      {
+        "icon": "serviceicon6.png",
+        "title": "Robust"
+      },
+      {
+        "icon": "serviceicon7.png",
+        "title": "Future-Ready"
+      }
     ]
   },
   "serviceProcess": {
     "title": "Our Streamlined App Development Process",
-    "letters": ["App", "Development"],
+    "letters": [
+      "App",
+      "Development"
+    ],
     "des": "Discover how our proven approach ensures success at every stage of your app journey, from concept to launch, delivering exceptional results tailored to your business needs.",
     "process": [
       {
@@ -6557,7 +6309,11 @@ export const MobileAppDevelopment: ServicePageData = {
   },
   "serviceOffering": {
     "title": "Comprehensive Mobile App Development Services",
-    "letters": ["Mobile", "App", "Development"],
+    "letters": [
+      "Mobile",
+      "App",
+      "Development"
+    ],
     "des": "End-to-end solutions from a trailblazing mobile app development agency, offering innovative app development services for iOS, Android, and cross-platform applications.",
     "cards": [
       {
@@ -6610,13 +6366,17 @@ export const MobileAppDevelopment: ServicePageData = {
     "image2": "indusimg2.png",
     "image3": "shape.png",
     "title": "Industries We Transform",
-    "letters": ["Transform"],
+    "letters": [
+      "Transform"
+    ],
     "des1": "At Allspark Technologies, we build mobile apps tailored to the unique needs of various industries. Even if you are in healthcare, retail, finance, or entertainment, our mobile app development services offer innovative solutions that drive engagement, enhance user experience, and increase business value.",
     "des2": "Let us help you stay ahead in a competitive digital world with our industry-specific expertise."
   },
   "serviceIndustries": {
     "title": "Industries We Serve",
-    "letters": ["Serve"],
+    "letters": [
+      "Serve"
+    ],
     "industries": [
       {
         "image": "industry1.png",
@@ -6663,7 +6423,10 @@ export const MobileAppDevelopment: ServicePageData = {
     "image4": "hugicon.png",
     "imageText": "Quality, Trust, Growth.",
     "title": "Custom App Development Designed For Your Business Goals",
-    "letters": ["Custom", "App"],
+    "letters": [
+      "Custom",
+      "App"
+    ],
     "des1": "We are committed to helping businesses achieve their goals with custom mobile apps that are intuitive, user-centric, and performance-driven. Our clients’ success stories speak for themselves.",
     "des2": "Our clients have seen exceptional growth and engagement with our tailor-made mobile app solutions. Here's what they have to say about our services.",
     "lis": [
@@ -6721,7 +6484,7 @@ export const AiAndMachineLearning: ServicePageData = {
       "logo-2.png",
       "logo-3.png",
       "logo-4.png",
-      "service_1757356768612.png"
+      "service_1757606723898.png"
     ]
   },
   "serviceCard": {
@@ -6777,7 +6540,10 @@ export const AiAndMachineLearning: ServicePageData = {
   },
   "serviceProcess": {
     "title": "Our Strategic AI Implementation Process",
-    "letters": ["AI", "Implementation"],
+    "letters": [
+      "AI",
+      "Implementation"
+    ],
     "des": "We follow a proven four-step methodology to ensure your AI solution is seamlessly integrated and delivers maximum impact from day one.",
     "process": [
       {
@@ -6799,7 +6565,7 @@ export const AiAndMachineLearning: ServicePageData = {
         "dir": "dir3.png"
       },
       {
-        "image": "service_1757356783381.png",
+        "image": "service_1757606768307.png",
         "heading": "Optimization & Support",
         "des": "We continuously monitor and refine your AI systems, providing ongoing support to ensure long-term success and optimal performance."
       }
@@ -6897,7 +6663,10 @@ export const AiAndMachineLearning: ServicePageData = {
   },
   "serviceOffering": {
     "title": "AI & ML Services Driving Business Growth",
-    "letters": ["Services", "Driving"],
+    "letters": [
+      "Services",
+      "Driving"
+    ],
     "des": "Take your digital presence to the next level with our web development services. We create custom, user-friendly, and scalable solutions designed to meet the unique needs of modern businesses. We're here to help you achieve your goals.",
     "cards": [
       {
@@ -6950,13 +6719,22 @@ export const AiAndMachineLearning: ServicePageData = {
     "image2": "indusimg2.png",
     "image3": "shape.png",
     "title": "Unlocking Competitive Advantage Through AI & ML Intelligence",
-    "letters": ["AI", "&", "ML", "Competitive"],
+    "letters": [
+      "AI",
+      "&",
+      "ML",
+      "Competitive"
+    ],
     "des1": "We empower businesses across various sectors to harness the power of artificial intelligence. Our expertise as a premier ML agency allows us to build industry-specific solutions that tackle unique challenges and create new avenues for growth. From optimizing supply chains in manufacturing to personalizing customer experiences in retail, our AI services deliver measurable value.",
     "des2": "We are one of the leading AI development companies committed to turning your industry-specific data into a powerful strategic asset."
   },
   "serviceIndustries": {
     "title": "Where AI & ML Drive Impact",
-    "letters": ["AI", "&", "ML"],
+    "letters": [
+      "AI",
+      "&",
+      "ML"
+    ],
     "industries": [
       {
         "image": "industry1.png",
@@ -6991,7 +6769,10 @@ export const AiAndMachineLearning: ServicePageData = {
     "image4": "hugicon.png",
     "imageText": "Quality, Trust, Growth.",
     "title": "Success Stories That Speak Volumes",
-    "letters": ["Success", "Stories"],
+    "letters": [
+      "Success",
+      "Stories"
+    ],
     "des1": "Our reputation as a leading AI agency is built on the success of our clients. We are dedicated to forging long-term partnerships, providing the strategic guidance and technical expertise needed to turn ambitious goals into reality.",
     "des2": "By collaborating closely with businesses, we deliver solutions that not only solve immediate problems but also pave the way for future innovation and sustained growth. We pride ourselves on being more than just a vendor; we are your dedicated AI partner.",
     "lis": [
@@ -7105,7 +6886,10 @@ export const UiAndUxDesign: ServicePageData = {
   },
   "serviceProcess": {
     "title": "Crafting Transformative Journeys With Innovative Methodology",
-    "letters": ["Innovative", "Methodology"],
+    "letters": [
+      "Innovative",
+      "Methodology"
+    ],
     "des": "Our methodology ensures every client receives scalable, high-impact UI UX design services tailored for market advantage.",
     "process": [
       {
@@ -7170,7 +6954,10 @@ export const UiAndUxDesign: ServicePageData = {
   },
   "serviceOffering": {
     "title": "Driving Enterprise Value Through Transformative UI/UX Services",
-    "letters": ["Transformative", "UI/UX"],
+    "letters": [
+      "Transformative",
+      "UI/UX"
+    ],
     "des": "Enterprise-grade UI UX USA agency solutions tailored for your success. We help clients thrive in digital markets with powerful, targeted experiences.\nService Cards:\n",
     "cards": [
       {
@@ -7223,13 +7010,20 @@ export const UiAndUxDesign: ServicePageData = {
     "image2": "indusimg2.png",
     "image3": "shape.png",
     "title": "Trusted by Leaders Across Industries",
-    "letters": ["Leaders", "Industries"],
+    "letters": [
+      "Leaders",
+      "Industries"
+    ],
     "des1": "As one of the most innovative ux design agencies, our team provides tailored UI UX services for diverse industries across the U.S. We help clients address evolving compliance standards, deliver sector leading innovation, and meet unique user expectations.",
     "des2": "From healthcare to fintech and enterprise solutions, our UI UX services empower businesses to achieve meaningful engagement, market differentiation, and measurable value across every digital touchpoint."
   },
   "serviceIndustries": {
     "title": "Visionary Impact Across Transformative Digital Frontiers",
-    "letters": ["Transformative", "Digital", "Frontiers"],
+    "letters": [
+      "Transformative",
+      "Digital",
+      "Frontiers"
+    ],
     "industries": [
       {
         "image": "industry1.png",
@@ -7264,7 +7058,10 @@ export const UiAndUxDesign: ServicePageData = {
     "image4": "hugicon.png",
     "imageText": "Quality, Trust, Growth.",
     "title": "Is A Complicated Process Driving Customers Away?",
-    "letters": ["Process", "Customers"],
+    "letters": [
+      "Process",
+      "Customers"
+    ],
     "des1": "User experience makes or breaks digital success. When interfaces are confusing or inefficient, businesses lose valuable revenue and customer loyalty. As a leading UX design agency in the USA, we transform complicated processes into seamless journeys that captivate users, cut friction, and maximize conversion for lasting business impact.",
     "des2": "",
     "lis": [
@@ -7378,7 +7175,10 @@ export const EcommerceDevelopment: ServicePageData = {
   },
   "serviceProcess": {
     "title": "A Proven Ecommerce Development Process Designed to Deliver Results Quickly and Efficiently",
-    "letters": ["Ecommerce", "Development"],
+    "letters": [
+      "Ecommerce",
+      "Development"
+    ],
     "des": "We follow a structured ecommerce development process that ensures smooth execution, reliable performance, and long-term growth for every Shopify or WooCommerce project.",
     "process": [
       {
@@ -7447,7 +7247,11 @@ export const EcommerceDevelopment: ServicePageData = {
   },
   "serviceOffering": {
     "title": "Full-Suite Ecommerce Solutions Tailored to Your Business Goals",
-    "letters": ["Ecommerce", "Solutions", "Tailored"],
+    "letters": [
+      "Ecommerce",
+      "Solutions",
+      "Tailored"
+    ],
     "des": "We offer specialized ecommerce development services in USA, covering Shopify, WooCommerce, and other platforms for businesses of every size.",
     "cards": [
       {
@@ -7500,13 +7304,19 @@ export const EcommerceDevelopment: ServicePageData = {
     "image2": "indusimg2.png",
     "image3": "shape.png",
     "title": "Comprehensive Ecommerce Development Services in USA",
-    "letters": ["Ecommerce", "Development", "USA"],
+    "letters": [
+      "Ecommerce",
+      "Development",
+      "USA"
+    ],
     "des1": "We understand that building a successful ecommerce store requires more than just design. Our ecommerce development services in the USA combine strategy, technology, and creativity to deliver seamless customer experiences.",
     "des2": "With expertise in Shopify and WooCommerce, we develop secure, scalable, and high-performing stores that help businesses grow in the competitive online marketplace. From product management and integrations to payment gateways and advanced features, we ensure your store is fully optimized to attract customers, boost conversions, and maximize ROI."
   },
   "serviceIndustries": {
     "title": "Sectors We Deliver Solutions For",
-    "letters": ["Solutions"],
+    "letters": [
+      "Solutions"
+    ],
     "industries": [
       {
         "image": "industry1.png",
@@ -7553,7 +7363,10 @@ export const EcommerceDevelopment: ServicePageData = {
     "image4": "hugicon.png",
     "imageText": "Quality, Trust, Growth.",
     "title": "Our Professional Team Helps You Overcome Ecommerce Challenges with Confidence",
-    "letters": ["Ecommerce", "Challenges"],
+    "letters": [
+      "Ecommerce",
+      "Challenges"
+    ],
     "des1": "Many businesses struggle with poorly developed ecommerce websites that fail to convert visitors into buyers. Slow loading times, weak integrations, and lack of scalability often prevent growth. Our professional ecommerce development company in USA ensures you never face these problems. With Shopify development services in USA and WooCommerce expertise, we create robust online stores designed to engage customers and increase sales.",
     "des2": "From technical issues to strategic optimization, our team supports you at every step, giving you the competitive edge your business needs to thrive in today’s digital marketplace.",
     "lis": []
@@ -7670,7 +7483,10 @@ export const seo: ServicePageData = {
   },
   "serviceProcess": {
     "title": "Our Strategic SEO Process",
-    "letters": ["SEO", "Process"],
+    "letters": [
+      "SEO",
+      "Process"
+    ],
     "des": "We follow a structured SEO process designed to maximize online growth and strengthen your digital presence.",
     "process": [
       {
@@ -7739,7 +7555,11 @@ export const seo: ServicePageData = {
   },
   "serviceOffering": {
     "title": "Our Core SEO Marketing Services in USA",
-    "letters": ["SEO", "Services", "Marketing"],
+    "letters": [
+      "SEO",
+      "Services",
+      "Marketing"
+    ],
     "des": "Tailored SEO solutions in the USA designed to boost traffic, enhance rankings, and drive revenue through innovative strategies aligned with your unique business goals.",
     "cards": [
       {
@@ -7792,13 +7612,19 @@ export const seo: ServicePageData = {
     "image2": "indusimg2.png",
     "image3": "shape.png",
     "title": "Empowering Diverse Industries with Strategic SEO",
-    "letters": ["Strategic", "SEO"],
+    "letters": [
+      "Strategic",
+      "SEO"
+    ],
     "des1": "Our SEO and digital marketing services in the USA are designed to serve businesses of all sizes and industries.",
     "des2": "From startups to enterprises, we help companies increase their online presence, connect with target audiences, and achieve sustainable growth."
   },
   "serviceIndustries": {
     "title": "Industries We Serve",
-    "letters": ["Industries", "Served"],
+    "letters": [
+      "Industries",
+      "Served"
+    ],
     "industries": [
       {
         "image": "industry1.png",
@@ -7833,7 +7659,10 @@ export const seo: ServicePageData = {
     "image4": "hugicon.png",
     "imageText": "Quality, Trust, Growth.",
     "title": "SEO Agency Delivering Proven Results Across USA",
-    "letters": ["SEO", "Results"],
+    "letters": [
+      "SEO",
+      "Results"
+    ],
     "des1": "As a leading SEO company in USA, we are committed to helping businesses grow through customized SEO marketing services. From startups to enterprises, our SEO specialists design strategies that drive lasting success.",
     "des2": "Our clients have seen remarkable improvements in rankings, traffic, and sales after working with our SEO services in the USA. Whether it’s on-page SEO services, off-page SEO services, or support from a local SEO company, the results speak for themselves.",
     "lis": [
@@ -7947,7 +7776,10 @@ export const DigitalMarketing: ServicePageData = {
   },
   "serviceProcess": {
     "title": "Precision Driven Process for Digital Excellence",
-    "letters": ["Digital", "Excellence"],
+    "letters": [
+      "Digital",
+      "Excellence"
+    ],
     "des": "Transform your digital presence through our systematic approach that guarantees results. Our every successful campaign starts with a strategic approach that ensures maximum impact.",
     "process": [
       {
@@ -8012,7 +7844,11 @@ export const DigitalMarketing: ServicePageData = {
   },
   "serviceOffering": {
     "title": "Comprehensive Digital Marketing Services in USA",
-    "letters": ["Digital", "Services", "Marketing"],
+    "letters": [
+      "Digital",
+      "Services",
+      "Marketing"
+    ],
     "des": "Drive growth and expand your reach with our full range of digital marketing services across the USA.",
     "cards": [
       {
@@ -8065,13 +7901,20 @@ export const DigitalMarketing: ServicePageData = {
     "image2": "indusimg2.png",
     "image3": "shape.png",
     "title": "Tailored Solutions for Every Industry",
-    "letters": ["Tailored", "Digital", "Solutions"],
+    "letters": [
+      "Tailored",
+      "Digital",
+      "Solutions"
+    ],
     "des1": "We understand that different industries face unique challenges and opportunities. Our specialized approach ensures your digital marketing strategy aligns perfectly with your industry's specific requirements, customer behaviors, and market dynamics.",
     "des2": "Whether you are a marketing company for small business or a large enterprise, we adapt our proven methodologies to deliver exceptional results across all sectors."
   },
   "serviceIndustries": {
     "title": "Industry-Focused Digital Marketing Solutions",
-    "letters": ["Digital", "Marketing"],
+    "letters": [
+      "Digital",
+      "Marketing"
+    ],
     "industries": [
       {
         "image": "industry1.png",
@@ -8106,7 +7949,9 @@ export const DigitalMarketing: ServicePageData = {
     "image4": "hugicon.png",
     "imageText": "Quality, Trust, Growth.",
     "title": "Losing Customers to Competitors?",
-    "letters": ["Customers"],
+    "letters": [
+      "Customers"
+    ],
     "des1": "Don't let your competition steal market share while you struggle with ineffective marketing. Our proven digital marketing strategies help businesses reclaim their competitive edge and accelerate growth.",
     "des2": "As an experienced online marketing agency, we have helped countless businesses overcome challenges and achieve remarkable success.",
     "lis": [

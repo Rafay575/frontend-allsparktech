@@ -84,10 +84,10 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
             {serviceAbout.features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center sm:justify-start gap-[10px] bg-[#5666ff] p-2   rounded-lg !ml-0"
+                className="flex items-center justify-start gap-[10px] bg-[#5666ff] p-[5px] min-w-[150px]  rounded-lg !ml-0"
               >
-                <Image src={`${baseURL}/images/services/${feature.icon}`} alt="img" width={10}
-              height={10} className="bg-white p-3 rounded-lg !w-[50px]" />
+                <Image src={`${baseURL}/images/services/${feature.icon}`} alt="img" width={200}
+              height={200} className="bg-white p-3 rounded-lg !w-[50px]" />
                 <div className="flex flex-col">
                   <h6 className="text-white font-semibold text-[15px] md:text-[12px] xl:text-[15px]">{feature.title}</h6>
                 </div>

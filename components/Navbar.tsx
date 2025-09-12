@@ -73,8 +73,8 @@ const Navbar = () => {
       >
         <div
           className={`mx-auto bg-white relative transition-all duration-300 lg:max-w-4xl xl:max-w-6xl ${isSticky
-            ? "max-w-[100%]"
-            : "max-w-[80%] rounded-full border-4 border-t-0 border-gray-400"
+            ? "max-w-[100%] "
+            : "max-w-[80%] rounded-full border-4 border-t-0 border-gray-400  relative top-[12px]"
             } px-4 py-3 flex items-center justify-between`}
         >
           {/* Left: Logo / Brand */}

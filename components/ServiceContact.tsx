@@ -66,7 +66,7 @@ export default function ServiceContact({ serviceContact }: ServiceContactProps) 
         }
     };
     return (
-        <div className="container flex  flex-wrap bg-[#384bff] min-h-[680px] pb-[40px] lg:pb-0 my-[50px] lg:my-[80px]"  >
+        <div className="container flex  flex-wrap bg-[#384bff] min-h-[680px] pb-[40px] lg:pb-0 mt-[30px] lg:mt-[50px] mb-[20px]"  >
             <div className='w-full lg:w-1/2 relative hidden lg:block '>
                 <Image src={`${baseURL}/images/services/${serviceContact.image}`} alt='img' width={400}
                     height={400} className='absolute bottom-0 !w-[80%]  left-[50px] z-[3]' />

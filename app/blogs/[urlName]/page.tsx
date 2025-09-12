@@ -8,8 +8,6 @@ import type { Metadata } from "next";
 import { MdOutlineDateRange } from "react-icons/md";
 import Image from "next/image";
 import authorimg from "@/public/images/blogs/blogauthor.jpg"
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import BlogFaqs from "@/components/BlogFaqs";
 
 
@@ -258,14 +256,10 @@ export default async function BlogDetailPage(props: any) {
           <BlogFaqs faqs={blog.faqs} />
 
           {/* Author  */}
-          <div className="flex gap-[10px] md:justify-start justify-center">
+          <div className="flex gap-[10px] md:justify-start justify-center items-center">
             <Image src={authorimg} alt="author" className="w-[70px] h-[70px] object-cover border border-[#384BFF] rounded-full  " />
             <div>
-              <p className="text-[20px] leading-[29px] font-medium border-b-2 border-[#384BFF] text">by Irfan</p>
-              <div className="flex items-center gap-[5px] mt-[5px]">
-                <FaLinkedin className="text-[23px]  text-[#384BFF] hover:scale-[1.1] duration-500 cursor-pointer" />
-                <FaTwitter className="text-[23px] text-[#384BFF] hover:scale-[1.1] duration-500 cursor-pointer" />
-              </div>
+              <p className="text-[20px] leading-[29px] font-medium border-b-2 border-[#384BFF] relative bottom-[3px] text">by Admin</p>
             </div>
           </div>
 

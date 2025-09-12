@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-[#18185E] text-gray-300 py-24 ">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="space-y-4">
             <Image
@@ -22,34 +22,34 @@ export default function Footer() {
             </p>
             {/* Social Media Icons */}
             <div className="flex space-x-3 mt-4">
-             <Link
-  href="https://www.facebook.com/allsparktechnologies.official/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
->
-  <Facebook className="h-4 w-4" />
-</Link>
-<Link
-  href="https://www.instagram.com/allspark_technologies?igsh=aXkzbDMwc2Jvc3g4"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
->
-  <Instagram className="h-4 w-4" />
-</Link>
+              <Link
+                href="https://www.facebook.com/allsparktechnologies.official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
+              >
+                <Facebook className="h-4 w-4" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/allspark_technologies?igsh=aXkzbDMwc2Jvc3g4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
+              >
+                <Instagram className="h-4 w-4" />
+              </Link>
 
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:pl-[60px]">
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-             <ul className="space-y-4 text-sm">
+            <ul className="space-y-4 text-sm">
               {[
-                { name: "About Us", href: "/about" },
+                { name: "About", href: "/about" },
                 { name: "FAQ'S", href: "/#faqs" },
-                { name: "Contact Us", href: "/contact" },
+                { name: "Contact", href: "/contact" },
                 { name: "Blogs", href: "/blogs" },
               ].map((linkItem, index) => (
                 <li key={index} className="flex items-center space-x-2">
@@ -65,28 +65,28 @@ export default function Footer() {
           {/* Our Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Our Services</h3>
-           <ul className="space-y-4 text-sm">
-  {[
-    { service: "Custom Software Development", icon: "/images/development-01.svg", query: "custom-software-development" },
-    { service: "Website Development", icon: "/images/web-app-development-01.svg", query: "website-development" },
-    { service: "Mobile App Development", icon: "/images/web-app-development-01.svg", query: "mobile-app-development" },
-    { service: "AI & Machine Learning", icon: "/images/ai-machine-learning-01.svg", query: "ai-and-machine-learning" },
-    { service: "Digital Marketing", icon: "/images/digital-marketing-seo-01.svg", query: "digital-marketing" },
-  ].map((serviceItem, index) => (
-    <li key={index} className="flex items-center space-x-2">
-      <ChevronsRight className="h-4 w-4 text-white" />
-      <Link
-        href={{
-          pathname: `/${serviceItem.query}`,
-        }}
-        className="flex items-center hover:text-white transition duration-300"
-      >
-        
-        {serviceItem.service}
-      </Link>
-    </li>
-  ))}
-</ul>
+            <ul className="space-y-4 text-sm">
+              {[
+                { service: "Custom Software Development", icon: "/images/development-01.svg", query: "custom-software-development" },
+                { service: "Website Development", icon: "/images/web-app-development-01.svg", query: "website-development" },
+                { service: "Mobile App Development", icon: "/images/web-app-development-01.svg", query: "mobile-app-development" },
+                { service: "AI & Machine Learning", icon: "/images/ai-machine-learning-01.svg", query: "ai-and-machine-learning" },
+                { service: "Digital Marketing", icon: "/images/digital-marketing-seo-01.svg", query: "digital-marketing" },
+              ].map((serviceItem, index) => (
+                <li key={index} className="flex items-center space-x-2">
+                  <ChevronsRight className="h-4 w-4 text-white" />
+                  <Link
+                    href={{
+                      pathname: `/${serviceItem.query}`,
+                    }}
+                    className="flex items-center hover:text-white transition duration-300"
+                  >
+
+                    {serviceItem.service}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
           </div>
 
@@ -127,7 +127,7 @@ export default function Footer() {
             <Link href="/termsandconditions" className="hover:underline">
               Terms & Conditions
             </Link>
-             <Link href="/privacypolicy" className="hover:underline">
+            <Link href="/privacypolicy" className="hover:underline">
               Privacy Policy
             </Link>
 

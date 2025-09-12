@@ -3,7 +3,7 @@ import React from 'react'
 import arrow from "@/public/images/icons/arrow.png"
 import Image, { StaticImageData } from 'next/image'
 import { baseURL } from '@/API/baseURL';
-
+import Link from 'next/link';
 interface Card {
     icon: string | StaticImageData;
     heading: string;
@@ -51,7 +51,9 @@ export default function servicesOffering({ serviceOffering }: ServiceOfferingPro
                                 height={20} className='!w-[70px] border border-[#d4dcff] p-[10px] rounded-[5px]' />
                             <p className='text-[23px] md:text-[27px] font-[700] mt-[20px]'>{card.heading}</p>
                             <p className='my-[10px] text-[15px] md:text-[18px]'>{card.des}</p>
-                            <button className='border border-[#737577] py-[10px] px-[30px] rounded-[25px] mt-auto flex items-center gap-[10px] hover:scale-[1.04] duration-300'>{card.btnText}<Image src={arrow} alt='icon' /></button>
+                            <Link href={"/contact"} className='mt-auto'>
+                                <button className='border border-[#737577] py-[10px] px-[30px] rounded-[25px] mt-auto flex items-center gap-[10px] hover:scale-[1.0] hover:opacity-40  duration-300'>{card.btnText}<Image src={arrow} alt='icon' /></button>
+                            </Link>
                         </div>
                     ))}
                 </div>

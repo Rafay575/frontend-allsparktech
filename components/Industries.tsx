@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel"
 import arrow from "@/public/images/arrow.png"
 import { baseURL } from '@/API/baseURL';
-
+import Link from 'next/link';
 interface IndustryItem {
     image: string | StaticImageData;
     title: string;
@@ -28,23 +28,23 @@ interface ServiceIndustriesProps {
 export default function Industries({ serviceIndustries }: ServiceIndustriesProps) {
 
     const renderTitle = (title: string, highlights: string[] = []) => {
-    return title.split(" ").map((word, i, words) => {
-        const cleanWord = word.replace(/[^a-zA-Z]/g, "");
-        const isLastWord = i === words.length - 1;
-        if (highlights.some(highlight => highlight.trim() === cleanWord)) {
-            return (
-                <span key={i} className="text-[#384bff]">
-                    {word}{isLastWord ? "" : " "}
-                </span>
-            );
-        }
-        return word + (isLastWord ? "" : " ");
-    });
-};
+        return title.split(" ").map((word, i, words) => {
+            const cleanWord = word.replace(/[^a-zA-Z]/g, "");
+            const isLastWord = i === words.length - 1;
+            if (highlights.some(highlight => highlight.trim() === cleanWord)) {
+                return (
+                    <span key={i} className="text-[#384bff]">
+                        {word}{isLastWord ? "" : " "}
+                    </span>
+                );
+            }
+            return word + (isLastWord ? "" : " ");
+        });
+    };
 
 
     return (
-        <div className='container border my-[50px] lg:my-[80px] py-[50px] lg:py-[80px] px-[30px] bg-[#f3f7fb] rounded-[20px]'>
+        <div className='container border my-[50px] lg:my-[80px] py-[30px] lg:py-[50px] px-[30px] bg-[#f3f7fb] rounded-[20px]'>
             <p className='text-[29px] lg:text-[35px] 2xl:text-[40px] font-[700] text-center w-full lg:w-[70%] xl:w-[55%] mx-auto'>
                 {renderTitle(serviceIndustries.title, serviceIndustries.letters)}
             </p>
@@ -67,7 +67,9 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
                             <div className='w-full md:w-[49%] bg-white rounded-[25px] p-[20px] flex flex-col items-center sm:items-start justify-center text-center sm:text-start'>
                                 <h3 className="text-[20px] font-[600] mb-2">{industry.title}</h3>
                                 <p className="text-[14px] text-gray-600">{industry.des}</p>
-                                <button className='bg-[#384BFF] text-white mt-[20px] flex items-center gap-[10px] py-[7px] px-[25px] text-[15px] rounded-[25px]'>{industry.btnText} <Image src={arrow} alt='img' /></button>
+                                <Link href={"/contact"}>
+                                    <button className='bg-[#384BFF] text-white mt-[20px] flex items-center gap-[10px] py-[7px] px-[25px] text-[15px] rounded-[25px]'>{industry.btnText} <Image src={arrow} alt='img' /></button>
+                                </Link>
                             </div>
                         </CarouselItem>
                     ))}

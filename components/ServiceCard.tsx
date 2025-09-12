@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 import shape3 from "@/public/images/shape3.png"
-import shape4 from "@/public/images/shape4.png"
-import shape5 from "@/public/images/servicebg2.png"
 import { baseURL } from '@/API/baseURL';
 import { StaticImageData } from 'next/image';
 
@@ -24,10 +22,10 @@ export default function ServiceCard({ serviceCard }: ServiceCardProps) {
 
     return (
         <div>
-            <div className="container flex flex-wrap bg-[#f4f7fb] my-[50px] relative overflow-hidden">
-                <div className='w-full lg:w-[45%]  relative p-[20px]  text-white  font-[700] flex items-center justify-center text-center text-center'>
-                    <Image src={shape4} alt='img' className='absolute w-[100%] h-[100%] lg:w-[1300px] left-0 top-0 z-[10] hidden  ' />
-                    <Image src={shape5} alt='img' className='absolute w-[100%] h-[100%] lg:w-[100%] left-0 top-0 z-[10] block ' />
+            <div className="container flex flex-wrap bg-[#f4f7fb] my-[50px] relative overflow-hidden rounded-[20px]">
+                <div className='w-full lg:w-[45%]  relative p-[20px]  text-white  font-[700] flex items-center justify-center text-center text-center bg-[#4153FF] '>
+                    {/* <Image src={shape4} alt='img' className='absolute w-[100%] h-[100%] lg:w-[1300px] left-0 top-0 z-[10] hidden  ' /> */}
+                    {/* <Image src={shape5} alt='img' w className='absolute w-[100%] h-[100%] lg:w-[100%] left-0 top-0 z-[10] block ' /> */}
                     <p className='relative z-[50] text-center text-[25px] lg:text-[25px] xl:text-[27px] 2xl:text-[30px] w-full md:w-[70%] lg:w-full' dangerouslySetInnerHTML={{ __html: serviceCard.title }} ></p>
                 </div>
                 <div className='w-full py-[20px] overflow-hidden lg:w-[55%] flex items-start md:items-center justify-center lg:justify-start '>

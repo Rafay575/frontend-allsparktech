@@ -5,10 +5,11 @@ import img2 from "@/public/images/serviceshape2.png"
 import sericon from "@/public/images/sericon.png"
 import arrow from "@/public/images/arrow.png"
 import arrowleft from "@/public/images/leftarrow.png"
-import arrowright from "@/public/images/rightarrow.png" 
+import arrowright from "@/public/images/rightarrow.png"
 import { usePathname } from "next/navigation";
 import { baseURL } from '@/API/baseURL'
 import { toast } from "sonner"; // Sonner for toasts
+import Link from 'next/link'
 
 interface HeroData {
     btnText: string;
@@ -58,7 +59,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                         label: "OK",
                         onClick: () => console.log("Undo"),
                     },
-                
+
                 });
                 setName("")
                 setEmail("")
@@ -79,10 +80,14 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
             <Image src={img2} className='absolute bottom-0 right-0 z-[0]' alt="heroimg" />
             <div className="container flex flex-wrap lg:items-center justify-center  pb-[40px] lg:pb-0" >
                 <div className='w-full lg:w-1/2 flex flex-col items-center sm:items-start text-center sm:text-start '>
-                    <button className='  text-[14px] lg:text-[18px] flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0  '><Image src={sericon} className='w-[25px] ' alt='icon' />{serviceHero.btnText}</button>
+                    <Link href='/contact'>
+                        <button className='  text-[14px] lg:text-[18px] flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0  '><Image src={sericon} className='w-[25px] ' alt='icon' />{serviceHero.btnText}</button>
+                    </Link>
                     <p className='text-[30px] lg:text-[40px] 2xl:text-[50px] font-[700] mt-[20px] w-full md:w-[70%] lg:w-full'>{serviceHero.title}</p>
                     <p className='w-full md:w-[80%] lg:w-full mt-[10px]'>{serviceHero.description}</p>
-                    <button className=' text-[14px] lg:text-[18px] flex items-center gap-[5px] bg-[#F98600] py-[15px] px-[30px] rounded-[27px] font-[500] mt-[30px]'>{serviceHero.btnText2} <Image src={arrow} className='w-[15px] lg:w-[25px]' alt='icon' /></button>
+                    <Link href='/contact'>
+                        <button className=' text-[14px] lg:text-[18px] flex items-center gap-[5px] bg-[#F98600] py-[15px] px-[30px] rounded-[27px] font-[500] mt-[30px]'>{serviceHero.btnText2} <Image src={arrow} className='w-[15px] lg:w-[25px]' alt='icon' /></button>
+                    </Link>
                 </div>
                 <div className='w-full lg:w-1/2  lg:pl-[80px] flex flex-col items-center sm:items-start'>
                     <div className='flex items-center gap-[5px] mt-[60px]'>
