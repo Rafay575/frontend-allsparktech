@@ -206,3 +206,34 @@ ol {
 .active{
   @apply bg-[#384bff]
 }
+
+/* Paragraph */
+.para {
+  @apply text-[13px] md:text-[14px] lg:text-[14px] ;
+}
+
+/* Subheading (like h3/h4) */
+.subheading {
+  @apply  text-[18px] md:text-[19px] lg:text-[21px] ;
+}
+
+/* Heading (like h1/h2) */
+.heading {
+  @apply text-[29px] lg:text-[35px] 2xl:text-[40px]  ;
+}
+
+.pad{
+  @apply py-[30px] lg:py-[50px]
+}
+.mar{
+  @apply my-[30px] lg:my-[50px]
+}
+.bg{
+  @apply bg-[#384bff]
+}
+.color{
+  @apply text-[#384bff]
+}
+.bcolor{
+  @apply border-[#384bff]
+}

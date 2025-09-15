@@ -28,7 +28,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     >
       <div className={`absolute inset-0 ${overlayColor}`} />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
-        <h1 className="mb-4 text-3xl font-bold md:text-5xl">{title}</h1>
+        <h1 className="mb-4 heading font-bold ">{title}</h1>
         {/* Breadcrumbs can be added here */}
       </div>
     </section>

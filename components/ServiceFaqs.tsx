@@ -33,7 +33,7 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
 
 
   return (
-    <section className="py-16" id="faqs">
+    <section className="pad" id="faqs">
       <div className="mx-auto container px-6 flex flex-col  lg:flex-row items-center justify-between gap-10">
         {/* Left Image Section */}
         <div className="relative w-full lg:w-[40%]  ">
@@ -67,14 +67,14 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
 
         <div className="w-full lg:w-[50%] flex flex-col  items-center sm:items-start text-center sm:text-start">
           {/* FAQ Label */}
-          <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
+          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
             <ArrowLeft className="h-4 w-4" />
             <span>{serviceFAQs.subTitle}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-[29px] lg:text-[35px] 2xl:text-[40px]  font-bold !leading-relaxed text-gray-900">
+          <h2 className="heading font-bold !leading-relaxed text-gray-900">
             {serviceFAQs.title}
           </h2>
 
@@ -82,8 +82,8 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
           <Accordion type="single" collapsible className="mt-6 space-y-3 text-start w-full">
             {serviceFAQs.faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent className=" text-start">{faq.answer}</AccordionContent>
+                <AccordionTrigger className="para">{faq.question}</AccordionTrigger>
+                <AccordionContent className=" text-start para">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

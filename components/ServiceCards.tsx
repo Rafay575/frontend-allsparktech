@@ -40,15 +40,15 @@ export default function ServiceCards({ aboutData }: { aboutData: aboutData }) {
               <Image
                 src={`/images/Layer_${i + 1}.svg`}
                 alt={`icon ${i + 1}`}
-                width={75}
-                height={75}
+                width={95}
+                height={95}
               />
             </div>
             <div className="flex flex-col text-start items-start ml-3">
-              <h5 className="mb-2 text-lg font-semibold text-gray-800">
+              <h5 className="mb-2 subheading font-semibold text-gray-800">
                 {aboutData.cards?.[i]?.title || "Title"}
               </h5>
-              <p className="mb-4 text-sm text-gray-600 leading-relaxed">
+              <p className="mb-4 para text-gray-600 leading-relaxed">
                 {aboutData.cards?.[i]?.description || "Description"}
               </p>
             </div>

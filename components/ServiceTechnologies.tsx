@@ -27,13 +27,13 @@ export default function ServiceTechnologies({ serviceTechnologies }: ServiceTech
     const [select, setSelect] = useState<string>(serviceTechnologies?.technologies[0]?.name || "Frontend");
 
     return (
-        <div className='bg-[#181965] py-[50px] lg:py-[80px] my-[50px] lg:my-[80px] '>
+        <div className='bg-[#181965] pad  '>
             <div className="container">
                 <div className='text-white text-center'>
-                    <p className='w-full lg:w-[70%] xl:w-[55%] mx-auto text-[29px] lg:text-[35px] 2xl:text-[40px] font-[800]'>
+                    <p className='w-full lg:w-[70%] xl:w-[55%] mx-auto heading font-[800]'>
                         {serviceTechnologies?.title}
                     </p>
-                    <p className='w-full md:w-[70%] xl:w-[52%] mx-auto text-[15px] md:text-[18px] mt-[15px]'>
+                    <p className='w-full md:w-[70%] xl:w-[52%] mx-auto para mt-[15px]'>
                         {serviceTechnologies?.des}
                     </p>
 
@@ -66,7 +66,7 @@ export default function ServiceTechnologies({ serviceTechnologies }: ServiceTech
                                         height={20}
                                         className="!w-[60px] !h-[60px] bg-[#384bff] p-[10px] rounded-full translate-y-[-100%] absolute"
                                     />
-                                    <p className='mt-2 text-[16px] capitalize'>{tec.name}</p>
+                                    <p className='mt-2 para capitalize'>{tec.name}</p>
                                 </div>
                             ))}
                     </div>

@@ -88,9 +88,9 @@ export default function ContactSection({homeData}:{homeData: HomePageData}) {
    const router = useRouter();
 
   return (
-    <section className="relative pt-16 mb-[-100px]">
+    <section className="relative pt-16 mb-[-150px]">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="relative flex flex-col items-center justify-between rounded-xl bg-blue-600 py-3 px-10 text-white md:flex-row">
+        <div className="relative flex flex-col items-center justify-between rounded-xl bg py-3 px-10 text-white md:flex-row">
           {/* Left Section - Illustration and Text */}
           <div className="flex flex-col items-center md:flex-row md:items-center">
             <Image
@@ -104,14 +104,14 @@ export default function ContactSection({homeData}:{homeData: HomePageData}) {
 
             <div className="text-center md:text-left">
               {/* Contact Label */}
-              <div className="mb-2 flex items-center justify-center md:justify-start space-x-4 text-sm font-semibold uppercase tracking-wide">
+              <div className="mb-2 flex items-center justify-center md:justify-start space-x-4 para font-semibold uppercase tracking-wide">
                 <ArrowLeft className="h-4 w-4" />
                 <span>{homeData.contactBanner?.subTitle}</span>
                 <ArrowRight className="h-4 w-4" />
               </div>
 
               {/* Main Heading */}
-              <h2 className="text-2xl font-bold md:text-3xl">
+              <h2 className="text-2xl font-bold heading">
                 {homeData.contactBanner?.title}
               </h2>
             </div>
@@ -120,7 +120,7 @@ export default function ContactSection({homeData}:{homeData: HomePageData}) {
           {/* Right Section - Call to Action */}
           <div className="mt-6 md:mt-0">
             <Button
-              className="rounded-full bg-[#F98600] hover:bg-opacity-80 text-white  px-10 py-6"
+              className="rounded-full bg-[#F98600] para hover:bg-opacity-80 text-white  px-10 py-6"
               onClick={() => {
                 router.push("/contact");
               }}

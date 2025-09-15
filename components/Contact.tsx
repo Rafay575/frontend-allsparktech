@@ -88,11 +88,11 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Left Column */}
           <div>
-            <h2 className="mb-4 text-2xl font-bold text-gray-900">
+            <h2 className="mb-4 subheading font-bold text-gray-900">
               {pagedata?.title}
             </h2>
             <div>
-              <p className="text-sm leading-6">{pagedata?.description}</p>
+              <p className="para leading-6">{pagedata?.description}</p>
             </div>
             <div className="py-12 pb-20 space-y-6">
               {/* Call Us */}
@@ -110,10 +110,10 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="subheading font-semibold">
                     {pagedata?.methods[0].label}
                   </h3>
-                  <p className="text-sm">{pagedata?.methods[0].value}</p>
+                  <p className="para">{pagedata?.methods[0].value}</p>
                 </div>
               </motion.a>
 
@@ -132,10 +132,10 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="subheading font-semibold">
                     {pagedata?.methods[1].label}
                   </h3>
-                  <p className="text-sm">{pagedata?.methods[1].value}</p>
+                  <p className="para">{pagedata?.methods[1].value}</p>
                 </div>
               </motion.a>
 
@@ -156,10 +156,10 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="subheading font-semibold">
                     {pagedata?.methods[2].label}
                   </h3>
-                  <p className="text-sm">{pagedata?.methods[2].value}</p>
+                  <p className="para">{pagedata?.methods[2].value}</p>
                 </div>
               </motion.a>
             </div>

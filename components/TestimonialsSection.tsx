@@ -89,17 +89,17 @@ export default function TestimonialsSection({ homeData }: { homeData: HomePageDa
 
 
 
-  return (
-    <section className="bg-gray-100 py-24">
+  return (    
+    <section className="bg-gray-100 pad !pt-[185px]">
       <div className="mx-auto max-w-7xl px-6 mt-8 text-center">
         {/* Section header */}
-        <div className="flex items-center justify-center space-x-4 text-sm font-semibold uppercase text-blue-700">
+        <div className="flex items-center justify-center space-x-4 para font-semibold uppercase color">
           <ArrowLeft className="h-4 w-4" />
           <span>{homeData.testimonials.subtitle}</span>
           <ArrowRight className="h-4 w-4" />
         </div>
 
-        <h2 className="mb-20 mt-5 text-4xl font-bold text-gray-900">
+        <h2 className="mb-20 mt-5 heading font-bold text-gray-900">
           {homeData.testimonials.title}
         </h2>
 
@@ -121,7 +121,7 @@ export default function TestimonialsSection({ homeData }: { homeData: HomePageDa
           {homeData.testimonials.testimonials.map((t, idx) => (
             <SwiperSlide key={t.id}>
               <div
-                className={`h-[250px] flex flex-col justify-between rounded-xl p-4 shadow-lg transition-colors duration-300 ${active === idx ? "bg-blue-600 text-white" : "bg-white text-gray-900"
+                className={`h-[250px] flex flex-col justify-between rounded-xl p-4 shadow-lg transition-colors duration-300 ${active === idx ? "bg text-white" : "bg-white text-gray-900"
                   }`}
               >
                 {/* Stars */}
@@ -135,7 +135,7 @@ export default function TestimonialsSection({ homeData }: { homeData: HomePageDa
                 </div>
 
                 {/* Quote */}
-                <p className="text-sm leading-relaxed">{t.text}</p>
+                <p className="para leading-relaxed">{t.text}</p>
 
                 {/* Author */}
                 <div className="flex items-center mt-auto">
@@ -148,10 +148,10 @@ export default function TestimonialsSection({ homeData }: { homeData: HomePageDa
                     unoptimized
                   />
                   <div className="flex flex-col items-start">
-                    <h3 className="font-semibold">{t.name}</h3>
+                    <h3 className="font-semibold subheading">{t.name}</h3>
                     <p
-                      className={`text-sm ${active === idx ? "text-blue-200" : "text-gray-500"
-                        }`}
+                      className={`para ${active === idx ? "text-blue-200" : "text-gray-500"
+                        } `}
                     >
                       {t.role}
                     </p>

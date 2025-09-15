@@ -133,26 +133,25 @@ export default function FaqSection({homeData}:{homeData: HomePageData}) {
             />
           </div>
         </div>
-
         <div className="w-full max-w-lg">
           {/* FAQ Label */}
-          <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
+          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
             <ArrowLeft className="h-4 w-4" />
             <span>{homeData.faq.title}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl font-bold !leading-relaxed text-gray-900">
+          <h2 className="heading font-bold !leading-relaxed text-gray-900">
             {homeData.faq.subtitle}
           </h2>
 
           {/* FAQ Accordion */}
-          <Accordion type="single" collapsible className="mt-6 space-y-3">
+          <Accordion type="single" collapsible className="para mt-6 space-y-3">
             {homeData.faq.faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
+                <AccordionTrigger className="para">{faq.question}</AccordionTrigger>
+                <AccordionContent className="para">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

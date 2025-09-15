@@ -69,13 +69,13 @@ export default function BlogPage() {
       />
       <div className="w-[95%] md:w-[80%] mx-auto my-[20px]">
         <div className="mx-auto max-w-7xl text-start mt-[100px]">
-          <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
+          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
             <ArrowLeft className="h-4 w-4" />
             <span>{data.subTitle}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
           <div className="relative">
-            <h2 className="mt-3 text-4xl font-semibold text-gray-900">
+            <h2 className="mt-3 heading font-semibold text-gray-900">
               {data.title}
             </h2>
           </div>

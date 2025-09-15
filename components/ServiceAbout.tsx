@@ -31,7 +31,7 @@ interface ServiceAboutProps {
 export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
       console.log(`${baseURL}/images/services/${serviceAbout.image1}`);
   return (
-    <section className="relative bg-blue-600 overflow-hidden py-[50px] lg:py-[80px] text-white relative">
+    <section className="relative bg overflow-hidden pad mar text-white relative">
       <div className="mx-auto container flex pt-[60px] lg:pt-[0]  flex-col-reverse justify-between items-center gap-10 px-3 lg:px-6 lg:flex-row relative z-[20]">
         {/* Left Image Column */}
         <div className="relative w-[90%] lg:w-[40%]   mx-auto lg:mx-0 order-2 lg:order-1">
@@ -65,17 +65,17 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
 
         {/* Right Text Column */}
         <div className="w-full lg:w-[50%] mx-auto lg:text-left order-1 lg:order-2 text-center sm:text-start pt-[40px] lg:pt-[0px] flex flex-col items-center sm:items-start">
-          <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
+          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase  text-white">
             <Image src={leftarrow} alt="img" className=" w-[40px]" />
             <span>{serviceAbout.subTitle}</span>
             <Image src={rightarrow} alt="img" className=" w-[40px]" />
           </div>
 
-          <h2 className="text-[29px] lg:text-[35px] 2xl:text-[40px] font-bold !leading-normal ">
+          <h2 className="heading font-[700]">
             {serviceAbout.title}
           </h2>
 
-          <p className="mt-4 text-base text-white/80">
+          <p className="mt-4 para text-white/80">
             <span className="mb-5 block">{serviceAbout.des}</span>
           </p>
 
@@ -89,7 +89,7 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
                 <Image src={`${baseURL}/images/services/${feature.icon}`} alt="img" width={200}
               height={200} className="bg-white p-3 rounded-lg !w-[50px]" />
                 <div className="flex flex-col">
-                  <h6 className="text-white font-semibold text-[15px] md:text-[12px] xl:text-[15px]">{feature.title}</h6>
+                  <h6 className="text-white font-semibold para">{feature.title}</h6>
                 </div>
               </div>
             ))}

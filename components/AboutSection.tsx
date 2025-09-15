@@ -85,7 +85,7 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
 
 
   return (
-    <section className="relative bg-blue-600 overflow-x-hidden py-28 text-white">
+    <section className="relative bg overflow-x-hidden py-28 text-white">
       <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-3 lg:px-6 lg:flex-row">
         {/* Left Image Column */}
         <div className="relative w-full mx-auto lg:mx-0 max-w-md">
@@ -130,34 +130,34 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
 
         {/* Right Text Column */}
         <div className="w-full max-w-lg mx-auto lg:text-left">
-          <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
+          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
             <span>{homeData?.about.subheading}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
-          <h2 className="text-4xl font-bold !leading-normal sm:text-4xl">
+          <h2 className="heading font-bold !leading-normal ">
             {homeData?.about.mainHeading}
           </h2>
 
-          <p className="mt-4 text-base text-white/80">
+          <p className="mt-4 para text-white/80">
             <span className="mb-5 block">{homeData?.about.paragraphs[0]}</span>
             <span className="mt-5 block">{homeData?.about.paragraphs[1]}</span>
           </p>
 
           {/* Features Section */}
-          <div className="flex flex-wrap lg:flex-nowrap space-x-6 mt-10 gap-6 lg:gap-0 justify-center lg:justify-between">
+          <div className="flex flex-wrap lg:flex-nowrap space-x-2  mt-10  lg:gap-0 justify-start ">
             {homeData?.about?.features?.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-center space-x-3 bg-[#5666ff] lg:w-1/3 p-2 rounded-lg"
+                className="flex items-center space-x-2 bg-[#5666ff]  p-2 pr-3 rounded-lg"
               >
                 <div className="bg-white p-3 rounded-lg flex items-center justify-center">
                   {index === 0 ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width={20}
-                      height={20}
+                      width={25}
+                      height={25}
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -173,8 +173,8 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
                   ) : index === 1 ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width={20}
-                      height={20}
+                      width={25}
+                      height={25}
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -191,8 +191,8 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width={20}
-                      height={20}
+                      width={25}
+                      height={25}
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -208,8 +208,8 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
                   )}
                 </div>
                 <div className="flex flex-col">
-                  <h6 className="text-white font-semibold">{feature.title}</h6>
-                  <p className="text-white text-xs">{feature.subtitle}</p>
+                  <h6 className="text-white font-semibold para">{feature.title}</h6>
+                  <p className="text-white text-[12px]">{feature.subtitle}</p>
                 </div>
               </div>
             ))}

@@ -145,7 +145,7 @@ export default function HeroSection({homeData}:{homeData: HomePageData}) {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="text-2xl font-bold text-white md:text-3xl lg:text-4xl xl:text-5xl !leading-normal"
+                className="text-2xl font-bold text-white heading !leading-normal"
               >
                 {homeData?.hero?.texts[currentTextIndex]}
 
@@ -167,7 +167,7 @@ export default function HeroSection({homeData}:{homeData: HomePageData}) {
                   .map((feature, index) => (
                     <div key={index} className="flex items-center">
                       <CheckCircle className="h-5 w-5 mr-1 text-white" />
-                      <span className="text-sm md:text-base">{feature}</span>
+                      <span className="subheading">{feature}</span>
                     </div>
                   ))}
               </motion.div>
@@ -185,7 +185,7 @@ export default function HeroSection({homeData}:{homeData: HomePageData}) {
               >
                 <Link
                   href="/contact"
-                  className={`${plusJakartaSans.className} bg-[#F98600] rounded-full px-10 !py-3 text-white hover:bg-yellow-500`}
+                  className={`${plusJakartaSans.className} bg-[#F98600] rounded-full px-10 !py-3 text-white para hover:bg-yellow-500`}
                 >
                   Get in touch
                 </Link>

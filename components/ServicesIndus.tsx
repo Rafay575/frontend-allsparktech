@@ -26,7 +26,7 @@ export default function ServiceIndus({serviceIndus}:ServiceIndusProps) {
         const isLastWord = i === words.length - 1;
         if (highlights.some(highlight => highlight.trim() === cleanWord)) {
             return (
-                <span key={i} className="text-[#384bff]">
+                <span key={i} className="color">
                     {word}{isLastWord ? "" : " "}
                 </span>
             );
@@ -35,12 +35,12 @@ export default function ServiceIndus({serviceIndus}:ServiceIndusProps) {
     });
 };
     return (
-        <div className="container  py-[50px] lg:py-[80px]   flex flex-wrap items-center justify-between relative z-[20]">
+        <div className="container pad flex flex-wrap items-center justify-between relative z-[20]">
             {/* Left Image Column */}
             <div className="w-full lg:w-[50%]  flex flex-col  items-center sm:items-start text-center sm:text-start">
-                <p className="text-[29px] lg:text-[35px] 2xl:text-[40px] font-[700]">{renderTitle(serviceIndus.title, serviceIndus.letters)} </p>
-                <p className="mt-[20px]">{serviceIndus.des1}</p>
-                <p className="mt-[10px]">{serviceIndus.des2}</p>
+                <p className="heading font-[700]">{renderTitle(serviceIndus.title, serviceIndus.letters)} </p>
+                <p className="mt-[20px] para">{serviceIndus.des1}</p>
+                <p className="mt-[10px] para">{serviceIndus.des2}</p>
             </div>
 
             {/* Right Text Column */}

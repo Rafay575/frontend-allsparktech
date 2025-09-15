@@ -120,13 +120,13 @@ export default function ServicesSection({homeData}:{homeData: HomePageData}) {
     >
       <div className="mx-auto max-w-7xl text-start">
         {/* Title Section */}
-        <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
+        <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
           <ArrowLeft className="h-4 w-4" />
           <span>{homeData.homeServices?.subTitle}</span>
           <ArrowRight className="h-4 w-4" />
         </div>
         <div className="relative">
-          <h2 className="mt-3 text-4xl font-semibold text-gray-900">
+          <h2 className="mt-3 heading font-semibold text-gray-900">
             {homeData.homeServices?.title}
           </h2>
         </div>
@@ -158,7 +158,7 @@ export default function ServicesSection({homeData}:{homeData: HomePageData}) {
                   }}
                 ></div>
                 <div className="absolute top-0 left-0 w-full h-full flex items-end p-4 bg-gradient-to-t from-black/60 to-transparent">
-                  <h3 className="text-white text-lg font-semibold">
+                  <h3 className="text-white subheading font-semibold">
                     {service.title}
                   </h3>
                 </div>

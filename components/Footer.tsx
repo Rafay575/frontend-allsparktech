@@ -2,6 +2,9 @@ import Image from "next/image";
 import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 import { ChevronsRight } from "lucide-react";
 import Link from "next/link";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <>
@@ -37,6 +40,23 @@ export default function Footer() {
                 className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
               >
                 <Instagram className="h-4 w-4" />
+              </Link>
+              <Link
+                href="https://x.com/allsparktec"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
+              >
+                <FaXTwitter className="h-4 w-4" />
+              </Link>
+              
+              <Link
+                href="https://www.linkedin.com/company/all-spark-technologies/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
+              >
+                <FaLinkedin className="h-4 w-4" />
               </Link>
 
             </div>
@@ -118,7 +138,7 @@ export default function Footer() {
       </footer>
 
       {/* Bottom Footer */}
-      <div className="bg-blue-600 py-4">
+      <div className="bg py-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 text-white text-sm">
           <p>
             © All Copyright {new Date().getFullYear()} by AllSpark Technologies

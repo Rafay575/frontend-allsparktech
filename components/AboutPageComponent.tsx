@@ -86,22 +86,22 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
 
           {/* Text Content */}
           <div>
-            <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
+            <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
               <ArrowLeft className="h-4 w-4" />
               <span>{aboutData.subheading}</span>
               <ArrowRight className="h-4 w-4" />
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-4">
+            <h2 className="heading font-bold text-gray-800 leading-tight mb-4">
               {aboutData.mainHeading.split(aboutData.split)[0]}
               <br />
-              <span className="text-blue-600">
+              <span className="color">
                 {"Through" + aboutData.mainHeading.split(aboutData.split)[1]}
               </span>
             </h2>
 
-            <p className="text-gray-600 mb-6 text-base">{aboutData.paragraphs[0]}</p>
-            <p className="text-gray-600 mb-6 text-base">{aboutData.paragraphs[1]}</p>
+            <p className="text-gray-600 mb-6 para">{aboutData.paragraphs[0]}</p>
+            <p className="text-gray-600 mb-6 para">{aboutData.paragraphs[1]}</p>
           </div>
         </div>
       </div>

@@ -120,7 +120,7 @@ export default async function BlogDetailPage(props: any) {
         {/* Content Area */}
         <div className="w-full md:w-[75%] md:border-r md:border-[#dbdbdb] flex flex-col gap-[10px] px-[20px] py-[30px] lg:pr-[60px]">
           {/* Title  */}
-          <p className="text-[35px] font-bold leading-[32px] text-[#111827]">
+          <p className="heading font-bold leading-[32px] text-[#111827]">
             {blog.title}
           </p>
           <div className="-mt-4">
@@ -131,7 +131,7 @@ export default async function BlogDetailPage(props: any) {
           {/* Date  */}
           <div className="flex items-center gap-[5px]">
             <MdOutlineDateRange className="text-[20px] text-blue-500" />
-            <p className="text-[14px]  text-[#4b5563]">
+            <p className="para  text-[#4b5563]">
               {new Date(blog.created_at).toLocaleDateString('en-GB', {
                 day: '2-digit',
                 month: 'long',
@@ -144,7 +144,7 @@ export default async function BlogDetailPage(props: any) {
           <Image src={`${baseURL}/images/blogs/${blog.image}`} width={400} height={400} className="rounded-[10px] !w-[100%]" alt="MainImg " />
 
           {/* Description  */}
-          <p className="text-[16px] text-[#1f2937]">
+          <p className="para text-[#1f2937]">
             {blog.description}
           </p>
 
@@ -153,7 +153,7 @@ export default async function BlogDetailPage(props: any) {
           <div className="blogsdata">
             {itemsWithIds.map((item: any, index: number) => (
               <div key={index}>
-                {item.type === "h1" && <h1 className="h1">{item.value}</h1>}
+                {item.type === "h1" && <h1 className="h1 heading">{item.value}</h1>}
                 {item.type === "h2" &&
                   <div>
                     <h2 id={item.id} className="h2 scroll-mt-24">{item.value}</h2>
@@ -163,13 +163,13 @@ export default async function BlogDetailPage(props: any) {
                   </div>}
                 {item.type === "h3" && <h3 className="h3">{item.value}</h3>}
 
-                {item.type === "p" && <p className="text-[16px] text-[#4B5563] font-[400]">{item.value}</p>}
+                {item.type === "p" && <p className="text-[16px] text-[#4B5563] font-[400] para">{item.value}</p>}
                 {item.type === "strong" && <strong className="strong text-[#4B5563] font-[400] text-[16px]">{item.value}</strong>}
 
                 {item.type === "ul" && (
                   <ul className="ul">
                     {item.value?.map((li: any, liIndex: number) => (
-                      <li key={liIndex} className="text-[#4B5563] font-[500]">{li}</li>
+                      <li key={liIndex} className="text-[#4B5563] font-[500] para">{li}</li>
                     ))}
                   </ul>
                 )}
@@ -177,14 +177,14 @@ export default async function BlogDetailPage(props: any) {
                 {item.type === "ol" && (
                   <ol className="ol">
                     {item.value?.map((li: any, liIndex: number) => (
-                      <li key={liIndex} className="text-[#4B5563] font-[500]">{li}</li>
+                      <li key={liIndex} className="text-[#4B5563] font-[500] para">{li}</li>
                     ))}
                   </ol>
                 )}
 
 
                 {item.type === "table" && (
-                  <table className="table !text-[16px] border-collapse border border-gray-400 w-full text-left rounded-[10px] my-[40px]">
+                  <table className="table para border-collapse border border-gray-400 w-full text-left rounded-[10px] my-[40px]">
                     <thead>
                       <tr>
                         {item.headers?.map((header: string, hIndex: number) => (
@@ -259,7 +259,7 @@ export default async function BlogDetailPage(props: any) {
           <div className="flex gap-[10px] md:justify-start justify-center items-center">
             <Image src={authorimg} alt="author" className="w-[70px] h-[70px] object-cover border border-[#384BFF] rounded-full  " />
             <div>
-              <p className="text-[20px] leading-[29px] font-medium border-b-2 border-[#384BFF] relative bottom-[3px] text">by Admin</p>
+              <p className="subheading leading-[29px] font-medium border-b-2 border-[#384BFF] relative bottom-[3px] text">by Admin</p>
             </div>
           </div>
 
@@ -267,14 +267,14 @@ export default async function BlogDetailPage(props: any) {
 
         {/* Table of Contents Area */}
         <div className="w-full md:w-[25%] hidden md:block p-[20px]  max-h-[95vh] overflow-y-auto hide-scrollbar md:sticky top-[40px] bottom-[300px] mb-[20px] md:mb-[0px] z-10">
-          <p className="text-[21px] font-semibold mt-[10px] mb-[6px] ml-1">
+          <p className=" font-semibold mt-[10px] mb-[6px] ml-1 subheading">
             Table of Contents
           </p>
           <hr />
           <div className="flex flex-col gap-[10px] my-[5px]">
             {toc.map((h, i) => (
               <div key={i}>
-                <a href={`#${h.id}`} className="text-[14px] text-[#4b5563] hover:text-blue-500 cursor-pointer">
+                <a href={`#${h.id}`} className="para  text-[#4b5563] hover:text-blue-500 cursor-pointer">
                   {h.text}
                 </a>
                 <hr className="mt-[7px]" />

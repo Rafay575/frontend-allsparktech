@@ -7,9 +7,10 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
-import arrow from "@/public/images/arrow.png"
 import { baseURL } from '@/API/baseURL';
 import Link from 'next/link';
+import { MdArrowForward } from "react-icons/md";
+
 interface IndustryItem {
     image: string | StaticImageData;
     title: string;
@@ -33,7 +34,7 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
             const isLastWord = i === words.length - 1;
             if (highlights.some(highlight => highlight.trim() === cleanWord)) {
                 return (
-                    <span key={i} className="text-[#384bff]">
+                    <span key={i} className="color">
                         {word}{isLastWord ? "" : " "}
                     </span>
                 );
@@ -44,8 +45,8 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
 
 
     return (
-        <div className='container border my-[50px] lg:my-[80px] py-[30px] lg:py-[50px] px-[30px] bg-[#f3f7fb] rounded-[20px]'>
-            <p className='text-[29px] lg:text-[35px] 2xl:text-[40px] font-[700] text-center w-full lg:w-[70%] xl:w-[55%] mx-auto'>
+        <div className='container border mar pad px-[30px] bg-[#f3f7fb] rounded-[20px]'>
+            <p className='heading font-[700] text-center w-full lg:w-[70%] xl:w-[55%] mx-auto'>
                 {renderTitle(serviceIndustries.title, serviceIndustries.letters)}
             </p>
 
@@ -65,10 +66,10 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
                                 </div>
                             </div>
                             <div className='w-full md:w-[49%] bg-white rounded-[25px] p-[20px] flex flex-col items-center sm:items-start justify-center text-center sm:text-start'>
-                                <h3 className="text-[20px] font-[600] mb-2">{industry.title}</h3>
-                                <p className="text-[14px] text-gray-600">{industry.des}</p>
+                                <h3 className="subheading font-[600] mb-2">{industry.title}</h3>
+                                <p className="para text-gray-600">{industry.des}</p>
                                 <Link href={"/contact"}>
-                                    <button className='bg-[#384BFF] text-white mt-[20px] flex items-center gap-[10px] py-[7px] px-[25px] text-[15px] rounded-[25px]'>{industry.btnText} <Image src={arrow} alt='img' /></button>
+                                    <button className='bg text-white mt-[20px] flex items-center gap-[10px] py-[7px] px-[25px] para rounded-[25px] hover:text-[#384BFF] hover:border hover:border-[#384BFF] hover:bg-transparent'>{industry.btnText}<MdArrowForward className='para relative top-[1px]'/></button>
                                 </Link>
                             </div>
                         </CarouselItem>

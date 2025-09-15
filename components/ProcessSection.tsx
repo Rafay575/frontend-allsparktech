@@ -108,11 +108,11 @@ export default function ProcessSection({homeData}:{homeData: HomePageData}) {
           <div className="mx-auto max-w-7xl grid grid-cols-1 gap-10 px-6 md:grid-cols-2 xl:grid-cols-4">
             {homeData.process?.map((step, index) => (
               <div key={index} className="text-start">
-                <h2 className="text-4xl font-bold text-gray-400">
+                <h2 className="heading font-bold text-gray-400">
                   {step.number}
                 </h2>
-                <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-xs text-gray-300 leading-[20px] [word-spacing:0.15em]">
+                <h3 className="mt-2 subheading font-semibold">{step.title}</h3>
+                <p className="mt-2 para text-gray-300 ">
                   {step.description}
                 </p>
               </div>

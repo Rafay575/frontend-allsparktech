@@ -11,7 +11,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-import {MetaTitle} from "./MetaTitle";
+import { MetaTitle } from "./MetaTitle";
 
 export interface HomePageData {
   hero: {
@@ -90,7 +90,7 @@ export interface HomePageData {
 }
 
 
-export default function Home({homeData}:{homeData:HomePageData}) {
+export default function Home({ homeData }: { homeData: HomePageData }) {
 
   // console.log(homeData.script);
 
@@ -99,15 +99,14 @@ export default function Home({homeData}:{homeData:HomePageData}) {
       <Navbar />
 
       <MetaTitle />
-      <Hero homeData={homeData}/>
-       <Logos homeData={homeData}/>
-      <ServicesSection homeData={homeData}/>
-     <AboutSection homeData={homeData} />
+      <Hero homeData={homeData} />
+      <Logos homeData={homeData} />
+      <ServicesSection homeData={homeData} />
+      <AboutSection homeData={homeData} />
       <ProcessSection homeData={homeData} />
       <FaqSection homeData={homeData} />
-       <ContactSection homeData={homeData} />
-     <TestimonialsSection homeData={homeData} />
-
+      <ContactSection homeData={homeData} />
+      <TestimonialsSection homeData={homeData} />
       <Footer />
 
       {homeData.script && (

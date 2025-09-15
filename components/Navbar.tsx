@@ -74,7 +74,7 @@ const Navbar = () => {
         <div
           className={`mx-auto bg-white relative transition-all duration-300 lg:max-w-4xl xl:max-w-6xl ${isSticky
             ? "max-w-[100%] "
-            : "max-w-[80%] rounded-full border-4 border-t-0 border-gray-400  relative top-[12px]"
+            : "max-w-[80%] rounded-full border-4 border-t-[1px] border-gray-400  relative top-[12px]"
             } px-4 py-3 flex items-center justify-between`}
         >
           {/* Left: Logo / Brand */}
@@ -120,7 +120,7 @@ const Navbar = () => {
                 transition-transform duration-300 ease-out `}
               >
                 <div className="bg-white w-full shadow-lg py-6 pb-10 rounded-xl px-10 relative">
-                  <div className="mx-auto w-full px-2 grid grid-cols-2 gap-4">
+                  <div className="mx-auto w-full px-2 grid grid-cols-2 gap-[90px]">
                     {/* Column 1 */}
                     <div>
                       <h3 className="mb-3 text-[15px] xl:text-[17px] font-bold text-gray-800">
@@ -275,7 +275,7 @@ const Navbar = () => {
           {/* Right: CTA button */}
           <div className="hidden lg:flex">
             <button
-              className="inline-block text-sm rounded-full bg-[#384BFF] px-5 py-2 text-white shadow hover:bg-blue-700 focus:outline-none"
+              className="inline-block text-sm rounded-full bg px-5 py-2 text-white shadow hover:bg-blue-700 focus:outline-none"
               onClick={() => {
                 console.log("Button Clicked!"); // ✅ Check if this appears in console
                 handleClick();

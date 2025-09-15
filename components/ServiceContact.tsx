@@ -66,7 +66,7 @@ export default function ServiceContact({ serviceContact }: ServiceContactProps) 
         }
     };
     return (
-        <div className="container flex  flex-wrap bg-[#384bff] min-h-[680px] pb-[40px] lg:pb-0 mt-[30px] lg:mt-[50px] mb-[20px]"  >
+        <div className="container flex  flex-wrap bg min-h-[680px]  mar"  >
             <div className='w-full lg:w-1/2 relative hidden lg:block '>
                 <Image src={`${baseURL}/images/services/${serviceContact.image}`} alt='img' width={400}
                     height={400} className='absolute bottom-0 !w-[80%]  left-[50px] z-[3]' />
@@ -83,23 +83,23 @@ export default function ServiceContact({ serviceContact }: ServiceContactProps) 
                         <div className='w-full flex flex-col items-center sm:items-start gap-[10px] mb-[20px]  '>
                             <div className='flex gap-[15px] mt-[20px] w-full'>
                                 <div className='w-full lg:w-1/2'>
-                                    <label htmlFor="name" className='text-start'>Your Name*</label>
-                                    <input type="text" placeholder='Your Name' value={name} onChange={(e) => setName(e.target.value)} required className='mt-[10px] placeholder-white text-white w-full border bg-transparent py-[10px] px-[8px]' />
+                                    <label htmlFor="name" className='text-start'>Name*</label>
+                                    <input type="text" placeholder='Enter Name' value={name} onChange={(e) => setName(e.target.value)} required className='mt-[10px]  text-white w-full border bg-transparent py-[10px] px-[8px]' />
                                 </div>
                                 <div className='w-full lg:w-1/2'>
-                                    <label htmlFor="name">Your Email*</label>
-                                    <input type="email" placeholder='Your Email' value={email} onChange={(e) => setEmail(e.target.value)} required className='mt-[10px] placeholder-white text-white w-full border bg-transparent py-[10px] px-[8px]' />
+                                    <label htmlFor="name">Email*</label>
+                                    <input type="email" placeholder='Enter Valid Email' value={email} onChange={(e) => setEmail(e.target.value)} required className='mt-[10px]  text-white w-full border bg-transparent py-[10px] px-[8px]' />
                                 </div>
                             </div>
                             <div className='w-full '>
-                                <label htmlFor="name">Your Phone*</label>
-                                <input type="number" placeholder='Your Phone' value={phone} onChange={(e) => setPhone(e.target.value)} required className='mt-[10px] placeholder-white text-white w-full border bg-transparent py-[10px] px-[8px]' />
+                                <label htmlFor="name">Phone*</label>
+                                <input type="number" placeholder='Enter Phone' value={phone} onChange={(e) => setPhone(e.target.value)} required className='mt-[10px]  text-white w-full border bg-transparent py-[10px] px-[8px]' />
                             </div>
                             <div className='w-full '>
-                                <label htmlFor="name">Your Message*</label>
-                                <textarea placeholder='Enter Message' value={message} onChange={(e) => setMessage(e.target.value)} required className='mt-[10px] min-h-[150px] placeholder-white text-white w-full border bg-transparent py-[10px] px-[8px]'></textarea>
+                                <label htmlFor="name">Message*</label>
+                                <textarea placeholder='Type Here...' value={message} onChange={(e) => setMessage(e.target.value)} required className='mt-[10px] min-h-[150px]  text-white w-full border bg-transparent py-[10px] px-[8px]'></textarea>
                             </div>
-                            <button className='px-[20px] py-[10px] font-[500] bg-white text-black rounded-[25px] '>{serviceContact.btnText}</button>
+                            <button className='px-[20px] py-[10px] font-[500] bg-white text-black rounded-[25px] text-center hover:border hover:border-white hover:bg-transparent hover:text-white'>{serviceContact.btnText}</button>
                         </div>
                     </form>
                 </div>

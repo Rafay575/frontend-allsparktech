@@ -88,13 +88,13 @@ export default function Navbar2() {
               {/* Full-width dropdown with smooth open/close */}
               {/* Full-width dropdown with smooth open/close */}
               <div
-                className={` absolute left-[30%] xl:left-[34%] 2xl:left-[39%] top-full z-10 mt-[3px] 
+                className={` absolute left-[25%] xl:left-[33%] 2xl:left-[37%] top-full z-10 mt-[3px] 
                  transform-gpu origin-top 
                 scale-y-0 group-hover:scale-y-100 
                 transition-transform duration-300 ease-out `}
               >
                 <div className="bg-white w-full shadow-lg py-6 pb-10 rounded-xl px-10 relative">
-                  <div className="mx-auto w-full px-2 grid grid-cols-2 gap-4">
+                  <div className="mx-auto w-full px-2 grid grid-cols-2 gap-[90px]">
                     {/* Column 1 */}
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
@@ -274,7 +274,7 @@ export default function Navbar2() {
         </div>
 
         {/* Right: Get a Quote button (Desktop Only) */}
-        <div className="hidden lg:block group relative min-w-[15%] bg-[#384BFF] py-3 transition-transform duration-300 ease-out hover:scale-105 hover:bg-[#253AC7]">
+        <div className="hidden lg:block group relative min-w-[15%] bg py-3 transition-transform duration-300 ease-out hover:scale-105 ">
           <Link href="/contact">
             <div className="px-4 pl-14 py-2 font-medium text-white transition-colors duration-300">
               Get a Quote &rarr;

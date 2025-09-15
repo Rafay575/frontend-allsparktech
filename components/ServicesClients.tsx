@@ -29,7 +29,7 @@ export default function ServiceClient({serviceClient}:ServiceClientProps) {
         const isLastWord = i === words.length - 1;
         if (highlights.some(highlight => highlight.trim() === cleanWord)) {
             return (
-                <span key={i} className="text-[#384bff]">
+                <span key={i} className="color">
                     {word}{isLastWord ? "" : " "}
                 </span>
             );
@@ -38,7 +38,7 @@ export default function ServiceClient({serviceClient}:ServiceClientProps) {
     });
 };
     return (
-        <div className="container py-[30px] lg:py-[50px]  flex flex-wrap items-center justify-between  relative z-[20]">
+        <div className="container pad  flex flex-wrap items-center justify-between  relative z-[20]">
             {/*Left Text Column */}
             
             <div className="relative w-full sm:w-[80%] lg:w-[45%] mx-auto ml-0 lg:mx-0  md:pl-[0px] p-[10px] ">
@@ -74,7 +74,7 @@ export default function ServiceClient({serviceClient}:ServiceClientProps) {
                         height={400}
                     className=" absolute top-0  right-0 !w-[30%] "
                 />
-                <span className="absolute -bottom-[10px] left-[20px] md:left-[20px]  bg-[#384BFF] text-white flex justify-center items-center gap-[10px] w-[150px] md:w-[190px] px-[10px] md:px-[20px] py-[15px] md:py-[25px]">
+                <span className="absolute -bottom-[10px] left-[20px] md:left-[20px]  bg text-white flex justify-center items-center gap-[10px] w-[150px] md:w-[190px] px-[10px] md:px-[20px] py-[15px] md:py-[25px]">
                     <Image
                         src={`${baseURL}/images/services/${serviceClient.image4}`}
                         alt="img"
@@ -82,19 +82,19 @@ export default function ServiceClient({serviceClient}:ServiceClientProps) {
                         height={400}
                         className="!w-[35px] !h-[35px]"
                     />
-                    <p className="text-[13px]">{serviceClient.imageText}</p>
+                    <p className="para">{serviceClient.imageText}</p>
                 </span>
             </div>
             {/*  Right Image Column */}
             <div className="w-full lg:w-[50%] lg:pl-[50px]  mt-[50px] lg:mt-0 flex flex-col  items-center sm:items-start text-center sm:text-start">
-                <p className="text-[29px] lg:text-[35px] 2xl:text-[40px] font-[700]"> {renderTitle(serviceClient.title, serviceClient.letters)}</p>
-                <p className="mt-[20px]">{serviceClient.des1}</p>
-                <p className="mt-[10px]">{serviceClient.des2}</p>
+                <p className="heading font-[700]"> {renderTitle(serviceClient.title, serviceClient.letters)}</p>
+                <p className="mt-[20px] para">{serviceClient.des1}</p>
+                <p className="mt-[10px] para">{serviceClient.des2}</p>
                 <div className="mt-[20px] text-start">
                     {serviceClient.lis.map((li, i) => (
                         <div key={i} className="flex gap-[10px] items-start">
                             <Image src={dot} alt="dot" className=" relative top-[5px] w-[10px] h-[10px]" />
-                            <p className="" key={i}>{li}</p>
+                            <p className="para" key={i}>{li}</p>
                         </div>
                     ))}
                 </div>

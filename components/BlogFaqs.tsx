@@ -25,16 +25,16 @@ export default function BlogFaqs({ faqs }: BlogFaqsProps) {
     return (
         <div className="w-full my-[30px]">
             {/* FAQ Label */}
-            <h2 className="text-3xl font-bold !leading-relaxed text-gray-900">
+            <h2 className="heading font-bold !leading-relaxed text-gray-900">
                 Frequently Asked Questions
             </h2>
 
             {/* FAQ Accordion */}
-            <Accordion type="single" collapsible className="mt-2 space-y-3">
+            <Accordion type="single" collapsible className="mt-2 space-y-3 para">
                 {faqs.map((faq, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger>{faq.question}</AccordionTrigger>
-                        <AccordionContent>{faq.answer}</AccordionContent>
+                        <AccordionTrigger className='para'>{faq.question}</AccordionTrigger>
+                        <AccordionContent className='para'>{faq.answer}</AccordionContent>
                     </AccordionItem>
                 ))}
             </Accordion>
