@@ -49,7 +49,7 @@ export default function ServiceCard({ serviceCard }: ServiceCardProps) {
                                     <p className="heading color font-bold">
                                         {`${card.number}${card.symbol}`}
                                     </p>
-                                    <p className="text-[15px] text-gray-600 leading-snug">
+                                    <p className="para text-gray-600 leading-snug">
                                         {card.text}
                                     </p>
                                 </div>
