@@ -77,6 +77,7 @@ interface ServiceOfferingCard {
     heading: string;
     des: string;
     btnText: string;
+    link?:string
 }
 
 interface ServiceOfferingData {

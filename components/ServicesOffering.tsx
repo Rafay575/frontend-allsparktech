@@ -10,6 +10,7 @@ interface Card {
     heading: string;
     des: string;
     btnText: string;
+    link?:string
 }
 
 interface ServiceOffering {
@@ -49,11 +50,11 @@ export default function servicesOffering({ serviceOffering }: ServiceOfferingPro
                     {serviceOffering.cards.map((card, i) => (
                         <div key={i} className='bg-[#f3f7fb] border border-[#d4dcff] p-[15px] lg:p-[20px] rounded-[10px]  min-h-[250px] md:min-h-[300px] flex flex-col  items-center sm:items-start text-center sm:text-start' >
                             <Image src={`${baseURL}/images/services/${card.icon}`} alt='icon' width={400}
-                                height={20} className='!w-[70px] border border-[#d4dcff] p-[10px] rounded-[5px]' />
-                            <p className='subheading font-[700] mt-[20px]'>{card.heading}</p>
+                                height={20} className='!w-[70px] !h-[70px] object-contain border border-[#d4dcff] p-[10px] rounded-[5px]' />
+                            <p className='subheading font-[700] mt-[20px] '>{card.heading}</p>
                             <p className='my-[10px] para'>{card.des}</p>
-                            <Link href={"/contact"} className='mt-auto'>
-                                <button className='border border-[#737577] group py-[10px] px-[30px] rounded-[25px] mt-auto flex items-center gap-[5px] hover:bg-[#384BFF] duration-300 hover:text-white border hover:border-[#384BFF] para '>{card.btnText}<MdKeyboardDoubleArrowRight className='text-grey-600 para group-hover:text-white'/></button>
+                            <Link href={`${card.link?`/subservice/${card.link}`:`/contact`}`} className='mt-auto'>
+                                <button className='border border-[#737577] group py-[10px] px-[30px] rounded-[25px] mt-auto flex items-center gap-[5px] hover:bg-[#384BFF] duration-300 hover:text-white hover:border-[#384BFF] para '>{card.btnText}<MdKeyboardDoubleArrowRight className='text-grey-600 para group-hover:text-white'/></button>
                             </Link>
                         </div>
                     ))}

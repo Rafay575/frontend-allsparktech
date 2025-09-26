@@ -66,10 +66,10 @@ export default function ServiceContact({ serviceContact }: ServiceContactProps) 
         }
     };
     return (
-        <div className="container flex  flex-wrap bg min-h-[680px]  mar"  >
-            <div className='w-full lg:w-1/2 relative hidden lg:block '>
+        <div className="container flex  flex-wrap bg min-h-[680px]  mar "  >
+            <div className='w-full lg:w-1/2 relative hidden lg:block  '>
                 <Image src={`${baseURL}/images/services/${serviceContact.image}`} alt='img' width={400}
-                    height={400} className='absolute bottom-0 !w-[80%]  left-[50px] z-[3]' />
+                    height={400} className='absolute bottom-0 !w-[80%]  left-[50px] z-[3] ' />
             </div>
             <div className='w-full lg:w-1/2 text-white '>
                 <div className='w-[90%] mx-auto lg:mx-0 flex flex-col items-center sm:items-start '>
@@ -78,7 +78,7 @@ export default function ServiceContact({ serviceContact }: ServiceContactProps) 
                         <p className='text-[15px] font-[500] text-center sm:text-start'>{serviceContact.subTitle}</p>
                         <Image src={arrowright} className='w-[35px]' alt='icon'></Image>
                     </div>
-                    <p className='text-[25px] lg:text-[30px] xl:text-[35px] font-[700] my-[10px] text-center sm:text-start'>{serviceContact.title}</p>
+                    <p className=' heading font-[700] my-[10px] text-center sm:text-start '>{serviceContact.title}</p>
                     <form onSubmit={handleSubmit} className=' w-full'>
                         <div className='w-full flex flex-col items-center sm:items-start gap-[10px] mb-[20px]  '>
                             <div className='flex gap-[15px] mt-[20px] w-full'>

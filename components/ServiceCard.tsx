@@ -21,7 +21,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ serviceCard }: ServiceCardProps) {
 
     return (
-        <div>
+        <div className='pad'>
             <div className="container flex flex-wrap bg-[#f4f7fb] mar relative overflow-hidden rounded-[10px] border-2 bcolor">
                 <div className='w-full lg:w-[50%]  relative p-[20px]  text-white  font-[700] flex items-center justify-center text-center text-center bg '>
                     {/* <Image src={shape4} alt='img' className='absolute w-[100%] h-[100%] lg:w-[1300px] left-0 top-0 z-[10] hidden  ' /> */}

@@ -88,7 +88,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Left Column */}
           <div>
-            <h2 className="mb-4 subheading font-bold text-gray-900">
+            <h2 className="mb-4 heading font-bold text-gray-900">
               {pagedata?.title}
             </h2>
             <div>

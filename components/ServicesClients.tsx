@@ -41,7 +41,7 @@ export default function ServiceClient({serviceClient}:ServiceClientProps) {
         <div className="container pad  flex flex-wrap items-center justify-between  relative z-[20]">
             {/*Left Text Column */}
             
-            <div className="relative w-full sm:w-[80%] lg:w-[45%] mx-auto ml-0 lg:mx-0  md:pl-[0px] p-[10px] ">
+            <div className="relative w-full lg:w-[45%] mx-auto ml-0 lg:mx-0  md:pl-[0px] p-[10px] ">
                 {/* Main Image */}
                 <div className="relative  rounded-3xl w-[95%] md:w-[90%] h-auto">
                     <Image

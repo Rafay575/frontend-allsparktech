@@ -215,11 +215,17 @@ ol {
 /* Subheading (like h3/h4) */
 .subheading {
   @apply  text-[18px] md:text-[19px] lg:text-[21px] ;
+
 }
 
 /* Heading (like h1/h2) */
 .heading {
-  @apply text-[29px] lg:text-[35px] 2xl:text-[40px]  ;
+  @apply text-[30px] lg:text-[35px] 2xl:text-[40px]  ;
+  font-family: "Rajdhani", sans-serif !important;
+}
+.font{
+  font-family: "Rajdhani", sans-serif !important;
+
 }
 
 .pad{
@@ -236,4 +242,7 @@ ol {
 }
 .bcolor{
   @apply border-[#384bff]
+}
+.cards{
+  box-shadow: 1px 1px 10px 1px #384cff5e;
 }

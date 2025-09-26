@@ -2652,7 +2652,7 @@ export const blogpage = {
 
 export const subServiceJson1 = [
   {
-    "title": "Custom Software Development Solutions",
+    "title": "Enterprise Software Solutions",
     "section2": {
       "title": "Transform Your Business with Enterprise Software Solutions",
       "des": "Discover how our customized enterprise software solutions solve your biggest challenges and help your business thrive in a competitive world. As a leading enterprise software development company, we bring innovation, security, and scalability to the forefront of your digital transformation journey."
@@ -2724,11 +2724,11 @@ export const subServiceJson1 = [
       "image": "img2.png",
       "title": "Enterprise Software Development & Integration Services",
       "des": "We provide a complete range of enterprise software solutions designed to meet the unique needs of modern organizations. Our custom enterprise software development services focus on creating systems that improve efficiency, streamline operations, and foster innovation in enterprise-level software. From building powerful platforms to enhancing day-to-day processes, we ensure every solution aligns with your strategic goals. Our enterprise data management services help businesses organize, analyze, and utilize their data more effectively, enabling smarter decision-making and long-term growth.",
-      "des2": " For companies with outdated systems, our enterprise software modernization services upgrade legacy applications to improve performance, security, and compatibility with the latest technologies. We also offer enterprise software integration to securely connect your existing tools, platforms, and workflows, ensuring smooth collaboration across your organization. With our software maintenance and support services, you benefit from regular updates, security patches, and expert technical assistance to keep your systems running at peak performance. Every service we offer is built with scalability, security, and business impact in mind, making us a trusted enterprise software development company for organizations seeking lasting digital transformation."
+      "des2": "For companies with outdated systems, our enterprise software modernization services upgrade legacy applications to improve performance, security, and compatibility with the latest technologies. We also offer enterprise software integration to securely connect your existing tools, platforms, and workflows, ensuring smooth collaboration across your organization. With our software maintenance and support services, you benefit from regular updates, security patches, and expert technical assistance to keep your systems running at peak performance. Every service we offer is built with scalability, security, and business impact in mind, making us a trusted enterprise software development company for organizations seeking lasting digital transformation."
     },
     "section7": {
       "quote": "Working with this team changed our business. They listened to what we needed, built software that fit us perfectly, and made everything run faster and easier. I trust them completely.",
-      "author": "Sarah L IT Director"
+      "author": "Sarah L., IT Director"
     },
     "section8": {
       "image": "img3.png",
@@ -2766,7 +2766,7 @@ export const subServiceJson1 = [
       ]
     },
     "faq": {
-      "title": "Your questions answered",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -2799,10 +2799,14 @@ export const subServiceJson1 = [
           "ans": "We use advanced encryption, secure development practices, and regular audits to safeguard your data."
         }
       ]
+    },
+    "contact": {
+      "title": "Still Have Questions?",
+      "subTitle": "Ready to transform your business? Contact us today to discuss your project and start your journey with a trusted enterprise software development company."
     }
   },
   {
-    "title": "Custom Software Development Solutions",
+    "title": "Bespoke Software Development Solutions",
     "section2": {
       "title": "Transform Your Business with Bespoke Software Development",
       "des": "Discover how our bespoke software development services solve your most complex business challenges while driving innovation, efficiency, and growth. As a trusted bespoke software development company in the US, we deliver tailor-made solutions designed to match your exact needs, ensuring long-term scalability, strong security, and measurable business results."
@@ -2874,7 +2878,7 @@ export const subServiceJson1 = [
       "image": "img2.png",
       "title": "Bespoke Software Development & Integration Services",
       "des": "We offer a full range of bespoke software solutions designed for modern enterprises. Our services focus on boosting efficiency, improving collaboration, and enabling smarter decision-making. From building fully customized applications to enhancing existing systems, our approach ensures every solution supports your long-term success.",
-      "des2": " Our software modernization services breathe new life into outdated systems, upgrading them for better speed, security, and compatibility. We also provide seamless software integration to connect your tools, workflows, and platforms for better organizational flow. With our ongoing maintenance and support, you receive regular updates, patches, and enhancements to keep everything running smoothly."
+      "des2": "Our software modernization services breathe new life into outdated systems, upgrading them for better speed, security, and compatibility. We also provide seamless software integration to connect your tools, workflows, and platforms for better organizational flow. With our ongoing maintenance and support, you receive regular updates, patches, and enhancements to keep everything running smoothly."
     },
     "section7": {
       "quote": "This team built software that truly works for us. They listened, delivered exactly what we needed, and made our processes faster and easier. I recommend them to any business that wants the job done right.",
@@ -2904,7 +2908,7 @@ export const subServiceJson1 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We have extensive experience providing enterprise software solutions across industries such as:",
+      "para": "We have extensive experience providing bespoke software development Solutions across industries such as:",
       "industries": [
         "Healthcare",
         "Finance & Fintech",
@@ -2916,7 +2920,7 @@ export const subServiceJson1 = [
       ]
     },
     "faq": {
-      "title": "Your questions answered",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -2949,10 +2953,14 @@ export const subServiceJson1 = [
           "ans": "We use encryption, secure coding practices, and regular security audits to safeguard your systems."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to transform your operations?",
+      "subTitle": "Contact us today to start your journey with a trusted bespoke software development company in the US."
     }
   },
   {
-    "title": "Custom Software Development Solutions",
+    "title": "Digital Product Development Services",
     "section2": {
       "title": "Product Development Services for Modern Enterprises",
       "des": "Transform your ideas into powerful digital solutions with our product development services. We help businesses design, build, and launch innovative products that meet user needs, scale with growth, and deliver measurable results. As a trusted product development company in the US, we combine strategy, design, and technology to bring your vision to life while ensuring long-term success."
@@ -3024,7 +3032,7 @@ export const subServiceJson1 = [
       "image": "img2.png",
       "title": "End-to-End Product Development & Integration Services",
       "des": "We offer complete product development solutions for modern enterprises, from building innovative software to integrating new products into your existing ecosystem. Our modernization services upgrade outdated products for better speed, security, and compatibility. With expert integration, we connect your product to tools, platforms, and workflows for maximum efficiency. Ongoing maintenance ensures your product evolves alongside your business needs.",
-      "des2": " Our product development approach blends innovation with practical results. We focus on building solutions that not only meet your immediate goals but also adapt to future challenges. From concept to launch, we work closely with your team to ensure every feature adds real value, improves productivity, and delivers measurable outcomes. By combining modern technology with a deep understanding of your industry, we help you create products that stand out in performance, reliability, and user experience."
+      "des2": "Our product development approach blends innovation with practical results. We focus on building solutions that not only meet your immediate goals but also adapt to future challenges. From concept to launch, we work closely with your team to ensure every feature adds real value, improves productivity, and delivers measurable outcomes. By combining modern technology with a deep understanding of your industry, we help you create products that stand out in performance, reliability, and user experience."
     },
     "section7": {
       "quote": "They didn’t just build our product, they understood our market, our users, and our long-term goals. The result was better than we imagined.",
@@ -3054,7 +3062,7 @@ export const subServiceJson1 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We have extensive experience providing product development services across industries such as:",
+      "para": "We have extensive experience providing digital product development services across industries such as:",
       "industries": [
         "Healthcare",
         "Finance & Fintech",
@@ -3066,7 +3074,7 @@ export const subServiceJson1 = [
       ]
     },
     "faq": {
-      "title": "Your questions answered",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -3099,10 +3107,14 @@ export const subServiceJson1 = [
           "ans": "We apply encryption, secure coding, and regular audits to protect your product."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to launch your next big idea?",
+      "subTitle": "Contact us today to work with a trusted product development company in the US."
     }
   },
   {
-    "title": "Custom Software Development Solutions",
+    "title": "System Integration Services",
     "section2": {
       "title": "System Integration Services for Modern Enterprises",
       "des": "Unify your business systems, applications, and data with our system integration services. We help organizations streamline operations, improve communication between platforms, and unlock the full value of their technology investments. As a trusted enterprise system integration company in the US, we deliver end-to-end integration solutions that connect every part of your business for seamless, efficient performance."
@@ -3173,7 +3185,7 @@ export const subServiceJson1 = [
     "section6": {
       "image": "img2.png",
       "title": "End-to-End System Integration Solutions",
-      "des": "We deliver complete enterprise application integration services, covering planning, development, and optimization. Our solutions include data integration strategy, API integration platform implementation, middleware integration tools, and cloud system integration for maximum flexibility. We also work with ETL tools, data virtualization, and microservices design patterns to support complex enterprise needs. With expert guidance from our system integration consultants, we ensure every connected system works together for better productivity and business growth. ",
+      "des": "We deliver complete enterprise application integration services, covering planning, development, and optimization. Our solutions include data integration strategy, API integration platform implementation, middleware integration tools, and cloud system integration for maximum flexibility. We also work with ETL tools, data virtualization, and microservices design patterns to support complex enterprise needs. With expert guidance from our system integration consultants, we ensure every connected system works together for better productivity and business growth.",
       "des2": "Our integration approach blends innovation with proven results. We focus on building solutions that not only meet current requirements but also adapt to evolving demands. By combining cutting-edge system integration technologies with industry expertise, we create solutions that deliver clear advantages of system integration: improved collaboration, reduced costs, and faster decision-making."
     },
     "section7": {
@@ -3216,7 +3228,7 @@ export const subServiceJson1 = [
       ]
     },
     "faq": {
-      "title": "Your questions answered",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -3249,10 +3261,14 @@ export const subServiceJson1 = [
           "ans": "We implement enterprise-grade security measures including encryption, secure coding, and compliance checks."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to unify your business systems?",
+      "subTitle": "Contact us today to work with a trusted enterprise system integration company in the US."
     }
   },
   {
-    "title": "Custom Software Development Solutions",
+    "title": "API Development Services in USA",
     "section2": {
       "title": "Custom API Development Services for Modern Enterprises",
       "des": "Build reliable, secure, and scalable APIs that power seamless communication between your applications, platforms, and devices. Our custom API development services help organizations streamline processes, unlock new integrations, and maximize the potential of their digital ecosystems. As a trusted API design and architecture partner in the US, we deliver end-to-end API solutions that connect systems, enhance user experiences, and future-proof your technology stack."
@@ -3270,7 +3286,7 @@ export const subServiceJson1 = [
           "description": "Our APIs reduce manual work, eliminate data silos, and improve cross-platform communication. We focus on building scalable API solutions that deliver measurable business results while cutting costs."
         },
         {
-          "title": "Cutting-Edge API Development Technology",
+          "title": "Cutting-Edge API Development Examples and Technology",
           "description": "We implement modern standards, leverage advanced API design tools, and use proven API integration platforms to deliver APIs that perform reliably at scale. Whether you need a sample REST API or a complete enterprise-grade system, our solutions are tailored to your requirements."
         },
         {
@@ -3354,7 +3370,7 @@ export const subServiceJson1 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide custom API development services across industries such as:",
+      "para": "We have extensive experience providing API development services across industries such as:",
       "industries": [
         "Healthcare",
         "Finance & Fintech",
@@ -3366,7 +3382,7 @@ export const subServiceJson1 = [
       ]
     },
     "faq": {
-      "title": "Your questions answered",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -3391,13 +3407,17 @@ export const subServiceJson1 = [
         {
           "item": "item-5",
           "ques": "How do you ensure scalability?",
-          "ans": "We design scalable API solutions using best practices in architecture, API gateway throttling, and cloud infrastructure."
+          "ans": "We design scalable API solutions using best practices in architecture, API gw throttling, and cloud infrastructure."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to build powerful APIs for your business?",
+      "subTitle": "Contact us today to work with a trusted API design and architecture partner in the US."
     }
   },
   {
-    "title": "Custom Software Development Solutions",
+    "title": "Future-Ready Software Solutions",
     "section2": {
       "title": "Future-Ready Technology Solutions for Modern Enterprises",
       "des": "Stay ahead in a rapidly evolving digital landscape with technology solutions built to adapt, scale, and drive innovation. Our future-ready technology services enable organizations to embrace new opportunities, streamline operations, and maintain a competitive edge. From advanced software development to intelligent automation, we deliver solutions that align with your business goals, integrate seamlessly with your existing systems, and prepare you for the challenges of tomorrow. As a trusted technology partner in the US, we help enterprises harness emerging tools and architectures that keep them at the forefront of their industries."
@@ -3469,7 +3489,7 @@ export const subServiceJson1 = [
       "image": "img2.png",
       "title": "End-to-End Future-Ready Technology Solutions",
       "des": "We deliver comprehensive technology solutions that cover every phase, from initial planning and architecture to deployment and continuous optimization. Our services include system integrations, cloud migrations, and AI-driven enhancements designed to improve efficiency and adaptability. For organizations with unique needs, we provide custom development tailored to specific operational goals, ensuring your tech stack functions as a unified, agile ecosystem.",
-      "des2": "Beyond development, we enhance usability with thorough documentation, intuitive interfaces, and automation strategies that simplify adoption across teams. Our solutions incorporate advanced scalability planning, ensuring your systems perform consistently even as demands grow. From integrating with popular platforms to building micro services-based environments, we create technology infrastructures ready to meet both present and future challenges."
+      "des2": "Beyond development, we enhance usability with thorough documentation, intuitive interfaces, and automation strategies that simplify adoption across teams. Our solutions incorporate advanced scalability planning, ensuring your systems perform consistently even as demands grow. From integrating with popular platforms to building microservices-based environments, we create technology infrastructures ready to meet both present and future challenges."
     },
     "section7": {
       "quote": "They didn’t just give us new technology, they future-proofed our entire business. Our systems run smoother, adapt faster, and give us the agility we need to stay ahead. The difference in performance and innovation has been remarkable.",
@@ -3499,7 +3519,7 @@ export const subServiceJson1 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide future-ready technology solutions across industries such as:",
+      "para": "We have extensive experience providing future-ready software Solutions across industries such as:",
       "industries": [
         "Healthcare",
         "Finance & Fintech",
@@ -3511,7 +3531,7 @@ export const subServiceJson1 = [
       ]
     },
     "faq": {
-      "title": "Your questions answered",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -3537,8 +3557,17 @@ export const subServiceJson1 = [
           "item": "item-5",
           "ques": "How do you ensure scalability?",
           "ans": "We design systems using best practices in architecture, load balancing, and cloud infrastructure for sustainable growth."
+        },
+        {
+          "item": "item-6",
+          "ques": "How secure will my integrated systems be?",
+          "ans": "We implement enterprise-grade security measures including encryption, secure coding, and compliance checks."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to embrace future-ready technology?",
+      "subTitle": "Contact us today to work with a trusted technology partner in the US."
     }
   }
 ]
@@ -3615,8 +3644,8 @@ export const subServiceJson2 = [
     "section6": {
       "image": "img2.png",
       "title": "Build Ecommerce Success That Lasts",
-      "des": "An ecommerce website is more than just an online shop, it is your brand’s digital headquarters. As a trusted ecommerce website development company in the USA, Allspark Technologies delivers platforms designed for growth, security, and high performance. Our ecommerce web developers combine technical strength with user-friendly design, ensuring your store attracts visitors and converts them into loyal customers.We provide enterprise ecommerce software development services, Shopify ecommerce web development, Magento ecommerce development services, and B2B ecommerce development agency solutions. From multi-vendor ecommerce marketplace development to ecommerce mobile app development company solutions, our expertise covers every business model and technology.",
-      "des2": "As one of the best ecommerce development companies, we go beyond launch. Our ecommerce web development agency ensures your store stays optimized with payment gateway integration, CRM and ERP connections, shipping automation, and performance driven SEO. By choosing Allspark as your ecommerce web design development company, you secure a long-term partner dedicated to scaling your online business."
+      "des": "An ecommerce website is more than just an online shop, it is your brand’s digital headquarters. As a trusted ecommerce website development company in the USA, Allspark Technologies delivers platforms designed for growth, security, and high performance. Our ecommerce web developers combine technical strength with user-friendly design, ensuring your store attracts visitors and converts them into loyal customers.",
+      "des2": "We provide enterprise ecommerce software development services, Shopify ecommerce web development, Magento ecommerce development services, and B2B ecommerce development agency solutions. From multi-vendor ecommerce marketplace development to ecommerce mobile app development company solutions, our expertise covers every business model and technology. As one of the best ecommerce development companies, we go beyond launch. Our ecommerce web development agency ensures your store stays optimized with payment gateway integration, CRM and ERP connections, shipping automation, and performance-driven SEO. By choosing Allspark as your ecommerce web design development company, you secure a long-term partner dedicated to scaling your online business."
     },
     "section7": {
       "quote": "Allspark delivered our ecommerce website faster than we expected. The store is stable, user-friendly, and our conversions doubled in the first quarter.",
@@ -3646,7 +3675,7 @@ export const subServiceJson2 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide ecommerce solutions across industries such as:",
+      "para": "We have extensive experience providing ecommerce website development services across industries such as:",
       "industries": [
         "Fashion and Apparel Brands",
         "Healthcare and Pharma Ecommerce",
@@ -3683,8 +3712,17 @@ export const subServiceJson2 = [
           "item": "item-5",
           "ques": "Do you build ecommerce mobile apps?",
           "ans": "Yes. As an ecommerce mobile app development company, our ecommerce app developers build custom iOS and Android solutions. This ensures your customers enjoy seamless shopping experiences across devices."
+        },
+        {
+          "item": "item-6",
+          "ques": "Why choose Allspark over other ecommerce development agencies?",
+          "ans": "Allspark stands out as the best ecommerce website development company because we combine transparency, advanced technology, and industry expertise. As a trusted ecommerce website development agency, ecommerce web development firm, and ecommerce magento development agency, we deliver solutions that are scalable, secure, and built to convert."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to launch or scale your ecommerce business?",
+      "subTitle": "Partner with Allspark Technologies today!"
     }
   },
   {
@@ -3759,7 +3797,7 @@ export const subServiceJson2 = [
     "section6": {
       "image": "img2.png",
       "title": "Build Digital Success That Lasts",
-      "des": "A website or app is more than just code, it’s the backbone of your digital presence. At All Spark Technologies, we provide front end and back end web development that drives performance, scalability, and long-term growth. Our full stack developers combine technical expertise with business-focused solutions to deliver applications that work seamlessly across devices and platforms.",
+      "des": "A website or app is more than just code, it’s the backbone of your digital presence. At Allspark Technologies, we provide front end and back end web development that drives performance, scalability, and long-term growth. Our full stack developers combine technical expertise with business-focused solutions to deliver applications that work seamlessly across devices and platforms.",
       "des2": "From enterprise-level full stack web development services to freelance full stack developer support, we cover every model your business needs. Whether you are hiring a full stack developer remote, looking for custom integrations, or need ongoing support, Allspark is your trusted partner."
     },
     "section7": {
@@ -3790,7 +3828,7 @@ export const subServiceJson2 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide full stack solutions across industries such as:",
+      "para": "We have extensive experience providing full stack web development Services across industries such as:",
       "industries": [
         "SaaS & Technology Platforms",
         "E-commerce & Online Stores",
@@ -3833,8 +3871,11 @@ export const subServiceJson2 = [
           "ques": "Why choose Allspark over freelance developers?",
           "ans": "Unlike freelancers, we provide a team of vetted, dedicated full stack developers with post-launch support, ensuring your project is stable and future ready."
         }
-
       ]
+    },
+    "contact": {
+      "title": "Ready to scale your business with expert full stack web development?",
+      "subTitle": "Partner with Allspark Technologies today!"
     }
   },
   {
@@ -3932,7 +3973,7 @@ export const subServiceJson2 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide web portal solutions across industries such as:",
+      "para": "We have extensive experience providing web portal development services across industries such as:",
       "industries": [
         "Healthcare & Pharma Portals",
         "B2B & Enterprise Platforms",
@@ -3976,6 +4017,10 @@ export const subServiceJson2 = [
           "ans": "Allspark combines technical expertise, clear pricing, and long-term support, making us a reliable web portal development partner."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to launch a secure and scalable portal?",
+      "subTitle": "Partner with Allspark Technologies today!"
     }
   },
   {
@@ -4077,7 +4122,7 @@ export const subServiceJson2 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide CMS solutions across industries such as:",
+      "para": "We have extensive experience providing CMS development services across industries such as:",
       "industries": [
         "E-commerce & Retail",
         "Healthcare & Pharma",
@@ -4088,7 +4133,7 @@ export const subServiceJson2 = [
       ]
     },
     "faq": {
-      "title": "FAQs – Answering Your Concerns",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -4111,6 +4156,10 @@ export const subServiceJson2 = [
           "ans": "Absolutely. Our CMS development services include long-term support, updates, and training."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to simplify content management?",
+      "subTitle": "Hire CMS developers from Allspark Technologies today and build a platform that grows with your business."
     }
   },
   {
@@ -4143,7 +4192,7 @@ export const subServiceJson2 = [
     },
     "section4": {
       "title": "Why Businesses Struggle With APIs & How We Fix It",
-      "des": "Many companies delay investing in API integration services because they have seen integrations that break existing systems, are expensive, or take months to deploy. Others are unsure how to develop a reliable API that scales with their growing business. At All Spark, we solve these challenges by designing APIs that are simple, stable, and tailored to your exact business processes."
+      "des": "Many companies delay investing in API integration services because they have seen integrations that break existing systems, are expensive, or take months to deploy. Others are unsure how to develop a reliable API that scales with their growing business. At Allspark, we solve these challenges by designing APIs that are simple, stable, and tailored to your exact business processes."
     },
     "section5": {
       "title": "How We Work",
@@ -4208,7 +4257,7 @@ export const subServiceJson2 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide API solutions across industries such as:",
+      "para": "We have extensive experience providing API development and integration services across industries such as:",
       "industries": [
         "Healthcare & Pharma Platforms",
         "Ecommerce & Payment Systems",
@@ -4252,13 +4301,17 @@ export const subServiceJson2 = [
           "ans": "We combine technical expertise, clear pricing, and long-term support, making us a reliable partner for API development and integration services."
         }
       ]
+    },
+    "contact": {
+      "title": "Partner with Allspark Technologies today!",
+      "subTitle": "Ready to simplify your systems with reliable API development and integration?"
     }
   },
   {
     "title": "Custom Web Application Development",
     "section2": {
       "title": "Build Web Apps That Perform",
-      "des": "Choosing a web application development company in the USA can be tough. Many web app development services result in platforms that are slow, insecure, or too complex for users. At Allspark Technologies, we deliver custom web application development that removes these challenges. Our web app developers build secure, scalable, and easy to use applications for businesses of every size. Whether you need enterprise web application development, eCommerce web application development, or healthcare web app development, we create solutions that help your business grow."
+      "des": "Choosing a web application development company in the USA can be tough. Many web app development services result in platforms that are slow, insecure, or too complex for users. At Allspark Technologies, we deliver custom web application development that removes these challenges. Our web app developers build secure, scalable, and easy-to-use applications for businesses of every size. Whether you need enterprise web application development, eCommerce web application development, or healthcare web app development, we create solutions that help your business grow."
     },
     "section3": {
       "title": "Web Application Development Services We Offer",
@@ -4266,7 +4319,7 @@ export const subServiceJson2 = [
       "data": [
         {
           "title": "Development Without Limits",
-          "description": "Many businesses wonder which is the best framework for web application development or which web application development platforms to choose. As a trusted custom web app development company, we guide you through very step. We provide enterprise web application development, progressive web app development services, healthcare solutions, and eCommerce platforms. Our team also works with AWS for advanced web application architecture for developing a dashboard for large dataset AWS solutions, ensuring speed and reliability."
+          "description": "Many businesses wonder which is the best framework for web application development or which web application development platforms to choose. As a trusted custom web app development company, we guide you through every step. We provide enterprise web application development, progressive web app development services, healthcare solutions, and eCommerce platforms. Our team also works with AWS for advanced web application architecture for developing a dashboard for large dataset AWS solutions, ensuring speed and reliability."
         },
         {
           "title": "Clear Pricing Without Surprises",
@@ -4274,7 +4327,7 @@ export const subServiceJson2 = [
         },
         {
           "title": "Usability That Drives Adoption",
-          "description": "Some businesses have tried web and mobile application whence application development companies only to end up with apps their teams never use. We focus on usability and user experience. From progressive web application development companies to java web application development company solutions, our applications are designed with responsive design, smooth navigation, and integrations that keep users engaged."
+          "description": "Some businesses have tried web and mobile application development companies only to end up with apps their teams never use. We focus on usability and user experience. From progressive web application development companies to java web application development company solutions, our applications are designed with responsive design, smooth navigation, and integrations that keep users engaged."
         },
         {
           "title": "Security That Builds Confidence",
@@ -4292,7 +4345,7 @@ export const subServiceJson2 = [
         {
           "step": 1,
           "title": "Discovery & Planning",
-          "description": "We begin by understanding your audience, workflows, and long term goals. As a web application development company in the USA, we design strategies for scalability and adoption.",
+          "description": "We begin by understanding your audience, workflows, and long-term goals. As a web application development company in the USA, we design strategies for scalability and adoption.",
           "margin": "0px"
         },
         {
@@ -4349,7 +4402,7 @@ export const subServiceJson2 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide web app solutions across industries such as:",
+      "para": "We have extensive experience providing sustom web application development across industries such as:",
       "industries": [
         "Healthcare & Pharma Applications",
         "Ecommerce & Retail Platforms",
@@ -4393,16 +4446,19 @@ export const subServiceJson2 = [
           "ans": "Allspark combines technical skill, transparent pricing, and ongoing support, making us a reliable web and mobile application development company."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to build a secure and scalable application?",
+      "subTitle": "Partner with Allspark Technologies today."
     }
   }
-
 ]
 export const subServiceJson3 = [
   {
-    "title": "UI UX Design",
+    "title": "User Experience Strategy",
     "section2": {
       "title": "User Experience (UX) Design Services for Engaging Digital Journeys",
-      "des": "Our user experience design services transform complex processes into simple, rewarding journeys that improve satisfaction and drive results. From research and wireframing to testing and optimization, our approach ensures a seamless experience on every platform. As a trusted UI/UX design agency in the United States, we combine creativity, strategy, and technology to help organizations deliver experiences that align with their brand and goals."
+      "des": "We create digital experiences that are clear, intuitive, and enjoyable, giving your customers confidence in every interaction. Our user experience design services transform complex processes into simple, rewarding journeys that improve satisfaction and drive results. From research and wireframing to testing and optimization, our approach ensures a seamless experience on every platform. As a trusted UI/UX design agency in the United States, we combine creativity, strategy, and technology to help organizations deliver experiences that align with their brand and goals."
     },
     "section3": {
       "title": "Data-Driven Results Through Usability Testing",
@@ -4427,16 +4483,12 @@ export const subServiceJson3 = [
         {
           "title": "Inclusive and Accessible Interfaces",
           "description": "Accessibility compliance is built into every stage of the design process. We make sure your digital products are usable for people of all abilities, expanding your reach and meeting industry regulations."
-        },
-        {
-          "title": "Staying Ahead With Evolving Design",
-          "description": "We monitor UI/UX design trends to keep your experience fresh while maintaining long-term usability. This balance ensures your product remains relevant without sacrificing the familiarity your customers appreciate."
         }
       ]
     },
     "section4": {
-      "title": "End-to-End UX Design Services",
-      "des": "Our services cover every stage of UX design, from initial concepts to final implementation. Whether modernizing an existing interface or building something new, we create experiences that inspire confidence and deliver lasting value."
+      "title": "Staying Ahead With Evolving Design",
+      "des": "We monitor UI/UX design trends to keep your experience fresh while maintaining long-term usability. This balance ensures your product remains relevant without sacrificing the familiarity your customers appreciate."
     },
     "section5": {
       "title": "How We Work",
@@ -4483,25 +4535,25 @@ export const subServiceJson3 = [
       "data": [
         {
           "title": "Industry Expertise",
-          "description": "Industry expertise across sectors including ecommerce, SaaS, healthcare, and finance."
+          "description": "Experience across sectors including ecommerce, SaaS, healthcare, and finance."
         },
         {
           "title": "Research-Driven Decisions",
-          "description": "Research-driven decisions supported by UX research methods and analytics."
+          "description": "Supported by UX research methods and analytics for measurable outcomes."
         },
         {
           "title": "Scalable and Adaptable Designs",
-          "description": "Designs built for scalability and adaptability."
+          "description": "Built to evolve with your business and user needs."
         },
         {
           "title": "Collaborative Approach",
-          "description": "Collaborative approach that keeps your goals at the center."
+          "description": "We keep your goals at the center, working closely with your team."
         }
       ]
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide UX design solutions across industries such as:",
+      "para": "We have extensive experience providing user experience strategy across industries such as:",
       "industries": [
         "Ecommerce",
         "SaaS and Technology",
@@ -4541,10 +4593,14 @@ export const subServiceJson3 = [
           "ans": "We stay updated with UI/UX design trends but prioritize long-term usability and brand consistency for sustainable results."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to create engaging digital experiences?",
+      "subTitle": "Partner with Allspark Technologies today!"
     }
   },
   {
-    "title": "UI UX Design",
+    "title": "Interface Design",
     "section2": {
       "title": "UI/UX Design Services for Modern Enterprises",
       "des": "A clear, friendly interface is the bridge between your product and its users. At Allspark Technologies, we are a trusted UI/UX design agency that creates digital experiences people enjoy using. With the right UI design tools and proven methods, we deliver designs that increase user satisfaction and business growth."
@@ -4642,7 +4698,7 @@ export const subServiceJson3 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide UI/UX design solutions across industries such as:",
+      "para": "We have extensive experience providing interface design across industries such as:",
       "industries": [
         "SaaS and Software",
         "E-commerce and Retail",
@@ -4687,12 +4743,16 @@ export const subServiceJson3 = [
           "ans": "Absolutely. We provide design systems, style guides, and documentation that support new UI/UX design jobs inside your company. This ensures your internal teams continue with consistent practices after project delivery."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to Get Started?",
+      "subTitle": "Your product deserves an interface that feels simple, modern, and effective. Partner with Allspark Technologies today!"
     }
   },
   {
-    "title": "Web & Mobile UI/UX Design Services",
+    "title": "Mobile App Design",
     "section2": {
-      "title": "Creative UI/UX Services",
+      "title": "Web & Mobile UI/UX Design Services",
       "des": "A strong user experience can make or break your app or website. At Allspark Technologies, we deliver creative UI/UX services that combine function and design to keep users engaged. Our team goes beyond visuals, using proven UX research case study examples and user interface design services that increase adoption and growth across both web and mobile platforms."
     },
     "section3": {
@@ -4701,7 +4761,7 @@ export const subServiceJson3 = [
       "data": [
         {
           "title": "Discovery & UX Research",
-          "description": "We begin with research to understand your audience. Using ux research case study examples, interviews, and surveys, we uncover what your users expect before we design."
+          "description": "We begin with research to understand your audience. Using UX research case study examples, interviews, and surveys, we uncover what your users expect before we design."
         },
         {
           "title": "Platform Consistency",
@@ -4717,13 +4777,13 @@ export const subServiceJson3 = [
         },
         {
           "title": "Continuous Improvement",
-          "description": "We apply current UI/UX design trends and update your digital products as your business grows. With our ui/ux design service, your brand stays ahead of the curve."
+          "description": "We apply current UI/UX design trends and update your digital products as your business grows. With our UI/UX design service, your brand stays ahead of the curve."
         }
       ]
     },
     "section4": {
       "title": "Web & Mobile UI/UX Design Services That Solve Real Problems",
-      "des": "Many businesses fear users will abandon their apps due to confusing layouts or poor usability. At Allspark Technologies, we address these concerns head-on with structured ui/ux design and development services. Our process ensures your apps and websites are simple to use, scalable, and designed with business outcomes in mind."
+      "des": "Many businesses fear users will abandon their apps due to confusing layouts or poor usability. At Allspark Technologies, we address these concerns head-on with structured UI/UX design and development services. Our process ensures your apps and websites are simple to use, scalable, and designed with business outcomes in mind."
     },
     "section5": {
       "title": "How We Work",
@@ -4757,8 +4817,8 @@ export const subServiceJson3 = [
     "section6": {
       "image": "img2.png",
       "title": "Building Unified Digital Journeys",
-      "des": "Websites and apps should never feel disconnected. Our ui/ux services ensure a seamless journey from desktop to mobile web application. By aligning navigation flows and keeping branding consistent, we remove fears of fragmented experiences.",
-      "des2": "Allspark Technologies is one of the best UX firms delivering creative ui ux services to global businesses. Whether you outsource ui design, outsource ux design, or need full outsourced ux design support, our experts provide ui ux services that scale with your needs. As a trusted app design agency, we deliver ui ux designing services that solve real challenges, whether you need saas ux design, enterprise platforms, or a fresh saas website design agency partner. Our design usage scenarios show how each decision reduces friction and increases engagement."
+      "des": "Websites and apps should never feel disconnected. Our UI/UX services ensure a seamless journey from desktop to mobile web application. By aligning navigation flows and keeping branding consistent, we remove fears of fragmented experiences.",
+      "des2": "Allspark Technologies is one of the best UX firms delivering creative UI/UX services to global businesses. Whether you outsource UI design, outsource UX design, or need full outsourced UX design support, our experts provide UI/UX services that scale with your needs. As a trusted app design agency, we deliver UI/UX designing services that solve real challenges, whether you need SaaS UX design, enterprise platforms, or a fresh SaaS website design agency partner. Our design usage scenarios show how each decision reduces friction and increases engagement."
     },
     "section7": {
       "quote": "Allspark built our app and web interface with clear workflows and a smooth user experience. Engagement doubled in six months.",
@@ -4778,17 +4838,17 @@ export const subServiceJson3 = [
         },
         {
           "title": "Research-Led Process",
-          "description": "Every ui/ux design service is guided by UX research case study examples and proven methods."
+          "description": "Every UI/UX design service is guided by UX research case study examples and proven methods."
         },
         {
           "title": "Dedicated Agency Support",
-          "description": "Not just design agencies, but a long-term partner for user experience outsourcing and ui ux services."
+          "description": "Not just design agencies, but a long-term partner for user experience outsourcing and UI/UX services."
         }
       ]
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide UI/UX design solutions across industries such as:",
+      "para": "We have extensive experience providing mobile app design across industries such as:",
       "industries": [
         "SaaS and Software",
         "E-commerce and Retail",
@@ -4805,12 +4865,12 @@ export const subServiceJson3 = [
         {
           "item": "item-1",
           "ques": "How do you ensure designs work across both web and mobile?",
-          "ans": "We align every user interface UI element with consistent branding and navigation flows. Our ui/ux design service covers responsive layouts that scale across devices for reliable user experience."
+          "ans": "We align every user interface UI element with consistent branding and navigation flows. Our UI/UX design service covers responsive layouts that scale across devices for reliable user experience."
         },
         {
           "item": "item-2",
           "ques": "What UI design tools do you use for web and app projects?",
-          "ans": "Our user interface design consultants use leading tools like Figma, Adobe XD, and Sketch. These support scalable ui ux designing services that integrate smoothly with your development teams."
+          "ans": "Our user interface design consultants use leading tools like Figma, Adobe XD, and Sketch. These support scalable UI/UX designing services that integrate smoothly with your development teams."
         },
         {
           "item": "item-3",
@@ -4825,21 +4885,25 @@ export const subServiceJson3 = [
         {
           "item": "item-5",
           "ques": "How do you keep up with UI/UX design trends?",
-          "ans": "Our creative ui ux services follow the latest design usage scenarios and user experience blog insights. We adopt trends that improve usability, not just surface style."
+          "ans": "Our creative UI/UX services follow the latest design usage scenarios and user experience blog insights. We adopt trends that improve usability, not just surface style."
         },
         {
           "item": "item-6",
           "ques": "Do you support outsourced UI design and outsourced UX design?",
-          "ans": "Yes. We provide user experience outsourcing through ui/ux services tailored for global enterprises. You can outsource ui design or outsource ux design confidently, knowing our ui/ux services deliver measurable results."
+          "ans": "Yes. We provide user experience outsourcing through UI/UX services tailored for global enterprises. You can outsource UI design or outsource UX design confidently, knowing our UI/UX services deliver measurable results."
         }
       ]
+    },
+    "contact": {
+      "title": "Ready to Transform Your Web and Mobile Experience?",
+      "subTitle": "Your app and website deserve seamless, consistent, and future-ready design. Partner with Allspark Technologies today!"
     }
   },
   {
-    "title": "Wireframing & Prototyping Services",
+    "title": "Web Application Design",
     "section2": {
-      "title": "App Wireframes and Functional Prototyping Solutions",
-      "des": "Bringing an idea to life without a clear blueprint is risky. That’s why wireframing and prototyping services are essential for every business planning to launch a digital product. At Allspark Technologies, we transform your concepts into application wireframes and functional prototypes that make your vision tangible before development begins. Many businesses fear that the final app or website may not align with their expectations. Our structured wireframing solutions eliminate that risk by showing you exactly how the product will look, flow, and function, well before a single line of code is written. We help enterprises, SaaS companies, and startups visualize user journeys, test usability, and validate ideas with ui wireframe design and interactive prototypes that save time, reduce costs, and increase product success rates."
+      "title": "Wireframing & Prototyping Services",
+      "des": "Bringing an idea to life without a clear blueprint is risky. That’s why wireframing and prototyping services are essential for every business planning to launch a digital product. At Allspark Technologies, we transform your concepts into application wireframes and functional prototypes that make your vision tangible before development begins. Many businesses fear that the final app or website may not align with their expectations. Our structured wireframing solutions eliminate that risk by showing you exactly how the product will look, flow, and function, well before a single line of code is written. We help enterprises, SaaS companies, and startups visualize user journeys, test usability, and validate ideas with UI wireframe design and interactive prototypes that save time, reduce costs, and increase product success rates."
     },
     "section3": {
       "title": "Our Wireframing and Prototyping Process",
@@ -4930,7 +4994,7 @@ export const subServiceJson3 = [
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide wireframing and prototyping solutions across industries such as:",
+      "para": "We have extensive experience providing web application design across industries such as:",
       "industries": [
         "SaaS Platforms & Digital Product Startups",
         "Enterprise Web Applications",
@@ -4942,7 +5006,7 @@ export const subServiceJson3 = [
       ]
     },
     "faq": {
-      "title": "FAQs",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -4967,15 +5031,19 @@ export const subServiceJson3 = [
         {
           "item": "item-5",
           "ques": "Do you support outsourced UX design projects?",
-          "ans": "Absolutely. Many companies outsource UX design and rely on Allspark as their user experience prototyping consultancy. We provide dedicated support to agencies and enterprises that need expert ui/ux services without hiring in-house teams."
+          "ans": "Absolutely. Many companies outsource UX design and rely on Allspark as their user experience prototyping consultancy. We provide dedicated support to agencies and enterprises that need expert UI/UX services without hiring in-house teams."
         }
       ]
+    },
+    "contact": {
+      "title": "Don’t risk costly redesigns or failed product launches.",
+      "subTitle": "Partner with Allspark Technologies for wireframing and prototyping services."
     }
   },
   {
-    "title": "Design Systems and Branding Services",
+    "title": "Design Systems",
     "section2": {
-      "title": "Shaping Strong Brand Identity for Digital Growth",
+      "title": "Design Systems and Branding Services",
       "des": "Your brand is more than just a logo. It is the foundation of how customers perceive your business across every digital and physical interaction. At Allspark Technologies, we provide professional design and branding services that help businesses establish a consistent identity, build trust, and create lasting customer loyalty. Companies often fear that their brand identity will look unprofessional, fail to connect with their audience, or become inconsistent across platforms. Our branding and creative services eliminate these concerns by developing complete brand systems that deliver clarity, recognition, and a unified visual experience."
     },
     "section3": {
@@ -5052,42 +5120,42 @@ export const subServiceJson3 = [
       "title": "Why Choose Allspark Technologies",
       "data": [
         {
-          "title": "Proven expertise as a brand identity design firm",
+          "title": "Proven Expertise",
           "description": "Our team delivers professional branding and creative services trusted by businesses across industries."
         },
         {
-          "title": "End-to-end branding solutions from concept to implementation",
+          "title": "End-to-End Branding Solutions",
           "description": "From logo design and branding to digital design systems, we manage the entire process seamlessly."
         },
         {
-          "title": "Experience with enterprise businesses, SaaS, and global startups",
+          "title": "Experience Across Industries",
           "description": "We provide scalable business branding services tailored to startups, SaaS platforms, and large enterprises."
         },
         {
-          "title": "Transparent process with client-first collaboration",
+          "title": "Transparent Process",
           "description": "Our branding design services prioritize open communication, keeping clients involved at every step."
         },
         {
-          "title": "Scalable design systems for long-term consistency",
+          "title": "Scalable Design Systems",
           "description": "We create design and branding systems that ensure your company identity grows with your business."
         },
         {
-          "title": "Creative branding strategies backed by user experience best practices",
+          "title": "Creative Strategies",
           "description": "Every branding decision is rooted in research, ensuring stronger customer engagement and long-term brand value."
         }
       ]
     },
     "section9": {
       "title": "Industries We Serve",
-      "para": "We provide branding and design solutions across industries such as:",
+      "para": "We have extensive experience providing design systems across industries such as:",
       "industries": [
-        "Technology and software development companies",
-        "E-commerce and retail brands",
-        "SaaS businesses and digital startups",
-        "Healthcare and wellness organizations",
-        "Education and e-learning platforms",
-        "Financial services and fintech companies",
-        "Professional services and consulting firms"
+        "Technology and Software Development Companies",
+        "E-commerce and Retail Brands",
+        "SaaS Businesses and Digital Startups",
+        "Healthcare and Wellness Organizations",
+        "Education and E-learning Platforms",
+        "Financial Services and Fintech Companies",
+        "Professional Services and Consulting Firms"
       ]
     },
     "faq": {
@@ -5129,12 +5197,16 @@ export const subServiceJson3 = [
           "ans": "Unlike many branding design studios, we combine creative design with technology expertise. As a digital-first brand identity design firm, we focus on scalable systems, usability, and cross-platform consistency that extend beyond just visuals."
         }
       ]
+    },
+    "contact": {
+      "title": "Elevate your brand with Allspark Technologies.",
+      "subTitle": "From professional logo design services to complete design and branding systems."
     }
   },
   {
-    "title": "Usability Testing & UX Audits",
+    "title": "Usability Testing",
     "section2": {
-      "title": "Smarter user experiences start with clarity",
+      "title": "Usability Testing & UX Audits",
       "des": "A strong digital product depends on how easily people can use it. At Allspark Technologies, our usability testing and UX audit services uncover hidden issues, improve engagement, and reduce wasted development costs. From mobile apps to enterprise SaaS and online stores, our team delivers clear insights backed by a proven UX audit checklist so you can launch with confidence."
     },
     "section3": {
@@ -5164,11 +5236,11 @@ export const subServiceJson3 = [
       ]
     },
     "section4": {
-      "title": "Comprehensive usability testing and audit services",
+      "title": "Comprehensive Usability Testing and Audit Services",
       "des": "Our UI UX audit services go beyond surface-level checks by blending real user testing, heuristic reviews, analytics, and accessibility standards into a single, actionable framework. As a trusted UX audit company, Allspark delivers a detailed user experience audit checklist tailored to your product. Each audit includes evaluations based on usability best practices, accessibility and compliance reviews, and conversion-focused testing for both websites and apps. We also specialize in UX audits for online stores to optimize sales funnels and conduct performance analysis across devices and browsers, ensuring your digital product delivers consistent, measurable results."
     },
     "section5": {
-      "title": "Specialized usability testing & UX audit solutions",
+      "title": "Specialized Usability Testing & UX Audit Solutions",
       "steps": [
         {
           "step": 1,
@@ -5191,16 +5263,16 @@ export const subServiceJson3 = [
         {
           "step": 4,
           "title": "Implementation Support & Validation",
-          "description": "Our team supports enterprise SaaS UX audit services, UI interaction flow validation, and agency audit ux solutions for global businesses. We ensure improvements are practical, scalable, and measurable.",
+          "description": "Our team supports enterprise SaaS UX audit services, UI interaction flow validation, and agency audit UX solutions for global businesses. We ensure improvements are practical, scalable, and measurable.",
           "margin": "300px"
         }
       ]
     },
     "section6": {
       "image": "img2.png",
-      "title": "Clarity and confidence for every digital product",
-      "des": "A user experience audit is more than just a document, it is a strategic roadmap for measurable business growth. At Allspark Technologies, our UX audit services help identify hidden usability issues, streamline customer journeys, and uncover conversion opportunities. Whether you are a SaaS platform, a pharma company, or an online retail store, our ui ux audit services provide clarity by combining data-driven insights with practical solutions. Every recommendation is backed by real user research and a comprehensive user experience audit checklist, ensuring your investment drives tangible results.",
-      "des2": "One of the biggest concerns businesses have is wasting money on research that doesn’t deliver value. Our role as a trusted ux audit agency is to eliminate that fear by producing actionable, measurable outcomes. Each UX audit report includes prioritized improvements, usability testing findings, and scalable design recommendations. By tailoring our ux audit service to your business model, we make sure every decision directly impacts customer satisfaction and long-term product growth. Complexity is another challenge that prevents teams from taking action. That’s why our UX audit company goes beyond text-heavy documents. We provide clear visuals, ux audit samples, and step-by-step recommendations so your design and development teams can act quickly. Whether it’s optimizing workflows, refining a website ux audit agency deliverable, or scaling enterprise design systems, our process builds confidence while saving time. With Allspark’s comprehensive ux audit services, you gain a roadmap that empowers your team to make confident, data-backed improvements."
+      "title": "Clarity and Confidence for Every Digital Product",
+      "des": "A user experience audit is more than just a document, it is a strategic roadmap for measurable business growth. At Allspark Technologies, our UX audit services help identify hidden usability issues, streamline customer journeys, and uncover conversion opportunities. Whether you are a SaaS platform, a pharma company, or an online retail store, our UI UX audit services provide clarity by combining data-driven insights with practical solutions. Every recommendation is backed by real user research and a comprehensive user experience audit checklist, ensuring your investment drives tangible results.",
+      "des2": "One of the biggest concerns businesses have is wasting money on research that doesn’t deliver value. Our role as a trusted UX audit agency is to eliminate that fear by producing actionable, measurable outcomes. Each UX audit report includes prioritized improvements, usability testing findings, and scalable design recommendations. By tailoring our UX audit service to your business model, we make sure every decision directly impacts customer satisfaction and long-term product growth. Complexity is another challenge that prevents teams from taking action. That’s why our UX audit company goes beyond text-heavy documents. We provide clear visuals, UX audit samples, and step-by-step recommendations so your design and development teams can act quickly. Whether it’s optimizing workflows, refining a website UX audit agency deliverable, or scaling enterprise design systems, our process builds confidence while saving time. With Allspark’s comprehensive UX audit services, you gain a roadmap that empowers your team to make confident, data-backed improvements."
     },
     "section7": {
       "quote": "Partnering with Allspark for a UX audit transformed our customer portal. Their audit report was clear, actionable, and boosted task completion rates by 40% within weeks.",
@@ -5208,48 +5280,48 @@ export const subServiceJson3 = [
     },
     "section8": {
       "image": "img3.png",
-      "title": "Why choose Allspark",
+      "title": "Why Choose Allspark",
       "data": [
         {
-          "title": "Proven expertise as a leading UX audit agency",
+          "title": "Proven Expertise",
           "description": "We bring years of experience delivering UX audit services across industries, ensuring every project is backed by research-driven insights and practical solutions."
         },
         {
-          "title": "End-to-end UI UX audit services for business growth",
-          "description": "From usability testing to detailed UX audit reports, our ui ux audit services cover every stage, tailored to your business goals and customer needs."
+          "title": "End-to-End UI UX Audit Services",
+          "description": "From usability testing to detailed UX audit reports, our UI UX audit services cover every stage, tailored to your business goals and customer needs."
         },
         {
-          "title": "Specialized in enterprise SaaS, pharma, and retail platforms",
-          "description": "As a trusted ux audit company, we provide targeted audits for SaaS products, pharma solutions, and online retail stores, addressing sector-specific challenges."
+          "title": "Specialized Solutions",
+          "description": "As a trusted UX audit company, we provide targeted audits for SaaS products, pharma solutions, and online retail stores, addressing sector-specific challenges."
         },
         {
-          "title": "Transparent process with clear and actionable reporting",
-          "description": "Our UX audit checklist and ux audit samples make it easy to see where improvements are needed, helping teams act quickly and confidently."
+          "title": "Transparent Process",
+          "description": "Our UX audit checklist and UX audit samples make it easy to see where improvements are needed, helping teams act quickly and confidently."
         },
         {
-          "title": "Scalable design systems for long-term consistency",
+          "title": "Scalable Design Systems",
           "description": "Beyond individual fixes, our UX audits include scalable recommendations and design systems that maintain consistency as your product grows."
         },
         {
-          "title": "Creative strategies backed by usability testing best practices",
-          "description": "We combine proven usability testing methods with innovative ux audit strategies, ensuring every solution improves user experience and business performance."
+          "title": "Creative Strategies",
+          "description": "We combine proven usability testing methods with innovative UX audit strategies, ensuring every solution improves user experience and business performance."
         }
       ]
     },
     "section9": {
-      "title": "Industries",
-      "para": "We provide usability testing and UX audit solutions across industries such as:",
+      "title": "Industries We Serve",
+      "para": "We have extensive experience providing usability testing across industries such as:",
       "industries": [
-        "E-commerce and online retail stores",
-        "Healthcare and pharma platforms (UX audit pharma solutions)",
-        "Fintech, banking, and digital wallets",
-        "SaaS and enterprise business applications",
-        "Education and e-learning platforms",
-        "Travel, hospitality, and booking systems"
+        "E-commerce and Online Retail Stores",
+        "Healthcare and Pharma Platforms",
+        "Fintech, Banking, and Digital Wallets",
+        "SaaS and Enterprise Business Applications",
+        "Education and E-learning Platforms",
+        "Travel, Hospitality, and Booking Systems"
       ]
     },
     "faq": {
-      "title": "FAQs",
+      "title": "Frequently Asked Questions",
       "faqs": [
         {
           "item": "item-1",
@@ -5259,7 +5331,7 @@ export const subServiceJson3 = [
         {
           "item": "item-2",
           "ques": "How does a UX audit save time and money?",
-          "ans": "By running an early user experience audit, businesses avoid costly redesigns. Fixing small usability issues uncovered by our ux audit services is faster and cheaper than rebuilding entire workflows later."
+          "ans": "By running an early user experience audit, businesses avoid costly redesigns. Fixing small usability issues uncovered by our UX audit services is faster and cheaper than rebuilding entire workflows later."
         },
         {
           "item": "item-3",
@@ -5274,18 +5346,754 @@ export const subServiceJson3 = [
         {
           "item": "item-5",
           "ques": "Is this only for large enterprises?",
-          "ans": "No. Startups, SaaS teams, and online retailers benefit from ui ux audit services. Our scalable approach works for businesses of all sizes."
+          "ans": "No. Startups, SaaS teams, and online retailers benefit from UI UX audit services. Our scalable approach works for businesses of all sizes."
         },
         {
           "item": "item-6",
           "ques": "Do you work with global businesses?",
-          "ans": "Yes, as an international UX audit company and agency audit ux partner, we provide usability audits in English, Spanish (auditoría ux), and French (agence audit ux) contexts."
+          "ans": "Yes, as an international UX audit company and agency audit UX partner, we provide usability audits in English, Spanish (auditoría UX), and French (agence audit UX) contexts."
         }
       ]
+    },
+    "contact": {
+      "title": "Build experiences your users trust.",
+      "subTitle": "Schedule your usability testing and UX audit with Allspark Technologies today."
     }
   }
 ]
-
+export const subServiceJson4 = [
+  {
+    "title": "Native iOS Development Services in USA",
+    "section2": {
+      "title": "Scale Your Business with Expert Native iOS Development",
+      "des": "Our team specializes in developing high-performance iOS applications tailored to your business goals. Whether you’re a startup or an enterprise, our native development approach ensures seamless integration with Apple’s ecosystem, unmatched performance, and a superior user experience."
+    },
+    "section3": {
+      "title": "Empowering Businesses with Native iOS Solutions",
+      "image": "img1.png",
+      "data": [
+        {
+          "title": "Custom-Built iOS Apps",
+          "description": "We craft apps designed specifically for your brand, using Swift and Objective-C to achieve lightning-fast performance and seamless UI/UX."
+        },
+        {
+          "title": "Maximizing ROI with Smart Development",
+          "description": "By combining Apple’s latest frameworks and proven methodologies, we deliver applications that accelerate your digital growth and maximize ROI."
+        },
+        {
+          "title": "Future-Ready with Modern Apple Technology",
+          "description": "We build apps ready for future iOS updates, leveraging the latest Apple APIs, SwiftUI, and native SDKs to ensure long-term reliability."
+        },
+        {
+          "title": "Protecting Your Data at Every Step",
+          "description": "Our iOS applications are engineered with robust security protocols to safeguard sensitive data, ensuring compliance with industry regulations."
+        },
+        {
+          "title": "Faster Delivery through Agile Processes",
+          "description": "We use Agile development practices to speed up delivery without sacrificing quality, providing transparency at every stage."
+        },
+        {
+          "title": "Ongoing Support and Maintenance",
+          "description": "Our services don’t stop at launch. We provide continuous updates, monitoring, and optimization to keep your iOS app running flawlessly."
+        }
+      ]
+    },
+    "section4": {
+      "title": "Driving Innovation with Native iOS Development",
+      "des": "From concept to App Store launch, our team develops iOS apps that leverage the full power of Apple devices. We integrate cutting-edge features such as ARKit, CoreML, and advanced UI animations to create immersive, future-proof apps that enhance user engagement and elevate your brand presence."
+    },
+    "section5": {
+      "title": "How We Work",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Discovery & Planning",
+          "description": "We collaborate to understand your goals, define requirements, and create a roadmap for your app.",
+          "margin": "0px"
+        },
+        {
+          "step": 2,
+          "title": "Design & Development",
+          "description": "We design intuitive interfaces and develop native iOS apps optimized for performance and usability.",
+          "margin": "100px"
+        },
+        {
+          "step": 3,
+          "title": "Testing & Quality Assurance",
+          "description": "Rigorous testing across multiple iOS devices ensures your app functions flawlessly before launch.",
+          "margin": "200px"
+        },
+        {
+          "step": 4,
+          "title": "Deployment & Support",
+          "description": "We launch your app on the App Store and provide ongoing support to keep it up to date.",
+          "margin": "300px"
+        }
+      ]
+    },
+    "section6": {
+      "title": "Native iOS Development & Integration Services",
+      "image": "img2.png",
+      "des": "We provide complete iOS app development services, including integration with back-end systems, cloud platforms, and third-party APIs. Our team ensures seamless data flow, robust performance, and intuitive interfaces across iPhones and iPads, aligning with Apple’s design principles and guidelines. We also optimize your apps for speed, scalability, and future iOS updates to keep them ahead of the curve. Our dedicated support team continuously monitors, updates, and enhances your app to deliver the best user experience over time."
+    },
+    "section7": {
+      "quote": "This team built an iOS app that truly reflects our vision. They understood our requirements, delivered on time, and created a seamless experience for our customers. Highly recommended for any company looking to build a standout iOS app.",
+      "author": "Project Manager, Retail Client"
+    },
+    "section8": {
+      "title": "Why Choose Us?",
+      "image": "img3.png",
+      "data": [
+        {
+          "title": "Industry Expertise",
+          "description": "We have extensive experience building secure, high-performance iOS apps for diverse industries."
+        },
+        {
+          "title": "Agile Methodology",
+          "description": "Our process emphasizes rapid development and transparent communication."
+        },
+        {
+          "title": "Security First",
+          "description": "We implement Apple’s best practices for data encryption and privacy protection."
+        },
+        {
+          "title": "Collaborative Partnership",
+          "description": "We work closely with your team from concept to App Store launch to deliver maximum impact."
+        }
+      ]
+    },
+    "section9": {
+      "title": "Industries We Serve",
+      "para": "We have extensive experience building secure, high-performance iOS apps for diverse industries such as:",
+      "industries": [
+        "Healthcare",
+        "Finance & Fintech",
+        "Retail & eCommerce",
+        "Logistics & Supply Chain",
+        "Education & Training"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "item": "item-1",
+          "ques": "What types of iOS apps do you develop?",
+          "ans": "We develop a full range of native iOS apps including business, e-commerce, healthcare, logistics, fintech, education, on-demand, and custom enterprise solutions. Whether it’s a customer-facing app or an internal business tool, we tailor it to your unique needs and Apple’s guidelines."
+        },
+        {
+          "item": "item-2",
+          "ques": "Do you provide App Store deployment assistance?",
+          "ans": "Yes. We handle the entire App Store submission process, from preparing assets and metadata to ensuring compliance with Apple’s policies, so your app launches smoothly and reaches your target audience without delays."
+        },
+        {
+          "item": "item-3",
+          "ques": "Can you integrate our existing systems into the iOS app?",
+          "ans": "Absolutely. Our team specializes in integrating iOS apps with existing databases, CRMs, ERPs, payment gateways, APIs, and other third-party services to ensure seamless data flow and consistent performance across your entire ecosystem."
+        },
+        {
+          "item": "item-4",
+          "ques": "Do you support ongoing app updates?",
+          "ans": "Yes. We offer ongoing support and maintenance packages, including performance monitoring, OS compatibility updates, new feature rollouts, and bug fixes, keeping your app secure and up to date."
+        },
+        {
+          "item": "item-5",
+          "ques": "How secure are your iOS applications?",
+          "ans": "Security is built into every stage of our development process. We use Apple’s recommended security frameworks, end-to-end encryption, secure coding practices, and rigorous testing to protect sensitive data and ensure compliance with industry standards."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let’s build a high-performance iOS app that drives your business forward.",
+      "subTitle": "Get in touch today and let’s discuss your project!"
+    }
+  },
+  {
+    "title": "Android App Development Services",
+    "section2": {
+      "title": "Take Your Business Further with Custom Android Development",
+      "des": "Our Android app development services are designed to empower businesses of all sizes with cutting-edge mobile solutions. We specialize in creating high-performance, native Android applications tailored to your goals and your users’ needs. Even if you are launching a new digital product, modernizing an existing app, or integrating advanced features, our team ensures your Android app delivers seamless functionality, beautiful design, and long-term scalability."
+    },
+    "section3": {
+      "title": "Driving Growth for Modern Businesses with Native Android Solutions",
+      "image": "img1.png",
+      "data": [
+        {
+          "title": "Custom-Built Android Apps",
+          "description": "We build apps designed specifically for your business, using Kotlin and Java to achieve unmatched performance and seamless UI/UX."
+        },
+        {
+          "title": "Maximizing ROI with Smart Development",
+          "description": "By combining Google’s latest frameworks and proven methodologies, we deliver applications that accelerate your digital growth and maximize ROI."
+        },
+        {
+          "title": "Future-Ready with Modern Android Technology",
+          "description": "We develop apps ready for upcoming Android versions, leveraging Jetpack Compose, Material Design 3, and native SDKs to ensure long-term reliability."
+        },
+        {
+          "title": "Protecting Your Data at Every Step",
+          "description": "Our Android applications are engineered with robust security protocols to safeguard sensitive data, ensuring compliance with industry regulations."
+        },
+        {
+          "title": "Faster Delivery through Agile Processes",
+          "description": "We use Agile development practices to speed up delivery without sacrificing quality, providing transparency at every stage."
+        },
+        {
+          "title": "Ongoing Support and Maintenance",
+          "description": "Our services don’t stop at launch. We provide continuous updates, monitoring, and optimization to keep your Android app running flawlessly."
+        }
+      ]
+    },
+    "section4": {
+      "title": "Driving Innovation with Native Android Development",
+      "des": "From concept to Play Store launch, our team develops Android apps that leverage the full power of Google’s platform. We integrate cutting-edge features such as AI, ARCore, advanced push notifications, and custom animations to create immersive, future-proof apps that enhance user engagement and elevate your brand presence."
+    },
+    "section5": {
+      "title": "How We Work",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Discovery & Planning",
+          "description": "We collaborate to understand your goals, define requirements, and create a roadmap for your app.",
+          "margin": "0px"
+        },
+        {
+          "step": 2,
+          "title": "Design & Development",
+          "description": "We design intuitive interfaces and develop native Android apps optimized for performance and usability.",
+          "margin": "100px"
+        },
+        {
+          "step": 3,
+          "title": "Testing & Quality Assurance",
+          "description": "Rigorous testing across multiple Android devices ensures your app functions flawlessly before launch.",
+          "margin": "200px"
+        },
+        {
+          "step": 4,
+          "title": "Deployment & Support",
+          "description": "We launch your app on the Google Play Store and provide ongoing support to keep it up to date.",
+          "margin": "300px"
+        }
+      ]
+    },
+    "section6": {
+      "title": "Android App Development & Integration Services",
+      "image": "img2.png",
+      "des": "We provide complete Android app development services, including integration with back-end systems, cloud platforms, and third-party APIs. Our team ensures seamless data flow, robust performance, and intuitive interfaces across phones, tablets, and wearables, aligning with Google’s design and usability standards. We also optimize your apps for speed, scalability, and future Android updates to keep them ahead of the curve. Our dedicated support team continuously monitors, updates, and enhances your app to deliver the best user experience over time while maintaining top-level security."
+    },
+    "section7": {
+      "quote": "This team built an Android app that truly reflects our vision. They understood our requirements, delivered on time, and created a seamless experience for our customers. Highly recommended for any company looking to build a standout Android app.",
+      "author": "Project Manager, Logistics Client"
+    },
+    "section8": {
+      "title": "Why Choose Us?",
+      "image": "img3.png",
+      "data": [
+        {
+          "title": "Industry Expertise",
+          "description": "We have extensive experience building secure, high-performance Android apps for diverse industries."
+        },
+        {
+          "title": "Agile Methodology",
+          "description": "Our process emphasizes rapid development and transparent communication."
+        },
+        {
+          "title": "Security First",
+          "description": "We implement Google’s best practices for data encryption and privacy protection."
+        },
+        {
+          "title": "Collaborative Partnership",
+          "description": "We work closely with your team from concept to Play Store launch to deliver maximum impact."
+        }
+      ]
+    },
+    "section9": {
+      "title": "Industries We Serve",
+      "para": "We have extensive experience building secure, high-performance Android apps for diverse industries such as:",
+      "industries": [
+        "Healthcare",
+        "Finance & Fintech",
+        "Retail & eCommerce",
+        "Logistics & Supply Chain",
+        "Education & Training"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "item": "item-1",
+          "ques": "What types of Android apps do you develop?",
+          "ans": "We build a wide range of Android apps including business, e-commerce, fintech, logistics, healthcare, education, on-demand services, and enterprise solutions. Whether you need a customer-facing app or an internal tool, we customize it to your goals and user needs."
+        },
+        {
+          "item": "item-2",
+          "ques": "Do you provide Google Play Store deployment assistance?",
+          "ans": "Yes. We handle the entire Google Play Store submission process, preparing assets, writing metadata, ensuring policy compliance, and managing rollout so your app reaches users quickly and smoothly."
+        },
+        {
+          "item": "item-3",
+          "ques": "Can you integrate our existing systems into the Android app?",
+          "ans": "Absolutely. Our team specializes in connecting Android apps with your existing databases, CRMs, ERPs, APIs, and third-party services to ensure seamless data flow, robust performance, and a unified ecosystem."
+        },
+        {
+          "item": "item-4",
+          "ques": "Do you support ongoing app updates?",
+          "ans": "Yes. We offer ongoing maintenance and support plans, including OS compatibility updates, feature enhancements, bug fixes, and performance monitoring to keep your Android app secure and current."
+        },
+        {
+          "item": "item-5",
+          "ques": "How secure are your Android applications?",
+          "ans": "Security is built into every stage of our development process. We follow Google’s best practices, implement secure coding standards, data encryption, and rigorous testing to protect sensitive information and meet industry regulations."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let’s build a high-performance Android app that drives your business forward.",
+      "subTitle": "Get in touch today and let’s discuss your project!"
+    }
+  },
+  {
+    "title": "Flutter Cross-Platform Development Services",
+    "section2": {
+      "title": "Innovate Across Platforms with Flutter Expertise",
+      "des": "Our Flutter cross-platform development services enable businesses to deliver high-quality mobile experiences across Android, iOS, and web from a single codebase. We specialize in creating visually stunning, high-performance apps tailored to your brand and your users. By leveraging Flutter’s robust framework and Google’s ecosystem, we help you cut development costs, speed up time-to-market, and maintain a consistent look and feel across all platforms. No matter if you are launching a new app or transforming an existing one, our team ensures seamless performance, future-ready architecture, and long-term scalability."
+    },
+    "section3": {
+      "title": "Building Seamless Experiences with Flutter Solutions",
+      "image": "img1.png",
+      "data": [
+        {
+          "title": "Single Codebase for Multiple Platforms",
+          "description": "We use Flutter to build apps for Android, iOS, web, and desktop simultaneously, reducing development time and costs."
+        },
+        {
+          "title": "Maximizing ROI with Unified Development",
+          "description": "By combining Flutter’s powerful widgets and proven methodologies, we deliver applications that enhance user experience and maximize ROI."
+        },
+        {
+          "title": "Future-Ready with Modern Technology",
+          "description": "We develop apps ready for future platform updates, leveraging Flutter 3, Dart, and the latest plugins to ensure long-term reliability."
+        },
+        {
+          "title": "Protecting Your Data at Every Step",
+          "description": "Our applications are engineered with robust security protocols to safeguard sensitive data, ensuring compliance with industry regulations."
+        },
+        {
+          "title": "Faster Delivery through Agile Processes",
+          "description": "We use Agile development practices to accelerate delivery without sacrificing quality, providing transparency at every stage."
+        },
+        {
+          "title": "Ongoing Support and Maintenance",
+          "description": "Our services don’t stop at launch. We provide continuous updates, monitoring, and optimization to keep your Flutter app running flawlessly."
+        }
+      ]
+    },
+    "section4": {
+      "title": "Driving Innovation with Flutter Cross-Platform Development",
+      "des": "From concept to launch, our team builds apps that leverage Flutter’s high-performance rendering engine and Google’s open-source ecosystem. We integrate advanced features such as animations, custom UI components, and third-party APIs to create immersive, future-proof apps that enhance user engagement and elevate your brand presence."
+    },
+    "section5": {
+      "title": "How We Work",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Discovery & Planning",
+          "description": "We collaborate to understand your goals, define requirements, and create a roadmap for your app.",
+          "margin": "0px"
+        },
+        {
+          "step": 2,
+          "title": "Design & Development",
+          "description": "We design intuitive interfaces and develop Flutter apps optimized for performance and usability across platforms.",
+          "margin": "100px"
+        },
+        {
+          "step": 3,
+          "title": "Testing & Quality Assurance",
+          "description": "Rigorous testing across multiple devices ensures your app functions flawlessly before launch.",
+          "margin": "200px"
+        },
+        {
+          "step": 4,
+          "title": "Deployment & Support",
+          "description": "We launch your app across app stores and provide ongoing support to keep it up to date.",
+          "margin": "300px"
+        }
+      ]
+    },
+    "section6": {
+      "title": "Flutter Cross-Platform Development & Integration Services",
+      "image": "img2.png",
+      "des": "We provide complete Flutter development services, including integration with back-end systems, cloud platforms, and third-party APIs. Our team ensures seamless data flow, robust performance, and intuitive interfaces across Android, iOS, and web platforms, aligning with modern UI and UX standards. We also optimize your apps for speed, scalability, and future platform updates to keep them ahead of the curve. Our dedicated support team continuously monitors, updates, and enhances your app to deliver the best user experience over time while maintaining top-level security."
+    },
+    "section7": {
+      "quote": "This team built a Flutter app that truly reflects our vision. They understood our requirements, delivered on time, and created a seamless experience for our customers. Highly recommended for any company looking to build cross-platform apps.",
+      "author": "CTO, E-Commerce Client"
+    },
+    "section8": {
+      "title": "Why Choose Us?",
+      "image": "img3.png",
+      "data": [
+        {
+          "title": "Industry Expertise",
+          "description": "We have extensive experience building secure, high-performance Flutter apps for diverse industries."
+        },
+        {
+          "title": "Agile Methodology",
+          "description": "Our process emphasizes rapid development and transparent communication."
+        },
+        {
+          "title": "Security First",
+          "description": "We implement best practices for data encryption and privacy protection across all platforms."
+        },
+        {
+          "title": "Collaborative Partnership",
+          "description": "We work closely with your team from concept to launch to deliver maximum impact."
+        }
+      ]
+    },
+    "section9": {
+      "title": "Industries We Serve",
+      "para": "We have extensive experience building secure, high-performance Flutter apps for diverse industries such as:",
+      "industries": [
+        "Healthcare",
+        "Finance & Fintech",
+        "Retail & eCommerce",
+        "Logistics & Supply Chain",
+        "Education & Training"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "item": "item-1",
+          "ques": "What types of Flutter apps do you develop?",
+          "ans": "We build a wide variety of cross-platform apps using Flutter, including e-commerce, healthcare, fintech, logistics, on-demand services, and enterprise apps. Our apps are designed to deliver a native-like experience on Android, iOS, web, and desktop from a single codebase."
+        },
+        {
+          "item": "item-2",
+          "ques": "Do you provide deployment assistance for Android and iOS stores?",
+          "ans": "Yes. We handle the entire deployment process for both Google Play and Apple App Store — from preparing assets and metadata to ensuring compliance with each platform’s policies — so your app launches smoothly on all stores."
+        },
+        {
+          "item": "item-3",
+          "ques": "Can you integrate our existing systems into a Flutter app?",
+          "ans": "Absolutely. We specialize in integrating Flutter apps with your existing back-end systems, APIs, CRMs, ERPs, payment gateways, and third-party services to ensure seamless data flow and unified operations across platforms."
+        },
+        {
+          "item": "item-4",
+          "ques": "Do you support ongoing app updates?",
+          "ans": "Yes. We offer full maintenance and support services, including OS compatibility updates, new feature releases, performance monitoring, and bug fixes to keep your Flutter app secure and up to date."
+        },
+        {
+          "item": "item-5",
+          "ques": "How secure are your Flutter applications?",
+          "ans": "Security is a core focus in our development process. We follow best practices for secure coding, data encryption, and authentication while conducting thorough testing to protect sensitive information and meet industry regulations on every platform."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let’s build a high-performance Flutter app that drives your business forward.",
+      "subTitle": "Get in touch today and let’s discuss your project!"
+    }
+  },
+  {
+    "title": "Flutter Cross-Platform Development Services",
+    "section2": {
+      "title": "Innovate Across Platforms with Flutter Expertise",
+      "des": "Our Flutter cross-platform development services enable businesses to deliver high-quality mobile experiences across Android, iOS, and web from a single codebase. We specialize in creating visually stunning, high-performance apps tailored to your brand and your users. By leveraging Flutter’s robust framework and Google’s ecosystem, we help you cut development costs, speed up time-to-market, and maintain a consistent look and feel across all platforms. No matter if you are launching a new app or transforming an existing one, our team ensures seamless performance, future-ready architecture, and long-term scalability."
+    },
+    "section3": {
+      "title": "Building Seamless Experiences with Flutter Solutions",
+      "image": "img1.png",
+      "data": [
+        {
+          "title": "Single Codebase for Multiple Platforms",
+          "description": "We use Flutter to build apps for Android, iOS, web, and desktop simultaneously, reducing development time and costs."
+        },
+        {
+          "title": "Maximizing ROI with Unified Development",
+          "description": "By combining Flutter’s powerful widgets and proven methodologies, we deliver applications that enhance user experience and maximize ROI."
+        },
+        {
+          "title": "Future-Ready with Modern Technology",
+          "description": "We develop apps ready for future platform updates, leveraging Flutter 3, Dart, and the latest plugins to ensure long-term reliability."
+        },
+        {
+          "title": "Protecting Your Data at Every Step",
+          "description": "Our applications are engineered with robust security protocols to safeguard sensitive data, ensuring compliance with industry regulations."
+        },
+        {
+          "title": "Faster Delivery through Agile Processes",
+          "description": "We use Agile development practices to accelerate delivery without sacrificing quality, providing transparency at every stage."
+        },
+        {
+          "title": "Ongoing Support and Maintenance",
+          "description": "Our services don’t stop at launch. We provide continuous updates, monitoring, and optimization to keep your Flutter app running flawlessly."
+        }
+      ]
+    },
+    "section4": {
+      "title": "Driving Innovation with Flutter Cross-Platform Development",
+      "des": "From concept to launch, our team builds apps that leverage Flutter’s high-performance rendering engine and Google’s open-source ecosystem. We integrate advanced features such as animations, custom UI components, and third-party APIs to create immersive, future-proof apps that enhance user engagement and elevate your brand presence."
+    },
+    "section5": {
+      "title": "How We Work",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Discovery & Planning",
+          "description": "We collaborate to understand your goals, define requirements, and create a roadmap for your app.",
+          "margin": "0px"
+        },
+        {
+          "step": 2,
+          "title": "Design & Development",
+          "description": "We design intuitive interfaces and develop Flutter apps optimized for performance and usability across platforms.",
+          "margin": "100px"
+        },
+        {
+          "step": 3,
+          "title": "Testing & Quality Assurance",
+          "description": "Rigorous testing across multiple devices ensures your app functions flawlessly before launch.",
+          "margin": "200px"
+        },
+        {
+          "step": 4,
+          "title": "Deployment & Support",
+          "description": "We launch your app across app stores and provide ongoing support to keep it up to date.",
+          "margin": "300px"
+        }
+      ]
+    },
+    "section6": {
+      "title": "Flutter Cross-Platform Development & Integration Services",
+      "image": "img2.png",
+      "des": "We provide complete Flutter development services, including integration with back-end systems, cloud platforms, and third-party APIs. Our team ensures seamless data flow, robust performance, and intuitive interfaces across Android, iOS, and web platforms, aligning with modern UI and UX standards. We also optimize your apps for speed, scalability, and future platform updates to keep them ahead of the curve. Our dedicated support team continuously monitors, updates, and enhances your app to deliver the best user experience over time while maintaining top-level security."
+    },
+    "section7": {
+      "quote": "This team built a Flutter app that truly reflects our vision. They understood our requirements, delivered on time, and created a seamless experience for our customers. Highly recommended for any company looking to build cross-platform apps.",
+      "author": "CTO, E-Commerce Client"
+    },
+    "section8": {
+      "title": "Why Choose Us?",
+      "image": "img3.png",
+      "data": [
+        {
+          "title": "Industry Expertise",
+          "description": "We have extensive experience building secure, high-performance Flutter apps for diverse industries."
+        },
+        {
+          "title": "Agile Methodology",
+          "description": "Our process emphasizes rapid development and transparent communication."
+        },
+        {
+          "title": "Security First",
+          "description": "We implement best practices for data encryption and privacy protection across all platforms."
+        },
+        {
+          "title": "Collaborative Partnership",
+          "description": "We work closely with your team from concept to launch to deliver maximum impact."
+        }
+      ]
+    },
+    "section9": {
+      "title": "Industries We Serve",
+      "para": "We have extensive experience building secure, high-performance Flutter apps for diverse industries such as:",
+      "industries": [
+        "Healthcare",
+        "Finance & Fintech",
+        "Retail & eCommerce",
+        "Logistics & Supply Chain",
+        "Education & Training"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "item": "item-1",
+          "ques": "What types of Flutter apps do you develop?",
+          "ans": "We build a wide variety of cross-platform apps using Flutter, including e-commerce, healthcare, fintech, logistics, on-demand services, and enterprise apps. Our apps are designed to deliver a native-like experience on Android, iOS, web, and desktop from a single codebase."
+        },
+        {
+          "item": "item-2",
+          "ques": "Do you provide deployment assistance for Android and iOS stores?",
+          "ans": "Yes. We handle the entire deployment process for both Google Play and Apple App Store — from preparing assets and metadata to ensuring compliance with each platform’s policies — so your app launches smoothly on all stores."
+        },
+        {
+          "item": "item-3",
+          "ques": "Can you integrate our existing systems into a Flutter app?",
+          "ans": "Absolutely. We specialize in integrating Flutter apps with your existing back-end systems, APIs, CRMs, ERPs, payment gateways, and third-party services to ensure seamless data flow and unified operations across platforms."
+        },
+        {
+          "item": "item-4",
+          "ques": "Do you support ongoing app updates?",
+          "ans": "Yes. We offer full maintenance and support services, including OS compatibility updates, new feature releases, performance monitoring, and bug fixes to keep your Flutter app secure and up to date."
+        },
+        {
+          "item": "item-5",
+          "ques": "How secure are your Flutter applications?",
+          "ans": "Security is a core focus in our development process. We follow best practices for secure coding, data encryption, and authentication while conducting thorough testing to protect sensitive information and meet industry regulations on every platform."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let’s build a high-performance Flutter app that drives your business forward.",
+      "subTitle": "Get in touch today and let’s discuss your project!"
+    }
+  },
+  {
+    "title": "Enterprise Application Development Services",
+    "section2": {
+      "title": "Modernizing Enterprise Processes with Innovative Solutions",
+      "des": "Our Enterprise Application Services help organizations modernize processes, improve productivity, and accelerate decision-making. We build robust, feature-rich applications designed for large-scale use, integrating seamlessly with your existing infrastructure. Whether you need custom ERP, CRM, HRM, or workflow solutions, our team delivers enterprise-grade technology that scales with your growth and adapts to evolving needs."
+    },
+    "section3": {
+      "title": "Strengthening Teams and Operations with Advanced Tools",
+      "image": "img1.png",
+      "data": [
+        {
+          "title": "Custom Enterprise Solutions",
+          "description": "We design and develop applications tailored to your unique workflows, departments, and user needs."
+        },
+        {
+          "title": "Integration Across Systems",
+          "description": "Our apps seamlessly integrate with legacy systems, cloud platforms, and third-party services to centralize data and improve efficiency."
+        },
+        {
+          "title": "Future-Proof Architecture",
+          "description": "We build using modern frameworks, APIs, and microservices to ensure adaptability and long-term performance."
+        },
+        {
+          "title": "Advanced Security Controls",
+          "description": "We implement enterprise-grade security measures to protect sensitive data and maintain compliance with industry standards."
+        },
+        {
+          "title": "Optimized for Scale",
+          "description": "Our solutions are designed to handle growing user bases, large datasets, and complex processes without compromising performance."
+        },
+        {
+          "title": "Dedicated Support & Maintenance",
+          "description": "We provide ongoing updates, monitoring, and enhancements to keep your enterprise apps operating at peak performance."
+        }
+      ]
+    },
+    "section4": {
+      "title": "Driving Enterprise Innovation Through Technology",
+      "des": "We combine deep domain knowledge with cutting-edge technologies — AI, analytics, and automation, to deliver applications that empower your teams and increase your competitive advantage."
+    },
+    "section5": {
+      "title": "Our Process to Deliver Enterprise Success",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Discovery & Strategy",
+          "description": "We work closely with stakeholders to identify business needs, define goals, and design a project roadmap.",
+          "margin": "0px"
+        },
+        {
+          "step": 2,
+          "title": "Architecture & Development",
+          "description": "We build secure, scalable, and modular enterprise applications tailored to your organization.",
+          "margin": "100px"
+        },
+        {
+          "step": 3,
+          "title": "Validation & Compliance",
+          "description": "We test thoroughly for functionality, performance, and adherence to industry standards before deployment.",
+          "margin": "200px"
+        },
+        {
+          "step": 4,
+          "title": "Deployment & Continuous Improvement",
+          "description": "We roll out your enterprise application and continue optimizing it to meet evolving business requirements.",
+          "margin": "300px"
+        }
+      ]
+    },
+    "section6": {
+      "title": "Enterprise Application Development & Integration Services",
+      "image": "img2.png",
+      "des": "We deliver full-scale enterprise application services, including integration with ERP, CRM, HR, finance systems, and cloud platforms. Our solutions ensure data consistency, real-time insights, and streamlined workflows across departments. We also optimize your applications for scalability, security, and evolving compliance requirements. Our ongoing support team monitors, updates, and enhances your enterprise solutions to deliver long-term business value."
+    },
+    "section7": {
+      "quote": "All Spark Technologies built an enterprise-grade application that unified our operations and improved efficiency across multiple departments. Their process and support have been exceptional.",
+      "author": "Operations Director, Manufacturing Company"
+    },
+    "section8": {
+      "title": "Why Choose Our Enterprise Services?",
+      "image": "img3.png",
+      "data": [
+        {
+          "title": "Proven Enterprise Expertise",
+          "description": "We specialize in large-scale application development for complex organizational needs."
+        },
+        {
+          "title": "End-to-End Delivery",
+          "description": "From strategy to deployment, we manage every phase of enterprise application delivery."
+        },
+        {
+          "title": "Robust Security & Compliance",
+          "description": "We implement strict security protocols and comply with global standards to protect sensitive data."
+        },
+        {
+          "title": "Long-Term Partnership",
+          "description": "We act as a trusted partner to continually enhance and support your enterprise applications."
+        }
+      ]
+    },
+    "section9": {
+      "title": "Industries We Serve",
+      "para": "We have extensive experience building secure, high-performing apps for diverse industries such as:",
+      "industries": [
+        "Healthcare",
+        "Finance & Banking",
+        "Manufacturing",
+        "Retail & eCommerce",
+        "Logistics & Supply Chain",
+        "Education"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "faqs": [
+        {
+          "item": "item-1",
+          "ques": "What types of enterprise applications do you develop?",
+          "ans": "We design and build a wide range of enterprise-grade applications such as ERP systems, CRMs, HR and payroll platforms, inventory management tools, workflow automation apps, analytics dashboards, and custom line-of-business solutions. Each application is tailored to your organization’s specific processes and goals."
+        },
+        {
+          "item": "item-2",
+          "ques": "Can you integrate with our existing ERP and CRM systems?",
+          "ans": "Yes. We specialize in seamless integrations with existing ERPs, CRMs, finance systems, and other third-party tools. Our approach ensures smooth data synchronization, unified reporting, and minimal disruption to your current operations."
+        },
+        {
+          "item": "item-3",
+          "ques": "Do you provide cloud migration and deployment support?",
+          "ans": "Absolutely. We help migrate legacy systems to secure cloud environments and manage full deployments across public, private, or hybrid clouds. Our team ensures optimized performance, scalability, and compliance throughout the migration process."
+        },
+        {
+          "item": "item-4",
+          "ques": "Do you offer ongoing support and maintenance?",
+          "ans": "Yes. We provide comprehensive post-launch support, including performance monitoring, feature enhancements, bug fixes, and security updates. Our proactive maintenance keeps your enterprise applications stable, secure, and aligned with evolving business needs."
+        },
+        {
+          "item": "item-5",
+          "ques": "How secure are your enterprise applications?",
+          "ans": "Security is built into every layer of our enterprise solutions. We implement role-based access control, encryption, secure APIs, and industry-standard compliance protocols. Rigorous testing and regular updates help safeguard sensitive data and maintain trust across your organization."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let’s build an enterprise application that drives innovation and efficiency across your organization.",
+      "subTitle": "Contact us today to discuss your project!"
+    }
+  }
+]
 // these are uncomplete subdervices json below
 
 export const aiAndMachineLearning = [
@@ -5659,12 +6467,12 @@ export const CustomSoftwareDevelopment: ServicePageData = {
     "letters": ["Software", "Development"],
     "des": "We offer custom software development service in USA, delivering secure, scalable, and innovative solutions tailored to meet unique business requirements.",
     "cards": [
-      { "icon": "csdicon1.png", "heading": "Enterprise Software Development Service", "des": "Enterprise software services in USA designed to improve operations, security, and scalability for businesses.", "btnText": "Read more" },
-      { "icon": "csdicon2.png", "heading": "Bespoke Application Development Services", "des": "Custom application development tailored to unique workflows, boosting efficiency and business growth.", "btnText": "Read more" },
-      { "icon": "csdicon3.png", "heading": "Digital Product Development Services", "des": "We design, build, and launch innovative digital products with seamless user experiences.", "btnText": "Read more" },
-      { "icon": "csdicon4.png", "heading": "System Integration Services", "des": "Integrating applications, platforms, and cloud solutions into one secure, streamlined ecosystem.", "btnText": "Read more" },
-      { "icon": "csdicon5.png", "heading": "API Development Services in USA", "des": "API development in USA ensures seamless communication, secure integration, and efficient data sharing.", "btnText": "Read more" },
-      { "icon": "csdicon6.png", "heading": "Future-Ready Software Solutions (AI, Cloud, IoT)", "des": "We create future-ready software using AI, cloud, and IoT for competitive advantage.", "btnText": "Read more" }
+      { "icon": "csdicon1.png", "heading": "Enterprise Software Development Service", "des": "Enterprise software services in USA designed to improve operations, security, and scalability for businesses.", "btnText": "Read more", "link": "enterprise-software-solutions" },
+      { "icon": "csdicon2.png", "heading": "Bespoke Application Development Services", "des": "Custom application development tailored to unique workflows, boosting efficiency and business growth.", "btnText": "Read more", "link": "bespoke-software-development" },
+      { "icon": "csdicon3.png", "heading": "Digital Product Development Services", "des": "We design, build, and launch innovative digital products with seamless user experiences.", "btnText": "Read more", "link": "product-development-services" },
+      { "icon": "csdicon4.png", "heading": "System Integration Services", "des": "Integrating applications, platforms, and cloud solutions into one secure, streamlined ecosystem.", "btnText": "Read more", "link": "system-integration-services" },
+      { "icon": "csdicon5.png", "heading": "API Development Services in USA", "des": "API development in USA ensures seamless communication, secure integration, and efficient data sharing.", "btnText": "Read more", "link": "custom-api-development" },
+      { "icon": "csdicon6.png", "heading": "Future-Ready Software Solutions (AI, Cloud, IoT)", "des": "We create future-ready software using AI, cloud, and IoT for competitive advantage.", "btnText": "Read more", "link": "technology-solutions" }
     ]
   },
   "serviceBanner": {
@@ -5964,37 +6772,43 @@ export const WebDevelopment: ServicePageData = {
         "icon": "csdicon1.png",
         "heading": "Custom Web Applications",
         "des": "Tailored solutions that perfectly align with your business processes and growth objectives.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "ecommerce-web-development"
       },
       {
         "icon": "csdicon2.png",
         "heading": "E-Commerce Development",
         "des": "Powerful online stores that drive sales and provide seamless shopping experiences for your customers.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "full-stack-development "
       },
       {
         "icon": "csdicon3.png",
         "heading": "WordPress Development",
         "des": "As your dedicated WordPress website developer, we create flexible, scalable websites that grow with your business.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "web-portal-development"
       },
       {
         "icon": "csdicon4.png",
         "heading": "Mobile-Responsive Design",
         "des": "Websites that deliver exceptional experiences across all devices and screen sizes.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "cms-development"
       },
       {
         "icon": "csdicon5.png",
         "heading": "Website Maintenance",
         "des": "Comprehensive website building services including ongoing support, updates, and performance optimization.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "api-integration-development"
       },
       {
         "icon": "csdicon6.png",
         "heading": "Enterprise Solutions",
         "des": "Scalable web development services for large organizations requiring complex, high-performance systems.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "custom-web-app-development"
       }
     ]
   },
@@ -6320,37 +7134,43 @@ export const MobileAppDevelopment: ServicePageData = {
         "icon": "csdicon1.png",
         "heading": "Native iOS Development",
         "des": "Expert iOS app development company services delivering premium experiences for Apple ecosystem users with cutting-edge Swift and Objective-C development.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link":"native-ios-development"
       },
       {
         "icon": "csdicon2.png",
         "heading": "Android App Solutions",
         "des": "Leading Android app development company in the USA creating feature-rich applications that leverage the full potential of Google's platform.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link":"android-app-solutions"
       },
       {
         "icon": "csdicon3.png",
         "heading": "Flutter Cross-Platform",
         "des": "Advanced Flutter app development services in the USA enabling single codebase deployment across multiple platforms with native performance.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link":"flutter-cross-platform"
       },
       {
         "icon": "csdicon4.png",
         "heading": "Cross-Platform Excellence",
         "des": "Comprehensive cross platform app development solutions in the USA that maximize reach while minimizing development time and costs.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link":"cross-platform-excellence"
       },
       {
         "icon": "csdicon5.png",
         "heading": "Enterprise Applications",
         "des": "Scalable enterprise solutions designed to streamline operations, enhance productivity, and drive digital transformation.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link":"enterprise-applications"
       },
       {
         "icon": "csdicon6.png",
         "heading": "App Maintenance & Support",
         "des": "24/7 technical support, regular updates, and performance optimization to keep your applications running smoothly.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link":"app-maintenance-and-support"
       }
     ]
   },
@@ -6964,37 +7784,43 @@ export const UiAndUxDesign: ServicePageData = {
         "icon": "csdicon1.png",
         "heading": "User Experience Strategy",
         "des": "Align business goals with user needs for clear results.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "user-experience-strategy"
       },
       {
         "icon": "csdicon2.png",
         "heading": "Interface Design",
         "des": "Engaging, beautiful UIs that improve brand perception and usability.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "interface-design"
       },
       {
         "icon": "csdicon3.png",
         "heading": "Mobile App Design",
         "des": "Native and cross-platform apps delivering intuitive user journeys.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "mobile-app-design"
       },
       {
         "icon": "csdicon4.png",
         "heading": "Web Application Design",
         "des": "High-conversion web products for seamless multi-device experience.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "web-application-design"
       },
       {
         "icon": "csdicon5.png",
         "heading": "Design Systems",
         "des": "Cohesive libraries for consistent cross-platform design.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "design-systems"
       },
       {
         "icon": "csdicon6.png",
         "heading": "Usability Testing",
         "des": "Data-backed insights to maximize satisfaction and reduce friction.",
-        "btnText": "Read more"
+        "btnText": "Read more",
+        "link": "usability-testing"
       }
     ]
   },

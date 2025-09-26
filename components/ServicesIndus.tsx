@@ -44,7 +44,7 @@ export default function ServiceIndus({serviceIndus}:ServiceIndusProps) {
             </div>
 
             {/* Right Text Column */}
-            <div className="relative w-full sm:w-[85%] lg:w-[40%] mx-auto ml-0 lg:mx-0  md:pr-[0px] p-[20px] mt-[30px] lg:mt-0 ">
+            <div className="relative w-full lg:w-[45%] mx-auto ml-0 lg:mx-0  md:pr-[0px] p-[20px] mt-[30px] lg:mt-0 ">
                 {/* Main Image */}
                 <div className="relative overflow-hidden rounded-3xl w-full md:w-[89%] h-auto">
                     <Image

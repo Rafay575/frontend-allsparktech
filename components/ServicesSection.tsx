@@ -126,7 +126,7 @@ export default function ServicesSection({homeData}:{homeData: HomePageData}) {
           <ArrowRight className="h-4 w-4" />
         </div>
         <div className="relative">
-          <h2 className="mt-3 heading font-semibold text-gray-900">
+          <h2 className="mt-3 heading font-bold text-gray-900">
             {homeData.homeServices?.title}
           </h2>
         </div>

@@ -31,8 +31,8 @@ interface ServiceAboutProps {
 export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
       console.log(`${baseURL}/images/services/${serviceAbout.image1}`);
   return (
-    <section className="relative bg overflow-hidden pad mar text-white relative">
-      <div className="mx-auto container flex pt-[60px] lg:pt-[0]  flex-col-reverse justify-between items-center gap-10 px-3 lg:px-6 lg:flex-row relative z-[20]">
+    <section className="relative bg overflow-hidden pad  text-white ">
+      <div className="mx-auto container flex pad  flex-col-reverse justify-between items-center gap-10 px-3 lg:px-6 lg:flex-row relative z-[20] py-[30px]">
         {/* Left Image Column */}
         <div className="relative w-[90%] lg:w-[40%]   mx-auto lg:mx-0 order-2 lg:order-1">
           {/* Main Image */}
@@ -50,7 +50,7 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
           <Image
             src={`${baseURL}/images/services/${serviceAbout.image2}`}
             alt="img"
-            className="object-contain absolute bottom-[-40px]  right-[-40px] !w-[50%]"
+            className="object-contain absolute bottom-[-30px]  right-[-30px] !w-[40%]"
            width={400} height={400}
           />
 
@@ -87,7 +87,7 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
                 className="flex items-center justify-start gap-[10px] bg-[#5666ff] p-[5px] min-w-[150px]  rounded-lg !ml-0"
               >
                 <Image src={`${baseURL}/images/services/${feature.icon}`} alt="img" width={200}
-              height={200} className="bg-white p-3 rounded-lg !w-[50px]" />
+              height={200} className="bg-white p-2 rounded-lg !w-[50px]" />
                 <div className="flex flex-col">
                   <h6 className="text-white font-semibold para">{feature.title}</h6>
                 </div>
