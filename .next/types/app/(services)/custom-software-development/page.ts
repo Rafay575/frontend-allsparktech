@@ -1,4 +1,4 @@
-// File: C:\Users\pc\Desktop\rebuild-main\frontend\app\(services)\custom-software-development\page.tsx
+// File: C:\Users\pc\Desktop\rebuild-main\allsparktechnologies\app\(services)\custom-software-development\page.tsx
 import * as entry from '../../../../../app/(services)/custom-software-development/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

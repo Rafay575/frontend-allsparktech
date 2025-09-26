@@ -45,7 +45,7 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
 
 
     return (
-        <div className='container border mar pad px-[30px] bg-[#f3f7fb] rounded-[20px]'>
+        <div className='container border mar pad px-[30px]  rounded-[20px] bg-red-500'>
             <p className='heading font-[700] text-center w-full lg:w-[70%] xl:w-[55%] mx-auto'>
                 {renderTitle(serviceIndustries.title, serviceIndustries.letters)}
             </p>
