@@ -8,12 +8,12 @@ import { ServicePageDataProps } from "@/lib/types"
 
 
 
-export default function LiveChatSupport({ servicePageData }: ServicePageDataProps) {
+export default function TaxiSupport({ servicePageData }: ServicePageDataProps) {
     return (
         <>
             <Topnav />
             <Navbar2 />
-            <h1 className="hidden">Live Chat Support.</h1>
+            <h1 className="hidden">Taxi Support.</h1>
             <NewServicePage servicePageData={servicePageData} />
             <Footer2 />
         </>

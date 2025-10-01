@@ -9,7 +9,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { usePathname, useRouter } from "next/navigation";
 import { FaSearchengin } from "react-icons/fa";
 import { FaMobileAlt } from "react-icons/fa";
-
+import { FaTaxi } from "react-icons/fa";
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
@@ -65,17 +65,19 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`${plusJakartaSans.className} ${isSticky
-          ? "fixed top-0 py-2 shadow-lg transition-all duration-300 left-0 w-full z-50 bg-white"
-          : "relative"
-          } transition-all `}
+        className={`${plusJakartaSans.className} ${
+          isSticky
+            ? "fixed top-0 py-2 shadow-lg transition-all duration-300 left-0 w-full z-50 bg-white"
+            : "relative"
+        } transition-all `}
         style={{ zIndex: 100 }}
       >
         <div
-          className={`mx-auto bg-white relative transition-all duration-300 lg:max-w-4xl xl:max-w-6xl ${isSticky
-            ? "max-w-[100%] "
-            : "max-w-[80%] rounded-full border-4 border-t-[1px] border-gray-400  relative top-[12px]"
-            } px-4 py-3 flex items-center justify-between`}
+          className={`mx-auto bg-white relative transition-all duration-300 lg:max-w-4xl xl:max-w-6xl ${
+            isSticky
+              ? "max-w-[100%]"
+              : "max-w-[80%] rounded-full border-4 border-t-0 border-gray-400"
+          } px-4 py-3 flex items-center justify-between`}
         >
           {/* Left: Logo / Brand */}
           <div className="flex items-center space-x-2">
@@ -114,13 +116,13 @@ const Navbar = () => {
               {/* Full-width dropdown with smooth open/close */}
               {/* Full-width dropdown with smooth open/close */}
               <div
-                className={` absolute left-[17%] xl:left-[23%]  top-full z-10 mt-1 
+                className={` absolute left-0 w-full top-full z-10 mt-[6px] 
                  transform-gpu origin-top 
                 scale-y-0 group-hover:scale-y-100 
                 transition-transform duration-300 ease-out `}
               >
-                <div className="bg-white w-full shadow-lg py-6 pb-10 rounded-xl px-10 relative">
-                  <div className="mx-auto w-full px-2 grid grid-cols-2 gap-[90px]">
+                <div className="bg-white shadow-lg py-6 pb-20 rounded-xl px-20 relative">
+                  <div className="mx-auto max-w-6xl px-6 grid grid-cols-3 gap-8">
                     {/* Column 1 */}
                     <div>
                       <h3 className="mb-3 text-[15px] xl:text-[17px] font-bold text-gray-800">
@@ -216,8 +218,81 @@ const Navbar = () => {
                         </Link>
                       </div>
                     </div>
-                    
+
                     {/* Column 2 */}
+                    <div>
+                      <h3 className="mb-3 text-base font-bold text-gray-800">
+                        BPO & Tech-Enabled Services
+                      </h3>
+                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700 list-none">
+                        <li>
+                          <Link
+                            href={{
+                              pathname: "/customer-support"
+                            }}
+                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                          >
+                            <Image
+                              className="mr-2"
+                              src={"/images/customer-support-icon-01.svg"}
+                              alt="icon"
+                              width={30}
+                              height={30}
+                            />
+                            Customer Support
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href={{
+                              pathname: "/email-support"
+                            }}
+                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                          >
+                            <Image
+                              className="mr-2"
+                              src={"/images/email-marketing-icon-01.svg"}
+                              alt="icon"
+                              width={30}
+                              height={30}
+                            />
+                            Email Support
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href={{
+                              pathname: "/live-chat-support"
+                            }}
+                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                          >
+                            <Image
+                              className="mr-2"
+                              src={"/images/live-chat-icon-01.svg"}
+                              alt="icon"
+                              width={30}
+                              height={30}
+                            />
+                            Live Chat Support
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href={{
+                              pathname: "/taxi-support"
+                            }}
+                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                          >
+                            <FaTaxi className="text-[25px] mr-[12px] text-[#6b7cff]"/>
+                            Taxi Support
+                          </Link>
+                        </li>
+
+                        {/* Add more as needed */}
+                      </ul>
+                    </div>
+
+                    {/* Column 3 */}
                     <div>
                       <h3 className="mb-3 text-[15px] xl:text-[17px] font-bold text-gray-800">
                         Marketing & Engagement
@@ -275,7 +350,7 @@ const Navbar = () => {
           {/* Right: CTA button */}
           <div className="hidden lg:flex">
             <button
-              className="inline-block text-sm rounded-full bg px-5 py-2 text-white shadow hover:bg-blue-700 focus:outline-none"
+              className="inline-block text-sm rounded-full bg-[#384BFF] px-5 py-2 text-white shadow hover:bg-blue-700 focus:outline-none"
               onClick={() => {
                 console.log("Button Clicked!"); // ✅ Check if this appears in console
                 handleClick();
@@ -355,23 +430,23 @@ const Navbar = () => {
                 </div>
                 <hr className="mt-3 " />
                 <nav className="flex flex-col mx-5 mt-10 h-full">
-                  <div className="space-y-2 text-gray-900 !list-unstyled">
-                    <div className="border-b pb-3">
+                  <ul className="space-y-2 text-gray-900 list-none">
+                    <li className="border-b pb-3">
                       <Link href="/" onClick={() => setIsSidebarOpen(false)}>
                         Home
                       </Link>
-                    </div>
-                    <div className="border-b pb-3">
+                    </li>
+                    <li className="border-b pb-3">
                       <Link
                         href="/about"
                         onClick={() => setIsSidebarOpen(false)}
                       >
                         About
                       </Link>
-                    </div>
+                    </li>
 
                     {/* Services with smooth dropdown */}
-                    <div className="border-b pb-3">
+                    <li className="border-b pb-3">
                       <button
                         className="flex items-center text-gray-700 font-semibold"
                         onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -379,8 +454,9 @@ const Navbar = () => {
                         Services
                         {/* Replace with your ChevronDown component/icon */}
                         <svg
-                          className={`ml-1 h-4 w-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""
-                            }`}
+                          className={`ml-1 h-4 w-4 transition-transform duration-300 ${
+                            isServicesOpen ? "rotate-180" : ""
+                          }`}
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -471,7 +547,7 @@ const Navbar = () => {
                                   </Link>
                                 </div>
 
-                                {/* <div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/customer-support",
@@ -485,12 +561,12 @@ const Navbar = () => {
                                 <div>
                                   <Link
                                     href={{
-                                      pathname: "/email-marketing"
+                                      pathname: "/email-support"
                                     }}
                                     onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center hover:text-blue-600 transition duration-300"
                                   >
-                                    Email Marketing
+                                    Email Support
                                   </Link>
                                 </div>
                                 <div>
@@ -503,7 +579,18 @@ const Navbar = () => {
                                   >
                                     Live Chat Support
                                   </Link>
-                                </div> */}
+                                </div>
+                                <div>
+                                  <Link
+                                    href={{
+                                      pathname: "/taxi-support",
+                                    }}
+                                    onClick={() => setIsSidebarOpen(false)}
+                                    className="flex items-center hover:text-blue-600 transition duration-300"
+                                  >
+                                    Taxi Support
+                                  </Link>
+                                </div>
 
                                 <div>
                                   <Link
@@ -532,25 +619,25 @@ const Navbar = () => {
                           </motion.div>
                         )}
                       </AnimatePresence>
-                    </div>
+                    </li>
 
-                    <div className="border-b pb-3">
+                    <li className="border-b pb-3">
                       <Link
                         href="/contact"
                         onClick={() => setIsSidebarOpen(false)}
                       >
                         Contact
                       </Link>
-                    </div>
-                    <div className="border-b pb-3">
+                    </li>
+                    <li className="border-b pb-3">
                       <Link
                         href="/blogs"
                         onClick={() => setIsSidebarOpen(false)}
                       >
                         Blogs
                       </Link>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </nav>
 
                 <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2  ">
@@ -573,5 +660,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
