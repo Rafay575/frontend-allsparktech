@@ -8,67 +8,7 @@ import "swiper/css/pagination";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa6";
 
-export interface HomePageData {
-  hero: {
-    texts: string[];
-    features: string[];
-  };
-  logos: {
-    id: number;
-    src: string;
-    alt: string;
-  }[];
-  homeServices: {
-    subTitle: string;
-    title: string;
-    allServices: {
-      id: string;
-      title: string;
-      imageUrl: string;
-      alt: string;
-    }[];
-  };
-  about: {
-    img1: string;
-    img2: string;
-    img3: string;
-    alt1: string;
-    alt2: string;
-    alt3: string;
-    subheading: string;
-    mainHeading: string;
-    paragraphs: string[];
-    features: {
-      title: string;
-      subtitle: string;
-    }[];
-  };
-  process: {
-    number: string;
-    title: string;
-    description: string;
-  }[];
-  faq: {
-    img1: string;
-    img2: string;
-    img3: string;
-    alt1: string;
-    alt2: string;
-    alt3: string;
-    subtitle: string;
-    title: string;
-    faqs: {
-      question: string;
-      answer: string;
-    }[];
-  };
-  contactBanner: {
-    img: string;
-    alt: string;
-    subTitle: string;
-    title: string;
-  };
-  testimonials: {
+interface testimonials{
     title: string;
     subtitle: string;
     testimonials: {
@@ -79,12 +19,9 @@ export interface HomePageData {
       image: string;
       rating: number;
     }[];
-  };
-  metadata: any;
-  script: any;
-}
+  }
 
-export default function TestimonialsSection({ homeData }: { homeData: HomePageData }) {
+export default function TestimonialsSection({ testimonials }: { testimonials: testimonials }) {
   const [active, setActive] = useState(0);
 
 
@@ -95,12 +32,12 @@ export default function TestimonialsSection({ homeData }: { homeData: HomePageDa
         {/* Section header */}
         <div className="flex items-center justify-center space-x-4 para font-semibold uppercase color">
           <ArrowLeft className="h-4 w-4" />
-          <span>{homeData.testimonials.subtitle}</span>
+          <span>{testimonials.subtitle}</span>
           <ArrowRight className="h-4 w-4" />
         </div>
 
         <h2 className="mb-20 mt-5 heading font-bold text-gray-900">
-          {homeData.testimonials.title}
+          {testimonials.title}
         </h2>
 
         {/* Swiper carousel */}
@@ -118,7 +55,7 @@ export default function TestimonialsSection({ homeData }: { homeData: HomePageDa
           onSlideChange={(s) => setActive(s.realIndex)}
           className="!pb-8"
         >
-          {homeData.testimonials.testimonials.map((t, idx) => (
+          {testimonials.testimonials.map((t, idx) => (
             <SwiperSlide key={t.id}>
               <div
                 className={`h-[250px] flex flex-col justify-between rounded-xl p-4 shadow-lg transition-colors duration-300 ${active === idx ? "bg text-white" : "bg-white text-gray-900"

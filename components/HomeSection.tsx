@@ -5,13 +5,14 @@ import Hero from "@/components/Hero";
 import Logos from "@/components/Logos";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
-import ProcessSection from "@/components/ProcessSection";
 import FaqSection from "@/components/FaqSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import { MetaTitle } from "./MetaTitle";
+import HomeProcess from "./HomeProcess";
+import { StaticImageData } from "next/image";
 
 export interface HomePageData {
   hero: {
@@ -49,10 +50,18 @@ export interface HomePageData {
     }[];
   };
   process: {
-    number: string;
-    title: string;
-    description: string;
+      title: string;
+      des: string;
+      image: string | StaticImageData;
+      link: string;
+      process: {
+      heading: string;
+      des: string;
+      image: string | StaticImageData;
+      dir?: string | StaticImageData;
   }[];
+  };
+  
   faq: {
     img1: string;
     img2: string;
@@ -92,21 +101,21 @@ export interface HomePageData {
 
 export default function Home({ homeData }: { homeData: HomePageData }) {
 
-  // console.log(homeData.script);
+  console.log(homeData.homeServices);
 
   return (
     <>
       <Navbar />
-
       <MetaTitle />
-      <Hero homeData={homeData} />
-      <Logos homeData={homeData} />
-      <ServicesSection homeData={homeData} />
-      <AboutSection homeData={homeData} />
-      <ProcessSection homeData={homeData} />
-      <FaqSection homeData={homeData} />
-      <ContactSection homeData={homeData} />
-      <TestimonialsSection homeData={homeData} />
+      <Hero hero={homeData.hero} />
+      <Logos logos={homeData.logos} />
+      <ServicesSection homeServices={homeData.homeServices} />
+      <AboutSection about={homeData.about} />
+      <h1 className="my-[20px]">hello</h1>
+      <HomeProcess homeProcess={homeData.process}/>
+      <FaqSection faq={homeData.faq} />
+      <ContactSection contactBanner={homeData.contactBanner} />
+      <TestimonialsSection testimonials={homeData.testimonials} />
       <Footer />
 
       {homeData.script && (

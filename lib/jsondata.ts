@@ -56,28 +56,37 @@ export const homePage = {
       { "title": "Sustainable", "subtitle": "Growth" }
     ]
   },
-  "process": [
-    {
-      "number": "1",
-      "title": "Planning & Strategy",
-      "description": "We start by understanding business requirements, defining objectives, and creating a roadmap. This phase includes market research, competitor analysis, and choosing the right tech stack for custom software development."
+  "process":{
+        "title": "Development Process",
+        "des": "We follow a structured, transparent, and efficient software development process that ensures custom software solutions are delivered with quality, speed, and scalability.",
+        "image": "clipVideo.png",
+        "link": "/contact",
+        "process": [
+            {
+                "image": "homeprocess1.png",
+                "heading": "Planning & Strategy",
+                "des": "We start by understanding business requirements, defining objectives, and creating a roadmap.",
+                "dir": "dir1.png"
+            },
+            {
+                "image": "homeprocess2.png",
+                "heading": "Design & Development",
+                "des": "Our team designs intuitive UI/UX and builds scalable software using full-stack  software development practices.",
+                "dir": "dir2.png"
+            },
+            {
+                "image": "homeprocess3.png",
+                "heading": "Testing & Quality Assurance",
+                "des": "We perform comprehensive QA including functionality, performance, security, and user testing.",
+                "dir": "dir3.png"
+            },
+            {
+                "image": "homeprocess4.png",
+                "heading": "Optimization & Support",
+                "des": "After deployment, we provide ongoing monitoring, updates, and feature enhancements."
+            }
+        ]
     },
-    {
-      "number": "2",
-      "title": "Design & Development",
-      "description": "Our team designs intuitive UI/UX and builds scalable software using full-stack software development practices. We follow agile methods, ensure seamless integration, and apply AI development for smarter automation."
-    },
-    {
-      "number": "3",
-      "title": "Testing & Quality Assurance",
-      "description": "We perform comprehensive QA—including functionality, performance, security, and user testing. Our mix of automated/manual testing ensures compliance with top software development standards."
-    },
-    {
-      "number": "4",
-      "title": "Optimization & Support",
-      "description": "After deployment, we provide ongoing monitoring, updates, and feature enhancements. Our software development agency USA also ensures post-launch support for long-term product success."
-    }
-  ],
   "faq": {
     "img1": "faq1.png",
     "img2": "faq2.png",

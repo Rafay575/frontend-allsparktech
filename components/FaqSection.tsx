@@ -11,47 +11,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { baseURL } from "@/API/baseURL";
 
 
-export interface HomePageData {
-  hero: {
-    texts: string[];
-    features: string[];
-  };
-  logos: {
-    id: number;
-    src: string;
-    alt: string;
-  }[];
-  homeServices: {
-    subTitle: string;
-    title: string;
-    allServices: {
-      id: string;
-      title: string;
-      imageUrl: string;
-      alt: string;
-    }[];
-  };
-  about: {
-    img1: string;
-    img2: string;
-    img3: string;
-    alt1: string;
-    alt2: string;
-    alt3: string;
-    subheading: string;
-    mainHeading: string;
-    paragraphs: string[];
-    features: {
-      title: string;
-      subtitle: string;
-    }[];
-  };
-  process: {
-    number: string;
-    title: string;
-    description: string;
-  }[];
-  faq: {
+interface faq{
     img1: string;
     img2: string;
     img3: string;
@@ -64,31 +24,11 @@ export interface HomePageData {
       question: string;
       answer: string;
     }[];
-  };
-  contactBanner: {
-    img: string;
-    alt: string;
-    subTitle: string;
-    title: string;
-  };
-  testimonials: {
-    title: string;
-    subtitle: string;
-    testimonials: {
-      id: number;
-      name: string;
-      role: string;
-      text: string;
-      image: string;
-      rating: number;
-    }[];
-  };
-  metadata: any;
-  script: any;
-}
+  }
 
 
-export default function FaqSection({homeData}:{homeData: HomePageData}) {
+
+export default function FaqSection({faq}:{faq: faq}) {
   return (
     <section className="py-16" id="faqs">
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
@@ -97,8 +37,8 @@ export default function FaqSection({homeData}:{homeData: HomePageData}) {
           {/* ───────── main photo ───────── */}
           <div className="relative overflow-hidden rounded-3xl w-full h-auto">
             <Image
-              src={`${baseURL}/images/home/${homeData.faq.img1}`}
-              alt={homeData.faq.alt1}
+              src={`${baseURL}/images/home/${faq.img1}`}
+              alt={faq.alt1}
               width={400}
               height={400}
               className="rounded-3xl w-full h-auto"
@@ -109,8 +49,8 @@ export default function FaqSection({homeData}:{homeData: HomePageData}) {
           {/* ───────── bottom-right overlay ───────── */}
           <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[200px] h-[200px]">
             <Image
-              src={`${baseURL}/images/home/${homeData.faq.img2}`}
-              alt={homeData.faq.alt2}
+              src={`${baseURL}/images/home/${faq.img2}`}
+              alt={faq.alt2}
               fill
               sizes="100px"
               className="object-contain"
@@ -124,8 +64,8 @@ export default function FaqSection({homeData}:{homeData: HomePageData}) {
             style={{ animationDuration: "4s" }}
           >
             <Image
-              src={`${baseURL}/images/home/${homeData.faq.img3}`}
-              alt={homeData.faq.alt3}
+              src={`${baseURL}/images/home/${faq.img3}`}
+              alt={faq.alt3}
               fill
               sizes="80px"
               className="object-contain"
@@ -137,18 +77,18 @@ export default function FaqSection({homeData}:{homeData: HomePageData}) {
           {/* FAQ Label */}
           <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
             <ArrowLeft className="h-4 w-4" />
-            <span>{homeData.faq.title}</span>
+            <span>{faq.title}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
           {/* Main Heading */}
           <h2 className="heading font-bold !leading-relaxed text-gray-900">
-            {homeData.faq.subtitle}
+            {faq.subtitle}
           </h2>
 
           {/* FAQ Accordion */}
           <Accordion type="single" collapsible className="para mt-6 space-y-3">
-            {homeData.faq.faqs.map((faq, index) => (
+            {faq.faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="para">{faq.question}</AccordionTrigger>
                 <AccordionContent className="para">{faq.answer}</AccordionContent>

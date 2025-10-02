@@ -6,17 +6,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { baseURL } from "@/API/baseURL";
 
-export interface HomePageData {
-  hero: {
-    texts: string[];
-    features: string[];
-  };
-  logos: {
-    id: number;
-    src: string;
-    alt: string;
-  }[];
-  homeServices: {
+interface homeServices{
     subTitle: string;
     title: string;
     allServices: {
@@ -25,70 +15,15 @@ export interface HomePageData {
       imageUrl: string;
       alt: string;
     }[];
-  };
-  about: {
-    img1: string;
-    img2: string;
-    img3: string;
-    alt1: string;
-    alt2: string;
-    alt3: string;
-    subheading: string;
-    mainHeading: string;
-    paragraphs: string[];
-    features: {
-      title: string;
-      subtitle: string;
-    }[];
-  };
-  process: {
-    number: string;
-    title: string;
-    description: string;
-  }[];
-  faq: {
-    img1: string;
-    img2: string;
-    img3: string;
-    alt1: string;
-    alt2: string;
-    alt3: string;
-    subtitle: string;
-    title: string;
-    faqs: {
-      question: string;
-      answer: string;
-    }[];
-  };
-  contactBanner: {
-    img: string;
-    alt: string;
-    subTitle: string;
-    title: string;
-  };
-  testimonials: {
-    title: string;
-    subtitle: string;
-    testimonials: {
-      id: number;
-      name: string;
-      role: string;
-      text: string;
-      image: string;
-      rating: number;
-    }[];
-  };
-  metadata: any;
-  script: any;
-}
+  }
 
 
 
 
-export default function ServicesSection({homeData}:{homeData: HomePageData}) {
+export default function ServicesSection({homeServices}:{homeServices: homeServices}) {
 
-  const displayedServices = Array.isArray(homeData.homeServices?.allServices)
-    ? homeData.homeServices.allServices.slice(0, 10)
+  const displayedServices = Array.isArray(homeServices?.allServices)
+    ? homeServices.allServices.slice(0, 10)
     : [];
 
   const cardVariants = {
@@ -122,12 +57,12 @@ export default function ServicesSection({homeData}:{homeData: HomePageData}) {
         {/* Title Section */}
         <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
           <ArrowLeft className="h-4 w-4" />
-          <span>{homeData.homeServices?.subTitle}</span>
+          <span>{homeServices?.subTitle}</span>
           <ArrowRight className="h-4 w-4" />
         </div>
         <div className="relative">
           <h2 className="mt-3 heading font-bold text-gray-900">
-            {homeData.homeServices?.title}
+            {homeServices?.title}
           </h2>
         </div>
       </div>

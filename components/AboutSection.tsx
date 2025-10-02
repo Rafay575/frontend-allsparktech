@@ -4,27 +4,7 @@ import Image from "next/image";
 import { baseURL } from "@/API/baseURL";
 
 
-export interface HomePageData {
-  hero: {
-    texts: string[];
-    features: string[];
-  };
-  logos: {
-    id: number;
-    src: string;
-    alt: string;
-  }[];
-  homeServices: {
-    subTitle: string;
-    title: string;
-    allServices: {
-      id: string;
-      title: string;
-      imageUrl: string;
-      alt: string;
-    }[];
-  };
-  about: {
+interface about{
     img1: string;
     img2: string;
     img3: string;
@@ -38,49 +18,9 @@ export interface HomePageData {
       title: string;
       subtitle: string;
     }[];
-  };
-  process: {
-    number: string;
-    title: string;
-    description: string;
-  }[];
-  faq: {
-    img1: string;
-    img2: string;
-    img3: string;
-    alt1: string;
-    alt2: string;
-    alt3: string;
-    subtitle: string;
-    title: string;
-    faqs: {
-      question: string;
-      answer: string;
-    }[];
-  };
-  contactBanner: {
-    img: string;
-    alt: string;
-    subTitle: string;
-    title: string;
-  };
-  testimonials: {
-    title: string;
-    subtitle: string;
-    testimonials: {
-      id: number;
-      name: string;
-      role: string;
-      text: string;
-      image: string;
-      rating: number;
-    }[];
-  };
-  metadata: any;
-  script: any;
-}
+  }
 
-export default function AboutSection({homeData}:{homeData: HomePageData}) {
+export default function AboutSection({about}:{about: about}) {
 
 
 
@@ -92,8 +32,8 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
           {/* Main Image */}
           <div className="relative overflow-hidden rounded-3xl w-full h-auto">
             <Image
-              src={`${baseURL}/images/home/${homeData?.about.img1}`}
-              alt={homeData?.about.alt1}
+              src={`${baseURL}/images/home/${about.img1}`}
+              alt={about.alt1}
               width={400}
               height={400}
               className="rounded-3xl w-full h-auto"
@@ -104,8 +44,8 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
           {/* Overlapping Image */}
           <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
             <Image
-              src={`${baseURL}/images/home/${homeData?.about.img2}`}
-              alt={homeData?.about.alt2}
+              src={`${baseURL}/images/home/${about.img2}`}
+              alt={about.alt2}
               fill
               sizes="100px"
               className="object-contain"
@@ -119,8 +59,8 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
             style={{ animationDuration: "4s" }}
           >
             <Image
-              src={`${baseURL}/images/home/${homeData?.about.img3}`}
-              alt={homeData?.about.alt3}
+              src={`${baseURL}/images/home/${about.img3}`}
+              alt={about.alt3}
               fill
               className="object-cover"
               unoptimized
@@ -132,22 +72,22 @@ export default function AboutSection({homeData}:{homeData: HomePageData}) {
         <div className="w-full max-w-lg mx-auto lg:text-left">
           <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
-            <span>{homeData?.about.subheading}</span>
+            <span>{about.subheading}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
           <h2 className="heading font-bold !leading-normal ">
-            {homeData?.about.mainHeading}
+            {about.mainHeading}
           </h2>
 
           <p className="mt-4 para text-white/80">
-            <span className="mb-5 block">{homeData?.about.paragraphs[0]}</span>
-            <span className="mt-5 block">{homeData?.about.paragraphs[1]}</span>
+            <span className="mb-5 block">{about.paragraphs[0]}</span>
+            <span className="mt-5 block">{about.paragraphs[1]}</span>
           </p>
 
           {/* Features Section */}
-          <div className="flex flex-wrap lg:flex-nowrap space-x-2  mt-10  lg:gap-0 justify-start ">
-            {homeData?.about?.features?.map((feature, index) => (
+          <div className="flex flex-wrap lg:flex-nowrap gap-2 mt-10  justify-start ">
+            {about?.features?.map((feature, index) => (
               <div
                 key={index}
                 className="flex items-center space-x-2 bg-[#5666ff]  p-2 pr-3 rounded-lg"

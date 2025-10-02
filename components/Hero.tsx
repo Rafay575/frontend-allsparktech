@@ -4,9 +4,15 @@ import { CheckCircle } from "lucide-react";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-
-
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
+
+
+import { StaticImageData } from "next/image";
+
+interface hero {
+  texts: string[];
+    features: string[];
+}
 export interface HomePageData {
   hero: {
     texts: string[];
@@ -43,10 +49,18 @@ export interface HomePageData {
     }[];
   };
   process: {
-    number: string;
-    title: string;
-    description: string;
+      title: string;
+      des: string;
+      image: string | StaticImageData;
+      link: string;
+      process: {
+      heading: string;
+      des: string;
+      image: string | StaticImageData;
+      dir?: string | StaticImageData;
   }[];
+  };
+  
   faq: {
     img1: string;
     img2: string;
@@ -85,7 +99,7 @@ export interface HomePageData {
 
 
 
-export default function HeroSection({homeData}:{homeData: HomePageData}) {
+export default function HeroSection({hero}:{hero: hero}) {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentGridIndex, setCurrentGridIndex] = useState(0);
 
@@ -93,22 +107,22 @@ export default function HeroSection({homeData}:{homeData: HomePageData}) {
 
   // Text change interval
   useEffect(() => {
-    if (!homeData?.hero?.texts) return;
+    if (!hero?.texts) return;
     const interval = setInterval(() => {
-      setCurrentTextIndex((prev) => (prev + 1) % homeData?.hero.texts.length);
+      setCurrentTextIndex((prev) => (prev + 1) % hero.texts.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [homeData?.hero?.texts]);
+  }, [hero?.texts]);
 
   // Grid change interval
-  const gridPageCount = homeData?.hero ? Math.ceil(homeData?.hero.features.length / 2) : 1;
+  const gridPageCount = hero ? Math.ceil(hero.features.length / 2) : 1;
   useEffect(() => {
-    if (!homeData?.hero?.features) return;
+    if (!hero?.features) return;
     const interval = setInterval(() => {
       setCurrentGridIndex((prev) => (prev + 1) % gridPageCount);
     }, 5000);
     return () => clearInterval(interval);
-  }, [homeData?.hero?.features, gridPageCount]);
+  }, [hero?.features, gridPageCount]);
 
   const textVariants = {
     initial: { opacity: 0 },
@@ -147,7 +161,7 @@ export default function HeroSection({homeData}:{homeData: HomePageData}) {
                 exit="exit"
                 className="text-2xl font-bold text-white heading !leading-normal"
               >
-                {homeData?.hero?.texts[currentTextIndex]}
+                {hero?.texts[currentTextIndex]}
 
               </motion.h2>
             </AnimatePresence>
@@ -162,7 +176,7 @@ export default function HeroSection({homeData}:{homeData: HomePageData}) {
                 exit="exit"
                 className="grid grid-cols-2 mx-auto md:mx-0 gap-6 w-fit mt-5 text-lg text-white"
               >
-                {homeData?.hero?.features
+                {hero?.features
                   .slice(currentGridIndex * 2, currentGridIndex * 2 + 2)
                   .map((feature, index) => (
                     <div key={index} className="flex items-center">
