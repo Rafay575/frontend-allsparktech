@@ -138,19 +138,19 @@ export default function Navbar3() {
                   id="services-mega"
                   role="menu"
                   aria-label="Services"
-                  className="absolute left-[15%] top-full z-[60] mt-2 w-[70vw] "
+                  className="absolute left-[12%] top-full z-[60] mt-2 w-[75vw] "
                   variants={megaVariants}
                   initial="initial"
                   animate="animate"
                   exit="exit"
                 >
                   <div className="rounded-xl border border-black/10 bg-white shadow-xl">
-                    <div className="px-8 py-6">
+                    <div className="px-[100px] py-6 pb-[60px]">
                       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-1 md:grid-cols-3">
                         {megaCols.map((col) => (
                           <div key={col.title}>
                             <h3 className="mb-2 text-base font-bold text-gray-800">{col.title}</h3>
-                            <ul className="mt-4 space-y-3 pl-1 text-sm list-none">
+                            <ul className="mt-4  pl-1 text-sm list-none">
                               {col.items.map((it) => (
                                 <li key={it.href}>
                                   <Link
@@ -163,7 +163,7 @@ export default function Navbar3() {
                                         alt=""
                                         width={28}
                                         height={28}
-                                        className="mr-2 h-7 w-7"
+                                        className="mr-2 h-7 w-7 object-contain"
                                       />
                                     )}
                                     {it.label}
