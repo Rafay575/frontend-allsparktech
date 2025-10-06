@@ -23,7 +23,7 @@ export default function NewServicePage({ servicePageData }: ServicePageDataProps
             <ServiceCard serviceCard={servicePageData.serviceCard} />
             <ServiceAbout serviceAbout={servicePageData.serviceAbout} />
             <ServiceProcess serviceProcess={servicePageData.serviceProcess} />
-            {servicePageData.serviceTechnologies && <ServiceTechnologies serviceTechnologies={servicePageData.serviceTechnologies} />}
+            <ServiceTechnologies serviceTechnologies={servicePageData.serviceTechnologies} />
             <ServicesOffering serviceOffering={servicePageData.serviceOffering} />
             <ServicesBanner serviceBanner={servicePageData.serviceBanner} />
             <ServicesIndus serviceIndus={servicePageData.serviceIndus} />

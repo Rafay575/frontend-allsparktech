@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
+import { motion } from "framer-motion"; // 👈 import motion
 import { baseURL } from "@/API/baseURL";
 
 interface FAQItem {
@@ -27,24 +27,26 @@ interface ServiceFAQsProps {
   serviceFAQs: ServiceFAQs;
 }
 
-
 export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
-
-
-
   return (
     <section className="pad" id="faqs">
-      <div className="mx-auto container  flex flex-col  lg:flex-row items-center justify-between gap-10">
-        {/* Left Image Section */}
-        <div className="relative w-[90%] lg:w-[45%] mr-auto  ">
-          <div className="relative  ">
+      <div className="mx-auto container flex flex-col lg:flex-row items-center justify-between gap-10">
 
+        {/* Left Image Section */}
+        <motion.div
+          className="relative w-[90%] lg:w-[40%] mr-auto"
+          initial={{ opacity: 0, x: -100 }} // from left
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <div className="relative">
             <Image
               src={`${baseURL}/images/services/${serviceFAQs.image1}`}
-              alt='img'
+              alt="img"
               width={400}
               height={400}
-              className="!w-[100%] "
+              className="!w-[100%]"
             />
 
             <Image
@@ -52,8 +54,9 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               alt="img"
               width={400}
               height={400}
-              className="absolute !w-[50%] right-[-10%]  bottom-[-10px] sm:bottom-[-17px]  xl:bottom-[-15px]"
+              className="absolute !w-[50%] right-[-10%] bottom-[-10px] sm:bottom-[-17px] xl:bottom-[-15px]"
             />
+
             <Image
               src={`${baseURL}/images/services/${serviceFAQs.image3}`}
               alt="img"
@@ -63,9 +66,16 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               style={{ animationDuration: "4s" }}
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-full lg:w-[50%] flex flex-col lg:pl-[50px]  items-center sm:items-start text-center sm:text-start">
+        {/* Right Text Section */}
+        <motion.div
+          className="w-full lg:w-[60%] flex flex-col lg:pl-[90px] items-center sm:items-start text-center sm:text-start"
+          initial={{ opacity: 0, x: 100 }} // from right
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           {/* FAQ Label */}
           <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
             <ArrowLeft className="h-4 w-4" />
@@ -79,17 +89,36 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
           </h2>
 
           {/* FAQ Accordion */}
-          <Accordion type="single" collapsible className="mt-6 space-y-3 text-start w-full">
+          <Accordion
+            type="single"
+            collapsible
+            className="mt-6 space-y-3 text-start w-full"
+          >
             {serviceFAQs.faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="para">{faq.question}</AccordionTrigger>
-                <AccordionContent className=" text-start para">{faq.answer}</AccordionContent>
-              </AccordionItem>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }} // come from bottom
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                  delay: index * 0.2, // delay each FAQ item
+                }}
+                viewport={{ once: true }}
+              >
+                <AccordionItem value={`item-${index}`}>
+                  <AccordionTrigger className="para">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="para">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
             ))}
           </Accordion>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 }
-                                         

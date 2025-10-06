@@ -3,7 +3,7 @@ import Navbar2 from '@/components/Navbar2'
 import Topnav from '@/components/Topnav'
 import React from 'react'
 import demo from "@/public/images/demo2.png"
-// import { Metadata } from 'next';
+
 
 import {
     Accordion,
@@ -18,7 +18,15 @@ import { baseURL } from "@/API/baseURL"
 
 async function fetchSubservice(slug: string) {
     try {
-        const res = await axios.post(`${baseURL}/getbyslug`, { slug });
+        const res = await axios.post(
+            `${baseURL}/getbyslug`,
+            { slug },
+            {
+                headers: {
+                    "Cache-Control": "no-store", 
+                },
+            }
+        );
         return res.data.json;
     } catch (error) {
         console.error("Error fetching subservice:", error);
@@ -28,8 +36,13 @@ async function fetchSubservice(slug: string) {
 
 
 type PageProps = {
-    params: Promise<{ slug: string }>; // Updated to use Promise
+    params: Promise<{ slug: string }>; 
 };
+// type PageProps = {
+//     params: { slug: string }; // ✅ not Promise
+// };
+
+
 export async function generateMetadata({ params }: PageProps) {
     const { slug } = await params;
     const subServiceJson = await fetchSubservice(slug);

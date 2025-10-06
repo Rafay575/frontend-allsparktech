@@ -77,7 +77,7 @@ interface ServiceOfferingCard {
     heading: string;
     des: string;
     btnText: string;
-    link?:string
+    link?: string
 }
 
 interface ServiceOfferingData {
@@ -113,8 +113,10 @@ interface ServiceIndustriesItem {
 }
 
 interface ServiceIndustriesData {
+    mainImage: string;
+    btnText: string;
     title: string;
-    letters: string[];
+    des: string;
     industries: ServiceIndustriesItem[];
 }
 

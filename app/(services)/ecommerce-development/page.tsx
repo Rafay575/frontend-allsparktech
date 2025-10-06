@@ -1,22 +1,30 @@
-import React from 'react'
-import {ServicePageData} from "@/lib/types"
+import React from "react";
+import { ServicePageData } from "@/lib/types";
+import { baseURL } from "@/API/baseURL";
+import EcommerceDevelopment from "@/components/EcommerceDevelopment";
+export const dynamic = "force-dynamic";
 
-import axios from 'axios';
-import { baseURL } from '@/API/baseURL';
-import EcommerceDevelopment from '@/components/EcommerceDevelopment';
-async function fetchServiceData() {
+async function fetchServiceData(): Promise<ServicePageData> {
   const service = "ecommerce-development";
-  try {
-    const res = await axios.post(`${baseURL}/service`, { name: service }, { headers: { "Cache-Control": "no-store" } });
-    return res.data;
-  } catch (error) {
-    console.error("Failed to fetch service data", error);
+
+  const res = await fetch(`${baseURL}/service`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name: service }),
+    cache: "no-store", // ✅ ensures always fresh SSR data
+  });
+
+  if (!res.ok) {
     throw new Error("Failed to fetch service data");
   }
+
+  return res.json();
 }
 
-export default async function page() {
-    const servicePageData:ServicePageData = await fetchServiceData();
+export default async function Page() {
+  const servicePageData: ServicePageData = await fetchServiceData();
 
-  return <EcommerceDevelopment servicePageData={servicePageData}   />
+  return <EcommerceDevelopment servicePageData={servicePageData} />;
 }

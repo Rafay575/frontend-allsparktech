@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import { baseURL } from '@/API/baseURL'
 import { toast } from "sonner"; // Sonner for toasts
 import Link from 'next/link'
+import { motion } from "framer-motion";
 
 interface HeroData {
     btnText: string;
@@ -29,7 +30,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
     const [phone, setPhone] = useState("")
     const [message, setMessage] = useState("")
     const pathname = usePathname();
-    const formattedPath = pathname
+    const formattedPath = pathname 
         .replace("/", "")
         .split("-")
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -79,7 +80,11 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
             <Image src={img1} className='absolute top-0 lg:bottom-0 left-0' alt="heroimg" />
             <Image src={img2} className='absolute bottom-0 right-0 z-[0]' alt="heroimg" />
             <div className="container flex flex-wrap lg:items-center justify-center  pad" >
-                <div className='w-full lg:w-1/2 flex flex-col items-center sm:items-start text-center sm:text-start '>
+                <motion.div
+                    className="w-full lg:w-1/2 flex flex-col items-center sm:items-start text-center sm:text-start"
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}>
                     <Link href='/contact'>
                         <button className='subheading flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0  hover:scale-[1.02] duration-500'><Image src={sericon} className='w-[25px] ' alt='icon' />{serviceHero.btnText}</button>
                     </Link>
@@ -88,8 +93,12 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                     <Link href='/contact'>
                         <button className=' text-[14px] lg:text-[15px] flex items-center gap-[5px] bg-[#F98600] py-[12px] px-[25px] rounded-[27px] font-[500] mt-[30px] hover:scale-[1.02] duration-500'>{serviceHero.btnText2} <Image src={arrow} className='w-[15px] lg:w-[20px]' alt='icon' /></button>
                     </Link>
-                </div>
-                <div className='w-full lg:w-1/2  lg:pl-[80px] flex flex-col items-center sm:items-start z-[20]'>
+                </motion.div>
+                <motion.div
+                    className="w-full lg:w-1/2 lg:pl-[80px] flex flex-col items-center sm:items-start z-[20]"
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}>
                     <div className='flex items-center gap-[5px] mt-[10px] '>
                         <Image src={arrowleft} className='w-[35px]' alt='icon'></Image>
                         <p className='text-[15px] font-[500] text-center sm:text-start'>{serviceHero.formSubtitle}</p>
@@ -119,7 +128,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                             <button className='px-[20px] py-[10px] font-[500] bg-white text-black rounded-[25px] text-center hover:border hover:border-white hover:bg-transparent hover:text-white'>{serviceHero.btnText3}</button>
                         </div>
                     </form>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

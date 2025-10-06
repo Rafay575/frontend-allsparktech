@@ -1,98 +1,128 @@
-import React from 'react'
-import { StaticImageData } from 'next/image'
+"use client";
+import React from "react";
+import Image, { StaticImageData } from "next/image";
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-
-} from "@/components/ui/carousel"
-// import { baseURL } from '@/API/baseURL';
-import Link from 'next/link';
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import sericon from "@/public/images/sericon.png";
+import { motion } from "framer-motion";
+import { baseURL } from "@/API/baseURL";
 
 interface IndustryItem {
-    image: string | StaticImageData;
-    title: string;
-    des: string;
-    btnText: string;
+  image: string | StaticImageData;
+  title: string;
+  des: string;
+  btnText: string;
 }
 
 interface ServiceIndustries {
-    title: string;
-    letters?: string[];
-    industries: IndustryItem[];
+  mainImage: string;
+  btnText: string;
+  title: string;
+  des: string;
+  industries: IndustryItem[];
 }
 interface ServiceIndustriesProps {
-    serviceIndustries: ServiceIndustries;
+  serviceIndustries: ServiceIndustries;
 }
+
 export default function Industries({ serviceIndustries }: ServiceIndustriesProps) {
+  // Parent animation (controls staggered timing)
+  const parentVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        when: "beforeChildren",
+        staggerChildren: 0.3, // <---- this makes children appear one by one
+      },
+    },
+  };
 
+  // Child animation (for each card)
+  const childVariants = {
+    hidden: { opacity: 0, y: 60 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
-    const renderTitle = (title: string, highlights: string[] = []) => {
-        return title.split(" ").map((word, i, words) => {
-            const cleanWord = word.replace(/[^a-zA-Z]/g, "");
-            const isLastWord = i === words.length - 1;
-            if (highlights.some(highlight => highlight.trim() === cleanWord)) {
-                return (
-                    <span key={i} className="color">
-                        {word}{isLastWord ? "" : " "}
-                    </span>
-                );
-            }
-            return word + (isLastWord ? "" : " ");
-        });
-    };
+  return (
+    <div className="container mar pad rounded-[30px] bg">
+      {/* Heading + Image Section */}
+      <div className="flex">
+        <motion.div
+          className="w-[91%] lg:w-[40%] mx-auto lg:mx-0 lg:pl-[50px] lg:pr-[20px] flex flex-col justify-center items-center sm:items-start gap-y-[10px]"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <button className="subheading flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0 hover:scale-[1.02] duration-500 text-white">
+            <Image src={sericon} className="w-[25px]" alt="icon" />
+            {serviceIndustries.btnText}
+          </button>
+          <p className="heading font-[700] text-white leading-[45px] mt-[10px] text-center sm:text-start">
+            {serviceIndustries.title}
+          </p>
+          <p className="para text-white text-center sm:text-start">
+            {serviceIndustries.des}
+          </p>
+        </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="hidden lg:block lg:w-[60%]"
+        >
+          <Image src={`${baseURL}/images/services/${serviceIndustries.mainImage}`} width={1400} height={1400} className="w-full" alt="industry" />
+        </motion.div>
+      </div>
 
-    return (
-        <div className='container  mar pad   rounded-[20px]'>
-            <p className='heading font-[700] text-center w-full lg:w-[70%] xl:w-[55%] mx-auto'>
-                {renderTitle(serviceIndustries.title, serviceIndustries.letters)}
-            </p>
-            <div className='px-[40px] lg:px-0'>
-                <Carousel className=" mx-auto mt-[40px] w-full  " >
-                    <CarouselContent>
-                        {serviceIndustries.industries.map((industry, index) => (
-                            <CarouselItem key={index} className=" sm:basis-1/2 lg:basis-1/3 2xl:basis-1/4 flex py-[20px] ">
-                                    <div className='w-full h-[100%] bg-white rounded-[15px] p-[25px] py-[20px] md:py-[30px] flex flex-col items-start text-start border-2 border-[#384BFF] cards'>
-                                        <h3 className="subheading font-[900] mb-2 text-start  ">{industry.title}</h3>
-                                        <p className="para text-gray-600 ">{industry.des}</p>
-                                        <Link href={"/contact"} className='mt-auto w-full'>
-                                            <button className='bg text-white mt-[20px] flex justify-center items-center gap-[10px] py-[5px] w-full  para rounded-[5px] hover:text-[#384BFF] border border-[#384BFF] hover:bg-transparent'>{industry.btnText}</button>
-                                        </Link>
-                                    </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className='absolute left-0 translate-x-[-135%]' />
-                    <CarouselNext className=' absolute right-0 translate-x-[135%]' />
-                </Carousel>
-            </div>
-        </div>
-    )
+      {/* Carousel Section */}
+      <div className="px-[40px] lg:px-0">
+        <motion.div
+          variants={parentVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Carousel className="mx-auto mt-[40px] w-[91%]">
+            <CarouselContent>
+              {serviceIndustries.industries.map((industry, index) => (
+                <CarouselItem
+                  key={index}
+                  className="sm:basis-1/2 lg:basis-1/3 2xl:basis-1/4 flex py-[20px]"
+                >
+                  <motion.div
+                    variants={childVariants}
+                    className="w-full h-[100%] bg-white rounded-[15px] p-[25px] py-[20px] md:py-[30px] flex flex-col items-center text-center border-2 border-[#384BFF] cards"
+                  >
+                    <Image src={`${baseURL}/images/services/${industry.image}`} width={400} height={400} className="w-[50%]" alt="icon" />
+                    <h3 className="subheading font-[600] mb-2 text-center color">
+                      {industry.title}
+                    </h3>
+                    <p className="para text-gray-600 text-center">{industry.des}</p>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-0 translate-x-[-135%] bg-white color" />
+            <CarouselNext className="absolute right-0 translate-x-[135%] bg-white color" />
+          </Carousel>
+        </motion.div>
+      </div>
+    </div>
+  );
 }
-
-// type CarouselApi,
-
-
-// const [api, setApi] = React.useState<CarouselApi>()
-// const [current, setCurrent] = React.useState(0)
-// const [count, setCount] = React.useState(0)
-// React.useEffect(() => {
-//     if (!api) {
-//         return
-//     }
-//     setCount(api.scrollSnapList().length)
-//     setCurrent(api.selectedScrollSnap() + 1)
-//     api.on("select", () => {
-//         setCurrent(api.selectedScrollSnap() + 1)
-//     })
-// }, [api])
-
-
-{/* <Carousel className=" mx-auto mt-[40px] w-full px-[40px]" setApi={setApi}></Carousel> */ }
-
-{/* <div className="text-muted-foreground py-2 text-center text-sm">
-                    Slide {current} of {count}
-                </div> */}

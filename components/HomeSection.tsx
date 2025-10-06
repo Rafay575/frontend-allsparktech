@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
 import Logos from "@/components/Logos";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
@@ -13,6 +11,8 @@ import Script from "next/script";
 import { MetaTitle } from "./MetaTitle";
 import HomeProcess from "./HomeProcess";
 import { StaticImageData } from "next/image";
+import HomePage from "./HomePage";
+import Marquee from "@/components/Marquee";
 
 export interface HomePageData {
   hero: {
@@ -101,21 +101,21 @@ export interface HomePageData {
 
 export default function Home({ homeData }: { homeData: HomePageData }) {
 
-  console.log(homeData.homeServices);
+  // console.log(homeData.homeServices);
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <MetaTitle />
-      <Hero hero={homeData.hero} />
-      <Logos logos={homeData.logos} />
+      <HomePage/>
       <ServicesSection homeServices={homeData.homeServices} />
       <AboutSection about={homeData.about} />
-      <h1 className="my-[20px]">hello</h1>
+      <Marquee/>
       <HomeProcess homeProcess={homeData.process}/>
       <FaqSection faq={homeData.faq} />
       <ContactSection contactBanner={homeData.contactBanner} />
       <TestimonialsSection testimonials={homeData.testimonials} />
+      <Logos logos={homeData.logos} />
       <Footer />
 
       {homeData.script && (

@@ -33,8 +33,12 @@ export const homePage = {
       { "id": "ai-and-machine-learning", "title": "AI & Machine Learning", "imageUrl": "ai-machine-learning.webp", "alt": "service4" },
       { "id": "ui-ux-design", "title": "UX/UI Design", "imageUrl": "ui-ux-design.webp", "alt": "service5" },
       { "id": "ecommerce-development", "title": "Ecommerce Development", "imageUrl": "ecommerce-development.webp", "alt": "service6" },
-      { "id": "seo", "title": "Seo", "imageUrl": "f3.jpg", "alt": "service7" },
-      { "id": "digital-marketing", "title": "Digital Marketing", "imageUrl": "digital-marketing-seo.webp", "alt": "service8" }
+      { "id": "custom-support", "title": "Custom Support", "imageUrl": "digital-marketing-seo.webp", "alt": "service7" },
+      { "id": "email-support", "title": "Email Support", "imageUrl": "digital-marketing-seo.webp", "alt": "service8" },
+      { "id": "live-chat-support", "title": "Live Chat Support", "imageUrl": "digital-marketing-seo.webp", "alt": "service9" },
+      { "id": "taxi-support", "title": "Taxi Support", "imageUrl": "digital-marketing-seo.webp", "alt": "service10" },
+      { "id": "seo", "title": "Seo", "imageUrl": "f3.jpg", "alt": "service11" },
+      { "id": "digital-marketing", "title": "Digital Marketing", "imageUrl": "digital-marketing-seo.webp", "alt": "service12" }
     ]
   },
   "about": {
@@ -56,37 +60,37 @@ export const homePage = {
       { "title": "Sustainable", "subtitle": "Growth" }
     ]
   },
-  "process":{
-        "title": "Development Process",
-        "des": "We follow a structured, transparent, and efficient software development process that ensures custom software solutions are delivered with quality, speed, and scalability.",
-        "image": "clipVideo.png",
-        "link": "/contact",
-        "process": [
-            {
-                "image": "homeprocess1.png",
-                "heading": "Planning & Strategy",
-                "des": "We start by understanding business requirements, defining objectives, and creating a roadmap.",
-                "dir": "dir1.png"
-            },
-            {
-                "image": "homeprocess2.png",
-                "heading": "Design & Development",
-                "des": "Our team designs intuitive UI/UX and builds scalable software using full-stack  software development practices.",
-                "dir": "dir2.png"
-            },
-            {
-                "image": "homeprocess3.png",
-                "heading": "Testing & Quality Assurance",
-                "des": "We perform comprehensive QA including functionality, performance, security, and user testing.",
-                "dir": "dir3.png"
-            },
-            {
-                "image": "homeprocess4.png",
-                "heading": "Optimization & Support",
-                "des": "After deployment, we provide ongoing monitoring, updates, and feature enhancements."
-            }
-        ]
-    },
+  "process": {
+    "title": "Development Process",
+    "des": "We follow a structured, transparent, and efficient software development process that ensures custom software solutions are delivered with quality, speed, and scalability.",
+    "image": "clipVideo.png",
+    "link": "/contact",
+    "process": [
+      {
+        "image": "homeprocess1.png",
+        "heading": "Planning & Strategy",
+        "des": "We start by understanding business requirements, defining objectives, and creating a roadmap.",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "homeprocess2.png",
+        "heading": "Design & Development",
+        "des": "Our team designs intuitive UI/UX and builds scalable software using full-stack  software development practices.",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "homeprocess3.png",
+        "heading": "Testing & Quality Assurance",
+        "des": "We perform comprehensive QA including functionality, performance, security, and user testing.",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "homeprocess4.png",
+        "heading": "Optimization & Support",
+        "des": "After deployment, we provide ongoing monitoring, updates, and feature enhancements."
+      }
+    ]
+  },
   "faq": {
     "img1": "faq1.png",
     "img2": "faq2.png",
@@ -6105,278 +6109,6 @@ export const subServiceJson4 = [
 ]
 // these are uncomplete subdervices json below
 
-export const aiAndMachineLearning = [
-  {
-    "section2": {
-      "title": "Custom AI Solutions",
-      "des": "Every business is unique. We build custom solutions that reflect your specific uses of AI, whether it's automation, predictive insights, or intelligent user interaction. Our expertise spans across industries, including AI in logistics and supply chain."
-    }
-  },
-  {
-    "section2": {
-      "title": "Predictive Analytics",
-      "des": "We help you apply machine learning through predictive models that optimize business operations. From customer churn to demand forecasting, we provide actionable intelligence rooted in proven artificial intelligence use cases."
-    }
-  },
-  {
-    "section2": {
-      "title": "Natural Language Processing (NLP)",
-      "des": "Our AI systems interpret and understand human language, powering chatbots, sentiment analysis, and automated support—key uses of AI in today's digital economy."
-    }
-  },
-  {
-    "section2": {
-      "title": "Computer Vision",
-      "des": "We build AI-driven visual systems for surveillance, manufacturing, and quality control. A prime example of AI in the business world, our solutions enhance accuracy and reduce manual oversight."
-    }
-  },
-  {
-    "section2": {
-      "title": "AI-Powered Automation",
-      "des": "AST develops AI systems that automate repetitive processes, significantly reducing costs. Our experience in AI in logistics and supply chain ensures efficiency across procurement, delivery, and inventory management."
-    }
-  },
-  {
-    "section2": {
-      "title": "AI Chatbots & Speech Recognition",
-      "des": "Real-time support through AI chatbots improves customer service and engagement. From AI platforms to integrated voice assistants, we help you create responsive, human-like interactions."
-    }
-  }
-]
-
-export const cloudAndDevopsSolutions = [
-  {
-    "section2": {
-      "title": "Cloud Strategy & Migration",
-      "des": "We craft customized cloud migration strategies that align with your business objectives. As leading cloud-based providers, we ensure data integrity, downtime minimization, and seamless platform integration. Our cloud strategy consulting team works with AWS, Azure, and GCP to create compliant, scalable environments."
-    }
-  },
-  {
-    "section2": {
-      "title": "Cloud-Native App Development",
-      "des": "Using cloud management software and containers, AST develops cloud-native applications that scale effortlessly. Our projects leverage cloud examples like serverless apps and microservices, powered by agile development environments for rapid iterations and delivery."
-    }
-  },
-  {
-    "section2": {
-      "title": "Infrastructure as Code (IaC)",
-      "des": "Manual infrastructure management is outdated. With tools like Terraform and Ansible, AST uses IaC in tandem with DevOps tools to ensure version-controlled, replicable, and compliant infrastructure setups. It’s part of our broader low cost cloud management approach."
-    }
-  },
-  {
-    "section2": {
-      "title": "DevOps Automation & CI/CD Pipelines",
-      "des": "Automation is key in DevOps practices. AST implements CI/CD pipeline code using Jenkins, GitHub Actions, and Azure DevOps for continuous deployment. From development to production, our systems ensure faster releases and fewer errors."
-    }
-  },
-  {
-    "section2": {
-      "title": "Kubernetes & Container Orchestration",
-      "des": "Containers are vital for portability and resilience. AST orchestrates workloads using Kubernetes, Helm, and Docker—essential DevOps tools that deliver reliability and efficiency."
-    }
-  },
-  {
-    "section2": {
-      "title": "Cloud Security & Compliance",
-      "des": "We integrate cloud computing security services that adhere to all major compliance standards. AST implements multi-layered security with IAM, end-to-end encryption, and real-time monitoring to keep your systems secure and compliant."
-    }
-  }
-]
-
-export const ecommerceDevelopment = [
-  {
-    "section2": {
-      "title": "Custom Ecommerce Website Development",
-      "des": "A custom solution fuels a successful ecommerce business better than one-size-fits-all platforms. AST builds tailored ecommerce website design services with robust scalability, integrated ecommerce security features, and seamless backend systems. Each website is optimized for user experience and performance, enabling sustainable business growth."
-    }
-  },
-  {
-    "section2": {
-      "title": "Platform-Based Ecommerce Development",
-      "des": "We offer flexible ecommerce website development services using Shopify, Magento, WooCommerce, and custom stacks like Laravel and React. Whether you're based in New York or beyond, our ecommerce website development NY team delivers robust and future-ready ecommerce platforms designed to be competitive and cost-effective."
-    }
-  },
-  {
-    "section2": {
-      "title": "Multi-Vendor & Headless Ecommerce",
-      "des": "Our ecommerce software solutions include full-featured multi-vendor marketplace platforms and headless ecommerce builds. These systems offer superior flexibility and customer engagement—crucial elements in any guide on how to start ecommerce business."
-    }
-  },
-  {
-    "section2": {
-      "title": "Mobile Ecommerce Development",
-      "des": "As part of modern ecommerce website design, our mobile-first approach includes responsive websites, PWAs, and custom apps that provide smooth checkout and navigation experiences. These features of e commerce enhance engagement and increase mobile conversions."
-    }
-  },
-  {
-    "section2": {
-      "title": "Payment Gateway & Security Integration",
-      "des": "From PayPal to crypto, we integrate reliable gateways and ensure ecommerce security via PCI DSS compliance, SSL encryption, and fraud detection. These safeguards are essential features of e commerce that build consumer trust."
-    }
-  },
-  {
-    "section2": {
-      "title": "Ecommerce Optimization & Marketing Automation",
-      "des": "Our ecommerce development includes built-in experto SEO ecommerce strategies, automation tools, and CRO techniques. From fast-loading pages to dynamic product pages and integrated analytics, our goal is to build ecommerce websites with the best ecommerce homepages for conversion."
-    }
-  }
-]
-
-export const customerSupport = [
-  {
-    "section2": {
-      "title": "Multichannel Customer Support",
-      "des": "Modern consumers expect support wherever they are. AST provides responsive multichannel support—live chat, email, phone, social media, and helpdesk platforms. We streamline query handling using intelligent ticketing systems and customer support platform UIs that ensure a seamless experience across devices and channels."
-    }
-  },
-  {
-    "section2": {
-      "title": "AI-Powered Chatbots & Virtual Assistants",
-      "des": "Automation is key for high-volume support. AST deploys AI chatbots and virtual assistants that offer 24/7 service, reduce agent workload, and enhance resolution speed. These automated customer tools are tightly integrated with your CRM to maintain context and accuracy throughout the interaction."
-    }
-  },
-  {
-    "section2": {
-      "title": "Technical Support & IT Helpdesk",
-      "des": "For IT firms and software providers, AST delivers specialized helpdesk and technical support services. From remote troubleshooting to ticket resolution, our approach leverages service desk software features that minimize downtime and build customer trust."
-    }
-  },
-  {
-    "section2": {
-      "title": "Ecommerce & Order Support",
-      "des": "AST supports ecommerce brands with real-time order tracking, returns, refunds, and cart recovery assistance. Using insights from customer experience statistics, we tailor customer journeys to increase conversions, retention, and satisfaction in a competitive retail space."
-    }
-  },
-  {
-    "section2": {
-      "title": "Customer Retention & Loyalty Management",
-      "des": "Building brand loyalty starts with consistent customer care. We craft programs that foster engagement—referral programs, feedback loops, and loyalty incentives—backed by trend analysis and customer service industry trends to optimize lifetime value."
-    }
-  },
-  {
-    "section2": {
-      "title": "CRM Integration & Self-Service Portals",
-      "des": "AST enables proactive and scalable support with integrated CRMs, automated ticket routing, and intelligent query tracking. Our self-service portals, FAQs, and knowledge management software empower users to resolve common issues independently, reducing load on support teams."
-    }
-  }
-]
-
-export const emailMarketing = [
-  {
-    "section2": {
-      "title": "Email Campaign Strategy & Management",
-      "des": "A well-crafted strategy is key to effective email marketing. AST designs end-to-end campaigns—from list building to content creation and scheduling—aligned with your goals. Using a custom email strategy template, we engage audiences through personalized messaging and optimize performance with email marketing analytics and A/B testing."
-    }
-  },
-  {
-    "section2": {
-      "title": "Automated Email Marketing & Drip Campaigns",
-      "des": "Automation ensures consistent communication and better retention. Our automatic email system supports lead nurturing, behavioral follow-ups, and cart abandonment recovery. This reduces manual effort and increases efficiency—especially valuable for ecommerce brands."
-    }
-  },
-  {
-    "section2": {
-      "title": "Personalized & Segmented Email Campaigns",
-      "des": "One-size-fits-all doesn’t work anymore. AST segments email lists based on demographics, purchase behavior, and user activity to send highly targeted, personalized messages. This approach significantly increases engagement and conversions."
-    }
-  },
-  {
-    "section2": {
-      "title": "Ecommerce Email Marketing",
-      "des": "Ecommerce thrives on effective communication. AST builds ecommerce email sequences for order confirmations, cart reminders, loyalty offers, and post-purchase follow-ups—optimized for Shopify, WooCommerce, and BigCommerce."
-    }
-  },
-  {
-    "section2": {
-      "title": "Transactional Emails & Branded Newsconstters",
-      "des": "Every touchpoint matters. From welcome emails and password resets to subscription renewals and feedback requests, AST ensures all mailing templates are branded, responsive, and strategically timed. We also produce compelling newsletters with valuable content and offers."
-    }
-  },
-  {
-    "section2": {
-      "title": "Deliverability, Compliance & A/B Testing",
-      "des": "We ensure the best email deliverability using SPF, DKIM, and DMARC protocols. AST cleans your email list free of invalid contacts and ensures compliance with CAN-SPAM and GDPR regulations. Our A/B tests maximize open rates, subject line effectiveness, and content performance."
-    }
-  }
-]
-
-export const liveChatSupport = [
-  {
-    "section2": {
-      "title": "24/7 Live Chat Support",
-      "des": "In today’s always-on digital world, customers expect instant help. AST delivers 24/7 customer support chat, ensuring round-the-clock assistance, global availability, and fast resolution. Our service reduces bounce rates and improves customer satisfaction through real-time customer support across time zones."
-    }
-  },
-  {
-    "section2": {
-      "title": "AI-Powered Chatbots & Hybrid Chat Support",
-      "des": "Automation improves scale and speed. AST’s chatbot integration allows businesses to respond instantly to FAQs, collect data, and escalate complex issues to trained human agents. This hybrid model enhances productivity while preserving the human touch."
-    }
-  },
-  {
-    "section2": {
-      "title": "Ecommerce Live Chat Support",
-      "des": "Online shoppers want instant help. AST’s live chat features include guided shopping, cart abandonment triggers, product suggestions, and refund handling—boosting conversion rates and building buyer confidence with website chat optimized for ecommerce."
-    }
-  },
-  {
-    "section2": {
-      "title": "Technical Support & IT Helpdesk Chat",
-      "des": "Our live chat team supports IT firms with real-time diagnostics, remote software setup, and issue resolution. We leverage the best live chat software platforms integrated with CRMs to provide seamless, technical troubleshooting."
-    }
-  },
-  {
-    "section2": {
-      "title": "Lead Generation & Multilingual Support",
-      "des": "Proactive engagement is key to lead conversion. AST uses intelligent triggers to engage visitors, qualify leads, and gather customer insights. With multilingual live chat and AI translation, we help you scale globally while maintaining a local feel."
-    }
-  },
-  {
-    "section2": {
-      "title": "CRM Integration & Performance Tracking",
-      "des": "Our live chat for business seamlessly connects with Zendesk, Freshdesk, Salesforce, and HubSpot. We monitor metrics like response times, CSAT scores, agent efficiency, and behavioral trends to fine-tune strategies and maximize ROI—while offering affordable live chat pricing packages."
-    }
-  }
-]
-
-export const digitalMarketingAndSeo = [
-  {
-    "section2": {
-      "title": "Search Engine Optimization (SEO)",
-      "des": "High search visibility is key to business growth. Our digital marketing services include full-stack SEO with keyword research, technical audits, link building, and optimized content strategies. We follow an extensive SEO audit list and implement advanced search engine optimization tags to improve rankings and increase organic traffic. AST’s SEO team includes consultant SEO local experts who enhance visibility in local maps and search packs. Whether you're a national brand or a local shop, our SEO tools site strategies are tailored to match your market."
-    }
-  },
-  {
-    "section2": {
-      "title": "Pay-Per-Click Advertising (PPC) & Paid Media",
-      "des": "Our PPC campaigns provide instant visibility on platforms like Google Ads, Amazon, and Meta. We carefully manage ad spend to maximize ROI while targeting high-intent audiences—making paid media a powerful complement to SEO and content marketing."
-    }
-  },
-  {
-    "section2": {
-      "title": "Content Marketing & Strategy",
-      "des": "Our content marketing fuels both SEO and conversions. We craft search-optimized blogs, landing pages, videos, and email content that aligns with evolving SEO trends, educating and converting users with purpose-driven storytelling."
-    }
-  },
-  {
-    "section2": {
-      "title": "Social Media Marketing & Management",
-      "des": "Boost brand engagement through social strategy. AST manages influencer campaigns, creative content, paid social, and analytics across all platforms—building communities that convert."
-    }
-  },
-  {
-    "section2": {
-      "title": "Conversion Rate Optimization (CRO) & Email Marketing",
-      "des": "Driving traffic is only half the battle. Our digital marketing services improve site structure, UX, and A/B test performance while automating personalized emails to nurture leads and drive retention."
-    }
-  },
-  {
-    "section2": {
-      "title": "Reputation Management & Ecommerce SEO",
-      "des": "We protect and enhance online reputations through review management and sentiment monitoring. AST also delivers specialized ecommerce SEO strategies with marketplace optimization and retargeting for better sales performance."
-    }
-  }
-]
 
 // these are services pages content 
 export const CustomSoftwareDevelopment: ServicePageData = {
@@ -6501,8 +6233,10 @@ export const CustomSoftwareDevelopment: ServicePageData = {
     "des2": "As a leading custom software development company in the USA, AllSpark Technologies delivers secure, enterprise-grade, and scalable software services. Our team of custom software developers ensures your business gains competitive advantage with future-ready solutions."
   },
   "serviceIndustries": {
-    "title": "Industries We Serve",
-    "letters": ["Serve"],
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       { "image": "industry1.png", "title": "Healthcare Software Development", "des": "We build secure, compliant, and scalable healthcare applications integrating medical systems, improving patient management, analytics, and overall outcomes.", "btnText": "Explore More" },
       { "image": "industry1.png", "title": "E-commerce", "des": "Develop scalable e-commerce platforms with a focus on smooth user experiences, secure transactions, and a streamlined checkout process. Our solutions help your online store grow efficiently while maximizing customer satisfaction.", "btnText": "Explore More" },
@@ -6842,10 +6576,10 @@ export const WebDevelopment: ServicePageData = {
     "des2": "We deliver specialized website creation services across diverse sectors, understanding unique industry challenges and opportunities."
   },
   "serviceIndustries": {
-    "title": "Industries We Serve",
-    "letters": [
-      "Serve"
-    ],
+   "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -7144,42 +6878,42 @@ export const MobileAppDevelopment: ServicePageData = {
         "heading": "Native iOS Development",
         "des": "Expert iOS app development company services delivering premium experiences for Apple ecosystem users with cutting-edge Swift and Objective-C development.",
         "btnText": "Read more",
-        "link":"native-ios-development"
+        "link": "native-ios-development"
       },
       {
         "icon": "csdicon2.png",
         "heading": "Android App Solutions",
         "des": "Leading Android app development company in the USA creating feature-rich applications that leverage the full potential of Google's platform.",
         "btnText": "Read more",
-        "link":"android-app-solutions"
+        "link": "android-app-solutions"
       },
       {
         "icon": "csdicon3.png",
         "heading": "Flutter Cross-Platform",
         "des": "Advanced Flutter app development services in the USA enabling single codebase deployment across multiple platforms with native performance.",
         "btnText": "Read more",
-        "link":"flutter-cross-platform"
+        "link": "flutter-cross-platform"
       },
       {
         "icon": "csdicon4.png",
         "heading": "Cross-Platform Excellence",
         "des": "Comprehensive cross platform app development solutions in the USA that maximize reach while minimizing development time and costs.",
         "btnText": "Read more",
-        "link":"cross-platform-excellence"
+        "link": "cross-platform-excellence"
       },
       {
         "icon": "csdicon5.png",
         "heading": "Enterprise Applications",
         "des": "Scalable enterprise solutions designed to streamline operations, enhance productivity, and drive digital transformation.",
         "btnText": "Read more",
-        "link":"enterprise-applications"
+        "link": "enterprise-applications"
       },
       {
         "icon": "csdicon6.png",
         "heading": "App Maintenance & Support",
         "des": "24/7 technical support, regular updates, and performance optimization to keep your applications running smoothly.",
         "btnText": "Read more",
-        "link":"app-maintenance-and-support"
+        "link": "app-maintenance-and-support"
       }
     ]
   },
@@ -7202,10 +6936,10 @@ export const MobileAppDevelopment: ServicePageData = {
     "des2": "Let us help you stay ahead in a competitive digital world with our industry-specific expertise."
   },
   "serviceIndustries": {
-    "title": "Industries We Serve",
-    "letters": [
-      "Serve"
-    ],
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -7558,12 +7292,10 @@ export const AiAndMachineLearning: ServicePageData = {
     "des2": "We are one of the leading AI development companies committed to turning your industry-specific data into a powerful strategic asset."
   },
   "serviceIndustries": {
-    "title": "Where AI & ML Drive Impact",
-    "letters": [
-      "AI",
-      "&",
-      "ML"
-    ],
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -7853,12 +7585,10 @@ export const UiAndUxDesign: ServicePageData = {
     "des2": "From healthcare to fintech and enterprise solutions, our UI UX services empower businesses to achieve meaningful engagement, market differentiation, and measurable value across every digital touchpoint."
   },
   "serviceIndustries": {
-    "title": "Visionary Impact Across Transformative Digital Frontiers",
-    "letters": [
-      "Transformative",
-      "Digital",
-      "Frontiers"
-    ],
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -8148,10 +7878,10 @@ export const EcommerceDevelopment: ServicePageData = {
     "des2": "With expertise in Shopify and WooCommerce, we develop secure, scalable, and high-performing stores that help businesses grow in the competitive online marketplace. From product management and integrations to payment gateways and advanced features, we ensure your store is fully optimized to attract customers, boost conversions, and maximize ROI."
   },
   "serviceIndustries": {
-    "title": "Sectors We Deliver Solutions For",
-    "letters": [
-      "Solutions"
-    ],
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -8243,6 +7973,1231 @@ export const EcommerceDevelopment: ServicePageData = {
     "image": "man.png",
     "subTitle": "TALK TO US",
     "title": "Let’s Build Your Custom Software Solution",
+    "btnText": "Get In Touch"
+  }
+}
+export const customeSupport: ServicePageData={
+  "serviceHero": {
+    "btnText": "Digital Marketing Solutions",
+    "btnText2": "GET STARTED",
+    "btnText3": "Get In Touch",
+    "title": "Customer Support That Drives Growth",
+    "description": "We provide 24/7 customer support solutions designed to resolve issues quickly, improve satisfaction, and strengthen your customer relationships.\n",
+    "formSubtitle": "TALK TO US",
+    "formTitle": "Book a Free Consultation"
+  },
+  "serviceLogos": {
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
+  },
+  "serviceCard": {
+    "title": "A Proven Track Record of Excellence in Customer Support Services",
+    "cards": [
+      {
+        "icon": "service_1758218879692.png",
+        "number": "150",
+        "text": "Companies Supported Across Industries",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218888022.png",
+        "number": "1M",
+        "text": "Customer Queries Resolved Successfully",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218906531.png",
+        "number": "24/7",
+        "text": "Support Availability for Global Clients",
+        "symbol": ""
+      },
+      {
+        "icon": "service_1758218912742.png",
+        "number": "95",
+        "text": "Average Customer Satisfaction Score",
+        "symbol": "%"
+      }
+    ]
+  },
+  "serviceAbout": {
+    "image1": "service_1759758292830.png",
+    "image2": "service_1759758298156.png",
+    "image3": "aboutShape2.png",
+    "subTitle": "About Company",
+    "title": "Professional Customer Support Services ",
+    "des": "At All Spark Technologies, we deliver end-to-end customer support services tailored to your business needs. Our team is trained to handle live chat, email, phone, and ticket-based support with professionalism and speed. Whether you’re a startup or an enterprise, we ensure smooth communication, quick resolutions, and a seamless customer experience. With round-the-clock availability, our support services help you retain customers and boost brand reputation.",
+    "features": [
+      {
+        "icon": "service_1759758817796.png",
+        "title": "Analytics"
+      },
+      {
+        "icon": "service_1759758821350.png",
+        "title": "Ingenuity"
+      },
+      {
+        "icon": "service_1759758825262.png",
+        "title": "Impact"
+      }
+    ]
+  },
+  "serviceProcess": {
+    "title": "Our Customer Support Process",
+    "letters": [
+      "Customer",
+      "Process"
+    ],
+    "des": "Our customer support process is structured to ensure efficiency, consistency, and measurable improvements in your customer experience.",
+    "process": [
+      {
+        "image": "process1.png",
+        "heading": "Requirement Analysis",
+        "des": "Understand business goals, customer expectations, and support requirements.",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "process2.png",
+        "heading": "Setup & Training",
+        "des": "Configure support channels and train dedicated customer service teams.",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "process3.png",
+        "heading": "Active Support Delivery",
+        "des": "Provide real-time, multi-channel support with fast response times.",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "process4.png",
+        "heading": "Monitoring & Optimization",
+        "des": "Analyze performance, gather feedback, and improve continuously."
+      }
+    ]
+  },
+  "serviceTechnologies": {
+    "title": "Tools & Technologies Powering Our Customer Support ",
+    "des": "We leverage leading tools and technologies to provide efficient, scalable, and reliable customer support services for businesses worldwide.",
+    "technologies": [
+      {
+        "name": "Platforms & Tools",
+        "techs": [
+          {
+            "name": "Zendesk",
+            "Icon": "service_1758634783678.png"
+          },
+          {
+            "name": "Freshdesk",
+            "Icon": "service_1758634786688.png"
+          },
+          {
+            "name": "Intercom",
+            "Icon": "service_1758634789835.png"
+          },
+          {
+            "name": "LiveChat",
+            "Icon": "service_1758634798566.png"
+          },
+          {
+            "name": "Zoho Desk",
+            "Icon": "service_1758634801464.png"
+          },
+          {
+            "name": "HubSpot Service Hub",
+            "Icon": "service_1758634806628.png"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceOffering": {
+    "title": "Our Specialized Customer Support Services",
+    "letters": [
+      "Customer ",
+      "Support "
+    ],
+    "des": "From phone support to live chat, we offer customer support solutions that improve engagement, loyalty, and business growth.",
+    "cards": [
+      {
+        "icon": "service_1758219005261.png",
+        "heading": "Live Chat Support ",
+        "des": "Real-time chat assistance that resolves customer queries instantly and enhances overall user experience.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219009340.png",
+        "heading": "Email Support",
+        "des": "Professional email-based support ensuring timely, structured, and detailed customer query responses.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219017458.png",
+        "heading": "Phone Support",
+        "des": "Dedicated phone support for personalized, quick, and effective customer assistance.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219024523.png",
+        "heading": "Ticketing Support",
+        "des": "Organized ticket management system for efficient query resolution and tracking.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219032857.png",
+        "heading": "Technical Support",
+        "des": "Troubleshooting and resolving customer issues related to software, hardware, or platforms.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219039571.png",
+        "heading": "After-Sales Support ",
+        "des": " Post-purchase assistance that builds trust and long-term customer satisfaction.",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceBanner": {
+    "image": "ctaThumb1_1.png",
+    "Subtitle": "CONTACT US",
+    "title": "Deliver Better Customer Experiences",
+    "des": "Partner with us to provide seamless customer support across all channels. Strengthen your brand, improve satisfaction, and grow your business with expert support.",
+    "btnText": "Start Transform"
+  },
+  "serviceIndus": {
+    "image1": "service_1759758319239.png",
+    "image2": "service_1759758325517.png",
+    "image3": "shape.png",
+    "title": "Customer Support Solutions Empowering Businesses",
+    "letters": [
+      "Customer ",
+      "Support "
+    ],
+    "des1": "Exceptional customer support is the backbone of successful businesses. At All Spark Technologies, we combine skilled teams with modern tools to deliver 24/7 assistance across all channels. Our services include live chat, phone, email, and ticket-based support to ensure your customers are never left waiting. By providing fast, reliable, and empathetic solutions, we help businesses improve retention, boost satisfaction, and drive long-term loyalty. Even if you are scaling up or handling high-volume queries, our customer support services in the USA adapt to your growth and ensure a consistent customer experience.\n",
+    "des2": "With a focus on personalization and efficiency, we tailor our approach to match your brand voice while streamlining operations. This allows your team to stay focused on core business priorities while we take care of building stronger, lasting customer relationships.\n"
+  },
+  "serviceIndustries": {
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "industries": [
+      {
+        "image": "service_1758725471499.webp",
+        "title": "Ecommerce",
+        "des": "Customer-first support solutions that boost retention and sales.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725484405.webp",
+        "title": "Healthcare",
+        "des": " HIPAA-compliant support for patients and healthcare providers.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725493142.webp",
+        "title": "Technology",
+        "des": "Tech support for SaaS, software, and IT companies.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725507018.webp",
+        "title": "Finance",
+        "des": "Secure support solutions for banks, fintech, and payment services.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "",
+        "title": "Education",
+        "des": "Reliable student and staff support for educational platforms.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "",
+        "title": "Hospitality",
+        "des": "24/7 support for hotels, travel agencies, and guest services.",
+        "btnText": "Read More"
+      }
+    ]
+  },
+  "serviceClient": {
+    "image1": "service_1759758335864.png",
+    "image2": "service_1759758342345.png",
+    "image3": "shape.png",
+    "image4": "hugicon.png",
+    "imageText": "Quality, Trust, Growth.",
+    "title": "Expert Team Helping You Tackle Customer Support Challenges",
+    "letters": [
+      "Customer ",
+      "Support "
+    ],
+    "des1": "Many businesses struggle with delayed responses, inconsistent support quality, and poor customer retention. At All Spark Technologies, we solve these challenges with professional customer support services designed to scale with your business. Whether it’s 24/7 availability, multi-channel support, or technical expertise, our team ensures every interaction adds value.",
+    "des2": "With advanced tools and a customer-first approach, we deliver efficient and reliable solutions. From reducing response times to increasing customer satisfaction, we help your business provide an exceptional support experience that keeps customers coming back.",
+    "lis": []
+  },
+  "serviceFAQs": {
+    "image1": "service_1759758352547.png",
+    "image2": "service_1759758357442.png",
+    "image3": "servicefaq3.png",
+    "subTitle": "FAQ",
+    "title": "Your Data, Our Priority",
+    "faqs": [
+      {
+        "question": "Why should I outsource customer support to All Spark Technologies?",
+        "answer": "We provide cost-effective, 24/7 support with trained teams and modern tools that ensure efficiency and customer satisfaction."
+      },
+      {
+        "question": "Do you offer multi-channel customer support services?",
+        "answer": "Yes. We handle live chat, email, phone, and ticket-based customer support."
+      },
+      {
+        "question": "Can you scale support teams as my business grows?",
+        "answer": "Absolutely. Our support teams are flexible and can expand as per business requirements."
+      },
+      {
+        "question": "Do you provide technical support services?",
+        "answer": "Yes, we offer dedicated technical support to resolve software, platform, and product-related issues."
+      },
+      {
+        "question": "What industries do you provide customer support for?",
+        "answer": "We serve the ecommerce, healthcare, tech, finance, education, and hospitality sectors."
+      },
+      {
+        "question": "How do you ensure data security in customer support?",
+        "answer": "We use secure platforms, follow strict compliance standards, and maintain confidentiality to protect customer data."
+      }
+    ]
+  },
+  "serviceContact": {
+    "image": "service_1758286570386.png",
+    "subTitle": "TALK TO US",
+    "title": "Let’s Build Loyalty With Exceptional Support",
+    "btnText": "Get In Touch"
+  }
+}
+export const emailSupport: ServicePageData={
+  "serviceHero": {
+    "btnText": "Digital Marketing Solutions",
+    "btnText2": "GET STARTED",
+    "btnText3": "Get In Touch",
+    "title": "Reliable Email Support for Stronger Customer Bonds",
+    "description": "We deliver professional email support services to handle customer queries promptly, build trust, and enhance your overall customer experience.",
+    "formSubtitle": "TALK TO US",
+    "formTitle": "Book a Free Consultation"
+  },
+  "serviceLogos": {
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
+  },
+  "serviceCard": {
+    "title": "Trusted Email Support Delivering Results That Strengthen Customer Relationships",
+    "cards": [
+      {
+        "icon": "service_1758218879692.png",
+        "number": "500K",
+        "text": "Customer Emails Handled Successfully",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218888022.png",
+        "number": "120",
+        "text": "Global Businesses Trust Our Email Support",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218906531.png",
+        "number": "24/7",
+        "text": "Availability with Fast Response Times",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218912742.png",
+        "number": "98",
+        "text": "Client Retention Rate",
+        "symbol": "%"
+      }
+    ]
+  },
+  "serviceAbout": {
+    "image1": "service_1759758431600.png",
+    "image2": "service_1759758439735.png",
+    "image3": "aboutShape2.png",
+    "subTitle": "About Company",
+    "title": "Professional Email Support to Keep Customers Engaged",
+    "des": "At All Spark Technologies, we understand the importance of timely and well-structured email responses. Our dedicated email support teams provide quick, accurate, and personalized replies that resolve customer concerns and enhance brand loyalty. From handling high volumes of queries to managing escalations, we ensure a seamless support experience. By combining empathy, speed, and accuracy, we help businesses reduce response times, build stronger customer relationships, and maintain a positive brand image.",
+    "features": [
+      {
+        "icon": "service_1759758835744.png",
+        "title": "Analytics"
+      },
+      {
+        "icon": "service_1759758840093.png",
+        "title": "Ingenuity"
+      },
+      {
+        "icon": "service_1759758843471.png",
+        "title": "Impact"
+      }
+    ]
+  },
+  "serviceProcess": {
+    "title": "Efficient Email Support Process",
+    "letters": [
+      "Email ",
+      "Support "
+    ],
+    "des": "Our structured email support process ensures clarity, consistency, and continuous improvement in every customer interaction.",
+    "process": [
+      {
+        "image": "process1.png",
+        "heading": "Requirement Analysis",
+        "des": " Understand customer support needs and communication guidelines.",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "process2.png",
+        "heading": "Setup & Training",
+        "des": "Configure tools, templates, and train dedicated email support teams.",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "process3.png",
+        "heading": "Active Email Handling",
+        "des": "Respond to queries promptly with accuracy and professionalism",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "process4.png",
+        "heading": "Monitoring & Optimization",
+        "des": "Track response times, analyze feedback, and enhance performance."
+      }
+    ]
+  },
+  "serviceTechnologies": {
+    "title": " Tools & Platforms Use for Email Support",
+    "des": "Our team is dedicated to ensuring seamless communication and exceptional customer satisfaction.",
+    "technologies": [
+      {
+        "name": "Platforms & Tools",
+        "techs": [
+          {
+            "name": "Zendesk",
+            "Icon": "service_1758634783678.png"
+          },
+          {
+            "name": "Freshdesk",
+            "Icon": "service_1758634786688.png"
+          },
+          {
+            "name": "Zoho Desk",
+            "Icon": "service_1758634789835.png"
+          },
+          {
+            "name": "HubSpot Service Hub",
+            "Icon": "service_1758634798566.png"
+          },
+          {
+            "name": "Outlook & Gmail",
+            "Icon": "service_1758634801464.png"
+          },
+          {
+            "name": "Help Scout",
+            "Icon": "service_1758634806628.png"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceOffering": {
+    "title": "Tailored Email Support for Every Business",
+    "letters": [
+      "Email ",
+      "Support ",
+      "Solutions "
+    ],
+    "des": "We provide tailored email support services designed to improve communication, efficiency, and customer satisfaction.",
+    "cards": [
+      {
+        "icon": "service_1758219005261.png",
+        "heading": "General Query Handling",
+        "des": "Quick, clear responses to customer questions, reducing wait times.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219009340.png",
+        "heading": "Technical Email Support",
+        "des": "Troubleshooting product or service issues via detailed and professional responses.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219017458.png",
+        "heading": "Order & Billing Support",
+        "des": "Assisting with order confirmations, billing, and refund-related queries.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219024523.png",
+        "heading": "Escalation Management ",
+        "des": "Handling urgent or complex queries with priority attention.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219032857.png",
+        "heading": "After-Sales Assistance",
+        "des": "Post-purchase follow-ups to improve retention and customer loyalty.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219039571.png",
+        "heading": "Feedback Collection",
+        "des": "Gathering customer insights through structured email interactions.",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceBanner": {
+    "image": "ctaThumb1_1.png",
+    "Subtitle": "CONTACT US",
+    "title": "Consistent Professional Email Support",
+    "des": "Partner with All Spark Technologies to provide reliable, round-the-clock email support services that build trust, strengthen relationships, and drive customer loyalty.",
+    "btnText": "Start Transform"
+  },
+  "serviceIndus": {
+    "image1": "service_1759758459293.png",
+    "image2": "service_1759758464216.png",
+    "image3": "shape.png",
+    "title": "Why Your Business Needs Email Support Services",
+    "letters": [
+      "Email ",
+      "Support "
+    ],
+    "des1": "Many businesses lose customers due to delayed or poorly written email responses. At All Spark Technologies, we eliminate these challenges with expert email support services. Our trained teams deliver clear, timely, and professional responses, ensuring that every customer feels valued. Even if managing thousands of queries or handling sensitive issues, we maintain accuracy and empathy in communication. By optimizing response times and maintaining consistency, we help businesses build credibility, improve customer satisfaction, and strengthen long-term loyalty through effective email communication.\n",
+    "des2": "We act as an extension of your brand, aligning every response with your voice and values.Our scalable solutions adapt seamlessly as your business grows and customer needs evolve.With All Spark Technologies, email support becomes a driver of trust, loyalty, and measurable results.\n"
+  },
+  "serviceIndustries": {
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "industries": [
+      {
+        "image": "service_1758725471499.webp",
+        "title": "Ecommerce ",
+        "des": "Quick responses for orders, returns, and product inquiries.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725484405.webp",
+        "title": "Technology",
+        "des": "Technical email support for SaaS and IT companies.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725493142.webp",
+        "title": "Healthcare",
+        "des": "HIPAA-compliant email communication for patients and providers.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725507018.webp",
+        "title": "Finance",
+        "des": "Secure and structured support for banks and fintech.\n",
+        "btnText": "Read More"
+      },
+      {
+        "image": "",
+        "title": "Education",
+        "des": "Reliable communication with students, staff, and parents.",
+        "btnText": "Read more"
+      },
+      {
+        "image": "",
+        "title": "Hospitality",
+        "des": "Efficient booking, inquiry, and guest service support.",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceClient": {
+    "image1": "service_1759758480343.png",
+    "image2": "service_1759758483514.png",
+    "image3": "shape.png",
+    "image4": "hugicon.png",
+    "imageText": "Quality, Trust, Growth.",
+    "title": "Why Businesses Rely on Our Email Support",
+    "letters": [
+      "Email ",
+      "Support"
+    ],
+    "des1": "We act as an extension of your brand, aligning every response with your voice and values.\nOur scalable solutions adapt seamlessly as your business grows and customer needs evolve.\nWith All Spark Technologies, email support becomes a driver of trust, loyalty, and measurable results.\n",
+    "des2": "At All Spark Technologies, we understand that every interaction shapes the customer’s perception of your brand. That’s why our team is trained to not only solve issues but also communicate with empathy, accuracy, and alignment to your brand’s unique voice.",
+    "lis": [
+      "Faster Response Times: Reduce customer wait periods with quick, efficient replies.",
+      "Consistent Professional Tone: Ensure every email reflects your brand values.",
+      "Scalable Solutions: Adapt effortlessly to increasing query volumes as your business grows.",
+      "Improved Customer Retention: Keep customers engaged and loyal with reliable support.",
+      "Enhanced Accuracy: Minimize errors with expert handling of sensitive and complex requests.",
+      "Cost-Efficient Service: Lower operational overhead without compromising quality."
+    ]
+  },
+  "serviceFAQs": {
+    "image1": "service_1759758492534.png",
+    "image2": "service_1759758495713.png",
+    "image3": "servicefaq3.png",
+    "subTitle": "FAQ",
+    "title": "Your Data, Our Priority",
+    "faqs": [
+      {
+        "question": "Why should I choose All Spark Technologies for email support?",
+        "answer": "A1: We provide 24/7 professional email support services with quick, accurate, and personalized responses to improve customer experience."
+      },
+      {
+        "question": "Can you handle high volumes of customer emails?",
+        "answer": "Yes. Our trained teams manage bulk email queries efficiently while maintaining accuracy and speed."
+      },
+      {
+        "question": "Do you provide technical email support?",
+        "answer": "Absolutely. We handle technical queries, troubleshooting, and product-related issues with expertise."
+      },
+      {
+        "question": "Can you integrate with my existing tools?",
+        "answer": "Yes, we work with platforms like Zendesk, Freshdesk, HubSpot, and more."
+      },
+      {
+        "question": "How do you ensure consistency in email replies?",
+        "answer": "We use pre-approved templates, guidelines, and continuous training for consistent and professional responses."
+      },
+      {
+        "question": "What industries can benefit from your email support?",
+        "answer": "Ecommerce, healthcare, technology, finance, education, and hospitality businesses all benefit from our tailored email support services."
+      }
+    ]
+  },
+  "serviceContact": {
+    "image": "service_1758286570386.png",
+    "subTitle": "TALK TO US",
+    "title": "Let’s Turn Every Email Into Loyalty",
+    "btnText": "Get In Touch"
+  }
+}
+export const liveChatSupport: ServicePageData={
+  "serviceHero": {
+    "btnText": "Digital Marketing Solutions",
+    "btnText2": "GET STARTED",
+    "btnText3": "Get In Touch",
+    "title": "Live Chat Support That Drives Engagement",
+    "description": "We deliver professional live chat support services to assist customers instantly, improve conversions, and enhance your overall customer experience.",
+    "formSubtitle": "TALK TO US",
+    "formTitle": "Book a Free Consultation"
+  },
+  "serviceLogos": {
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
+  },
+  "serviceCard": {
+    "title": "Delivering Real-Time Support That Scales With Your Business Growth",
+    "cards": [
+      {
+        "icon": "service_1758218879692.png",
+        "number": "1M",
+        "text": "Customer Chats Handled Successfully",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218888022.png",
+        "number": "100",
+        "text": "Global Businesses Trust Our Live Chat Support",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218906531.png",
+        "number": "24/7",
+        "text": "Real-Time Assistance Across All Time Zones",
+        "symbol": ""
+      },
+      {
+        "icon": "service_1758218912742.png",
+        "number": "97",
+        "text": "Customer Satisfaction Rate",
+        "symbol": "%"
+      }
+    ]
+  },
+  "serviceAbout": {
+    "image1": "service_1759758584058.png",
+    "image2": "service_1759758586675.png",
+    "image3": "aboutShape2.png",
+    "subTitle": "About Company",
+    "title": "Real-Time Live Chat That Builds Trust",
+    "des": "At All Spark Technologies, we understand the importance of instant customer communication. Our professional live chat teams provide immediate, accurate, and personalized support that keeps visitors engaged and prevents drop-offs. From assisting with product questions to guiding customers through purchases, we ensure a seamless experience that builds trust. By combining speed, empathy, and efficiency, we help businesses improve satisfaction, strengthen customer loyalty, and boost sales through proactive live chat engagement.",
+    "features": [
+      {
+        "icon": "service_1759758853000.png",
+        "title": "Analytics"
+      },
+      {
+        "icon": "service_1759758856391.png",
+        "title": "Ingenuity"
+      },
+      {
+        "icon": "service_1759758859198.png",
+        "title": "Impact"
+      }
+    ]
+  },
+  "serviceProcess": {
+    "title": "A Proven Chat Support Process for Efficiency",
+    "letters": [
+      "Support ",
+      "Chat "
+    ],
+    "des": "Our structured live chat support process ensures clarity, responsiveness, and consistent service across all customer interactions.",
+    "process": [
+      {
+        "image": "process1.png",
+        "heading": "Requirement Analysis",
+        "des": "Understand business goals and customer communication needs.",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "process2.png",
+        "heading": "Setup & Integration",
+        "des": "Implement live chat tools customized for your platform.",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "process3.png",
+        "heading": "Active Chat Handling",
+        "des": "Deliver quick, accurate, and personalized responses.",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "process4.png",
+        "heading": "Monitoring & Optimization",
+        "des": "Track chats, analyze feedback, and improve performance."
+      }
+    ]
+  },
+  "serviceTechnologies": {
+    "title": "Platforms We Use for Live Chat Support",
+    "des": "Our trained agents ensure every interaction is fast, personalized, and aligned with your brand voice.",
+    "technologies": [
+      {
+        "name": "Platforms & Tools",
+        "techs": [
+          {
+            "name": "LiveChat ",
+            "Icon": "service_1758634783678.png"
+          },
+          {
+            "name": "Zendesk Chat",
+            "Icon": "service_1758634786688.png"
+          },
+          {
+            "name": "Intercom",
+            "Icon": "service_1758634789835.png"
+          },
+          {
+            "name": "Freshchat",
+            "Icon": "service_1758634798566.png"
+          },
+          {
+            "name": "Tawk.to",
+            "Icon": "service_1758634801464.png"
+          },
+          {
+            "name": "Drift",
+            "Icon": "service_1758634806628.png"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceOffering": {
+    "title": "Tailored Live Chat Solutions for Every Business",
+    "letters": [
+      "Live ",
+      "Chat ",
+      "Solutions "
+    ],
+    "des": "We provide customized live chat support solutions carefully tailored to effectively increase efficiency, customer trust, and overall satisfaction of customer.",
+    "cards": [
+      {
+        "icon": "service_1758219005261.png",
+        "heading": "General Chat Assistance ",
+        "des": "Provide instant answers to customer inquiries quickly and clearly.\n",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219009340.png",
+        "heading": "Sales & Conversion Support",
+        "des": "Guide users through checkout to increase purchases.\n",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219017458.png",
+        "heading": "Technical Chat Support ",
+        "des": "Assist with technical queries in real time.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219024523.png",
+        "heading": "Order & Billing Help",
+        "des": "Handle order updates, billing, and payment queries instantly.\n",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219032857.png",
+        "heading": "Escalation Handling",
+        "des": "Transfer complex issues to higher support with care.\n",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219039571.png",
+        "heading": "Proactive Engagement ",
+        "des": "Initiate chats to prevent cart abandonment and boost sales.\n",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceBanner": {
+    "image": "ctaThumb1_1.png",
+    "Subtitle": "CONTACT US",
+    "title": "Reliable & Engaging Chat Support Service",
+    "des": "Partner with us to provide real-time, round-the-clock live chat support that builds trust, increases conversions, and boosts customer loyalty.",
+    "btnText": "Start Transform"
+  },
+  "serviceIndus": {
+    "image1": "service_1759758603178.png",
+    "image2": "service_1759758607627.png",
+    "image3": "shape.png",
+    "title": "Why Live Chat Support Is Essential for Your Business",
+    "letters": [
+      "Live ",
+      "Chat ",
+      "Support "
+    ],
+    "des1": "Many businesses lose customers due to delayed responses and lack of real-time interaction. At All Spark Technologies, we eliminate this gap with instant, professional live chat services. Our trained teams provide real-time answers, guide buyers through their journey, and resolve issues without delays. Whether handling product inquiries or payment concerns, we ensure fast and empathetic responses. By maintaining constant availability and proactive engagement, we help businesses increase customer trust, improve sales, and deliver exceptional support experiences.",
+    "des2": "Our live chat support is designed to seamlessly integrate with your website and CRM systems for smooth operations.\nWe adapt our approach to match your brand tone, ensuring customers always feel connected and valued.\nWith scalable solutions, we help you manage growing demand without compromising quality or response times.\n"
+  },
+  "serviceIndustries": {
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "industries": [
+      {
+        "image": "service_1758725471499.webp",
+        "title": "Ecommerce",
+        "des": "Instant help for product and checkout queries",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725484405.webp",
+        "title": "Technology",
+        "des": "Live troubleshooting for SaaS and IT support.\n",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725493142.webp",
+        "title": "Healthcare",
+        "des": "Secure, HIPAA-compliant patient chat support.\n",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725507018.webp",
+        "title": "Finance ",
+        "des": "Real-time assistance for banking and fintech users.\n",
+        "btnText": "Read More"
+      },
+      {
+        "image": "",
+        "title": "Education ",
+        "des": "Reliable live chat for students and faculty queries.",
+        "btnText": "Read more"
+      },
+      {
+        "image": "",
+        "title": "Hospitality",
+        "des": "Quick booking and guest service support anytime.\n",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceClient": {
+    "image1": "service_1759758619402.png",
+    "image2": "service_1759758622533.png",
+    "image3": "shape.png",
+    "image4": "hugicon.png",
+    "imageText": "Quality, Trust, Growth.",
+    "title": "Why Live Chat Support Makes a Difference",
+    "letters": [
+      "Live ",
+      "Chat "
+    ],
+    "des1": "With live chat, customer interactions happen instantly, and we make every conversation count. Our service helps businesses reduce wait times, improve customer satisfaction, and increase conversions by offering real-time assistance. Clients value our ability to represent their brand with professionalism while keeping communication warm, approachable, and solution-focused. It’s not just support, it’s about creating meaningful connections that drive results.",
+    "des2": "We ensure that every inquiry is resolved quickly without sacrificing accuracy or empathy.\nOur team is trained to identify opportunities for upselling and cross-selling through natural conversations.\nBy analyzing chat data, we provide insights that help businesses refine products and services.\nThis proactive approach turns live chat from a simple support tool into a powerful driver of growth.\n",
+    "lis": []
+  },
+  "serviceFAQs": {
+    "image1": "service_1759758636217.png",
+    "image2": "service_1759758640699.png",
+    "image3": "servicefaq3.png",
+    "subTitle": "FAQ",
+    "title": "Your Data, Our Priority",
+    "faqs": [
+      {
+        "question": "Why should I choose All Spark Technologies for live chat support?",
+        "answer": " We provide 24/7 real-time support with fast, accurate, and personalized chat assistance to improve customer engagement."
+      },
+      {
+        "question": "Can you manage high volumes of live chat requests?",
+        "answer": " Yes. Our teams handle large volumes efficiently while maintaining quality and speed."
+      },
+      {
+        "question": "Do you provide sales and conversion-focused live chat?",
+        "answer": "Absolutely. We assist customers through checkout and boost conversions with proactive chat."
+      },
+      {
+        "question": "Can your live chat integrate with my website or app?",
+        "answer": "Yes, we integrate with tools like Intercom, Zendesk, and LiveChat seamlessly."
+      },
+      {
+        "question": "How do you ensure consistency in chat responses?",
+        "answer": "We use pre-approved scripts, training, and monitoring for professional and consistent service."
+      },
+      {
+        "question": "What industries benefit from live chat support?",
+        "answer": "Ecommerce, technology, healthcare, finance, education, and hospitality industries benefit greatly from live chat support services."
+      }
+    ]
+  },
+  "serviceContact": {
+    "image": "service_1758286570386.png",
+    "subTitle": "TALK TO US",
+    "title": "Let’s Build Trust Through Instant Support",
+    "btnText": "Get In Touch"
+  }
+}
+export const taxiSupport: ServicePageData={
+  "serviceHero": {
+    "btnText": "Digital Marketing Solutions",
+    "btnText2": "GET STARTED",
+    "btnText3": "Get In Touch",
+    "title": "Reliable Taxi Support to Keep Fleets Moving",
+    "description": "We deliver professional taxi support services to manage bookings, customer queries, and driver coordination, ensuring smooth operations and improved customer satisfaction.",
+    "formSubtitle": "TALK TO US",
+    "formTitle": "Book a Free Consultation"
+  },
+  "serviceLogos": {
+    "logos": [
+      "logo-1.png",
+      "logo-2.png",
+      "logo-3.png",
+      "logo-4.png",
+      "logo-5.png"
+    ]
+  },
+  "serviceCard": {
+    "title": "Driving Reliable Taxi Support, Every Day to Keep Your Customers Moving",
+    "cards": [
+      {
+        "icon": "service_1758218879692.png",
+        "number": "2M",
+        "text": "Taxi Bookings Managed Successfully",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218888022.png",
+        "number": "200",
+        "text": "Transport Businesses Trust Our Taxi Support",
+        "symbol": "+"
+      },
+      {
+        "icon": "service_1758218906531.png",
+        "number": " 24/7",
+        "text": "Customer and Driver Assistance Services",
+        "symbol": ""
+      },
+      {
+        "icon": "service_1758218912742.png",
+        "number": "95",
+        "text": "On-Time Ride Coordination Rate",
+        "symbol": "%"
+      }
+    ]
+  },
+  "serviceAbout": {
+    "image1": "service_1759758686322.png",
+    "image2": "service_1759758693414.png",
+    "image3": "aboutShape2.png",
+    "subTitle": "About Company",
+    "title": "Professional Support for Smooth Operations",
+    "des": "At All Spark Technologies, we specialize in providing dedicated taxi support services that connect passengers, drivers, and businesses with efficiency. From managing ride bookings to resolving issues in real time, our teams ensure a smooth travel experience. With quick response times, accurate ride tracking, and customer-first communication, we help taxi businesses reduce cancellations, increase reliability, and build trust. Our focus on efficiency and care ensures higher customer satisfaction and improved driver performance.",
+    "features": [
+      {
+        "icon": "service_1759758866875.png",
+        "title": "Analytics"
+      },
+      {
+        "icon": "service_1759758870214.png",
+        "title": "Ingenuity"
+      },
+      {
+        "icon": "service_1759758873092.png",
+        "title": "Impact"
+      }
+    ]
+  },
+  "serviceProcess": {
+    "title": "Proven Process for Efficiency and Reliability",
+    "letters": [
+      "Efficiency ",
+      "Reliability"
+    ],
+    "des": "Our structured taxi support process guarantees real-time coordination, smooth communication, and reliable service across every ride and customer interaction.",
+    "process": [
+      {
+        "image": "process1.png",
+        "heading": "Requirement Analysis",
+        "des": "Understand taxi business needs and support requirements.\n",
+        "dir": "dir1.png"
+      },
+      {
+        "image": "process2.png",
+        "heading": "Setup & Integration",
+        "des": "Implement booking systems and communication tools.\n",
+        "dir": "dir2.png"
+      },
+      {
+        "image": "process3.png",
+        "heading": "Active Ride Support",
+        "des": "Manage bookings, cancellations, and customer inquiries.\n",
+        "dir": "dir3.png"
+      },
+      {
+        "image": "process4.png",
+        "heading": "Monitoring & Optimization",
+        "des": "Track rides, gather feedback, and enhance operations."
+      }
+    ]
+  },
+  "serviceTechnologies": {
+    "title": "Tools We Use for Taxi Support",
+    "des": "We utilize modern tools and systems to provide efficient, scalable, and real-time taxi support services. ",
+    "technologies": [
+      {
+        "name": "Platforms & Tools",
+        "techs": [
+          {
+            "name": "Uber Central",
+            "Icon": "service_1758634783678.png"
+          },
+          {
+            "name": "Lyft Business",
+            "Icon": "service_1758634786688.png"
+          },
+          {
+            "name": "Twilio",
+            "Icon": "service_1758634789835.png"
+          },
+          {
+            "name": "Zendesk",
+            "Icon": "service_1758634798566.png"
+          },
+          {
+            "name": "Freshdesk",
+            "Icon": "service_1758634801464.png"
+          },
+          {
+            "name": "GPS & Tracking Tools",
+            "Icon": "service_1758634806628.png"
+          }
+        ]
+      }
+    ]
+  },
+  "serviceOffering": {
+    "title": "Taxi Support Solutions Tailored to Every Business",
+    "letters": [
+      "Taxi ",
+      "Support "
+    ],
+    "des": "We provide tailored taxi support services designed to improve communication, ensure timely rides, and enhance customer loyalty.",
+    "cards": [
+      {
+        "icon": "service_1758219005261.png",
+        "heading": "Booking Assistance",
+        "des": "Manage ride bookings and confirmations instantly.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219009340.png",
+        "heading": "Driver Coordination",
+        "des": "Communicate with drivers for smooth operations.\n",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219017458.png",
+        "heading": "Customer Query Support",
+        "des": "Resolve passenger issues quickly and effectively.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219024523.png",
+        "heading": "Payment & Billing Help",
+        "des": "Assist with fare queries and refunds.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219032857.png",
+        "heading": "Ride Tracking Updates",
+        "des": "Provide customers with accurate real-time updates.",
+        "btnText": "Read more"
+      },
+      {
+        "icon": "service_1758219039571.png",
+        "heading": "Escalation Management",
+        "des": "Handle urgent or complex ride issues efficiently.\n",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceBanner": {
+    "image": "ctaThumb1_1.png",
+    "Subtitle": "CONTACT US",
+    "title": "Delivering Reliable Taxi Support Services",
+    "des": "Partner with us to provide dependable taxi support solutions that improve customer experience, optimize operations, and build trust with every ride.",
+    "btnText": "Start Transform"
+  },
+  "serviceIndus": {
+    "image1": "service_1759758710529.png",
+    "image2": "service_1759758719618.png",
+    "image3": "shape.png",
+    "title": "Why Taxi Support Matters for Your Business",
+    "letters": [
+      "Taxi ",
+      "Support "
+    ],
+    "des1": "Taxi businesses often lose customers due to poor communication, delayed responses, and unorganized ride management. At All Spark Technologies, we eliminate these issues with dedicated taxi support services. Our teams manage ride bookings, cancellations, and real-time communication between drivers and passengers. By ensuring quick responses, accurate ride tracking, and proactive issue resolution, we help businesses reduce errors, improve customer satisfaction, and build long-term trust. With 24/7 availability, we ensure no customer query or ride request goes unanswered.",
+    "des2": "We integrate seamlessly with your existing systems to keep operations smooth and transparent.\nOur trained agents handle high volumes without compromising accuracy or service quality.\nBy aligning with your brand standards, we ensure passengers experience professionalism at every touchpoint.\n"
+  },
+  "serviceIndustries": {
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "industries": [
+      {
+        "image": "service_1758725471499.webp",
+        "title": "Taxi & Ridesharing",
+        "des": "Seamless booking and ride management.\n",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725484405.webp",
+        "title": "Logistics",
+        "des": "Real-time coordination for deliveries and fleets.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725493142.webp",
+        "title": "Healthcare Transport",
+        "des": " On-time rides for patients and staff.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "service_1758725507018.webp",
+        "title": "Corporate Travel ",
+        "des": " Efficient transport solutions for businesses.",
+        "btnText": "Read More"
+      },
+      {
+        "image": "",
+        "title": "Hospitality",
+        "des": "Reliable guest pickup and travel coordination.\n",
+        "btnText": "Read more"
+      },
+      {
+        "image": "",
+        "title": "Education",
+        "des": "Safe and punctual student transport support.\n",
+        "btnText": "Read more"
+      }
+    ]
+  },
+  "serviceClient": {
+    "image1": "service_1759758730139.png",
+    "image2": "service_1759758733395.png",
+    "image3": "shape.png",
+    "image4": "hugicon.png",
+    "imageText": "Quality, Trust, Growth.",
+    "title": " Why Taxi Firms Choose Our Support",
+    "letters": [
+      "Taxi ",
+      "Firms "
+    ],
+    "des1": "For taxi companies, reliable support can be the difference between a satisfied passenger and a missed opportunity. Our taxi support services ensure smooth coordination, from handling bookings to assisting drivers in real time. Businesses trust us to reduce operational stress, maintain clear communication, and deliver faster response times. The result is a service experience that passengers remember for the right reasons, convenience, reliability, and trust.",
+    "des2": "Here are the key benefits of our taxi support services include:",
+    "lis": [
+      "Seamless Ride Management: From bookings to cancellations, every step is handled smoothly.",
+      "24/7 Availability: Passengers and drivers receive assistance anytime, without delays.",
+      "Improved Communication: Clear, real-time updates between customers and drivers.",
+      "Faster Response Times: Reduce waiting periods and minimize missed rides.",
+      "Enhanced Customer Loyalty: Build trust through consistent and reliable service.",
+      "Operational Efficiency: Lower errors and streamline processes for growing businesses."
+    ]
+  },
+  "serviceFAQs": {
+    "image1": "service_1759758744006.png",
+    "image2": "service_1759758746806.png",
+    "image3": "servicefaq3.png",
+    "subTitle": "FAQ",
+    "title": "Your Data, Our Priority",
+    "faqs": [
+      {
+        "question": "Why should I choose All Spark Technologies for taxi support?",
+        "answer": "We provide 24/7 dedicated taxi support with efficient booking, driver coordination, and customer service."
+      },
+      {
+        "question": "Can you handle high volumes of bookings daily?",
+        "answer": "Yes. Our teams manage large booking volumes while maintaining accuracy and speed."
+      },
+      {
+        "question": "Do you provide real-time ride tracking support?",
+        "answer": "Absolutely. We provide live updates to passengers and drivers for seamless coordination.\n"
+      },
+      {
+        "question": "Can your support integrate with my taxi booking system?",
+        "answer": " Yes, we integrate with existing tools and platforms like Uber Central and Twilio."
+      },
+      {
+        "question": "How do you ensure reliability in taxi support?",
+        "answer": "We use advanced tracking tools, monitoring systems, and strict processes for consistent performance.\n"
+      },
+      {
+        "question": "What industries can benefit from taxi support services?",
+        "answer": "Taxi, logistics, healthcare, corporate, hospitality, and education sectors all benefit from our services."
+      }
+    ]
+  },
+  "serviceContact": {
+    "image": "service_1758286570386.png",
+    "subTitle": "TALK TO US",
+    "title": "Let’s Drive Reliable Taxi Support Together",
     "btnText": "Get In Touch"
   }
 }
@@ -8455,11 +9410,10 @@ export const seo: ServicePageData = {
     "des2": "From startups to enterprises, we help companies increase their online presence, connect with target audiences, and achieve sustainable growth."
   },
   "serviceIndustries": {
-    "title": "Industries We Serve",
-    "letters": [
-      "Industries",
-      "Served"
-    ],
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -8745,11 +9699,10 @@ export const DigitalMarketing: ServicePageData = {
     "des2": "Whether you are a marketing company for small business or a large enterprise, we adapt our proven methodologies to deliver exceptional results across all sectors."
   },
   "serviceIndustries": {
-    "title": "Industry-Focused Digital Marketing Solutions",
-    "letters": [
-      "Digital",
-      "Marketing"
-    ],
+    "mainImage":"industrybg.png",
+    "btnText":"Industries We Support",
+    "title":"Sectors We Deliver Solutions For",
+    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",

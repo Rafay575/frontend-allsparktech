@@ -23,7 +23,7 @@ interface homeServices{
 export default function ServicesSection({homeServices}:{homeServices: homeServices}) {
 
   const displayedServices = Array.isArray(homeServices?.allServices)
-    ? homeServices.allServices.slice(0, 10)
+    ? homeServices.allServices.slice(0, 12)
     : [];
 
   const cardVariants = {

@@ -3,7 +3,6 @@ import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 import bg1 from "@/public/images/homeprocessbg1.png"
 import bg2 from "@/public/images/homeprocessbg2.png"
-import clipVideo from "@/public/images/clipVideo.png"
 import clipcircle from "@/public/images/clipcircle.png"
 import Link from 'next/link';
 import { motion } from "framer-motion";
@@ -28,38 +27,6 @@ interface homeProcessProps {
 }
 
 export default function HomeProcess({ homeProcess }: homeProcessProps) {
-    // const homeProcess: homeProcessData = {
-    //     "title": "Development Process",
-    //     "des": "We follow a structured, transparent, and efficient software development process that ensures custom software solutions are delivered with quality, speed, and scalability.",
-    //     "image": "clipVideo.png",
-    //     "link": "/contact",
-    //     "process": [
-    //         {
-    //             "image": "homeprocess1.png",
-    //             "heading": "Planning & Strategy",
-    //             "des": "We start by understanding business requirements, defining objectives, and creating a roadmap.",
-    //             "dir": "dir1.png"
-    //         },
-    //         {
-    //             "image": "homeprocess2.png",
-    //             "heading": "Design & Development",
-    //             "des": "Our team designs intuitive UI/UX and builds scalable software using full-stack  software development practices.",
-    //             "dir": "dir2.png"
-    //         },
-    //         {
-    //             "image": "homeprocess3.png",
-    //             "heading": "Testing & Quality Assurance",
-    //             "des": "We perform comprehensive QA including functionality, performance, security, and user testing.",
-    //             "dir": "dir3.png"
-    //         },
-    //         {
-    //             "image": "homeprocess4.png",
-    //             "heading": "Optimization & Support",
-    //             "des": "After deployment, we provide ongoing monitoring, updates, and feature enhancements."
-    //         }
-    //     ]
-    // }
-
     // console.log("homeProcess :" ,homeProcess)
     return (
         <>
@@ -88,20 +55,27 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
             <div
                 className='container mt-[-18%] relative z-[20]  '
             >
-                <Link href={homeProcess.link} className='container w-full ' >
-                    <Image src={`${baseURL}/images/home/${homeProcess.image}`} alt='bg' width={4000} height={4000} className='w-full ' />
+                <Link href={homeProcess.link} target="_blank" className='relative z-20 '>
+                    <Image
+                        src={`${baseURL}/images/home/${homeProcess.image}`}
+                        alt="bg"
+                        width={4000}
+                        height={4000}
+                        className="w-full cursor-pointer"
+                    />
                 </Link>
 
-                <div
-                    className='w-full h-full absolute top-0 left-0  flex justify-center items-center'>
-                    <motion.div className='w-[8%] mt-[0.7%]' initial={{ scale: 1, opacity: 1 }}
-                    animate={{ scale: 2, opacity: 0 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}    >
+                <Link href={homeProcess.link}>
+                    <div
+                        className='w-full h-full absolute top-0 left-0  flex justify-center items-center z-30'>
+                        <motion.div className='w-[8%] mt-[0.7%]' initial={{ scale: 1, opacity: 1 }}
+                            animate={{ scale: 2, opacity: 0 }}
+                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}    >
 
-                        <Image src={clipcircle} alt='bg' width={4000} height={4000} className='w-full' />
-                    </motion.div>
-                </div>
-
+                            <Link href={homeProcess.link}><Image src={clipcircle} alt='bg' width={4000} height={4000} className='w-full' /></Link>
+                        </motion.div>
+                    </div>
+                </Link>
 
             </div>
 
