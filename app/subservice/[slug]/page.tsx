@@ -42,7 +42,7 @@ async function fetchSubservice(slug: string) {
 
 
 export async function generateMetadata({ params }: PageProps) {
-    const { slug } =  params;
+    const { slug } = await params;
     const subServiceJson = await fetchSubservice(slug);
     if (!subServiceJson) {
         return <div className="p-10 text-red-600">Subservice not found.</div>;
