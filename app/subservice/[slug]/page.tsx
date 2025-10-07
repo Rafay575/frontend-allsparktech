@@ -14,6 +14,11 @@ import ServicesContact from '@/components/ServicesContact'
 import axios from "axios"
 import { baseURL } from "@/API/baseURL"
 export const dynamic = "force-dynamic";
+export const revalidate = 0; 
+
+type PageProps = {
+  params: { slug: string };
+};
 
 async function fetchSubservice(slug: string) {
     try {
@@ -34,13 +39,10 @@ async function fetchSubservice(slug: string) {
 }
 
 
-type PageProps = {
-    params: Promise<{ slug: string }>; 
-};
 
 
 export async function generateMetadata({ params }: PageProps) {
-    const { slug } = await params;
+    const { slug } =  params;
     const subServiceJson = await fetchSubservice(slug);
     if (!subServiceJson) {
         return <div className="p-10 text-red-600">Subservice not found.</div>;
