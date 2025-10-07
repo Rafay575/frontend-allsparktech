@@ -226,12 +226,12 @@ export async function generateStaticParams() {
     const res = await fetch(`${baseURL}/getslug`, {
       cache: "no-store",
     });
-     
 
-    const data = await res.json();
+    const data: string[] = await res.json();
 
-    return data.map((item: { slug: string }) => ({
-      slug: item.slug,
+    // Convert array of slugs into Next.js params format
+    return data.map((slug) => ({
+      slug: slug.trim(), // remove spaces just in case
     }));
   } catch (error) {
     console.error("Error generating static params:", error);
