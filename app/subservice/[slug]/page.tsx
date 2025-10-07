@@ -220,3 +220,22 @@ export default async function Page({ params }: PageProps) {
     )
 }
 
+// 👇 Add this at the very end of your file
+export async function generateStaticParams() {
+  try {
+    const res = await fetch(`${baseURL}/getslug`, {
+      cache: "no-store",
+    });
+     
+
+    const data = await res.json();
+
+    return data.map((item: { slug: string }) => ({
+      slug: item.slug,
+    }));
+  } catch (error) {
+    console.error("Error generating static params:", error);
+    return [];
+  }
+}
+
