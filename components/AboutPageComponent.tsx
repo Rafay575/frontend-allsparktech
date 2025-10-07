@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { baseURL } from "@/API/baseURL";
 
 export interface aboutData {
@@ -26,17 +27,19 @@ export interface aboutData {
   script: any;
 }
 
-
-
-
 export default function AboutPageComponent({ aboutData }: { aboutData: aboutData }) {
-
-
   return (
-    <section className="py-10 md:py-16  lg:py-20 bg-white">
+    <section className="py-10 md:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="relative mb-10 ">
+          {/* Left Side Animation */}
+          <motion.div
+            className="relative mb-10"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <Image
               src={`${baseURL}/images/about/${aboutData.img3}`}
               alt={aboutData.alt3}
@@ -52,7 +55,7 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
               width={800}
               unoptimized
               height={600}
-              className="w-full right-0  lg:w-2/3 h-auto z-10"
+              className="w-full right-0 lg:w-2/3 h-auto z-10"
               style={{ zIndex: 10 }}
             />
 
@@ -82,10 +85,15 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
                 <p className="text-[10px] font-medium">Of Experience</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Text Content */}
-          <div>
+          {/* Right Side Animation */}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
               <ArrowLeft className="h-4 w-4" />
               <span>{aboutData.subheading}</span>
@@ -102,10 +110,9 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
 
             <p className="text-gray-600 mb-6 para">{aboutData.paragraphs[0]}</p>
             <p className="text-gray-600 mb-6 para">{aboutData.paragraphs[1]}</p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
-

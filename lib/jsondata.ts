@@ -1,44 +1,147 @@
 import { ServicePageData } from "@/lib/types"
 
 export const homePage = {
-  "hero": {
-    "texts": [
-      "Trusted Software Development Company",
-      "AI Solutions That Drive Innovation and Growth",
-      "Full-Stack Development & SaaS Expertise"
-    ],
-    "features": [
-      "Custom Software Solutions",
-      "Transparent Collaboration",
-      "Scalable AI Tools",
-      "Enterprise-Grade Security",
-      "End-to-End Delivery",
-      "Agile Software Teams"
-    ]
-  },
+  "hero": [
+    {
+      "bg": "homehero1.png",
+      "topBtn": "Enterprise Software Solutions",
+      "topBtnLink": "custom-software-development",
+      "title": "Enterprise Software Development Solutions",
+      "des": "Smart enterprise software development services in the USA to streamline workflows, enhance security, and drive growth.",
+      "bottomBtn": "Dicover Me",
+      "bottomBtnLink": "contact"
+    },
+    {
+      "bg": "homehero2.png",
+      "topBtn": "Enterprise Software Solutions",
+      "topBtnLink": "custom-software-development",
+      "title": "Enterprise Software Development Solutions",
+      "des": "Smart enterprise software development services in the USA to streamline workflows, enhance security, and drive growth.",
+      "bottomBtn": "Dicover Me",
+      "bottomBtnLink": "contact"
+    },
+    {
+      "bg": "homehero3.png",
+      "topBtn": "Enterprise Software Solutions",
+      "topBtnLink": "custom-software-development",
+      "title": "Enterprise Software Development Solutions",
+      "des": "Smart enterprise software development services in the USA to streamline workflows, enhance security, and drive growth.",
+      "bottomBtn": "Dicover Me",
+      "bottomBtnLink": "contact"
+    },
+    {
+      "bg": "homehero4.png",
+      "topBtn": "Enterprise Software Solutions",
+      "topBtnLink": "custom-software-development",
+      "title": "Enterprise Software Development Solutions",
+      "des": "Smart enterprise software development services in the USA to streamline workflows, enhance security, and drive growth.",
+      "bottomBtn": "Dicover Me",
+      "bottomBtnLink": "contact"
+    }
+  ],
   "logos": [
-    { "id": 1, "src": "logo-1.png", "alt": "AllSpark Logo 1" },
-    { "id": 2, "src": "logo-2.png", "alt": "AllSpark Logo 2" },
-    { "id": 3, "src": "logo-3.png", "alt": "AllSpark Logo 3" },
-    { "id": 4, "src": "logo-4.png", "alt": "AllSpark Logo 4" },
-    { "id": 5, "src": "logo-5.png", "alt": "AllSpark Logo 5" }
+    {
+      "id": 1,
+      "src": "logo-1.png",
+      "alt": "AllSpark Logo 1"
+    },
+    {
+      "id": 2,
+      "src": "logo-2.png",
+      "alt": "AllSpark Logo 2"
+    },
+    {
+      "id": 3,
+      "src": "logo-3.png",
+      "alt": "AllSpark Logo 3"
+    },
+    {
+      "id": 4,
+      "src": "logo-4.png",
+      "alt": "AllSpark Logo 4"
+    },
+    {
+      "id": 5,
+      "src": "logo-5.png",
+      "alt": "AllSpark Logo 5"
+    }
   ],
   "homeServices": {
     "subTitle": "OUR SERVICES",
     "title": "What We Do Best",
     "allServices": [
-      { "id": "custom-software-development", "title": "Custom Software Development", "imageUrl": "custom-software-development.webp", "alt": "service1" },
-      { "id": "website-development", "title": "Website Development", "imageUrl": "web-app-development.webp", "alt": "service2" },
-      { "id": "mobile-app-development", "title": "Mobile App Development", "imageUrl": "web-app-development.webp", "alt": "service3" },
-      { "id": "ai-and-machine-learning", "title": "AI & Machine Learning", "imageUrl": "ai-machine-learning.webp", "alt": "service4" },
-      { "id": "ui-ux-design", "title": "UX/UI Design", "imageUrl": "ui-ux-design.webp", "alt": "service5" },
-      { "id": "ecommerce-development", "title": "Ecommerce Development", "imageUrl": "ecommerce-development.webp", "alt": "service6" },
-      { "id": "custom-support", "title": "Custom Support", "imageUrl": "digital-marketing-seo.webp", "alt": "service7" },
-      { "id": "email-support", "title": "Email Support", "imageUrl": "digital-marketing-seo.webp", "alt": "service8" },
-      { "id": "live-chat-support", "title": "Live Chat Support", "imageUrl": "digital-marketing-seo.webp", "alt": "service9" },
-      { "id": "taxi-support", "title": "Taxi Support", "imageUrl": "digital-marketing-seo.webp", "alt": "service10" },
-      { "id": "seo", "title": "Seo", "imageUrl": "f3.jpg", "alt": "service11" },
-      { "id": "digital-marketing", "title": "Digital Marketing", "imageUrl": "digital-marketing-seo.webp", "alt": "service12" }
+      {
+        "id": "custom-software-development",
+        "title": "Custom Software Development",
+        "imageUrl": "custom-software-development.webp",
+        "alt": "service1"
+      },
+      {
+        "id": "website-development",
+        "title": "Website Development",
+        "imageUrl": "home_1759513075843.jpg",
+        "alt": "service2"
+      },
+      {
+        "id": "mobile-app-development",
+        "title": "Mobile App Development",
+        "imageUrl": "web-app-development.webp",
+        "alt": "service3"
+      },
+      {
+        "id": "ai-and-machine-learning",
+        "title": "AI & Machine Learning",
+        "imageUrl": "ai-machine-learning.webp",
+        "alt": "service4"
+      },
+      {
+        "id": "ui-ux-design",
+        "title": "UX/UI Design",
+        "imageUrl": "ui-ux-design.webp",
+        "alt": "service5"
+      },
+      {
+        "id": "ecommerce-development",
+        "title": "Ecommerce Development",
+        "imageUrl": "ecommerce-development.webp",
+        "alt": "service6"
+      },
+      {
+        "id": "custom-support",
+        "title": "Custom Support",
+        "imageUrl": "home_1759513157754.jpg",
+        "alt": "service7"
+      },
+      {
+        "id": "email-support",
+        "title": "Email Support",
+        "imageUrl": "home_1759513170807.webp",
+        "alt": "service8"
+      },
+      {
+        "id": "live-chat-support",
+        "title": "Live Chat Support",
+        "imageUrl": "home_1759513177408.jpg",
+        "alt": "service9"
+      },
+      {
+        "id": "taxi-support",
+        "title": "Taxi Support",
+        "imageUrl": "home_1759513250725.jpg",
+        "alt": "service10"
+      },
+      {
+        "id": "seo",
+        "title": "Seo",
+        "imageUrl": "home_1759513257981.webp",
+        "alt": "service11"
+      },
+      {
+        "id": "digital-marketing",
+        "title": "Digital Marketing",
+        "imageUrl": "home_1759513341820.jpg",
+        "alt": "service12"
+      }
     ]
   },
   "about": {
@@ -55,11 +158,21 @@ export const homePage = {
       "Our team of experienced developers, engineers, and AI specialists work collaboratively to deliver enterprise software development solutions that are intelligent, scalable, and user-centric."
     ],
     "features": [
-      { "title": "Creative", "subtitle": "Innovation" },
-      { "title": "Team", "subtitle": "Collaboration" },
-      { "title": "Sustainable", "subtitle": "Growth" }
+      {
+        "title": "Creative",
+        "subtitle": "Innovation"
+      },
+      {
+        "title": "Team",
+        "subtitle": "Collaboration"
+      },
+      {
+        "title": "Sustainable",
+        "subtitle": "Growth"
+      }
     ]
   },
+  "titles": ["Next.js", "React", "TailwindCSS", "Secure Apps", "Next.js", "React", "TailwindCSS", "Secure Apps"],
   "process": {
     "title": "Development Process",
     "des": "We follow a structured, transparent, and efficient software development process that ensures custom software solutions are delivered with quality, speed, and scalability.",
@@ -129,13 +242,62 @@ export const homePage = {
     "title": "Our Latest Client Feedback",
     "subtitle": "Testimonials",
     "testimonials": [
-      { "id": 1, "name": "Jonathan Carter", "role": "Startup Founder", "text": "AllSpark transformed our business with its AI-powered solutions. Their team built a scalable, efficient system that automated our operations. Highly recommend!", "image": "/images/testimonials/avatar.png", "rating": 5 },
-      { "id": 2, "name": "David Thompson", "role": "CTO, FinTech Company", "text": "Their cloud-based software development helped us migrate to a high-performance, secure setup. Exceptional technical expertise!", "image": "/images/testimonials/avatar.png", "rating": 5 },
-      { "id": 3, "name": "Emily Roberts", "role": "AI Researcher", "text": "The AI automation tools AllSpark delivered saved our team countless hours. Their machine learning knowledge is unmatched.", "image": "/images/testimonials/avatar-2.png", "rating": 5 },
-      { "id": 4, "name": "Michael Lee", "role": "SaaS Product Manager", "text": "Seamless collaboration with AllSpark. Their innovative development improved our app’s performance and security.", "image": "/images/testimonials/avatar.png", "rating": 5 },
-      { "id": 5, "name": "Rachel Green", "role": "Healthcare IT Specialist", "text": "AllSpark developed a secure telehealth platform with complex integrations. Their enterprise software development firm experience really stood out.", "image": "/images/testimonials/avatar-2.png", "rating": 5 },
-      { "id": 6, "name": "James Wilson", "role": "Logistics Operations Manager", "text": "The custom ERP they built streamlined our supply chain. Fast delivery and excellent responsiveness from a skilled software development agency.", "image": "/images/testimonials/avatar.png", "rating": 5 },
-      { "id": 7, "name": "Natalie Cooper", "role": "Digital Marketing Consultant", "text": "Their automation features supercharged our ad campaigns. Truly a tech-enabled software development company worth partnering with.", "image": "/images/testimonials/avatar-2.png", "rating": 5 }
+      {
+        "id": 1,
+        "name": "Jonathan Carter",
+        "role": "Startup Founder",
+        "text": "AllSpark transformed our business with its AI-powered solutions. Their team built a scalable, efficient system that automated our operations. Highly recommend!",
+        "image": "/images/testimonials/avatar.png",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "David Thompson",
+        "role": "CTO, FinTech Company",
+        "text": "Their cloud-based software development helped us migrate to a high-performance, secure setup. Exceptional technical expertise!",
+        "image": "/images/testimonials/avatar.png",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Emily Roberts",
+        "role": "AI Researcher",
+        "text": "The AI automation tools AllSpark delivered saved our team countless hours. Their machine learning knowledge is unmatched.",
+        "image": "/images/testimonials/avatar-2.png",
+        "rating": 5
+      },
+      {
+        "id": 4,
+        "name": "Michael Lee",
+        "role": "SaaS Product Manager",
+        "text": "Seamless collaboration with AllSpark. Their innovative development improved our app’s performance and security.",
+        "image": "/images/testimonials/avatar.png",
+        "rating": 5
+      },
+      {
+        "id": 5,
+        "name": "Rachel Green",
+        "role": "Healthcare IT Specialist",
+        "text": "AllSpark developed a secure telehealth platform with complex integrations. Their enterprise software development firm experience really stood out.",
+        "image": "/images/testimonials/avatar-2.png",
+        "rating": 5
+      },
+      {
+        "id": 6,
+        "name": "James Wilson",
+        "role": "Logistics Operations Manager",
+        "text": "The custom ERP they built streamlined our supply chain. Fast delivery and excellent responsiveness from a skilled software development agency.",
+        "image": "/images/testimonials/avatar.png",
+        "rating": 5
+      },
+      {
+        "id": 7,
+        "name": "Natalie Cooper",
+        "role": "Digital Marketing Consultant",
+        "text": "Their automation features supercharged our ad campaigns. Truly a tech-enabled software development company worth partnering with.",
+        "image": "/images/testimonials/avatar-2.png",
+        "rating": 5
+      }
     ]
   },
   "metadata": {
@@ -157,7 +319,10 @@ export const homePage = {
     "alternates": {
       "canonical": "https://allsparktechnologies.com/"
     },
-    "robots": { "index": true, "follow": true }
+    "robots": {
+      "index": true,
+      "follow": true
+    }
   },
   "script": {
     "@context": "https://schema.org",
@@ -176,14 +341,19 @@ export const homePage = {
             ],
             "description": "AllSpark Technologies is a leading software development company and AI development agency in the USA, offering custom software, cloud, DevOps, and full-stack solutions.",
             "foundingDate": "2010",
-            "address": { "@type": "PostalAddress", "addressCountry": "US" }
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "US"
+            }
           },
           {
             "@type": "WebSite",
             "@id": "https://allsparktechnologies.com/#website",
             "url": "https://allsparktechnologies.com",
             "name": "AllSpark Technologies",
-            "publisher": { "@id": "https://allsparktechnologies.com/#organization" },
+            "publisher": {
+              "@id": "https://allsparktechnologies.com/#organization"
+            },
             "potentialAction": {
               "@type": "SearchAction",
               "target": "https://allsparktechnologies.com/search?q={search_term_string}",
@@ -197,8 +367,12 @@ export const homePage = {
             "name": "Custom Software Development Company & AI Solutions | AllSpark Technologies",
             "description": "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
             "inLanguage": "en-US",
-            "isPartOf": { "@id": "https://allsparktechnologies.com/#website" },
-            "about": { "@id": "https://allsparktechnologies.com/#organization" }
+            "isPartOf": {
+              "@id": "https://allsparktechnologies.com/#website"
+            },
+            "about": {
+              "@id": "https://allsparktechnologies.com/#organization"
+            }
           },
           {
             "@type": "FAQPage",
@@ -6233,10 +6407,10 @@ export const CustomSoftwareDevelopment: ServicePageData = {
     "des2": "As a leading custom software development company in the USA, AllSpark Technologies delivers secure, enterprise-grade, and scalable software services. Our team of custom software developers ensures your business gains competitive advantage with future-ready solutions."
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       { "image": "industry1.png", "title": "Healthcare Software Development", "des": "We build secure, compliant, and scalable healthcare applications integrating medical systems, improving patient management, analytics, and overall outcomes.", "btnText": "Explore More" },
       { "image": "industry1.png", "title": "E-commerce", "des": "Develop scalable e-commerce platforms with a focus on smooth user experiences, secure transactions, and a streamlined checkout process. Our solutions help your online store grow efficiently while maximizing customer satisfaction.", "btnText": "Explore More" },
@@ -6576,10 +6750,10 @@ export const WebDevelopment: ServicePageData = {
     "des2": "We deliver specialized website creation services across diverse sectors, understanding unique industry challenges and opportunities."
   },
   "serviceIndustries": {
-   "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -6936,10 +7110,10 @@ export const MobileAppDevelopment: ServicePageData = {
     "des2": "Let us help you stay ahead in a competitive digital world with our industry-specific expertise."
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -7292,10 +7466,10 @@ export const AiAndMachineLearning: ServicePageData = {
     "des2": "We are one of the leading AI development companies committed to turning your industry-specific data into a powerful strategic asset."
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -7585,10 +7759,10 @@ export const UiAndUxDesign: ServicePageData = {
     "des2": "From healthcare to fintech and enterprise solutions, our UI UX services empower businesses to achieve meaningful engagement, market differentiation, and measurable value across every digital touchpoint."
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -7878,10 +8052,10 @@ export const EcommerceDevelopment: ServicePageData = {
     "des2": "With expertise in Shopify and WooCommerce, we develop secure, scalable, and high-performing stores that help businesses grow in the competitive online marketplace. From product management and integrations to payment gateways and advanced features, we ensure your store is fully optimized to attract customers, boost conversions, and maximize ROI."
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -7976,7 +8150,7 @@ export const EcommerceDevelopment: ServicePageData = {
     "btnText": "Get In Touch"
   }
 }
-export const customeSupport: ServicePageData={
+export const customeSupport: ServicePageData = {
   "serviceHero": {
     "btnText": "Digital Marketing Solutions",
     "btnText2": "GET STARTED",
@@ -8180,10 +8354,10 @@ export const customeSupport: ServicePageData={
     "des2": "With a focus on personalization and efficiency, we tailor our approach to match your brand voice while streamlining operations. This allows your team to stay focused on core business priorities while we take care of building stronger, lasting customer relationships.\n"
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "service_1758725471499.webp",
@@ -8278,7 +8452,7 @@ export const customeSupport: ServicePageData={
     "btnText": "Get In Touch"
   }
 }
-export const emailSupport: ServicePageData={
+export const emailSupport: ServicePageData = {
   "serviceHero": {
     "btnText": "Digital Marketing Solutions",
     "btnText2": "GET STARTED",
@@ -8483,10 +8657,10 @@ export const emailSupport: ServicePageData={
     "des2": "We act as an extension of your brand, aligning every response with your voice and values.Our scalable solutions adapt seamlessly as your business grows and customer needs evolve.With All Spark Technologies, email support becomes a driver of trust, loyalty, and measurable results.\n"
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "service_1758725471499.webp",
@@ -8588,7 +8762,7 @@ export const emailSupport: ServicePageData={
     "btnText": "Get In Touch"
   }
 }
-export const liveChatSupport: ServicePageData={
+export const liveChatSupport: ServicePageData = {
   "serviceHero": {
     "btnText": "Digital Marketing Solutions",
     "btnText2": "GET STARTED",
@@ -8794,10 +8968,10 @@ export const liveChatSupport: ServicePageData={
     "des2": "Our live chat support is designed to seamlessly integrate with your website and CRM systems for smooth operations.\nWe adapt our approach to match your brand tone, ensuring customers always feel connected and valued.\nWith scalable solutions, we help you manage growing demand without compromising quality or response times.\n"
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "service_1758725471499.webp",
@@ -8892,7 +9066,7 @@ export const liveChatSupport: ServicePageData={
     "btnText": "Get In Touch"
   }
 }
-export const taxiSupport: ServicePageData={
+export const taxiSupport: ServicePageData = {
   "serviceHero": {
     "btnText": "Digital Marketing Solutions",
     "btnText2": "GET STARTED",
@@ -9096,10 +9270,10 @@ export const taxiSupport: ServicePageData={
     "des2": "We integrate seamlessly with your existing systems to keep operations smooth and transparent.\nOur trained agents handle high volumes without compromising accuracy or service quality.\nBy aligning with your brand standards, we ensure passengers experience professionalism at every touchpoint.\n"
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "service_1758725471499.webp",
@@ -9410,10 +9584,10 @@ export const seo: ServicePageData = {
     "des2": "From startups to enterprises, we help companies increase their online presence, connect with target audiences, and achieve sustainable growth."
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",
@@ -9699,10 +9873,10 @@ export const DigitalMarketing: ServicePageData = {
     "des2": "Whether you are a marketing company for small business or a large enterprise, we adapt our proven methodologies to deliver exceptional results across all sectors."
   },
   "serviceIndustries": {
-    "mainImage":"industrybg.png",
-    "btnText":"Industries We Support",
-    "title":"Sectors We Deliver Solutions For",
-    "des":" We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
+    "mainImage": "industrybg.png",
+    "btnText": "Industries We Support",
+    "title": "Sectors We Deliver Solutions For",
+    "des": " We provide tailored ecommerce solutions across industries, helping brands enhance customer experience and achieve growth in fashion, health, food, electronics, home, and fitness.",
     "industries": [
       {
         "image": "industry1.png",

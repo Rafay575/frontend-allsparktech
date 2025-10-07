@@ -2,6 +2,7 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { baseURL } from "@/API/baseURL";
+import { motion } from "framer-motion";
 
 
 interface about{
@@ -27,8 +28,15 @@ export default function AboutSection({about}:{about: about}) {
   return (
     <section className="relative bg overflow-x-hidden py-28 text-white">
       <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-3 lg:px-6 lg:flex-row">
+        
         {/* Left Image Column */}
-        <div className="relative w-full mx-auto lg:mx-0 max-w-md">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="relative w-full mx-auto lg:mx-0 max-w-md"
+        >
           {/* Main Image */}
           <div className="relative overflow-hidden rounded-3xl w-full h-auto">
             <Image
@@ -66,17 +74,23 @@ export default function AboutSection({about}:{about: about}) {
               unoptimized
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Text Column */}
-        <div className="w-full max-w-lg mx-auto lg:text-left">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="w-full max-w-lg mx-auto lg:text-left"
+        >
           <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
             <span>{about.subheading}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
-          <h2 className="heading font-bold !leading-normal ">
+          <h2 className="heading font-bold !leading-normal">
             {about.mainHeading}
           </h2>
 
@@ -86,11 +100,11 @@ export default function AboutSection({about}:{about: about}) {
           </p>
 
           {/* Features Section */}
-          <div className="flex flex-wrap lg:flex-nowrap gap-2 mt-10  justify-start ">
-            {about?.features?.map((feature, index) => (
+          <div className="flex flex-wrap lg:flex-nowrap gap-2 mt-10 justify-start">
+            {about?.features?.map((feature: any, index: number) => (
               <div
                 key={index}
-                className="flex items-center space-x-2 bg-[#5666ff]  p-2 pr-3 rounded-lg"
+                className="flex items-center space-x-2 bg-[#5666ff] p-2 pr-3 rounded-lg"
               >
                 <div className="bg-white p-3 rounded-lg flex items-center justify-center">
                   {index === 0 ? (
@@ -148,13 +162,15 @@ export default function AboutSection({about}:{about: about}) {
                   )}
                 </div>
                 <div className="flex flex-col">
-                  <h6 className="text-white font-semibold para">{feature.title}</h6>
+                  <h6 className="text-white font-semibold para">
+                    {feature.title}
+                  </h6>
                   <p className="text-white text-[12px]">{feature.subtitle}</p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

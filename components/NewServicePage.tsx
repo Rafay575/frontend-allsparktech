@@ -16,7 +16,7 @@ import { ServicePageDataProps } from "@/lib/types"
 
 export default function NewServicePage({ servicePageData }: ServicePageDataProps) {
 
-    console.log(servicePageData)
+    // console.log(servicePageData)
     return (
         <>
             <ServiceHero serviceHero={servicePageData.serviceHero} />

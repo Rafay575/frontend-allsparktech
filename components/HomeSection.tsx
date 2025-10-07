@@ -16,9 +16,14 @@ import Marquee from "@/components/Marquee";
 
 export interface HomePageData {
   hero: {
-    texts: string[];
-    features: string[];
-  };
+  bg: string;
+  topBtn: string;
+  topBtnLink: string;
+  title: string;
+  des: string;
+  bottomBtn: string;
+  bottomBtnLink: string;
+}[];
   logos: {
     id: number;
     src: string;
@@ -49,19 +54,20 @@ export interface HomePageData {
       subtitle: string;
     }[];
   };
+  titles:string[];
   process: {
-      title: string;
-      des: string;
-      image: string | StaticImageData;
-      link: string;
-      process: {
+    title: string;
+    des: string;
+    image: string | StaticImageData;
+    link: string;
+    process: {
       heading: string;
       des: string;
       image: string | StaticImageData;
       dir?: string | StaticImageData;
-  }[];
+    }[];
   };
-  
+
   faq: {
     img1: string;
     img2: string;
@@ -107,11 +113,11 @@ export default function Home({ homeData }: { homeData: HomePageData }) {
     <>
       {/* <Navbar /> */}
       <MetaTitle />
-      <HomePage/>
+      <HomePage hero={homeData.hero}/>
       <ServicesSection homeServices={homeData.homeServices} />
       <AboutSection about={homeData.about} />
-      <Marquee/>
-      <HomeProcess homeProcess={homeData.process}/>
+      <Marquee titles={homeData.titles} />
+      <HomeProcess homeProcess={homeData.process} />
       <FaqSection faq={homeData.faq} />
       <ContactSection contactBanner={homeData.contactBanner} />
       <TestimonialsSection testimonials={homeData.testimonials} />

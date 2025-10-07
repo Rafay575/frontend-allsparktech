@@ -77,17 +77,17 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
 
   return (
     <>
-      <motion.section
+      <section
         className="max-w-7xl mx-auto px-4 my-8 py-8"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
       >
         {/* Grid layout: two columns on md+ screens, one column on smaller screens */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Left Column */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}>
             <h2 className="mb-4 heading font-bold text-gray-900">
               {pagedata?.title}
             </h2>
@@ -163,10 +163,13 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                 </div>
               </motion.a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Contact Form */}
-          <div>
+          <motion.div initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div>
@@ -292,9 +295,9 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Google Map */}
       <motion.div

@@ -47,7 +47,7 @@ export default function Navbar3() {
       title: "BPO & Tech-Enabled Services",
       items: [
         { href: "/customer-support", label: "Customer Support", icon: "/images/customer-support-icon-01.svg" },
-        { href: "/email-marketing", label: "Email Marketing", icon: "/images/email-marketing-icon-01.svg" },
+        { href: "/email-support", label: "Email Support", icon: "/images/email-marketing-icon-01.svg" },
         { href: "/live-chat-support", label: "Live Chat Support", icon: "/images/live-chat-icon-01.svg" },
         { href: "/taxi-support", label: "Taxi Support", icon: "/images/taxinavicon.png" },
       ],
@@ -218,13 +218,13 @@ export default function Navbar3() {
 
             {/* Panel */}
             <motion.aside
-              className="absolute right-0 top-0 h-full w-80 max-w-[85%] bg-white text-slate-900 shadow-xl"
+              className="absolute right-0 top-0 h-[100vh] w-80 max-w-[85%] bg-white text-slate-900 shadow-xl z-50 "
               variants={drawerVariants}
               role="dialog"
               aria-modal="true"
               aria-label="Mobile navigation"
             >
-              <div className="flex h-[72px] items-center justify-between px-4 border-b border-black/10">
+              <div className="flex h-[72px] items-center justify-between px-4 border-b border-black/10  bg-white">
                 <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center" aria-label="AllSpark Home">
                   <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-7 w-auto" />
                 </Link>
@@ -237,7 +237,7 @@ export default function Navbar3() {
                 </button>
               </div>
 
-              <nav className="px-4 py-4">
+              <nav className="px-4 py-4 z-50 relative bg-white">
                 <Link
                   href="/"
                   onClick={() => setMobileOpen(false)}
