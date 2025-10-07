@@ -3,6 +3,8 @@ import Navbar2 from '@/components/Navbar2'
 import Topnav from '@/components/Topnav'
 import React from 'react'
 import demo from "@/public/images/demo2.png"
+// import { Metadata } from 'next';
+
 import {
     Accordion,
     AccordionContent,
@@ -13,27 +15,10 @@ import Image from 'next/image'
 import ServicesContact from '@/components/ServicesContact'
 import axios from "axios"
 import { baseURL } from "@/API/baseURL"
-// export const dynamic = "force-dynamic";
-// export const revalidate = 0; 
-
-type PageProps = {
-   params: Promise<{ slug: string }>;
-};
 
 async function fetchSubservice(slug: string) {
     try {
-        // const res = await axios.post(
-        //     `${baseURL}/getbyslug`,
-        //     { slug },
-        //     {
-        //         headers: {
-        //             "Cache-Control": "no-store", 
-        //         },
-        //     }
-        // );
-        const res = await axios.post(
-            `${baseURL}/getbyslug`,
-            { slug });
+        const res = await axios.post(`${baseURL}/getbyslug`, { slug });
         return res.data.json;
     } catch (error) {
         console.error("Error fetching subservice:", error);
@@ -42,8 +27,9 @@ async function fetchSubservice(slug: string) {
 }
 
 
-
-
+type PageProps = {
+    params: Promise<{ slug: string }>; // Updated to use Promise
+};
 export async function generateMetadata({ params }: PageProps) {
     const { slug } = await params;
     const subServiceJson = await fetchSubservice(slug);
@@ -61,7 +47,7 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function Page({ params }: PageProps) {
     const { slug } = await params;
     const subServiceJson = await fetchSubservice(slug);
-    // console.log("subServiceJson : ",subServiceJson)
+    console.log("subServiceJson : ",subServiceJson)
 
     if (!subServiceJson) {
         return <div className="p-10 text-red-600">Subservice not found.</div>;
