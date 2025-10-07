@@ -13,8 +13,8 @@ import Image from 'next/image'
 import ServicesContact from '@/components/ServicesContact'
 import axios from "axios"
 import { baseURL } from "@/API/baseURL"
-export const dynamic = "force-dynamic";
-export const revalidate = 0; 
+// export const dynamic = "force-dynamic";
+// export const revalidate = 0; 
 
 type PageProps = {
    params: Promise<{ slug: string }>;
@@ -22,15 +22,18 @@ type PageProps = {
 
 async function fetchSubservice(slug: string) {
     try {
+        // const res = await axios.post(
+        //     `${baseURL}/getbyslug`,
+        //     { slug },
+        //     {
+        //         headers: {
+        //             "Cache-Control": "no-store", 
+        //         },
+        //     }
+        // );
         const res = await axios.post(
             `${baseURL}/getbyslug`,
-            { slug },
-            {
-                headers: {
-                    "Cache-Control": "no-store", 
-                },
-            }
-        );
+            { slug });
         return res.data.json;
     } catch (error) {
         console.error("Error fetching subservice:", error);
