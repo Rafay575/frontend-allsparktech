@@ -3,8 +3,6 @@ import Navbar2 from '@/components/Navbar2'
 import Topnav from '@/components/Topnav'
 import React from 'react'
 import demo from "@/public/images/demo2.png"
-
-
 import {
     Accordion,
     AccordionContent,
@@ -15,6 +13,7 @@ import Image from 'next/image'
 import ServicesContact from '@/components/ServicesContact'
 import axios from "axios"
 import { baseURL } from "@/API/baseURL"
+export const dynamic = "force-dynamic";
 
 async function fetchSubservice(slug: string) {
     try {
@@ -38,9 +37,6 @@ async function fetchSubservice(slug: string) {
 type PageProps = {
     params: Promise<{ slug: string }>; 
 };
-// type PageProps = {
-//     params: { slug: string }; // ✅ not Promise
-// };
 
 
 export async function generateMetadata({ params }: PageProps) {
