@@ -13,9 +13,7 @@ import Image from 'next/image'
 import ServicesContact from '@/components/ServicesContact'
 import axios from "axios"
 import { baseURL } from "@/API/baseURL"
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-export const dynamicParams = true;
+
 
 type PageProps = {
    params: Promise<{ slug: string }>;
@@ -26,12 +24,7 @@ async function fetchSubservice(slug: string) {
     try {
         const res = await axios.post(
             `${baseURL}/getbyslug`,
-            { slug },
-            {
-                headers: {
-                    "Cache-Control": "no-store", 
-                },
-            }
+            { slug }
         );
 
         return res.data.json;
@@ -223,14 +216,14 @@ export default async function Page({ params }: PageProps) {
 
 export async function generateStaticParams() {
   try {
-    const res = await fetch(`${baseURL}/getslug`, { cache: "no-store" });
+    const res = await fetch(`${baseURL}/getslug`);
     const data: string[] = await res.json();
 
     // ✅ Log slugs during build to verify
     console.log("Building slug:", data);
 
     // ✅ Return correct structure and trim spaces
-    return data.map((slug) => ({
+    return data.map((slug:string) => ({
       slug: slug.trim(),
     }));
   } catch (error) {
