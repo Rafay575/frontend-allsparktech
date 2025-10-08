@@ -13,8 +13,7 @@ import Image from 'next/image'
 import ServicesContact from '@/components/ServicesContact'
 import axios from "axios"
 import { baseURL } from "@/API/baseURL"
-
-export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 
 type PageProps = {
