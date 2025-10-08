@@ -13,7 +13,9 @@ import Image from 'next/image'
 import ServicesContact from '@/components/ServicesContact'
 import axios from "axios"
 import { baseURL } from "@/API/baseURL"
-
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export const dynamicParams = true;
 
 type PageProps = {
    params: Promise<{ slug: string }>;
