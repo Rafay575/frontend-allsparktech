@@ -31,35 +31,35 @@ export default function Navbar3() {
     title: string;
     items: { href: string; label: string; icon?: string }[];
   }[] = [
-    {
-      title: "Software Development & AI",
-      items: [
-        { href: "/custom-software-development", label: "Custom Software Development", icon: "/images/development-01.svg" },
-        { href: "/website-development", label: "Website Development", icon: "/images/web-app-development-01.svg" },
-        { href: "/mobile-app-development", label: "Mobile App Development", icon: "/images/mobnavicon.png" },
-        { href: "/ai-and-machine-learning", label: "AI & Machine Learning", icon: "/images/ai-machine-01.svg" },
-        { href: "/cloud-and-devops-solutions", label: "Cloud & DevOps Solutions", icon: "/images/devops-icon.svg" },
-        { href: "/ui-ux-design", label: "UI/UX Design", icon: "/images/social-media-marekting-01.svg" },
-        { href: "/ecommerce-development", label: "Ecommerce Development", icon: "/images/ecommerce-development-icon-01.svg" },
-      ],
-    },
-    {
-      title: "BPO & Tech-Enabled Services",
-      items: [
-        { href: "/customer-support", label: "Customer Support", icon: "/images/customer-support-icon-01.svg" },
-        { href: "/email-support", label: "Email Support", icon: "/images/email-marketing-icon-01.svg" },
-        { href: "/live-chat-support", label: "Live Chat Support", icon: "/images/live-chat-icon-01.svg" },
-        { href: "/taxi-support", label: "Taxi Support", icon: "/images/taxinavicon.png" },
-      ],
-    },
-    {
-      title: "Marketing & Engagement",
-      items: [
-        { href: "/seo", label: "SEO", icon: "/images/seonavicon.png" },
-        { href: "/digital-marketing", label: "Digital Marketing", icon: "/images/digital-marketing-icon-01.svg" },
-      ],
-    },
-  ];
+      {
+        title: "Software Development & AI",
+        items: [
+          { href: "/custom-software-development", label: "Custom Software Development", icon: "/images/development-01.svg" },
+          { href: "/website-development", label: "Website Development", icon: "/images/web-app-development-01.svg" },
+          { href: "/mobile-app-development", label: "Mobile App Development", icon: "/images/mobnavicon.png" },
+          { href: "/ai-and-machine-learning", label: "AI & Machine Learning", icon: "/images/ai-machine-01.svg" },
+          { href: "/cloud-and-devops-solutions", label: "Cloud & DevOps Solutions", icon: "/images/devops-icon.svg" },
+          { href: "/ui-ux-design", label: "UI/UX Design", icon: "/images/social-media-marekting-01.svg" },
+          { href: "/ecommerce-development", label: "Ecommerce Development", icon: "/images/ecommerce-development-icon-01.svg" },
+        ],
+      },
+      {
+        title: "BPO & Tech-Enabled Services",
+        items: [
+          { href: "/customer-support", label: "Customer Support", icon: "/images/customer-support-icon-01.svg" },
+          { href: "/email-support", label: "Email Support", icon: "/images/email-marketing-icon-01.svg" },
+          { href: "/live-chat-support", label: "Live Chat Support", icon: "/images/live-chat-icon-01.svg" },
+          { href: "/taxi-support", label: "Taxi Support", icon: "/images/taxinavicon.png" },
+        ],
+      },
+      {
+        title: "Marketing & Engagement",
+        items: [
+          { href: "/seo", label: "SEO", icon: "/images/seonavicon.png" },
+          { href: "/digital-marketing", label: "Digital Marketing", icon: "/images/digital-marketing-icon-01.svg" },
+        ],
+      },
+    ];
 
   // Framer variants
   const headerVariants = {
@@ -85,7 +85,7 @@ export default function Navbar3() {
     exit: { opacity: 0, transition: { duration: 0.2 } },
   };
 
-  const wrapBase = 
+  const wrapBase =
     "fixed  inset-x-0 top-0 z-50 border-b transition-colors duration-300";
   const surface = scrolled
     ? "bg-white/95 text-slate-900 border-black/10 shadow-sm backdrop-blur"
@@ -102,116 +102,120 @@ export default function Navbar3() {
       animate="animate"
       role="banner"
     >
-      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4">
-        {/* Left: Logo */}
-        <Link href="/" className="flex items-center gap-3" aria-label="AllSpark Home">
-         
-          {scrolled == true ? <Image src="/images/logo.svg" alt="logo" width={128} height={32} className="h-8 w-auto" priority />: <Image src="images/footer-logo copy.svg" alt="logo" width={128} height={32} className="h-8 w-auto" priority />}
-        </Link>
+      <div className="mx-auto  w-[100vw]  ">
+        <div className="container flex items-center justify-between py-[15px] ">
 
-        {/* Desktop Nav (lg+) */}
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
-          <Link href="/" className={`${linkBase} ${linkColor}`}>Home</Link>
-          <Link href="/about" className={`${linkBase} ${linkColor}`}>About</Link>
+          {/* Left: Logo */}
+          <Link href="/" className="flex items-center gap-3" aria-label="AllSpark Home">
 
-          {/* Mega Dropdown with FM smoothness */}
-          <div
-            
-            onMouseEnter={() => setMegaOpen(true)}
-            onMouseLeave={() => setMegaOpen(false)}
-          >
-            <button
-              className={`${linkBase} ${linkColor} flex items-center gap-1`}
-              
-              aria-expanded={megaOpen}
-           
+            {scrolled == true ? <Image src="/images/logo.svg" alt="logo" width={128} height={32} className="h-8 w-auto" priority /> : <Image src="images/footer-logo copy.svg" alt="logo" width={128} height={32} className="h-8 w-auto" priority />}
+          </Link>
+
+          {/* Desktop Nav (lg+) */}
+          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+            <Link href="/" className={`${linkBase} ${linkColor}`}>Home</Link>
+            <Link href="/about" className={`${linkBase} ${linkColor}`}>About</Link>
+
+            {/* Mega Dropdown with FM smoothness */}
+            <div
+
+              onMouseEnter={() => setMegaOpen(true)}
+              onMouseLeave={() => setMegaOpen(false)}
             >
-              Services
-              <ChevronDown
-                className={`h-4 w-4 opacity-80 transition-transform ${megaOpen ? "rotate-180" : ""}`}
-              />
-            </button>
+              <button
+                className={`${linkBase} ${linkColor} flex items-center gap-1`}
 
-            <AnimatePresence >
-              {megaOpen && (
-                <motion.div
-                  id="services-mega"
-                  role="menu"
-                  aria-label="Services"
-                  className="absolute left-[12%] top-full z-[60] mt-2 w-[75vw] "
-                  variants={megaVariants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                >
-                  <div className="rounded-xl border border-black/10 bg-white shadow-xl">
-                    <div className="px-[100px] py-6 pb-[60px]">
-                      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-1 md:grid-cols-3">
-                        {megaCols.map((col) => (
-                          <div key={col.title}>
-                            <h3 className="mb-2 text-base font-bold text-gray-800">{col.title}</h3>
-                            <ul className="mt-4  pl-1 text-sm list-none">
-                              {col.items.map((it) => (
-                                <li key={it.href}>
-                                  <Link
-                                    href={it.href}
-                                    className="flex items-center rounded-md px-2 py-2 text-gray-700 transition hover:bg-slate-100 hover:text-slate-900"
-                                  >
-                                    {it.icon && (
-                                      <Image
-                                        src={it.icon}
-                                        alt=""
-                                        width={28}
-                                        height={28}
-                                        className="mr-2 h-7 w-7 object-contain"
-                                      />
-                                    )}
-                                    {it.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
+                aria-expanded={megaOpen}
+
+              >
+                Services
+                <ChevronDown
+                  className={`h-4 w-4 opacity-80 transition-transform ${megaOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              <AnimatePresence >
+                {megaOpen && (
+                  <motion.div
+                    id="services-mega"
+                    role="menu"
+                    aria-label="Services"
+                    className="absolute left-[12%] top-full z-[60] mt-2 w-[75vw] "
+                    variants={megaVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                  >
+                    <div className="rounded-xl border border-black/10 bg-white shadow-xl">
+                      <div className="px-[100px] py-6 pb-[60px]">
+                        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-1 md:grid-cols-3">
+                          {megaCols.map((col) => (
+                            <div key={col.title}>
+                              <h3 className="mb-2 text-base font-bold text-gray-800">{col.title}</h3>
+                              <ul className="mt-4  pl-1 text-sm list-none">
+                                {col.items.map((it) => (
+                                  <li key={it.href}>
+                                    <Link
+                                      href={it.href}
+                                      className="flex items-center rounded-md px-2 py-2 text-gray-700 transition hover:bg-slate-100 hover:text-slate-900"
+                                    >
+                                      {it.icon && (
+                                        <Image
+                                          src={it.icon}
+                                          alt=""
+                                          width={28}
+                                          height={28}
+                                          className="mr-2 h-7 w-7 object-contain"
+                                        />
+                                      )}
+                                      {it.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
-          <Link href="/contact" className={`${linkBase} ${linkColor}`}>Contact</Link>
-          <Link href="/blogs" className={`${linkBase} ${linkColor}`}>Blogs</Link>
-        </nav>
+            <Link href="/contact" className={`${linkBase} ${linkColor}`}>Contact</Link>
+            <Link href="/blogs" className={`${linkBase} ${linkColor}`}>Blogs</Link>
+          </nav>
 
-        {/* CTA (lg+) */}
-        <Link href="/contact" className={quoteBtn}>
-          GET A QUOTE <span className="ml-1">+</span>
-        </Link>
+          {/* CTA (lg+) */}
+          <Link href="/contact" className={quoteBtn}>
+            GET A QUOTE <span className="ml-1">+</span>
+          </Link>
 
-        {/* Mobile burger (sm–md) */}
-        <button
-          className={`lg:hidden inline-flex items-center justify-center rounded-md p-2 ${linkColor}`}
-          aria-label="Open menu"
-          onClick={() => setMobileOpen(true)}
-        >
-          <Menu className="h-6 w-6" />
-        </button>
+          {/* Mobile burger (sm–md) */}
+          <button
+            className={`lg:hidden inline-flex items-center justify-center rounded-md p-2 ${linkColor}`}
+            aria-label="Open menu"
+            onClick={() => setMobileOpen(true)}
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+
+        </div>
       </div>
 
       {/* Mobile Drawer with FM */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="lg:hidden fixed inset-0 z-[70]"
+            className="lg:hidden fixed inset-0 z-[70] "
             initial="hidden"
             animate="show"
             exit="exit"
           >
             {/* Backdrop */}
             <motion.div
-              className="absolute inset-0 bg-black"
+              className="absolute inset-0 bg-black "
               variants={backdropVariants}
               onClick={() => setMobileOpen(false)}
             />

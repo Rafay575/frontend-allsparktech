@@ -91,7 +91,7 @@ export default function RootLayout({
         </Script>
       </head>
 
-      <body className={`${plusJakartaSans.className} antialiased`}>
+      <body className={`${plusJakartaSans.className} antialiased `}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-T96MJWT5"

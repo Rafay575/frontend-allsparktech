@@ -220,22 +220,21 @@ export default async function Page({ params }: PageProps) {
     )
 }
 
-// 👇 Add this at the very end of your file
+
 export async function generateStaticParams() {
   try {
-    const res = await fetch(`${baseURL}/getslug`, {
-      cache: "no-store",
-    });
-
+    const res = await fetch(`${baseURL}/getslug`, { cache: "no-store" });
     const data: string[] = await res.json();
 
-    // Convert array of slugs into Next.js params format
+    // ✅ Log slugs during build to verify
+    console.log("Building slug:", data);
+
+    // ✅ Return correct structure and trim spaces
     return data.map((slug) => ({
-      slug: slug.trim(), // remove spaces just in case
+      slug: slug.trim(),
     }));
   } catch (error) {
     console.error("Error generating static params:", error);
     return [];
   }
 }
-
