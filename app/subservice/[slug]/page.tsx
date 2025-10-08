@@ -13,7 +13,7 @@ import Image from 'next/image'
 import ServicesContact from '@/components/ServicesContact'
 import axios from "axios"
 import { baseURL } from "@/API/baseURL"
-export const revalidate = 0; 
+
 
 type PageProps = {
    params: Promise<{ slug: string }>;
