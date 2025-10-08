@@ -24,7 +24,12 @@ async function fetchSubservice(slug: string) {
     try {
         const res = await axios.post(
             `${baseURL}/getbyslug`,
-            { slug }
+            { slug },
+            {
+                headers: {
+                    "Cache-Control": "no-store", 
+                },
+            }
         );
 
         return res.data.json;
@@ -216,7 +221,7 @@ export default async function Page({ params }: PageProps) {
 
 export async function generateStaticParams() {
   try {
-    const res = await fetch(`${baseURL}/getslug`);
+    const res = await fetch(`${baseURL}/getslug`, { cache: "no-store" });
     const data: string[] = await res.json();
 
     // ✅ Log slugs during build to verify
