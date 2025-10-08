@@ -42,7 +42,7 @@ export default function ServiceTechnologies({
         className="absolute right-0 h-auto object-cover w-auto opacity-40"
       />
 
-      <div className="container pad">
+      <div className="container ">
         <div className="text-white text-center">
           {/* Heading Animation */}
           <motion.p

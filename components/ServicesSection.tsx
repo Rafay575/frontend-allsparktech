@@ -46,10 +46,10 @@ export default function ServicesSection({ homeServices }: { homeServices: homeSe
       whileInView="show"
       viewport={{ once: true }}
       variants={sectionVariants}
-      className="max-w-7xl mx-auto px-4 py-10"
+      className="container  pad"
     >
       {/* text Section */}
-      <div className="mx-auto max-w-7xl text-start">
+      <div className="w-full text-start">
         <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
           <ArrowLeft className="h-4 w-4" />
           <span>{homeServices?.subTitle}</span>

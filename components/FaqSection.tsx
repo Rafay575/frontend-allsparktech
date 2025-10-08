@@ -49,65 +49,59 @@ export default function FaqSection({ faq }: { faq: faq }) {
 
   return (
     <section className="py-16" id="faqs">
-      <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="container  flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* ───────── LEFT IMAGE SECTION ───────── */}
         <motion.div
-          className="relative w-full max-w-md"
+          className="relative w-full lg:w-[43%] mx-auto   "
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           {/* main photo */}
-          <div className="relative overflow-hidden rounded-3xl w-full h-auto">
+          <div className="relative w-full h-auto">
             <Image
               src={`${baseURL}/images/home/${faq.img1}`}
               alt={faq.alt1}
               width={400}
               height={400}
-              className="rounded-3xl w-full h-auto"
+              className="rounded-3xl w-full "
               unoptimized
             />
           </div>
 
           {/* bottom-right overlay */}
-          <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[200px] h-[200px]">
+          <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] !w-[40%]">
             <Image
               src={`${baseURL}/images/home/${faq.img2}`}
               alt={faq.alt2}
-              fill
-              sizes="100px"
-              className="object-contain"
-              unoptimized
+             className="!w-full "
+                width={200}
+                height={200}
             />
           </div>
 
           {/* spinning shape */}
-          <div
-            className="absolute top-0 right-0 w-12 h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16  [@media(min-width:768px)]:w-16 [@media(min-width:768px)]:h-16 [@media(min-width:1024px)]:w-20 [@media(min-width:1024px)]:h-20 [@media(min-width:1280px)]:!w-[80px]  [@media(min-width:1280px)]:!h-[80px]  flex items-center justify-center rounded-full border-2 border-white text-white text-xs uppercase tracking-wide animate-spin"
+          <Image
+            src={`${baseURL}/images/home/${faq.img3}`}
+            alt={faq.alt3}
+            className="w-[20%] absolute top-0 right-0 animate-spin"
             style={{ animationDuration: "4s" }}
-          >
-            <Image
-              src={`${baseURL}/images/home/${faq.img3}`}
-              alt={faq.alt3}
-              fill
-              sizes="80px"
-              className="object-contain"
-              unoptimized
-            />
-          </div>
+            width={200}
+            height={200}
+          />
         </motion.div>
 
         {/* ───────── RIGHT FAQ SECTION ───────── */}
         <motion.div
-          className="w-full max-w-lg"
+          className="w-full lg:w-[57%] lg:text-left   lg:pl-[50px] xl:pl-[80px] flex flex-col justify-center"
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           {/* FAQ Label */}
-          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
+          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color mt-[40px] lg:mt-0">
             <ArrowLeft className="h-4 w-4" />
             <span>{faq.title}</span>
             <ArrowRight className="h-4 w-4" />

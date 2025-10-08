@@ -29,8 +29,8 @@ interface ServiceAboutProps {
 
 export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
   return (
-    <section className="relative bg overflow-hidden pad text-white">
-      <div className="mx-auto container flex pad flex-col-reverse justify-between items-center gap-10 px-3 lg:px-6 lg:flex-row relative z-[20] py-[30px]">
+    <section className="relative bg overflow-hidden pad text-white w-[100vw] overflow-x-hidden">
+      <div className="mx-auto container flex  flex-col-reverse justify-between items-center gap-10 px-3 lg:px-6 lg:flex-row relative z-[20] py-[30px]">
         
         {/* Left Image Column */}
         <motion.div
@@ -97,7 +97,7 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
 
           {/* Features Section */}
           <motion.div
-            className="flex justify-center sm:justify-start flex-wrap xl:flex-nowrap space-x-6 mt-10 gap-2"
+            className="flex justify-center sm:justify-start flex-wrap xl:flex-nowrap  mt-10 gap-2"
             variants={{
               hidden: {},
               show: {
@@ -133,7 +133,7 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
       </div>
 
       {/* Decorative Images */}
-      <Image src={hand} alt="img" className="absolute right-0 top-[10px] lg:top-[100px] z-10 w-[100px] md:w-[130px]" />
+      <Image src={hand} alt="img" className="hidden lg:block absolute right-0 top-[10px] lg:top-[100px] z-10 w-[100px] md:w-[130px]" />
       <Image src={overlay1} alt="img" className="absolute -left-6 -bottom-9 hidden lg:block" />
       <Image src={overlay2} alt="img" className="absolute right-8 bottom-[30px] hidden lg:block" />
     </section>

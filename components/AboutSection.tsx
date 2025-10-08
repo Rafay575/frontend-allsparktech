@@ -5,73 +5,68 @@ import { baseURL } from "@/API/baseURL";
 import { motion } from "framer-motion";
 
 
-interface about{
-    img1: string;
-    img2: string;
-    img3: string;
-    alt1: string;
-    alt2: string;
-    alt3: string;
-    subheading: string;
-    mainHeading: string;
-    paragraphs: string[];
-    features: {
-      title: string;
-      subtitle: string;
-    }[];
-  }
+interface about {
+  img1: string;
+  img2: string;
+  img3: string;
+  alt1: string;
+  alt2: string;
+  alt3: string;
+  subheading: string;
+  mainHeading: string;
+  paragraphs: string[];
+  features: {
+    title: string;
+    subtitle: string;
+  }[];
+}
 
-export default function AboutSection({about}:{about: about}) {
+export default function AboutSection({ about }: { about: about }) {
 
 
 
   return (
-    <section className="relative bg overflow-x-hidden py-28 text-white">
-      <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-3 lg:px-6 lg:flex-row">
-        
+    <section className="relative bg overflow-x-hidden pad text-white">
+      <div className="container flex flex-col-reverse  justify-between gap-10  lg:flex-row">
+
         {/* Left Image Column */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative w-full mx-auto lg:mx-0 max-w-md"
-        >
-          {/* Main Image */}
-          <div className="relative overflow-hidden rounded-3xl w-full h-auto">
+          className="relative w-full lg:w-[43%] mx-auto pr-[40px] lg:pr-0  py-[20px]  flex flex-col justify-center">
+          <div className="relative w-full ">
+
+
+            {/* Main Image */}
             <Image
               src={`${baseURL}/images/home/${about.img1}`}
               alt={about.alt1}
               width={400}
               height={400}
-              className="rounded-3xl w-full h-auto"
-              unoptimized
+              className=" !w-full "
             />
-          </div>
 
-          {/* Overlapping Image */}
-          <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
-            <Image
-              src={`${baseURL}/images/home/${about.img2}`}
-              alt={about.alt2}
-              fill
-              sizes="100px"
-              className="object-contain"
-              unoptimized
-            />
-          </div>
+            {/* Overlapping Image */}
+            <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] !w-[40%]">
+              <Image
+                src={`${baseURL}/images/home/${about.img2}`}
+                alt={about.alt2}
+                className="!w-full "
+                width={200}
+                height={200}
+              />
+            </div>
 
-          {/* Floating Shape */}
-          <div
-            className="absolute top-0 right-0 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-[80px] xl:h-[80px] flex items-center justify-center rounded-full border-2 border-white text-white animate-spin"
-            style={{ animationDuration: "4s" }}
-          >
+            {/* Floating Shape */}
             <Image
               src={`${baseURL}/images/home/${about.img3}`}
               alt={about.alt3}
-              fill
-              className="object-cover"
-              unoptimized
+              className="w-[20%] absolute top-0 right-0 animate-spin"
+              style={{ animationDuration: "4s" }}
+              width={200}
+              height={200}
             />
           </div>
         </motion.div>
@@ -82,7 +77,7 @@ export default function AboutSection({about}:{about: about}) {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="w-full max-w-lg mx-auto lg:text-left"
+          className="w-full lg:w-[57%] lg:text-left   lg:pl-[50px] xl:pl-[80px] flex flex-col justify-center "
         >
           <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
