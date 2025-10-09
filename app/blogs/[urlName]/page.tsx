@@ -75,9 +75,7 @@ export default async function BlogDetailPage({ params }: any) {
   }
 
   // 🔥 SSR fetch (always fresh)
-  const res = await fetch(`${baseURL}/blogs/${params.urlName}`, {
-    cache: "no-store", // ❌ disables caching → SSR
-  });
+  const res = await fetch(`${baseURL}/blogs/${params.urlName}`);
 
   if (!res.ok) return <h1>No detail fetch</h1>;
   const blog: BlogData = await res.json();
