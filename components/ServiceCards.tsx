@@ -45,7 +45,7 @@ export default function ServiceCards({ aboutData }: { aboutData: aboutData }) {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-10 md:pt-16 lg:pt-20">
+    <div className="container pad">
       <motion.div
         className="grid grid-cols-1 lg:grid-cols-3 gap-6"
         variants={parentVariants}
@@ -57,21 +57,21 @@ export default function ServiceCards({ aboutData }: { aboutData: aboutData }) {
           <motion.div
             key={i}
             variants={cardVariants}
-            className="border-2 flex justify-center border-[#E4E9FF] bg-[#F3F6FD] p-6 text-center rounded-[12px]"
+            className="border-2 flex flex-col  items-center sm:items-start border-[#E4E9FF] bg-[#F3F6FD] p-6 text-center rounded-[12px]"
           >
-            <div className="mb-4 mt-2 text-[#1D4ED8]">
-              <Image
-                src={`/images/Layer_${i + 1}.svg`}
-                alt={`icon ${i + 1}`}
-                width={95}
-                height={95}
-              />
-            </div>
-            <div className="flex flex-col text-start items-start ml-3">
+            <Image
+              src={`/images/Layer_${i + 1}.svg`}
+              alt={`icon ${i + 1}`}
+              width={95}
+              height={95}
+              className="w-[20%] sm:w-[10%] lg:w-[20%] mb-4 mt-2 text-[#1D4ED8] "
+            />
+
+            <div className="flex flex-col items-center sm:items-start w-full text-center sm:text-start">
               <h5 className="mb-2 subheading font-semibold text-gray-800">
                 {aboutData.cards?.[i]?.title || "Title"}
               </h5>
-              <p className="mb-4 para text-gray-600 leading-relaxed">
+              <p className="mb-4 para text-gray-600 leading-relaxed ">
                 {aboutData.cards?.[i]?.description || "Description"}
               </p>
             </div>

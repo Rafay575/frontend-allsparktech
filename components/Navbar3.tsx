@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { MdKeyboardArrowRight } from "react-icons/md";
 export default function Navbar3() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -49,13 +49,13 @@ export default function Navbar3() {
           { href: "/customer-support", label: "Customer Support", icon: "/images/customer-support-icon-01.svg" },
           { href: "/email-support", label: "Email Support", icon: "/images/email-marketing-icon-01.svg" },
           { href: "/live-chat-support", label: "Live Chat Support", icon: "/images/live-chat-icon-01.svg" },
-          { href: "/taxi-support", label: "Taxi Support", icon: "/images/taxinavicon.png" },
+          { href: "/taxi-support", label: "Taxi Support", icon: "/images/taxi.png" },
         ],
       },
       {
         title: "Marketing & Engagement",
         items: [
-          { href: "/seo", label: "SEO", icon: "/images/seonavicon.png" },
+          { href: "/seo", label: "SEO", icon: "/images/seo.png" },
           { href: "/digital-marketing", label: "Digital Marketing", icon: "/images/digital-marketing-icon-01.svg" },
         ],
       },
@@ -92,7 +92,7 @@ export default function Navbar3() {
     : "md:bg-transparent text-white border-white/10";
 
   const quoteBtn =
-    "hidden lg:inline-flex rounded-full px-5 py-2.5 text-sm font-semibold uppercase tracking-wide bg-[#384bff] text-white hover:brightness-110 transition-colors";
+    "hidden lg:inline-flex items-center  rounded-full px-5 py-2.5 text-sm font-semibold uppercase tracking-wide bg-[#384bff] text-white hover:brightness-110 transition-colors";
 
   return (
     <motion.header
@@ -157,7 +157,7 @@ export default function Navbar3() {
                                   <li key={it.href}>
                                     <Link
                                       href={it.href}
-                                      className="flex items-center rounded-md px-2 py-2 text-gray-700 transition hover:bg-slate-100 hover:text-slate-900"
+                                      className="flex items-center rounded-md  text-gray-700 transition px-2 py-2 hover:bg-slate-100 hover:text-slate-900"
                                     >
                                       {it.icon && (
                                         <Image
@@ -188,8 +188,8 @@ export default function Navbar3() {
           </nav>
 
           {/* CTA (lg+) */}
-          <Link href="/contact" className={quoteBtn}>
-            GET A QUOTE <span className="ml-1">+</span>
+          <Link href="/contact" className={quoteBtn }>
+            GET A QUOTE <span ><MdKeyboardArrowRight className="text-[20px]"/></span>
           </Link>
 
           {/* Mobile burger (sm–md) */}
@@ -317,7 +317,7 @@ export default function Navbar3() {
                     onClick={() => setMobileOpen(false)}
                     className="inline-flex w-full items-center justify-center rounded-full bg-[#384bff] px-5 py-2.5 text-sm font-semibold text-white"
                   >
-                    GET A QUOTE +
+                    GET A QUOTE <span><MdKeyboardArrowRight className="text-[20px]"/></span>
                   </Link>
                 </div>
               </nav>

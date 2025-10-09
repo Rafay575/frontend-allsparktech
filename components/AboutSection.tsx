@@ -27,7 +27,7 @@ export default function AboutSection({ about }: { about: about }) {
 
   return (
     <section className="relative bg overflow-x-hidden pad text-white">
-      <div className="container flex flex-col-reverse  justify-between gap-10  lg:flex-row">
+      <div className="container flex flex-col-reverse  justify-between gap-10  lg:flex-row" >
 
         {/* Left Image Column */}
         <motion.div
@@ -79,23 +79,23 @@ export default function AboutSection({ about }: { about: about }) {
           viewport={{ once: true }}
           className="w-full lg:w-[57%] lg:text-left   lg:pl-[50px] xl:pl-[80px] flex flex-col justify-center "
         >
-          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide text-white">
+          <div className="mb-2 flex items-center justify-center sm:justify-start space-x-4 para font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
             <span>{about.subheading}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
-          <h2 className="heading font-bold !leading-normal">
+          <h2 className="heading font-bold !leading-normal text-center sm:text-start">
             {about.mainHeading}
           </h2>
 
-          <p className="mt-4 para text-white/80">
+          <p className="mt-4 para text-white/80 text-center sm:text-start">
             <span className="mb-5 block">{about.paragraphs[0]}</span>
             <span className="mt-5 block">{about.paragraphs[1]}</span>
           </p>
 
           {/* Features Section */}
-          <div className="flex flex-wrap lg:flex-nowrap gap-2 mt-10 justify-start">
+          <div className="flex flex-wrap lg:flex-nowrap gap-2 mt-10 justify-center sm:justify-start">
             {about?.features?.map((feature: any, index: number) => (
               <div
                 key={index}

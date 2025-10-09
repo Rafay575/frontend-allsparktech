@@ -8,14 +8,11 @@ import { MdOutlineDateRange } from "react-icons/md";
 import Image from "next/image";
 import authorimg from "@/public/images/blogs/blogauthor.jpg"
 import BlogFaqs from "@/components/BlogFaqs";
-export const dynamic = "force-dynamic";
 
 // ✅ Metadata SSR
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   try {
-    const res = await fetch(`${baseURL}/blogs/${params.urlName}`, {
-      cache: "no-store", // 🔥 always fetch fresh for metadata too
-    });
+    const res = await fetch(`${baseURL}/blogs/${params.urlName}`);
     if (!res.ok) throw new Error("Metadata fetch failed");
 
     const data = await res.json();
@@ -228,12 +225,12 @@ export default async function BlogDetailPage({ params }: any) {
   );
 }
 
-// ❌ Remove this for SSR
-// export async function generateStaticParams() {
-//   const res = await fetch(`${baseURL}/blogs`);
-//   const blogs = await res.json();
 
-//   return blogs.map((blog: { urlName: string }) => ({
-//     urlName: blog.urlName,
-//   }));
-// }
+export async function generateStaticParams() {
+  const res = await fetch(`${baseURL}/blogs`);
+  const blogs = await res.json();
+
+  return blogs.map((blog: { urlName: string }) => ({
+    urlName: blog.urlName,
+  }));
+}

@@ -9,6 +9,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaSearchengin } from "react-icons/fa";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaTaxi } from "react-icons/fa";
+import { MdKeyboardArrowRight } from "react-icons/md";
+
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
@@ -101,12 +103,12 @@ export default function Navbar2() {
                       <h3 className="mb-3 text-[15px] xl:text-[17px] font-bold text-gray-800">
                         Software Development & AI
                       </h3>
-                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
+                      <div className=" pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
                         <Link
                           href={{
                             pathname: "/custom-software-development"
                           }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300 "
+                          className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300  "
                         >
                           <Image
                             className="mr-2"
@@ -121,7 +123,7 @@ export default function Navbar2() {
                           href={{
                             pathname: "/website-development"
                           }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                          className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300"
                         >
                           <Image
                             className="mr-2"
@@ -136,7 +138,7 @@ export default function Navbar2() {
                           href={{
                             pathname: "/mobile-app-development"
                           }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                          className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300"
                         >
                           <FaMobileAlt className="text-[27px] mr-[7px] text-[#6b7cff]" />
                           Mobile App Development
@@ -145,7 +147,7 @@ export default function Navbar2() {
                           href={{
                             pathname: "/ai-and-machine-learning"
                           }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                          className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300"
                         >
                           <Image
                             className="mr-2"
@@ -162,7 +164,7 @@ export default function Navbar2() {
                           href={{
                             pathname: "/ui-ux-design"
                           }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300 "
+                          className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300 "
                         >
                           <Image
                             className="mr-2"
@@ -178,7 +180,7 @@ export default function Navbar2() {
                           href={{
                             pathname: "/ecommerce-development"
                           }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                          className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300"
                         >
                           <Image
                             className="mr-2"
@@ -197,13 +199,13 @@ export default function Navbar2() {
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         BPO & Tech-Enabled Services
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700 list-none">
+                      <ul className=" pl-2 mt-5 text-sm text-gray-700 list-none">
                         <li>
                           <Link
                             href={{
                               pathname: "/customer-support"
                             }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                            className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300 mr-2"
                           >
                             <Image
                               className="mr-2"
@@ -220,7 +222,7 @@ export default function Navbar2() {
                             href={{
                               pathname: "/email-support"
                             }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                            className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300 mr-2"
                           >
                             <Image
                               className="mr-2"
@@ -237,7 +239,7 @@ export default function Navbar2() {
                             href={{
                               pathname: "/live-chat-support"
                             }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                            className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300 mr-2"
                           >
                             <Image
                               className="mr-2"
@@ -254,7 +256,7 @@ export default function Navbar2() {
                             href={{
                               pathname: "/taxi-support"
                             }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                            className="flex items-center px-2 py-2 hover:bg-slate-100 C transition duration-300 mr-2"
                           >
                             <FaTaxi className="text-[25px] mr-[12px] text-[#6b7cff]" />
                             Taxi Support
@@ -270,13 +272,13 @@ export default function Navbar2() {
                       <h3 className="mb-3 text-[15px] xl:text-[17px] font-bold text-gray-800">
                         Marketing & Engagement
                       </h3>
-                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
+                      <div className=" pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
                         <div>
                           <Link
                             href={{
                               pathname: "/seo",
                             }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                            className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300 mr-2"
                           >
                             <FaSearchengin className="text-[30px] mr-[7px] text-[#6b7cff]" />
                             SEO
@@ -287,7 +289,7 @@ export default function Navbar2() {
                             href={{
                               pathname: "/digital-marketing",
                             }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                            className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300 mr-2"
                           >
                             <Image
                               className="mr-2"
@@ -349,8 +351,8 @@ export default function Navbar2() {
         {/* Right: Get a Quote button (Desktop Only) */}
         <div className="hidden lg:block group relative min-w-[15%] bg-[#384BFF] py-3 transition-transform duration-300 ease-out hover:scale-105 hover:bg-[#253AC7]">
           <Link href="/contact">
-            <div className="px-4 pl-14 py-2 font-medium text-white transition-colors duration-300">
-              Get a Quote &rarr;
+            <div className="px-4 pl-14 py-2 font-medium text-white transition-colors duration-300 flex items-center">
+              Get a Quote <span><MdKeyboardArrowRight className="text-[20px]"/></span>
             </div>
           </Link>
         </div>
@@ -461,7 +463,7 @@ export default function Navbar2() {
                                     pathname: "/custom-software-development",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px] mt-[18px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px] mt-[18px]"
                                 >
                                   Custom Software Development
                                 </Link>
@@ -472,7 +474,7 @@ export default function Navbar2() {
                                     pathname: "/website-development"
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   Website Development
                                 </Link>
@@ -483,7 +485,7 @@ export default function Navbar2() {
                                     pathname: "/mobile-app-development"
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   Mobile App Development
                                 </Link>
@@ -494,7 +496,7 @@ export default function Navbar2() {
                                     pathname: "/ai-and-machine-learning",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   AI &amp; Machine Learning
                                 </Link>
@@ -506,7 +508,7 @@ export default function Navbar2() {
                                     pathname: "/ui-ux-design",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   UI/UX Design
                                 </Link>
@@ -517,7 +519,7 @@ export default function Navbar2() {
                                     pathname: "/ecommerce-development"
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   Ecommerce Development
                                 </Link>
@@ -529,7 +531,7 @@ export default function Navbar2() {
                                     pathname: "/customer-support",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   Customer Support
                                 </Link>
@@ -540,7 +542,7 @@ export default function Navbar2() {
                                     pathname: "/email-support"
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   Email Support
                                 </Link>
@@ -551,7 +553,7 @@ export default function Navbar2() {
                                     pathname: "/live-chat-support",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   Live Chat Support
                                 </Link>
@@ -562,7 +564,7 @@ export default function Navbar2() {
                                     pathname: "/taxi-support",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   Taxi Support
                                 </Link>
@@ -574,7 +576,7 @@ export default function Navbar2() {
                                     pathname: "/seo",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   SEO
                                 </Link>
@@ -585,7 +587,7 @@ export default function Navbar2() {
                                     pathname: "/digital-marketing",
                                   }}
                                   onClick={() => setIsSidebarOpen(false)}
-                                  className="flex items-center hover:bg-slate-100 hover:text-slate-900 transition duration-300 text-[15px]"
+                                  className="flex items-center hover:bg-slate-100 rounded-[5px] hover:text-slate-900 transition duration-300 text-[15px]"
                                 >
                                   Digital Marketing
                                 </Link>

@@ -78,7 +78,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
   return (
     <>
       <section
-        className="max-w-7xl mx-auto px-4 my-8 py-8"
+        className="container pad"
       >
         {/* Grid layout: two columns on md+ screens, one column on smaller screens */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -88,13 +88,13 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5 }}
             viewport={{ once: true }}>
-            <h2 className="mb-4 heading font-bold text-gray-900">
+            <h2 className="mb-4 heading font-bold text-gray-900 text-center sm:text-start">
               {pagedata?.title}
             </h2>
             <div>
-              <p className="para leading-6">{pagedata?.description}</p>
+              <p className="para leading-6  text-center sm:text-start">{pagedata?.description}</p>
             </div>
-            <div className="py-12 pb-20 space-y-6">
+            <div className="py-12 pb-20 space-y-6 flex flex-col items-start">
               {/* Call Us */}
               <motion.a
                 href={pagedata?.methods[0].href}
@@ -171,7 +171,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
             transition={{ duration: 1.5 }}
             viewport={{ once: true }}>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
                 <div>
                   <label
                     htmlFor="name"
@@ -215,9 +215,9 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div>
-                  <Controller
+                  <Controller 
                     name="phone"
                     control={control}
                     render={({ field }) => (
@@ -235,7 +235,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                   )}
                 </div>
 
-                <div>
+                <div >
                   <Controller
                     name="service"
                     control={control}
@@ -249,9 +249,12 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                           "AI & Machine Learning",
                           "UI/UX Design",
                           "Ecommerce Development",
+                          "Customer-Support",
+                          "Email-Support",
+                          "Live-Chat-Support",
+                          "Taxi-Support",
                           "SEO",
                           "Digital Marketing",
-
                         ]}
                         value={field.value}
                         onChange={field.onChange}

@@ -24,7 +24,7 @@ export default function PhoneField({
   error,
 }: PhoneFieldProps) {
   return (
-    <div className="flex flex-col gap-1 w-full">
+    <div className="flex flex-col gap-1 w-full ">
       {label && (
         <label htmlFor={name} className="block text-sm font-medium text-gray-700">
           {label}
@@ -44,7 +44,7 @@ export default function PhoneField({
         placeholder={placeholder}
         enableSearch
         containerClass=" w-full rounded-md border border-gray-300  shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-        inputClass="w-full text-base py-[20px] rounded-md border border-gray-300"
+        inputClass="!w-full text-base py-[20px] rounded-md border border-gray-300 "
         buttonClass="border border-gray-300 rounded-l-md "
         dropdownClass="rounded-md "
       />

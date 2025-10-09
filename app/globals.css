@@ -229,10 +229,10 @@ ol {
 }
 
 .pad{
-  @apply py-[30px] lg:py-[50px]
+  @apply py-[50px] lg:py-[80px]
 }
 .mar{
-  @apply my-[30px] lg:my-[50px]
+  @apply my-[50px] lg:my-[80px]
 }
 .bg{
   @apply bg-[#384bff]

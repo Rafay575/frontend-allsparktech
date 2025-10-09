@@ -13,7 +13,6 @@ import HomeProcess from "./HomeProcess";
 import { StaticImageData } from "next/image";
 import HomePage from "./HomePage";
 import Marquee from "@/components/Marquee";
-
 export interface HomePageData {
   hero: {
   bg: string;
@@ -107,7 +106,6 @@ export interface HomePageData {
 
 export default function Home({ homeData }: { homeData: HomePageData }) {
 
-  // console.log(homeData.homeServices);
 
   return (
     <>

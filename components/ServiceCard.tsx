@@ -24,9 +24,9 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ serviceCard }: ServiceCardProps) {
   return (
-    <div className="pad">
+    <div className="mar">
       <motion.div
-        className="container flex flex-wrap bg-[#f4f7fb] mar relative overflow-hidden rounded-[10px] border-2 bcolor"
+        className="container flex flex-wrap bg-[#f4f7fb]  relative overflow-hidden rounded-[10px] border-2 bcolor"
         initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}

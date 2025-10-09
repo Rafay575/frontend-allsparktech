@@ -101,14 +101,14 @@ export default function FaqSection({ faq }: { faq: faq }) {
           viewport={{ once: true }}
         >
           {/* FAQ Label */}
-          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color mt-[40px] lg:mt-0">
+          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color mt-[40px] lg:mt-0 justify-center sm:justify-start text-center sm:text-start">
             <ArrowLeft className="h-4 w-4" />
             <span>{faq.title}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
           {/* Main Heading */}
-          <h2 className="heading font-bold !leading-relaxed text-gray-900">
+          <h2 className="heading font-bold !leading-relaxed text-gray-900 text-center sm:text-start">
             {faq.subtitle}
           </h2>
 
