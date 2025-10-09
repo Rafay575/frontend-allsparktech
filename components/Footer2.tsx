@@ -87,7 +87,7 @@ export default function Footer2() {
         </div>
 
         {/* Bottom Section */}
-        <div className="max-w-7xl pb-8 mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="container pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="space-y-4">
             <Image
