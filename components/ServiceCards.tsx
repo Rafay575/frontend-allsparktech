@@ -64,7 +64,7 @@ export default function ServiceCards({ aboutData }: { aboutData: aboutData }) {
               alt={`icon ${i + 1}`}
               width={95}
               height={95}
-              className="w-[20%] sm:w-[10%] lg:w-[20%] mb-4 mt-2 text-[#1D4ED8] "
+              className="w-[17%] sm:w-[10%] lg:w-[15%] mb-4 mt-2 text-[#1D4ED8] "
             />
 
             <div className="flex flex-col items-center sm:items-start w-full text-center sm:text-start">

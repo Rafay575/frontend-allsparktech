@@ -30,8 +30,8 @@ export default function NewServicePage({ servicePageData }: ServicePageDataProps
             <Industries serviceIndustries={servicePageData.serviceIndustries} />
             <ServicesClients serviceClient={servicePageData.serviceClient} />
             <ServiceFaqs serviceFAQs={servicePageData.serviceFAQs} />
-            <Logos serviceLogos={servicePageData.serviceLogos} />
             <ServiceContact serviceContact={servicePageData.serviceContact} />
+            <Logos serviceLogos={servicePageData.serviceLogos} />
         </>
     )
 }

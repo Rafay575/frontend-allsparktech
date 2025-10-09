@@ -91,7 +91,7 @@ export default function TestimonialsSection({ testimonials }: { testimonials: te
               <SwiperSlide key={t.id}>
                 <motion.div
                   variants={itemVariants}
-                  className={`h-[250px] flex flex-col justify-between rounded-xl p-4 shadow-lg transition-colors duration-300 ${
+                  className={`h-[270px] flex flex-col justify-between rounded-xl p-4 shadow-lg transition-colors duration-300 ${
                     active === idx
                       ? "bg text-white"
                       : "bg-white text-gray-900"
@@ -110,10 +110,10 @@ export default function TestimonialsSection({ testimonials }: { testimonials: te
                   </div>
 
                   {/* Quote text */}
-                  <p className="para leading-relaxed">{t.text}</p>
+                  <p className="para leading-relaxed ">{t.text}</p>
 
                   {/* Author */}
-                  <div className="flex items-center mt-auto">
+                  <div className="flex items-center mt-auto ">
                     <Image
                       src={t.image}
                       alt={t.name}
@@ -133,7 +133,7 @@ export default function TestimonialsSection({ testimonials }: { testimonials: te
                       </p>
                     </div>
                     <Quote
-                      className={`ml-auto h-7 w-7 ${
+                      className={`ml-auto h-7 w-7  ${
                         active === idx ? "text-blue-200" : "text-gray-300"
                       }`}
                     />

@@ -48,8 +48,8 @@ export default function FaqSection({ faq }: { faq: faq }) {
   };
 
   return (
-    <section className="py-16" id="faqs">
-      <div className="container  flex flex-col lg:flex-row items-center justify-between gap-10">
+    <section className="pad" id="faqs">
+      <div className="container pt-[3%] flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* ───────── LEFT IMAGE SECTION ───────── */}
         <motion.div
           className="relative w-full lg:w-[43%] mx-auto   "

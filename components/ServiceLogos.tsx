@@ -14,7 +14,7 @@ export default function Logos({ serviceLogos }: ServiceLogosProps) {
   
 
   return (
-    <section className="py-[30px]  ">
+    <section className="py-[30px] mb-[30px] ">
       <div className="mx-auto container flex  flex-wrap items-center justify-center lg:justify-between  gap-y-[40px]  ">
         {serviceLogos.logos.map((logo, index) => (
           <div

@@ -67,9 +67,9 @@ export default function BlogPage() {
           { label: "About Us", href: "/About" },
         ]}
       />
-      <div className="w-[95%] md:w-[80%] mx-auto my-[20px]">
-        <div className="mx-auto max-w-7xl text-start mt-[100px]">
-          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
+      <div className="container mar">
+        <div className="text-center sm:text-start ">
+          <div className="mb-2 flex items-center justify-center sm:justify-start space-x-4 para font-semibold uppercase tracking-wide color">
             <ArrowLeft className="h-4 w-4" />
             <span>{data.subTitle}</span>
             <ArrowRight className="h-4 w-4" />
@@ -81,7 +81,7 @@ export default function BlogPage() {
           </div>
         </div>
 
-        <div className="my-[50px]">
+        <div className="my-[30px]">
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-[15px]">
             {blogs.map((blog) => (
               <LazyBlogCard key={blog.id} blog={blog} />

@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-[#18185E] text-gray-300 py-24 ">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="space-y-4">
             <Image

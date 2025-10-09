@@ -13,7 +13,7 @@ export default function Footer2() {
         {/* Top Bar */}
 
         <div className="py-8">
-          <div className="mx-auto max-w-7xl px-4">
+          <div className="container ">
             {/* Main container with bright background */}
             <div className="flex flex-col items-center justify-between rounded-xl bg px-6 py-10 shadow-md md:flex-row">
               {/* Address */}

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import {
   Carousel,
@@ -11,7 +11,7 @@ import {
 import sericon from "@/public/images/sericon.png";
 import { motion } from "framer-motion";
 import { baseURL } from "@/API/baseURL";
-
+import Autoplay from "embla-carousel-autoplay";
 interface IndustryItem {
   image: string | StaticImageData;
   title: string;
@@ -56,6 +56,10 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
     },
   };
 
+   const autoplay = useRef(
+    Autoplay({ delay: 2500, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
+
   return (
     <div className="container mar pad rounded-[30px] bg">
       {/* Heading + Image Section */}
@@ -98,7 +102,10 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <Carousel className="mx-auto mt-[40px] w-[91%]">
+          <Carousel className="mx-auto mt-[40px] w-[91%]" plugins={[autoplay.current]}
+            opts={{
+              loop: true, // 👈 Enable looping
+            }}>
             <CarouselContent>
               {serviceIndustries.industries.map((industry, index) => (
                 <CarouselItem

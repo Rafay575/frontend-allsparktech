@@ -125,7 +125,7 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
       </div>
 
       {/* Bottom Image Section */}
-      <div className="container mt-[-18%] 2xl:mt-[-13%] relative z-[20]">
+      <div className="container mt-[-18%]  2xl:mt-[-13%] relative z-[20]">
         <Link href={homeProcess.link} target="_blank" className="relative z-20">
           <Image
             src={`${baseURL}/images/home/${homeProcess.image}`}

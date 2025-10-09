@@ -19,7 +19,7 @@ export default function ContactSection({contactBanner}:{contactBanner: contactBa
 
   return (
     <section className="relative pt-16 mb-[-150px]">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="container ">
         <div className="relative flex flex-col items-center justify-between rounded-xl bg py-3 px-10 text-white md:flex-row">
           {/* Left Section - Illustration and Text */}
           <div className="flex flex-col items-center md:flex-row md:items-center">
