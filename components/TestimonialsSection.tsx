@@ -61,7 +61,7 @@ export default function TestimonialsSection({ testimonials }: { testimonials: te
             <ArrowRight className="h-4 w-4" />
           </div>
 
-          <h2 className="mb-20 mt-5 heading font-bold text-gray-900">
+          <h2 className="mt-3 heading font-bold text-gray-900">
             {testimonials.title}
           </h2>
         </motion.div>
@@ -72,6 +72,7 @@ export default function TestimonialsSection({ testimonials }: { testimonials: te
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          className="mt-[30px]"
         >
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -85,7 +86,7 @@ export default function TestimonialsSection({ testimonials }: { testimonials: te
             pagination={{ clickable: true }}
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             onSlideChange={(s) => setActive(s.realIndex)}
-            className="!pb-8"
+            className="!pb-5"
           >
             {testimonials.testimonials.map((t, idx) => (
               <SwiperSlide key={t.id}>

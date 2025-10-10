@@ -10,6 +10,7 @@ import { Toaster } from "sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useState } from "react";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // Font setup
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -104,7 +105,10 @@ export default function RootLayout({
         <GlobalPreloader />
 
         {/* React Query Provider */}
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ReactQueryProvider>
+          {children}
+          <ScrollToTop/>
+          </ReactQueryProvider>
 
         <Toaster position="bottom-right" className="bg-[#384BFF] text-white" />
       </body>
