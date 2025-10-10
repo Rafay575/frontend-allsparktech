@@ -408,7 +408,7 @@ export default function Navbar2() {
                 </button>
               </div>
               <hr className="mt-3 " />
-              <nav className="flex flex-col  mt-10 h-full z-20">
+              <nav className="flex flex-col relative  mt-10  z-20 bg-white">
                 <ul className="space-y-2 text-gray-900 list-none">
                   <li className=" pb-3">
                     <Link href="/" onClick={() => setIsSidebarOpen(false)}>
