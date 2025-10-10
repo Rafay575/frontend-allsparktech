@@ -148,7 +148,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+                <div className="mr-3 flex h-[60px] w-[60px] items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative  group-hover:bg-[#384BFF] transition-all">
                   <MapPin
                     className="text-[#384BFF] group-hover:text-white transition-all"
                     size={22}
@@ -217,7 +217,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div>
-                  <Controller 
+                  <Controller
                     name="phone"
                     control={control}
                     render={({ field }) => (

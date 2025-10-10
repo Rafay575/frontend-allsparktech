@@ -86,7 +86,7 @@ export default function Navbar3() {
   };
 
   const wrapBase =
-    "fixed  inset-x-0 top-0 z-50 border-b transition-colors duration-300";
+    "fixed  inset-x-0 top-0 z-50 border-b transition-colors duration-300  ";
   const surface = scrolled
     ? "bg-white/95 text-slate-900 border-black/10 shadow-sm backdrop-blur"
     : "md:bg-transparent text-white border-white/10";
@@ -102,7 +102,7 @@ export default function Navbar3() {
       animate="animate"
       role="banner"
     >
-      <div className="mx-auto  w-[100vw]  ">
+      <div className=" w-[100vw]  ">
         <div className="container flex items-center justify-between py-[15px] ">
 
           {/* Left: Logo */}
@@ -215,7 +215,7 @@ export default function Navbar3() {
           >
             {/* Backdrop */}
             <motion.div
-              className="absolute inset-0 bg-black "
+              className="absolute inset-0 bg-black w-[100vw] h-[100vh] "
               variants={backdropVariants}
               onClick={() => setMobileOpen(false)}
             />

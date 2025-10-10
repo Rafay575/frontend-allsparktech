@@ -52,7 +52,7 @@ export default function FaqSection({ faq }: { faq: faq }) {
       <div className="container pt-[3%] flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* ───────── LEFT IMAGE SECTION ───────── */}
         <motion.div
-          className="relative w-full lg:w-[43%] mx-auto   "
+          className="relative w-[96%] lg:w-[43%] mx-auto    "
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
@@ -71,7 +71,7 @@ export default function FaqSection({ faq }: { faq: faq }) {
           </div>
 
           {/* bottom-right overlay */}
-          <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] !w-[40%]">
+          <div className="absolute bottom-[-20px] right-[-20px] sm:bottom-[-35px] sm:right-[-40px] !w-[40%]">
             <Image
               src={`${baseURL}/images/home/${faq.img2}`}
               alt={faq.alt2}

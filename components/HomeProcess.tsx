@@ -80,7 +80,7 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="flex flex-col items-center w-[50%] lg:w-[25%] px-[15px] lg:px-[30px] relative"
+                className="flex flex-col items-center w-[50%] lg:w-[25%] px-[15px] lg:px-[20px] xl:px-[30px] relative"
               >
                 <Image
                   src={`${baseURL}/images/home/${process.image}`}
@@ -95,13 +95,13 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                     width={400}
                     height={400}
                     alt="img1"
-                    className="absolute w-[60px] hidden lg:block xl:w-[80px] -right-[10%] top-[12%]"
+                    className="absolute w-[60px] hidden xl:block xl:w-[80px] -right-[10%] top-[12%]"
                   />
                 )}
                 <p className="subheading font-[600] mt-[20px] lg:mt-[30px] w-[80%] md:w-[70%]">
                   {process.heading}
                 </p>
-                <p className="para mt-[5px] lg:mt-[20px]">{process.des}</p>
+                <p className="para mt-[5px] lg:mt-[20px] hidden md:block">{process.des}</p>
               </motion.div>
             ))}
           </motion.div>

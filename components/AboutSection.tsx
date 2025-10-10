@@ -35,7 +35,7 @@ export default function AboutSection({ about }: { about: about }) {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative w-full lg:w-[43%] mx-auto pr-[40px] lg:pr-0  py-[20px]  flex flex-col justify-center">
+          className="relative w-full lg:w-[43%] mx-auto pr-[15px] lg:pr-0  py-[20px]  flex flex-col justify-center">
           <div className="relative w-full ">
 
 
@@ -49,7 +49,7 @@ export default function AboutSection({ about }: { about: about }) {
             />
 
             {/* Overlapping Image */}
-            <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] !w-[40%]">
+            <div className="absolute bottom-[-20px] right-[-20px] sm:bottom-[-35px] sm:right-[-40px] !w-[40%]">
               <Image
                 src={`${baseURL}/images/home/${about.img2}`}
                 alt={about.alt2}
@@ -99,7 +99,7 @@ export default function AboutSection({ about }: { about: about }) {
             {about?.features?.map((feature: any, index: number) => (
               <div
                 key={index}
-                className="flex items-center space-x-2 bg-[#5666ff] p-2 pr-3 rounded-lg"
+                className="w-[160px] lg:w-[180px] flex items-center space-x-2 bg-[#5666ff] p-2 pr-3 rounded-lg"
               >
                 <div className="bg-white p-3 rounded-lg flex items-center justify-center">
                   {index === 0 ? (

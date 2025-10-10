@@ -108,7 +108,7 @@ export default function Home({ homeData }: { homeData: HomePageData }) {
 
 
   return (
-    <>
+    <div className="w-[100vw]  overflow-x-hidden">
       {/* <Navbar /> */}
       <MetaTitle />
       <HomePage hero={homeData.hero}/>
@@ -131,6 +131,6 @@ export default function Home({ homeData }: { homeData: HomePageData }) {
           }}
         />
       )}
-    </>
+    </div>
   );
 }

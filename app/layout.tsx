@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!w-[100vw] overflow-x-hidden">
       <head>
 
         <link rel="icon" href="/images/favicon.png" type="image/png" />
@@ -91,7 +91,7 @@ export default function RootLayout({
         </Script>
       </head>
 
-      <body className={`${plusJakartaSans.className} antialiased w-[100vw]  overflow-x-hidden`}>
+      <body className={`${plusJakartaSans.className} antialiased `}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-T96MJWT5"

@@ -18,7 +18,7 @@ export default function NewServicePage({ servicePageData }: ServicePageDataProps
 
     // console.log(servicePageData)
     return (
-        <>
+        <div className='w-[100vw] overflow-hidden'>
             <ServiceHero serviceHero={servicePageData.serviceHero} />
             <ServiceCard serviceCard={servicePageData.serviceCard} />
             <ServiceAbout serviceAbout={servicePageData.serviceAbout} />
@@ -32,6 +32,6 @@ export default function NewServicePage({ servicePageData }: ServicePageDataProps
             <ServiceFaqs serviceFAQs={servicePageData.serviceFAQs} />
             <ServiceContact serviceContact={servicePageData.serviceContact} />
             <Logos serviceLogos={servicePageData.serviceLogos} />
-        </>
+        </div>
     )
 }

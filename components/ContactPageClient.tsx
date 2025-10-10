@@ -31,23 +31,27 @@ const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) =>
     <>
       <Topnav />
       <Navbar2 />
-      <Hero2Section
-        title="Contact"
-        backgroundImage={`${baseURL}/images/contact/${contactData.heroimg}`}
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Contact", href: "/contact" },
-        ]}
-      />
-      <Contact pagedata={contactData}/>
-      <Footer2 />
-      <Script
-        id="ldjson"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(contactData.script),
-        }}
-      />
+      <div className="w-[100vw] overflow-x-hidden">
+
+        <Hero2Section
+          title="Contact"
+          backgroundImage={`${baseURL}/images/contact/${contactData.heroimg}`}
+          breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Contact", href: "/contact" },
+          ]}
+        />
+        <Contact pagedata={contactData} />
+        <Footer2 />
+        <Script
+          id="ldjson"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(contactData.script),
+          }}
+        />
+
+      </div>
     </>
   );
 };

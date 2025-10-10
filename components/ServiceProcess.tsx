@@ -65,9 +65,9 @@ export default function ServiceProcess({ serviceProcess }: ServiceProcessProps) 
                         whileHover={{ scale: 1.02 }}
                         transition={{ type: "spring", stiffness: 100 }} key={index} className='flex flex-col items-center  w-[50%] lg:w-[25%] px-[15px] lg:px-[30px] relative'>
                         <Image src={`${baseURL}/images/services/${process.image}`} alt='img1' width={450}
-                            height={450} className='!w-[40%] lg:!w-[50%]' />
+                            height={450} className='w-[130px]' />
                         {process.dir &&
-                            <Image src={`${baseURL}/images/services/${process.dir}`} width={400} height={400} alt='img1' className='absolute w-[60px] hidden lg:block xl:w-[80px] -right-[10%] top-[12%]' />
+                            <Image src={`${baseURL}/images/services/${process.dir}`} width={400} height={400} alt='img1' className='absolute w-[60px] hidden xl:block xl:w-[80px] -right-[10%] top-[12%]' />
                         }
                         <motion.p
                             variants={{
@@ -78,7 +78,7 @@ export default function ServiceProcess({ serviceProcess }: ServiceProcessProps) 
                             variants={{
                                 hidden: { y: 40, opacity: 0 },
                                 show: { y: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } },
-                            }} className='para mt-[5px] lg:mt-[20px]'>{process.des}</motion.p>
+                            }} className='para mt-[5px] lg:mt-[20px] hidden sm:block'>{process.des}</motion.p>
                     </motion.div>
                 ))}
             </div>
