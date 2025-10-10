@@ -50,8 +50,8 @@ export async function generateMetadata({ params }: PageProps) {
     }
 
     return {
-        title: `${subServiceJson.slug}`,
-        description: `${subServiceJson.slug}`,
+        title: `${subServiceJson.title}`,
+        description: `${subServiceJson.des}`,
     };
 }
 

@@ -319,7 +319,7 @@ export default function Navbar2() {
             <li>
               <Link
                 href="/blogs"
-                className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
+                className="text-gray-700 px-4 py-2 hover:bg-[#384BFF]  hover:text-white transition duration-500 rounded-full font-semibold "
               >
                 Blogs
               </Link>
