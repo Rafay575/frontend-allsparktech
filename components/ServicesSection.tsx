@@ -50,13 +50,13 @@ export default function ServicesSection({ homeServices }: { homeServices: homeSe
     >
       {/* text Section */}
       <div className="w-full text-start">
-        <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color">
+        <div className="mb-2 flex items-center justify-center sm:justify-start space-x-4 para font-semibold uppercase tracking-wide color">
           <ArrowLeft className="h-4 w-4" />
           <span>{homeServices?.subTitle}</span>
           <ArrowRight className="h-4 w-4" />
         </div>
         <div className="relative">
-          <h2 className="mt-3 heading font-bold text-gray-900">
+          <h2 className="mt-3 heading font-bold text-gray-900 text-center sm:text-start">
             {homeServices?.title}
           </h2>
         </div>

@@ -73,7 +73,7 @@ export default async function Page({ params }: PageProps) {
                 className="bg-cover bg-no-repeat h-[50vh]"
                 style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${demo.src})` }}>
                 <div className="container flex flex-col justify-center items-center h-full">
-                    <p className='text-white heading font-bold'>
+                    <p className='text-white heading font-bold text-center sm:text-start'>
                         {subServiceJson.title}
                     </p>
                 </div>
