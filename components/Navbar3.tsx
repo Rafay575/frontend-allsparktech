@@ -228,103 +228,108 @@ export default function Navbar3() {
               aria-modal="true"
               aria-label="Mobile navigation "
             >
-              <div className="flex h-[72px] items-center justify-between px-4 border-b border-black/10  bg-white ">
-                <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center" aria-label="AllSpark Home">
-                  <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-7 w-auto" />
-                </Link>
-                <button
-                  aria-label="Close menu"
-                  className="p-2 text-slate-600 hover:text-slate-900"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-
-              <nav className="px-4 py-4 z-50  bg-white relative ">
-                <Link
-                  href="/"
-                  onClick={() => setMobileOpen(false)}
-                  className="block rounded-md px-3 py-2 text-[15px] font-medium text-slate-700 hover:bg-slate-100"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  onClick={() => setMobileOpen(false)}
-                  className="mt-1 block rounded-md px-3 py-2 text-[15px] font-medium text-slate-700 hover:bg-slate-100"
-                >
-                  About
-                </Link>
-
-                {/* Services collapsible (FM height/opacity) */}
-                <button
-                  className="mt-1 flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-[15px] font-semibold text-slate-700 hover:bg-slate-100"
-                  onClick={() => setMobileServicesOpen((s) => !s)}
-                  aria-expanded={mobileServicesOpen}
-                  aria-controls="mobile-services"
-                >
-                  <span>Services</span>
-                  <ChevronDown
-                    className={`h-4 w-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {mobileServicesOpen && (
-                    <motion.div
-                      id="mobile-services"
-                      key="mobile-services"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1, transition: { duration: 0.22 } }}
-                      exit={{ height: 0, opacity: 0, transition: { duration: 0.18 } }}
-                      className="overflow-hidden pl-3"
+              <div className="relative h-full z-50 flex flex-col justify-between">
+                <div>
+                  <div className="flex h-[72px] items-center justify-between px-4 border-b border-black/10  bg-white ">
+                    <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center" aria-label="AllSpark Home">
+                      <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-7 w-auto" />
+                    </Link>
+                    <button
+                      aria-label="Close menu"
+                      className="p-2 text-slate-600 hover:text-slate-900"
+                      onClick={() => setMobileOpen(false)}
                     >
-                      <div className="mt-1 space-y-1">
-                        {megaCols.flatMap((c) => c.items).map((i) => (
-                          <Link
-                            key={i.href}
-                            href={i.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block rounded-md px-3 py-2 text-sm text-slate-600 hover:bg-slate-100"
-                          >
-                            {i.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                      <X className="h-6 w-6" />
+                    </button>
+                  </div>
 
-                <Link
-                  href="/contact"
-                  onClick={() => setMobileOpen(false)}
-                  className="mt-1 block rounded-md px-3 py-2 text-[15px] font-medium text-slate-700 hover:bg-slate-100"
-                >
-                  Contact
-                </Link>
-                <Link
-                  href="/blogs"
-                  onClick={() => setMobileOpen(false)}
-                  className="mt-1 block rounded-md px-3 py-2 text-[15px] font-medium text-slate-700 hover:bg-slate-100"
-                >
-                  Blogs
-                </Link>
+                  <nav className="px-4 py-4 z-50  bg-white relative ">
+                    <Link
+                      href="/"
+                      onClick={() => setMobileOpen(false)}
+                      className="block rounded-md px-3 py-2 text-[15px] font-medium text-slate-700 hover:bg-slate-100"
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href="/about"
+                      onClick={() => setMobileOpen(false)}
+                      className="mt-1 block rounded-md px-3 py-2 text-[15px] font-medium text-slate-700 hover:bg-slate-100"
+                    >
+                      About
+                    </Link>
 
-                <div className="mt-4 border-t border-black/10 pt-4">
-                  <Link
-                    href="/contact"
-                    onClick={() => setMobileOpen(false)}
-                    className="inline-flex w-full items-center justify-center rounded-full bg-[#384bff] px-5 py-2.5 text-sm font-semibold text-white"
-                  >
-                    GET A QUOTE <span><MdKeyboardArrowRight className="text-[20px]" /></span>
-                  </Link>
+                    {/* Services collapsible (FM height/opacity) */}
+                    <button
+                      className="mt-1 flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-[15px] font-semibold text-slate-700 hover:bg-slate-100"
+                      onClick={() => setMobileServicesOpen((s) => !s)}
+                      aria-expanded={mobileServicesOpen}
+                      aria-controls="mobile-services"
+                    >
+                      <span>Services</span>
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {mobileServicesOpen && (
+                        <motion.div
+                          id="mobile-services"
+                          key="mobile-services"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1, transition: { duration: 0.22 } }}
+                          exit={{ height: 0, opacity: 0, transition: { duration: 0.18 } }}
+                          className="overflow-hidden pl-3"
+                        >
+                          <div className="mt-1 space-y-1">
+                            {megaCols.flatMap((c) => c.items).map((i) => (
+                              <Link
+                                key={i.href}
+                                href={i.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="block rounded-md px-3 py-2 text-sm text-slate-600 hover:bg-slate-100"
+                              >
+                                {i.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    <Link
+                      href="/contact"
+                      onClick={() => setMobileOpen(false)}
+                      className="mt-1 block rounded-md px-3 py-2 text-[15px] font-medium text-slate-700 hover:bg-slate-100"
+                    >
+                      Contact
+                    </Link>
+                    <Link
+                      href="/blogs"
+                      onClick={() => setMobileOpen(false)}
+                      className="mt-1 block rounded-md px-3 py-2 text-[15px] font-medium text-slate-700 hover:bg-slate-100"
+                    >
+                      Blogs
+                    </Link>
+
+                    <div className="mt-4 border-t border-black/10 pt-4">
+                      <Link
+                        href="/contact"
+                        onClick={() => setMobileOpen(false)}
+                        className="inline-flex w-full items-center justify-center rounded-full bg-[#384bff] px-5 py-2.5 text-sm font-semibold text-white"
+                      >
+                        GET A QUOTE <span><MdKeyboardArrowRight className="text-[20px]" /></span>
+                      </Link>
+                    </div>
+                  </nav>
                 </div>
-              </nav>
-              <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2  z-10">
-                <div className="max-w-[75%] mx-auto mt-3 text-center">
-                  © All Copyright {new Date().getFullYear()} by AllSpark
-                  Technologies
+
+                <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2  z-10">
+                  <div className="max-w-[75%] mx-auto mt-3 text-center">
+                    © All Copyright {new Date().getFullYear()} by AllSpark
+                    Technologies
+                  </div>
                 </div>
               </div>
             </motion.aside>
