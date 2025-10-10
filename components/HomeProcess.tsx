@@ -6,8 +6,16 @@ import React from "react";
 import bg1 from "@/public/images/homeprocessbg1.png";
 import bg2 from "@/public/images/homeprocessbg2.png";
 import clipcircle from "@/public/images/clipcircle.png";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
+
 
 interface homeProcessData {
   title: string;
@@ -43,6 +51,7 @@ const itemVariants = {
 };
 
 export default function HomeProcess({ homeProcess }: homeProcessProps) {
+  console.log(`${baseURL}/images/home/${homeProcess.image}`)
   return (
     <>
       <div className="pad bg-[#181965] text-white relative z-[10]">
@@ -124,37 +133,57 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
         />
       </div>
 
-      {/* Bottom Image Section */}
-      <div className="container mt-[-18%]  2xl:mt-[-13%] relative z-[20]">
-        <Link href={homeProcess.link} target="_blank" className="relative z-20">
-          <Image
-            src={`${baseURL}/images/home/${homeProcess.image}`}
-            alt="bg"
-            width={4000}
-            height={4000}
-            className="w-full cursor-pointer"
-          />
-        </Link>
 
-        <Link href={homeProcess.link}>
-          <div className="w-full h-full absolute top-0 left-0 flex justify-center items-center z-30">
-            <motion.div
-              className="w-[8%] mt-[0.7%]"
-              initial={{ scale: 1, opacity: 1 }}
-              animate={{ scale: 2, opacity: 0 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
+      <Dialog >
+        <DialogTrigger>
+          {/* Bottom Image Section */}
+          <div className="w-[100vw]">
+            <div className="container mt-[-18%]  2xl:mt-[-13%] relative z-[20]">
+
               <Image
-                src={clipcircle}
+                src={`${baseURL}/images/home/${homeProcess.image}`}
                 alt="bg"
                 width={4000}
                 height={4000}
-                className="w-full"
+                className="w-full cursor-pointer"
               />
-            </motion.div>
+
+
+
+              <div className="w-full h-full absolute top-0 left-0 flex justify-center items-center z-30">
+                <motion.div
+                  className="w-[8%] mt-[0.7%]"
+                  initial={{ scale: 1, opacity: 1 }}
+                  animate={{ scale: 2, opacity: 0 }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <Image
+                    src={clipcircle}
+                    alt="bg"
+                    width={4000}
+                    height={4000}
+                    className="w-full"
+                  />
+                </motion.div>
+              </div>
+
+            </div>
           </div>
-        </Link>
-      </div>
+
+        </DialogTrigger>
+        <DialogContent className="w-[95vw] lg:w-[70vw] max-w-[80vw]  p-0" >
+          <DialogHeader>
+            <DialogDescription>
+              <video
+                autoPlay
+                src={`/images/videos/below_process.mp4`}
+                controls
+                className="!w-full rounded-lg "
+              />
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

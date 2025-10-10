@@ -83,17 +83,19 @@ export default async function BlogDetailPage({ params }: any) {
   const takenIds = new Set<string>();
   const itemsWithIds = Array.isArray(blog.items)
     ? blog.items.map((it: any) => {
-        if (it?.type === "h2" && typeof it.value === "string") {
-          const id = makeUnique(slugify(it.value), takenIds);
-          return { ...it, id };
-        }
-        return it;
-      })
+      if (it?.type === "h2" && typeof it.value === "string") {
+        const id = makeUnique(slugify(it.value), takenIds);
+        return { ...it, id };
+      }
+      return it;
+    })
     : [];
 
   const toc = itemsWithIds
     .filter((it: any) => it.type === "h2" && it.id)
     .map((it: any) => ({ id: it.id, text: it.value }));
+
+  console.log(blog.items)
 
   return (
     <div>
@@ -125,6 +127,7 @@ export default async function BlogDetailPage({ params }: any) {
             src={`${baseURL}/images/blogs/${blog.image}`}
             width={400}
             height={400}
+            unoptimized
             className="rounded-[10px] !w-[100%]"
             alt="MainImg "
           />
@@ -147,9 +150,10 @@ export default async function BlogDetailPage({ params }: any) {
                 )}
                 {item.type === "h3" && <h3 className="h3">{item.value}</h3>}
                 {item.type === "p" && (
-                  <p className="text-[16px] text-[#4B5563] font-[400] para">
-                    {item.value}
-                  </p>
+                  <p
+                    className="text-[16px] text-[#4B5563] font-[400] para"
+                    dangerouslySetInnerHTML={{ __html: item.value }}
+                  />
                 )}
                 {item.type === "strong" && (
                   <strong className="strong text-[#4B5563] font-[400] text-[16px]">
@@ -174,6 +178,46 @@ export default async function BlogDetailPage({ params }: any) {
                     ))}
                   </ol>
                 )}
+                {item.type === "singleimage" && (
+                  <Image
+                    src={`${baseURL}/images/blogs/${item.value}`}
+                    unoptimized
+                    alt="img"
+                    width={1200}
+                    height={2000}
+                    className="w-full"
+                  />
+                )}
+                {item.type === "doubleimage" && (
+                  <div className="flex flex-col lg:flex-row gap-4">
+                    {item.value.map((url: string, index: number) => (
+                      <Image
+                        key={index}
+                        src={`${baseURL}/images/blogs/${url}`}
+                        unoptimized
+                        alt={`img-${index}`}
+                        width={1200}
+                        height={2000}
+                        className="w-full lg:w-1/2"
+                      />
+                    ))}
+                  </div>
+                )}
+                {item.type === "tripleimage" && (
+                  <div className="flex flex-col lg:flex-row gap-4">
+                    {item.value.map((url: string, index: number) => (
+                      <Image
+                        key={index}
+                        src={`${baseURL}/images/blogs/${url}`}
+                        unoptimized
+                        alt={`img-${index}`}
+                        width={1200}
+                        height={2000}
+                        className="w-full lg:w-1/3"
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -185,6 +229,8 @@ export default async function BlogDetailPage({ params }: any) {
           <div className="flex gap-[10px] justify-start  items-center">
             <Image
               src={authorimg}
+              unoptimized
+
               alt="author"
               className="w-[50px] h-[50px] object-cover border border-[#384BFF] rounded-full"
             />
