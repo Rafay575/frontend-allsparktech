@@ -214,7 +214,7 @@ export default function Footer2() {
       <div className="bg py-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 text-white text-sm">
           <p>
-            © All Copyright {new Date().getFullYear()} by AllSpark Technologies
+            © {new Date().getFullYear()} All Copyright by AllSpark Technologies
           </p>
           <div className="flex space-x-4">
             <Link href="/termsandconditions" className="hover:underline">

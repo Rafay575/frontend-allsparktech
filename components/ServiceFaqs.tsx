@@ -70,7 +70,7 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
 
         {/* Right Text Section */}
         <motion.div
-          className="w-full lg:w-[60%] flex flex-col lg:pl-[90px] items-center sm:items-start text-center sm:text-start"
+          className="w-full lg:w-[60%] flex flex-col lg:pl-[90px] items-center sm:items-start text-center sm:text-start mt-[20px] lg:mt-0" 
           initial={{ opacity: 0, x: 100 }} // from right
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -84,7 +84,7 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
           </div>
 
           {/* Main Heading */}
-          <h2 className="heading font-bold !leading-relaxed text-gray-900">
+          <h2 className="heading font-bold  text-gray-900">
             {serviceFAQs.title}
           </h2>
 
