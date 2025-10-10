@@ -40,7 +40,8 @@ export default function ServiceProcess({ serviceProcess }: ServiceProcessProps) 
 
 
     return (
-        <motion.div
+        <div className='serviceprocess w-full'>
+            <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
@@ -83,5 +84,7 @@ export default function ServiceProcess({ serviceProcess }: ServiceProcessProps) 
                 ))}
             </div>
         </motion.div>
+        </div>
+        
     )
 }

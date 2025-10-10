@@ -188,8 +188,8 @@ export default function Navbar3() {
           </nav>
 
           {/* CTA (lg+) */}
-          <Link href="/contact" className={quoteBtn }>
-            GET A QUOTE <span ><MdKeyboardArrowRight className="text-[20px]"/></span>
+          <Link href="/contact" className={quoteBtn}>
+            GET A QUOTE <span ><MdKeyboardArrowRight className="text-[20px]" /></span>
           </Link>
 
           {/* Mobile burger (sm–md) */}
@@ -226,9 +226,9 @@ export default function Navbar3() {
               variants={drawerVariants}
               role="dialog"
               aria-modal="true"
-              aria-label="Mobile navigation"
+              aria-label="Mobile navigation "
             >
-              <div className="flex h-[72px] items-center justify-between px-4 border-b border-black/10  bg-white">
+              <div className="flex h-[72px] items-center justify-between px-4 border-b border-black/10  bg-white ">
                 <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center" aria-label="AllSpark Home">
                   <Image src="/images/logo.svg" alt="logo" width={120} height={28} className="h-7 w-auto" />
                 </Link>
@@ -241,7 +241,7 @@ export default function Navbar3() {
                 </button>
               </div>
 
-              <nav className="px-4 py-4 z-50 relative bg-white">
+              <nav className="px-4 py-4 z-50  bg-white relative ">
                 <Link
                   href="/"
                   onClick={() => setMobileOpen(false)}
@@ -317,10 +317,16 @@ export default function Navbar3() {
                     onClick={() => setMobileOpen(false)}
                     className="inline-flex w-full items-center justify-center rounded-full bg-[#384bff] px-5 py-2.5 text-sm font-semibold text-white"
                   >
-                    GET A QUOTE <span><MdKeyboardArrowRight className="text-[20px]"/></span>
+                    GET A QUOTE <span><MdKeyboardArrowRight className="text-[20px]" /></span>
                   </Link>
                 </div>
               </nav>
+              <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2  z-10">
+                <div className="max-w-[75%] mx-auto mt-3 text-center">
+                  © All Copyright {new Date().getFullYear()} by AllSpark
+                  Technologies
+                </div>
+              </div>
             </motion.aside>
           </motion.div>
         )}

@@ -408,14 +408,14 @@ export default function Navbar2() {
                 </button>
               </div>
               <hr className="mt-3 " />
-              <nav className="flex flex-col mx-5 mt-10 h-full">
+              <nav className="flex flex-col  mt-10 h-full z-20">
                 <ul className="space-y-2 text-gray-900 list-none">
-                  <li className="border-b pb-3">
+                  <li className=" pb-3">
                     <Link href="/" onClick={() => setIsSidebarOpen(false)}>
                       Home
                     </Link>
                   </li>
-                  <li className="border-b pb-3">
+                  <li className=" pb-3">
                     <Link
                       href="/about"
                       onClick={() => setIsSidebarOpen(false)}
@@ -425,7 +425,7 @@ export default function Navbar2() {
                   </li>
 
                   {/* Services with smooth dropdown */}
-                  <li className="border-b pb-3  ">
+                  <li className=" pb-3  ">
                     <button
                       className="flex items-center justify-between w-full text-gray-700 font-semibold"
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -599,7 +599,7 @@ export default function Navbar2() {
                     </AnimatePresence>
                   </li>
 
-                  <li className="border-b pb-3">
+                  <li className=" pb-3">
                     <Link
                       href="/contact"
                       onClick={() => setIsSidebarOpen(false)}
@@ -624,7 +624,7 @@ export default function Navbar2() {
                   </li>
                 </ul>
               </nav>
-              <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2  ">
+              <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2 z-10 ">
                 <div className="max-w-[75%] mx-auto mt-3 text-center">
                   © All Copyright {new Date().getFullYear()} by AllSpark
                   Technologies

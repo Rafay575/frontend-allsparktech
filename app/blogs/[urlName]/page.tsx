@@ -182,11 +182,11 @@ export default async function BlogDetailPage({ params }: any) {
           <BlogFaqs faqs={blog.faqs} />
 
           {/* Author */}
-          <div className="flex gap-[10px] md:justify-start justify-center items-center">
+          <div className="flex gap-[10px] justify-start  items-center">
             <Image
               src={authorimg}
               alt="author"
-              className="w-[70px] h-[70px] object-cover border border-[#384BFF] rounded-full"
+              className="w-[50px] h-[50px] object-cover border border-[#384BFF] rounded-full"
             />
             <div>
               <p className="subheading leading-[29px] font-medium border-b-2 border-[#384BFF] relative bottom-[3px]">

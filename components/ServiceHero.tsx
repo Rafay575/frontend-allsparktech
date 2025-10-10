@@ -95,7 +95,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                     </Link>
                 </motion.div>
                 <motion.div
-                    className="w-full lg:w-1/2 lg:pl-[80px] flex flex-col items-center sm:items-start z-[20]"
+                    className="w-full lg:w-1/2 lg:pl-[80px] flex flex-col items-center sm:items-start z-[20] mt-[40px] lg:mt-[0]"
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}>
