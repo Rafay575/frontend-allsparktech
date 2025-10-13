@@ -7,6 +7,7 @@ import { MdOutlineDateRange } from "react-icons/md";
 import Image from "next/image";
 import authorimg from "@/public/images/blogs/blogauthor.jpg";
 import BlogFaqs from "@/components/BlogFaqs";
+export const dynamic = "force-dynamic";
 
 // ✅ Disable caching globally (SSR)
 export const revalidate = 0;
