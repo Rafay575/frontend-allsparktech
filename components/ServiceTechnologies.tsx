@@ -67,7 +67,7 @@ export default function ServiceTechnologies({
           </motion.p>
 
           {/* Tabs */}
-          <div className="flex mt-[60px] border-b justify-center lg:justify-start gap-[10px]">
+          <div className="flex mt-[60px] border-b justify-center  gap-[10px]">
             {serviceTechnologies?.technologies.map((category) => (
               <p
                 key={category.name}
@@ -82,7 +82,7 @@ export default function ServiceTechnologies({
           </div>
 
           {/* Technologies Animation */}
-          <div className="mt-[30px] grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 gap-y-[20px]">
+          <div className="mt-[30px] flex flex-wrap gap-2 md:gap-3 justify-center">
             {serviceTechnologies?.technologies
               .find((category) => category.name === select)
               ?.techs.map((tec, index) => (
@@ -96,7 +96,7 @@ export default function ServiceTechnologies({
                     ease: "easeOut",
                   }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center border py-[10px] pt-[30px] rounded-[5px] relative mt-[20px]"
+                  className="w-[47%] md:w-[23%] lg:w-[14%] flex flex-col items-center border py-[10px] pt-[30px] rounded-[5px] relative mt-[20px]"
                 >
                   <div className="w-[60px] h-[60px] bg-[#384bff] rounded-full translate-y-[-100%] absolute flex items-center justify-center p-[5px]">
                     <Image
