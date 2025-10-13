@@ -1,4 +1,3 @@
-// import { notFound } from "next/navigation";
 import Navbar2 from "@/components/Navbar2";
 import Topnav from "@/components/Topnav";
 import Footer2 from "@/components/Footer2";
@@ -6,31 +5,29 @@ import { baseURL } from "@/API/baseURL";
 import type { Metadata } from "next";
 import { MdOutlineDateRange } from "react-icons/md";
 import Image from "next/image";
-import authorimg from "@/public/images/blogs/blogauthor.jpg"
+import authorimg from "@/public/images/blogs/blogauthor.jpg";
 import BlogFaqs from "@/components/BlogFaqs";
 
-// ✅ Metadata SSR
+// ✅ Disable caching globally (SSR)
+export const revalidate = 0;
+
+// ✅ Metadata (SSR friendly)
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   try {
-    const res = await fetch(`${baseURL}/blogs/${params.urlName}`);
+    const res = await fetch(`${baseURL}/blogs/${params.urlName}`, {
+      cache: "no-store", // always fresh
+    });
     if (!res.ok) throw new Error("Metadata fetch failed");
 
     const data = await res.json();
-    const metatitle = data.metatitle?.trim();
-    const metadescription = data.metadescription?.trim();
-
-    const defaultMeta: Metadata = {
-      title: "AllSpark Technologies",
-      description:
-        "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
-    };
 
     return {
-      title: metatitle || defaultMeta.title,
-      description: metadescription || defaultMeta.description,
+      title: data.metatitle?.trim() || "AllSpark Technologies",
+      description:
+        data.metadescription?.trim() ||
+        "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
     };
-  } catch (err) {
-    console.error("Metadata fetch failed:", err);
+  } catch {
     return {
       title: "AllSpark Technologies",
       description:
@@ -56,13 +53,14 @@ const makeUnique = (base: string, taken: Set<string>) => {
   return id;
 };
 
-// ✅ Page SSR
+// ✅ SSR Page (no static generation)
 export default async function BlogDetailPage({ params }: any) {
   interface Faq {
     id: string;
     question: string;
     answer: string;
   }
+
   interface BlogData {
     id: number;
     title: string;
@@ -74,28 +72,35 @@ export default async function BlogDetailPage({ params }: any) {
     faqs: Faq[];
   }
 
-  // 🔥 SSR fetch (always fresh)
-  const res = await fetch(`${baseURL}/blogs/${params.urlName}`);
+  // ✅ Always fetch latest data
+  const res = await fetch(`${baseURL}/blogs/${params.urlName}`, {
+    cache: "no-store",
+  });
 
-  if (!res.ok) return <h1>No detail fetch</h1>;
+  if (!res.ok) {
+    return (
+      <div className="text-center py-20">
+        <h1 className="text-2xl font-semibold">Blog not found</h1>
+      </div>
+    );
+  }
+
   const blog: BlogData = await res.json();
 
   const takenIds = new Set<string>();
   const itemsWithIds = Array.isArray(blog.items)
     ? blog.items.map((it: any) => {
-      if (it?.type === "h2" && typeof it.value === "string") {
-        const id = makeUnique(slugify(it.value), takenIds);
-        return { ...it, id };
-      }
-      return it;
-    })
+        if (it?.type === "h2" && typeof it.value === "string") {
+          const id = makeUnique(slugify(it.value), takenIds);
+          return { ...it, id };
+        }
+        return it;
+      })
     : [];
 
   const toc = itemsWithIds
     .filter((it: any) => it.type === "h2" && it.id)
     .map((it: any) => ({ id: it.id, text: it.value }));
-
-  console.log(blog.items)
 
   return (
     <div>
@@ -137,7 +142,9 @@ export default async function BlogDetailPage({ params }: any) {
           <div className="blogsdata">
             {itemsWithIds.map((item: any, index: number) => (
               <div key={index}>
-                {item.type === "h1" && <h1 className="h1 heading">{item.value}</h1>}
+                {item.type === "h1" && (
+                  <h1 className="h1 heading">{item.value}</h1>
+                )}
                 {item.type === "h2" && (
                   <div>
                     <h2 id={item.id} className="h2 scroll-mt-24">
@@ -230,7 +237,6 @@ export default async function BlogDetailPage({ params }: any) {
             <Image
               src={authorimg}
               unoptimized
-
               alt="author"
               className="w-[50px] h-[50px] object-cover border border-[#384BFF] rounded-full"
             />
@@ -267,14 +273,4 @@ export default async function BlogDetailPage({ params }: any) {
       <Footer2 />
     </div>
   );
-}
-
-
-export async function generateStaticParams() {
-  const res = await fetch(`${baseURL}/blogs`);
-  const blogs = await res.json();
-
-  return blogs.map((blog: { urlName: string }) => ({
-    urlName: blog.urlName,
-  }));
 }
