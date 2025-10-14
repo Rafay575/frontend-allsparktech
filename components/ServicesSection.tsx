@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion} from "framer-motion";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { baseURL } from "@/API/baseURL";
@@ -64,63 +64,63 @@ export default function ServicesSection({ homeServices }: { homeServices: homeSe
 
       {/* Cards */}
 
-        {/* Parent motion.div for stagger animation */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.2, // 👈 Controls delay between each card
-              },
+      {/* Parent motion.div for stagger animation */}
+      <motion.div
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.2, // 👈 Controls delay between each card
             },
-          }}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-[15px]"
-        >
-          {displayedServices.map((service) => (
-            <motion.div
-              key={service.id}
-              variants={{
-                hidden: { opacity: 0, y: 60 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.6, ease: "easeOut" },
-                },
-              }}
-              whileHover={{ y: -10 }}
-              className="relative rounded-lg overflow-hidden shadow-md cursor-pointer"
-            >
-              <Link href={`/${service.id}`} className="w-full h-full">
-                <div
-                  className="h-72 bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${baseURL}/images/home/${service.imageUrl})`,
-                  }}
-                ></div>
+          },
+        }}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-[15px]"
+      >
+        {displayedServices.map((service) => (
+          <motion.div
+            key={service.id}
+            variants={{
+              hidden: { opacity: 0, y: 60 },
+              show: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.6, ease: "easeOut" },
+              },
+            }}
+            whileHover={{ y: -10 }}
+            className="relative rounded-lg overflow-hidden shadow-md cursor-pointer"
+          >
+            <Link href={`/${service.id}`} className="w-full h-full">
+              <div
+                className="h-72 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${baseURL}/images/home/${service.imageUrl})`,
+                }}
+              ></div>
 
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    show: {
-                      opacity: 1,
-                      y: 0,
-                      transition: { delay: 0.2 },
-                    },
-                  }}
-                  className="absolute top-0 left-0 w-full h-full flex items-end p-4 bg-gradient-to-t from-black/60 to-transparent"
-                >
-                  <h3 className="text-white subheading font-semibold">
-                    {service.title}
-                  </h3>
-                </motion.div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { delay: 0.2 },
+                  },
+                }}
+                className="absolute top-0 left-0 w-full h-full flex items-end p-4 bg-gradient-to-t from-black/60 to-transparent"
+              >
+                <h3 className="text-white subheading font-semibold">
+                  {service.title}
+                </h3>
+              </motion.div>
+            </Link>
+          </motion.div>
+        ))}
+      </motion.div>
 
 
     </motion.section>

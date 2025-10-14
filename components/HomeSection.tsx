@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+
+import React, { Suspense } from "react";
 import Logos from "@/components/Logos";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
@@ -15,14 +15,14 @@ import HomePage from "./HomePage";
 import Marquee from "@/components/Marquee";
 export interface HomePageData {
   hero: {
-  bg: string;
-  topBtn: string;
-  topBtnLink: string;
-  title: string;
-  des: string;
-  bottomBtn: string;
-  bottomBtnLink: string;
-}[];
+    bg: string;
+    topBtn: string;
+    topBtnLink: string;
+    title: string;
+    des: string;
+    bottomBtn: string;
+    bottomBtnLink: string;
+  }[];
   logos: {
     id: number;
     src: string;
@@ -53,7 +53,7 @@ export interface HomePageData {
       subtitle: string;
     }[];
   };
-  titles:string[];
+  titles: string[];
   process: {
     title: string;
     des: string;
@@ -111,11 +111,19 @@ export default function Home({ homeData }: { homeData: HomePageData }) {
     <div className="w-[100vw]  overflow-x-hidden">
       {/* <Navbar /> */}
       <MetaTitle />
-      <HomePage hero={homeData.hero}/>
+      <HomePage hero={homeData.hero} />
       <ServicesSection homeServices={homeData.homeServices} />
       <AboutSection about={homeData.about} />
       <Marquee titles={homeData.titles} />
-      <HomeProcess homeProcess={homeData.process} />
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center py-10">
+            <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        }
+      >
+        <HomeProcess homeProcess={homeData.process} />
+      </Suspense>
       <FaqSection faq={homeData.faq} />
       <ContactSection contactBanner={homeData.contactBanner} />
       <TestimonialsSection testimonials={homeData.testimonials} />

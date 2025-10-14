@@ -140,7 +140,13 @@ export default function Navbar2() {
                           }}
                           className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300"
                         >
-                          <FaMobileAlt className="text-[27px] mr-[7px] text-[#6b7cff]" />
+                          <Image
+                            className="mr-2"
+                            src={"/images/mobappnav.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />
                           Mobile App Development
                         </Link>
                         <Link
@@ -258,7 +264,13 @@ export default function Navbar2() {
                             }}
                             className="flex items-center px-2 py-2 hover:bg-slate-100 C transition duration-300 mr-2"
                           >
-                            <FaTaxi className="text-[25px] mr-[12px] text-[#6b7cff]" />
+                            <Image
+                            className="mr-2"
+                            src={"/images/taxinav.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />
                             Taxi Support
                           </Link>
                         </li>
@@ -280,7 +292,13 @@ export default function Navbar2() {
                             }}
                             className="flex items-center px-2 py-2 hover:bg-slate-100 rounded-[5px] transition duration-300 mr-2"
                           >
-                            <FaSearchengin className="text-[30px] mr-[7px] text-[#6b7cff]" />
+                            <Image
+                            className="mr-2"
+                            src={"/images/seonav.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />
                             SEO
                           </Link>
                         </div>

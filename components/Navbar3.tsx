@@ -36,7 +36,7 @@ export default function Navbar3() {
         items: [
           { href: "/custom-software-development", label: "Custom Software Development", icon: "/images/development-01.svg" },
           { href: "/website-development", label: "Website Development", icon: "/images/web-app-development-01.svg" },
-          { href: "/mobile-app-development", label: "Mobile App Development", icon: "/images/mobnavicon.png" },
+          { href: "/mobile-app-development", label: "Mobile App Development", icon: "/images/mobappnav.svg" },
           { href: "/ai-and-machine-learning", label: "AI & Machine Learning", icon: "/images/ai-machine-01.svg" },
           { href: "/cloud-and-devops-solutions", label: "Cloud & DevOps Solutions", icon: "/images/devops-icon.svg" },
           { href: "/ui-ux-design", label: "UI/UX Design", icon: "/images/social-media-marekting-01.svg" },
@@ -49,13 +49,13 @@ export default function Navbar3() {
           { href: "/customer-support", label: "Customer Support", icon: "/images/customer-support-icon-01.svg" },
           { href: "/email-support", label: "Email Support", icon: "/images/email-marketing-icon-01.svg" },
           { href: "/live-chat-support", label: "Live Chat Support", icon: "/images/live-chat-icon-01.svg" },
-          { href: "/taxi-support", label: "Taxi Support", icon: "/images/taxi.png" },
+          { href: "/taxi-support", label: "Taxi Support", icon: "/images/taxinav.svg" },
         ],
       },
       {
         title: "Marketing & Engagement",
         items: [
-          { href: "/seo", label: "SEO", icon: "/images/seo.png" },
+          { href: "/seo", label: "SEO", icon: "/images/seonav.svg" },
           { href: "/digital-marketing", label: "Digital Marketing", icon: "/images/digital-marketing-icon-01.svg" },
         ],
       },
