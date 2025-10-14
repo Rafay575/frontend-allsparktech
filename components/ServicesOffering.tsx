@@ -2,8 +2,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { baseURL } from "@/API/baseURL";
-import Link from "next/link";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+
 import { motion } from "framer-motion"; // 👈 Import Framer Motion
 
 interface Card {
