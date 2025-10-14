@@ -16,7 +16,6 @@ import { ServicePageDataProps } from "@/lib/types"
 
 export default function NewServicePage({ servicePageData }: ServicePageDataProps) {
 
-    // console.log(servicePageData)
     return (
         <div className='w-[100vw] overflow-hidden'>
             <ServiceHero serviceHero={servicePageData.serviceHero} />

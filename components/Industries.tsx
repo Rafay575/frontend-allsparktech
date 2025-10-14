@@ -105,7 +105,8 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
           <Carousel className="mx-auto mt-[40px] w-[91%]" plugins={[autoplay.current]}
             opts={{
               loop: true, // 👈 Enable looping
-            }}>
+            }}
+            >
             <CarouselContent>
               {serviceIndustries.industries.map((industry, index) => (
                 <CarouselItem
