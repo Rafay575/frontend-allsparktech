@@ -81,7 +81,7 @@ export default function ServicesOffering({ serviceOffering }: ServiceOfferingPro
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
-              className="bg-[#f3f7fb] border border-[#d4dcff] p-[15px] lg:p-[20px] rounded-[10px] min-h-[250px] md:min-h-[300px] flex flex-col items-center sm:items-start text-center sm:text-start"
+              className={`bg-[#f3f7fb] border border-[#d4dcff] p-[15px] lg:p-[20px] rounded-[10px] min-h-[250px] ${card.link? ` min-h-[250px] md:min-h-[300px]`:`min-h-[210px] md:min-h-[240px]`} md:min-h-[300px] flex flex-col items-center sm:items-start text-center sm:text-start`}
             >
               <Image
                 src={`${baseURL}/images/services/${card.icon}`}
@@ -92,15 +92,18 @@ export default function ServicesOffering({ serviceOffering }: ServiceOfferingPro
               />
               <p className="subheading font-[700] mt-[20px]">{card.heading}</p>
               <p className="my-[10px] para">{card.des}</p>
-              <Link
-                href={`${card.link ? `/subservice/${card.link}` : `/contact`}`}
-                className="mt-auto"
-              >
-                <button className="border border-[#737577] group py-[10px] px-[30px] rounded-[25px] mt-auto flex items-center gap-[5px] hover:bg-[#384BFF] duration-300 hover:text-white hover:border-[#384BFF] para">
-                  {card.btnText}
-                  <MdKeyboardDoubleArrowRight className="text-grey-600 para group-hover:text-white" />
-                </button>
-              </Link>
+
+              {card.link &&
+                <Link
+                  href={`${card.link ? `/subservice/${card.link}` : `/contact`}`}
+                  className="mt-auto"
+                >
+                  <button className="border border-[#737577] group py-[10px] px-[30px] rounded-[25px] mt-auto flex items-center gap-[5px] hover:bg-[#384BFF] duration-300 hover:text-white hover:border-[#384BFF] para">
+                    {card.btnText}
+                    <MdKeyboardDoubleArrowRight className="text-grey-600 para group-hover:text-white" />
+                  </button>
+                </Link>
+              }
             </motion.div>
           ))}
         </div>

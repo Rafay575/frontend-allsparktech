@@ -38,7 +38,6 @@ export default function Navbar3() {
           { href: "/website-development", label: "Website Development", icon: "/images/web-app-development-01.svg" },
           { href: "/mobile-app-development", label: "Mobile App Development", icon: "/images/mobappnav.svg" },
           { href: "/ai-and-machine-learning", label: "AI & Machine Learning", icon: "/images/ai-machine-01.svg" },
-          { href: "/cloud-and-devops-solutions", label: "Cloud & DevOps Solutions", icon: "/images/devops-icon.svg" },
           { href: "/ui-ux-design", label: "UI/UX Design", icon: "/images/social-media-marekting-01.svg" },
           { href: "/ecommerce-development", label: "Ecommerce Development", icon: "/images/ecommerce-development-icon-01.svg" },
         ],
