@@ -6,9 +6,7 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaSearchengin } from "react-icons/fa";
-import { FaMobileAlt } from "react-icons/fa";
-import { FaTaxi } from "react-icons/fa";
+
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const plusJakartaSans = Plus_Jakarta_Sans({

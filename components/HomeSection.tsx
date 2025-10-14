@@ -1,5 +1,5 @@
 
-import React, { Suspense } from "react";
+import React from "react";
 import Logos from "@/components/Logos";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
@@ -115,15 +115,7 @@ export default function Home({ homeData }: { homeData: HomePageData }) {
       <ServicesSection homeServices={homeData.homeServices} />
       <AboutSection about={homeData.about} />
       <Marquee titles={homeData.titles} />
-      <Suspense
-        fallback={
-          <div className="flex justify-center items-center py-10">
-            <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        }
-      >
         <HomeProcess homeProcess={homeData.process} />
-      </Suspense>
       <FaqSection faq={homeData.faq} />
       <ContactSection contactBanner={homeData.contactBanner} />
       <TestimonialsSection testimonials={homeData.testimonials} />
