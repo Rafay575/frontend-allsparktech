@@ -18,7 +18,7 @@ export default function Logos({ serviceLogos }: ServiceLogosProps) {
   return (
     <section className="py-[30px] mb-[30px] ">
       {/* <div className="mx-auto container flex  flex-wrap items-center justify-center lg:justify-between  gap-y-[40px]  "> */}
-        <Marquee speed={180} gradient={false} pauseOnHover={true}>
+        <Marquee speed={100} gradient={false} pauseOnHover={true}>
           {serviceLogos.logos.map((logo, index) => (
             <div
               key={index}

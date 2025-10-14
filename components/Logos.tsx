@@ -18,7 +18,7 @@ export default function Logos({ logos }: { logos: logos[] }) {
   return (
     <section className="py-[50px] ">
       {/* <div className="mx-auto container flex  flex-wrap items-center justify-center lg:justify-between  gap-y-[40px] "> */}
-      <Marquee speed={180} gradient={false} pauseOnHover={true}>
+      <Marquee speed={100} gradient={false} pauseOnHover={true}>
         {logos.map((logo) => (
           <div 
           key={logo.id} 

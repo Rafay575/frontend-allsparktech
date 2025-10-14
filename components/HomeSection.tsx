@@ -115,7 +115,7 @@ export default function Home({ homeData }: { homeData: HomePageData }) {
       <ServicesSection homeServices={homeData.homeServices} />
       <AboutSection about={homeData.about} />
       <Marquee titles={homeData.titles} />
-        <HomeProcess homeProcess={homeData.process} />
+      <HomeProcess homeProcess={homeData.process} />
       <FaqSection faq={homeData.faq} />
       <ContactSection contactBanner={homeData.contactBanner} />
       <TestimonialsSection testimonials={homeData.testimonials} />

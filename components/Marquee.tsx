@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function MyMarquee({titles}:{titles:string[]}) {
   return (
     <div className=" py-10">
-      <Marquee speed={200} gradient={false} pauseOnHover={true}>
+      <Marquee speed={100} gradient={false} pauseOnHover={true}>
         {titles.map((title,i)=>(
             <span key={i} className="flex items-center gap-[20px]">
                 <span className="heading font-[700]">{title}</span>

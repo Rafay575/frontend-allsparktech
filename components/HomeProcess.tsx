@@ -14,7 +14,7 @@ import {
   DialogHeader,
   DialogTrigger,
 } from "@/components/ui/dialog"
-
+import { Suspense } from "react";
 
 
 interface homeProcessData {
@@ -173,14 +173,17 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
         </DialogTrigger>
         <DialogContent className="w-[95vw] lg:w-[70vw] max-w-[80vw]  p-0" >
           <DialogHeader>
-            <DialogDescription>
-              <video
-                autoPlay
-                src={`/images/videos/below_process.mp4`}
-                controls
-                className="!w-full rounded-lg "
-              />
-            </DialogDescription>
+            <Suspense fallback={<p>Loading...</p>}>
+              <DialogDescription>
+
+                <video
+                  autoPlay
+                  src={`/images/videos/below_process.mp4`}
+                  controls
+                  className="!w-full rounded-lg "
+                />
+              </DialogDescription>
+            </Suspense>
           </DialogHeader>
         </DialogContent>
       </Dialog>
