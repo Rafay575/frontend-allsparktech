@@ -98,13 +98,13 @@ export default function ServiceTechnologies({
                   viewport={{ once: true }}
                   className="w-[47%] md:w-[23%] lg:w-[14%] flex flex-col items-center border py-[10px] pt-[30px] rounded-[5px] relative mt-[20px]"
                 >
-                  <div className="w-[60px] h-[60px] bg-[#384bff] rounded-full translate-y-[-100%] absolute flex items-center justify-center p-[5px]">
+                  <div className="w-[60px] h-[60px] bg-[#384bff] rounded-full translate-y-[-100%] absolute flex items-center justify-center p-[5px] hover:scale-[1.04] duration-300">
                     <Image
                       src={`${baseURL}/images/services/${tec.Icon}`}
                       alt={tec.name}
                       width={200}
                       height={200}
-                      className="!w-[80%] h-[80%] object-contain"
+                      className="!w-[80%] h-[80%] object-contain "
                     />
                   </div>
                   <p className="mt-2 para capitalize px-[5px]">{tec.name}</p>

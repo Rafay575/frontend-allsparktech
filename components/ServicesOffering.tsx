@@ -81,7 +81,8 @@ export default function ServicesOffering({ serviceOffering }: ServiceOfferingPro
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
-              className={`bg-[#f3f7fb] border border-[#d4dcff] p-[15px] lg:p-[20px] rounded-[10px] min-h-[250px] ${card.link? ` min-h-[250px] md:min-h-[300px]`:`min-h-[210px] md:min-h-[240px]`} md:min-h-[300px] flex flex-col items-center sm:items-start text-center sm:text-start`}
+              // className={`bg-[#f3f7fb] border border-[#d4dcff] p-[15px] lg:p-[20px] rounded-[10px] min-h-[250px] ${card.link? ` min-h-[250px] md:min-h-[300px]`:`min-h-[210px] md:min-h-[240px]`} md:min-h-[300px] flex flex-col items-center sm:items-start text-center sm:text-start`}
+              className={`bg-[#f3f7fb] border border-[#d4dcff] p-[15px] lg:p-[20px] rounded-[10px]  min-h-[210px] md:min-h-[240px] flex flex-col items-center sm:items-start text-center sm:text-start`}
             >
               <Image
                 src={`${baseURL}/images/services/${card.icon}`}
@@ -93,7 +94,7 @@ export default function ServicesOffering({ serviceOffering }: ServiceOfferingPro
               <p className="subheading font-[700] mt-[20px]">{card.heading}</p>
               <p className="my-[10px] para">{card.des}</p>
 
-              {card.link &&
+              {/* {card.link &&
                 <Link
                   href={`${card.link ? `/subservice/${card.link}` : `/contact`}`}
                   className="mt-auto"
@@ -103,7 +104,7 @@ export default function ServicesOffering({ serviceOffering }: ServiceOfferingPro
                     <MdKeyboardDoubleArrowRight className="text-grey-600 para group-hover:text-white" />
                   </button>
                 </Link>
-              }
+              } */}
             </motion.div>
           ))}
         </div>
