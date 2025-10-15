@@ -1,7 +1,7 @@
 "use client";
 import Navbar2 from "@/components/Navbar2";
 import Topnav from "@/components/Topnav";
-import Footer2 from "@/components/Footer2";
+import Footer from "@/components/Footer";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Hero2Section from "@/components/Hero2Section";
 import LazyBlogCard from "@/components/LazyBlogCard";
@@ -190,7 +190,7 @@ export default function BlogPage() {
           ),
         }}
       />
-      <Footer2 />
+      <Footer />
     </div>
   );
 }

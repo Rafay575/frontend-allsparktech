@@ -1,7 +1,8 @@
 import React from "react";
 import { ServicePageData } from "@/lib/types";
 import { baseURL } from "@/API/baseURL";
-import CustomSoftwareDevelopment from "@/components/CustomSoftwareDevelopment";
+import TaxiSupport from "@/components/TaxiSupport";
+
 export const dynamic = "force-dynamic";
 
 async function fetchServiceData(): Promise<ServicePageData> {
@@ -30,5 +31,5 @@ async function fetchServiceData(): Promise<ServicePageData> {
 
 export default async function Page() {
   const servicePageData: ServicePageData = await fetchServiceData();
-  return <CustomSoftwareDevelopment servicePageData={servicePageData} />;
+  return <TaxiSupport servicePageData={servicePageData} />;
 }

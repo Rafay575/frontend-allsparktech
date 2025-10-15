@@ -4,7 +4,7 @@ import React from "react";
 import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
 import Hero2Section from "@/components/Hero2Section";
-import Footer2 from "@/components/Footer2";
+import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import Script from "next/script";
 import { baseURL } from "@/API/baseURL";
@@ -42,7 +42,7 @@ const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) =>
           ]}
         />
         <Contact pagedata={contactData} />
-        <Footer2 />
+        <Footer />
         <Script
           id="ldjson"
           type="application/ld+json"

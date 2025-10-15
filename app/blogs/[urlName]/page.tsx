@@ -1,7 +1,7 @@
 // import { notFound } from "next/navigation";
 import Navbar2 from "@/components/Navbar2";
 import Topnav from "@/components/Topnav";
-import Footer2 from "@/components/Footer2";
+import Footer from "@/components/Footer";
 import { baseURL } from "@/API/baseURL";
 import type { Metadata } from "next";
 import { MdOutlineDateRange } from "react-icons/md";
@@ -188,36 +188,7 @@ export default async function BlogDetailPage({ params }: any) {
                     className="w-full"
                   />
                 )}
-                {item.type === "doubleimage" && (
-                  <div className="flex flex-col lg:flex-row gap-4">
-                    {item.value.map((url: string, index: number) => (
-                      <Image
-                        key={index}
-                        src={`${baseURL}/images/blogs/${url}`}
-                        unoptimized
-                        alt={`img-${index}`}
-                        width={1200}
-                        height={2000}
-                        className="w-full lg:w-1/2"
-                      />
-                    ))}
-                  </div>
-                )}
-                {item.type === "tripleimage" && (
-                  <div className="flex flex-col lg:flex-row gap-4">
-                    {item.value.map((url: string, index: number) => (
-                      <Image
-                        key={index}
-                        src={`${baseURL}/images/blogs/${url}`}
-                        unoptimized
-                        alt={`img-${index}`}
-                        width={1200}
-                        height={2000}
-                        className="w-full lg:w-1/3"
-                      />
-                    ))}
-                  </div>
-                )}
+                
               </div>
             ))}
           </div>
@@ -264,7 +235,7 @@ export default async function BlogDetailPage({ params }: any) {
         </div>
       </div>
 
-      <Footer2 />
+      <Footer />
     </div>
   );
 }

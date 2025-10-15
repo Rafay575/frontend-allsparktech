@@ -1,4 +1,4 @@
-import Footer2 from "@/components/Footer2";
+import Footer from "@/components/Footer";
 import Navbar2 from "@/components/Navbar2";
 import Topnav from "@/components/Topnav";
 import React from "react";
@@ -292,7 +292,7 @@ export default function page() {
           </div>
         </div>
       </section>
-      <Footer2 />
+      <Footer />
     </>
   );
 }

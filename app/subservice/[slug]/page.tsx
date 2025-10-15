@@ -1,4 +1,4 @@
-import Footer2 from '@/components/Footer2'
+import Footer from '@/components/Footer'
 import Navbar2 from '@/components/Navbar2'
 import Topnav from '@/components/Topnav'
 import React from 'react'
@@ -213,7 +213,7 @@ export default async function Page({ params }: PageProps) {
                     <ServicesContact title={subServiceJson.contact.title} subTitle={subServiceJson.contact.subTitle} />
                 </div>
             </div>
-            <Footer2 />
+            <Footer />
         </>
     )
 }

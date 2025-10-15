@@ -3,7 +3,7 @@
 import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
 import Hero2Section from "@/components/Hero2Section";
-import Footer2 from "@/components/Footer2";
+import Footer from "@/components/Footer";
 import ServiceCards from "@/components/ServiceCards";
 import AboutPageComponent from "@/components/AboutPageComponent";
 import CoreValuesSemiCircle from "@/components/CoreValuesSemiCircle";
@@ -64,7 +64,7 @@ const AboutClient = ({ aboutData }: { aboutData: aboutData }) => {
             }}
           />
         )}
-        <Footer2 />
+        <Footer />
       </div>
     </>
   );

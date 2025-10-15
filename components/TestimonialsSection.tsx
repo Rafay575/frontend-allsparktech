@@ -6,8 +6,8 @@ import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useState } from "react";
-import { FaStar } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 interface testimonials {
   title: string;
@@ -92,22 +92,24 @@ export default function TestimonialsSection({ testimonials }: { testimonials: te
               <SwiperSlide key={t.id}>
                 <motion.div
                   variants={itemVariants}
-                  className={`h-[270px] flex flex-col justify-between rounded-xl p-4 shadow-lg transition-colors duration-300 ${
-                    active === idx
+                  className={`h-[270px] flex flex-col justify-between rounded-xl p-4 shadow-lg transition-colors duration-300 ${active === idx
                       ? "bg text-white"
                       : "bg-white text-gray-900"
-                  }`}
+                    }`}
                 >
                   {/* Stars */}
                   <div className="mb-6 mt-3 flex justify-center space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <FaStar
-                        key={i}
-                        className={`text-[22px] ${
-                          i < t.rating ? "text-yellow-500" : "text-gray-500"
-                        }`}
-                      />
-                    ))}
+                    {[...Array(5)].map((_, i) => {
+                      const full = i + 1 <= Math.floor(t.rating);
+                      const half = !full && i < t.rating;
+                      return full ? (
+                        <FaStar key={i} className="text-[22px] text-yellow-500" />
+                      ) : half ? (
+                        <FaStarHalfAlt key={i} className="text-[22px] text-yellow-500" />
+                      ) : (
+                        <FaRegStar key={i} className="text-[22px] text-gray-400" />
+                      );
+                    })}
                   </div>
 
                   {/* Quote text */}
@@ -126,17 +128,15 @@ export default function TestimonialsSection({ testimonials }: { testimonials: te
                     <div className="flex flex-col items-start">
                       <h3 className="font-semibold subheading">{t.name}</h3>
                       <p
-                        className={`para ${
-                          active === idx ? "text-blue-200" : "text-gray-500"
-                        }`}
+                        className={`para ${active === idx ? "text-blue-200" : "text-gray-500"
+                          }`}
                       >
                         {t.role}
                       </p>
                     </div>
                     <Quote
-                      className={`ml-auto h-7 w-7  ${
-                        active === idx ? "text-blue-200" : "text-gray-300"
-                      }`}
+                      className={`ml-auto h-7 w-7  ${active === idx ? "text-blue-200" : "text-gray-300"
+                        }`}
                     />
                   </div>
                 </motion.div>

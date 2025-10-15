@@ -20,7 +20,7 @@ export default function Navbar3() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const linkBase = "text-sm transition-colors hover:opacity-100 px-4 py-2 hover:bg-[#384BFF]  hover:text-white rounded-full";
+  const linkBase = "text-[16px] transition-colors hover:opacity-100 px-4 py-2 hover:bg-[#384BFF]  hover:text-white rounded-full";
   const linkColor = scrolled
     ? "text-slate-700 hover:text-slate-900"
     : "text-white hover:text-white";
@@ -111,7 +111,7 @@ export default function Navbar3() {
           </Link>
 
           {/* Desktop Nav (lg+) */}
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <nav className=" hidden items-center gap-3 xl:gap-8 lg:flex font-medium" aria-label="Primary">
             <Link href="/" className={`${linkBase} ${linkColor} `}>Home</Link>
             <Link href="/about" className={`${linkBase} ${linkColor}`}>About</Link>
 
