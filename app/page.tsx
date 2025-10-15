@@ -1,5 +1,6 @@
 import { baseURL } from "@/API/baseURL";
 import HomeSection from "@/components/HomeSection"
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
   return {

@@ -1,26 +1,23 @@
 // import { notFound } from "next/navigation";
 import Navbar2 from "@/components/Navbar2";
 import Topnav from "@/components/Topnav";
-import Footer2 from "@/components/Footer2";
+import Footer from "@/components/Footer";
 import { baseURL } from "@/API/baseURL";
-import { JSDOM } from "jsdom";
-import axios from "axios";
 import type { Metadata } from "next";
 import { MdOutlineDateRange } from "react-icons/md";
 import Image from "next/image";
 import authorimg from "@/public/images/blogs/blogauthor.jpg"
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import BlogFaqs from "@/components/BlogFaqs";
 
-
-
-
-export async function generateMetadata(props: any): Promise<Metadata> {
+// ✅ Metadata SSR
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   try {
-    const { params } = props;
-    const res = await axios.get(`${baseURL}/blogs/${params.urlName}`);
-    const metatitle = res.data.metatitle?.trim();
-    const metadescription = res.data.metadescription?.trim();
+    const res = await fetch(`${baseURL}/blogs/${params.urlName}`);
+    if (!res.ok) throw new Error("Metadata fetch failed");
+
+    const data = await res.json();
+    const metatitle = data.metatitle?.trim();
+    const metadescription = data.metadescription?.trim();
 
     const defaultMeta: Metadata = {
       title: "AllSpark Technologies",
@@ -42,7 +39,30 @@ export async function generateMetadata(props: any): Promise<Metadata> {
   }
 }
 
-export default async function BlogDetailPage(props: any) {
+// ✅ Helper functions
+const slugify = (text: string) =>
+  (text || "")
+    .toLowerCase()
+    .trim()
+    .replace(/[\s_]+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-") || "section";
+
+const makeUnique = (base: string, taken: Set<string>) => {
+  let id = base;
+  let n = 2;
+  while (taken.has(id)) id = `${base}-${n++}`;
+  taken.add(id);
+  return id;
+};
+
+// ✅ Page SSR
+export default async function BlogDetailPage({ params }: any) {
+  interface Faq {
+    id: string;
+    question: string;
+    answer: string;
+  }
   interface BlogData {
     id: number;
     title: string;
@@ -50,109 +70,163 @@ export default async function BlogDetailPage(props: any) {
     urlName: string;
     image: string;
     created_at: string;
-    content: string;
+    items: any[];
+    faqs: Faq[];
   }
 
-  const { params } = props;
-
+  // 🔥 SSR fetch (always fresh)
   const res = await fetch(`${baseURL}/blogs/${params.urlName}`);
 
-  if (!res.ok) return <h1>No detail fetch </h1>;
-
+  if (!res.ok) return <h1>No detail fetch</h1>;
   const blog: BlogData = await res.json();
 
-  // ✅ Parse content and extract headings
-  const dom = new JSDOM(blog.content);
-  const document = dom.window.document;
-  const headings: { id: string; text: string }[] = [];
+  const takenIds = new Set<string>();
+  const itemsWithIds = Array.isArray(blog.items)
+    ? blog.items.map((it: any) => {
+      if (it?.type === "h2" && typeof it.value === "string") {
+        const id = makeUnique(slugify(it.value), takenIds);
+        return { ...it, id };
+      }
+      return it;
+    })
+    : [];
 
-  ["h2"].forEach((tag) => {
-    document.querySelectorAll(tag).forEach((heading) => {
-      const text = heading.textContent?.trim() || "";
-      if (!text) return; // ✅ Skip empty headings
+  const toc = itemsWithIds
+    .filter((it: any) => it.type === "h2" && it.id)
+    .map((it: any) => ({ id: it.id, text: it.value }));
 
-      const id = text
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^a-z0-9\-]/g, "");
+  console.log(blog.items)
 
-      heading.setAttribute("id", id);
-      headings.push({ id, text });
-    });
-  });
-
-  // ✅ Update blog.content with new HTML (with ids on headings)
-  const updatedContent = document.body.innerHTML;
-  console.log("Blog :", blog)
   return (
     <div>
       <Topnav />
       <Navbar2 />
-      {/* <BlogHeroSection title={blog.title} backgroundImage={blog.image} /> */}
 
-      <div className="w-[95%] xl:w-[80%] mx-auto flex flex-col md:flex-row ">
-
-        {/* Content Area */}
-        <div className="w-full md:w-[75%] md:border-r md:border-[#dbdbdb] flex flex-col gap-[10px] px-[20px] py-[30px]">
-          {/* Title  */}
-          <p className="text-[35px] font-bold leading-[32px] text-[#111827]">
+      <div className="w-[95%] xl:w-[80%] mx-auto flex flex-col md:flex-row">
+        {/* Content */}
+        <div className="w-full md:w-[75%] md:border-r md:border-[#dbdbdb] flex flex-col gap-[10px] px-[20px] py-[30px] lg:pr-[60px]">
+          <p className="heading font-bold leading-[32px] text-[#111827]">
             {blog.title}
           </p>
+          <div className="-mt-4">
+            <div className="w-10 border-b-4 border-blue-500 inline-block"></div>
+          </div>
 
-        
-          {/* Date  */}
           <div className="flex items-center gap-[5px]">
-            <MdOutlineDateRange className="text-[20px] text-[#384BFF]" />
-            <p className="text-[14px]  text-[#4b5563]">
-              {new Date(blog.created_at).toLocaleDateString('en-GB', {
-                day: '2-digit',
-                month: 'long',
-                year: 'numeric'
+            <MdOutlineDateRange className="text-[20px] text-blue-500" />
+            <p className="para text-[#4b5563]">
+              {new Date(blog.created_at).toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
               })}
             </p>
           </div>
 
-          {/* Main Image  */}
-          <img src={`${baseURL}/images/blogs/${blog.image}`} className="rounded-[10px] !w-[100%]" alt="MainImg " />
-          
-          {/* Description  */}
-          <p className="text-[15px] text-[#1f2937]">
-            {blog.description}
-          </p>
-          <div
-            style={{}}
-            className=" blogcontent text-[15px] text-[#1f2937]"
-            dangerouslySetInnerHTML={{ __html: updatedContent }}
+          <Image
+            src={`${baseURL}/images/blogs/${blog.image}`}
+            width={400}
+            height={400}
+            unoptimized
+            className="rounded-[10px] !w-[100%]"
+            alt="MainImg "
           />
-          
-           {/* Author  */}
-          <div className="flex gap-[10px]">
-            <Image src={authorimg} alt="author" className="w-[70px] h-[70px] object-cover border border-[#384BFF] rounded-full  " />
-            <div>
-              <p className="text-[20px] leading-[29px] font-medium border-b-2 border-[#384BFF] text">by Irfan</p>
-              <div className="flex items-center gap-[5px] mt-[5px]">
-                <FaLinkedin className="text-[23px]  text-[#384BFF] hover:scale-[1.1] duration-500 cursor-pointer"/>
-                <FaTwitter className="text-[23px] text-[#384BFF] hover:scale-[1.1] duration-500 cursor-pointer"/>
+
+          <p className="para text-[#1f2937]">{blog.description}</p>
+
+          <div className="blogsdata">
+            {itemsWithIds.map((item: any, index: number) => (
+              <div key={index}>
+                {item.type === "h1" && <h1 className="h1 heading">{item.value}</h1>}
+                {item.type === "h2" && (
+                  <div>
+                    <h2 id={item.id} className="h2 scroll-mt-24">
+                      {item.value}
+                    </h2>
+                    <div className="-mt-4">
+                      <div className="w-10 border-b-4 border-blue-500 inline-block"></div>
+                    </div>
+                  </div>
+                )}
+                {item.type === "h3" && <h3 className="h3">{item.value}</h3>}
+                {item.type === "p" && (
+                  <p
+                    className="text-[16px] text-[#4B5563] font-[400] para"
+                    dangerouslySetInnerHTML={{ __html: item.value }}
+                  />
+                )}
+                {item.type === "strong" && (
+                  <strong className="strong text-[#4B5563] font-[400] text-[16px]">
+                    {item.value}
+                  </strong>
+                )}
+                {item.type === "ul" && (
+                  <ul className="ul">
+                    {item.value?.map((li: any, liIndex: number) => (
+                      <li key={liIndex} className="text-[#4B5563] font-[500] para">
+                        {li}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {item.type === "ol" && (
+                  <ol className="ol">
+                    {item.value?.map((li: any, liIndex: number) => (
+                      <li key={liIndex} className="text-[#4B5563] font-[500] para">
+                        {li}
+                      </li>
+                    ))}
+                  </ol>
+                )}
+                {item.type === "singleimage" && (
+                  <Image
+                    src={`${baseURL}/images/blogs/${item.value}`}
+                    unoptimized
+                    alt="img"
+                    width={1200}
+                    height={2000}
+                    className="w-full"
+                  />
+                )}
+                
               </div>
-            </div>
+            ))}
           </div>
 
+          {/* FAQs */}
+          <BlogFaqs faqs={blog.faqs} />
+
+          {/* Author */}
+          <div className="flex gap-[10px] justify-start  items-center">
+            <Image
+              src={authorimg}
+              unoptimized
+
+              alt="author"
+              className="w-[50px] h-[50px] object-cover border border-[#384BFF] rounded-full"
+            />
+            <div>
+              <p className="subheading leading-[29px] font-medium border-b-2 border-[#384BFF] relative bottom-[3px]">
+                by Admin
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Table of Contents Area */}
-        <div className="w-full md:w-[25%] hidden md:block p-[20px]  max-h-[95vh] overflow-y-auto hide-scrollbar md:sticky top-[40px] bottom-[300px] mb-[20px] md:mb-[0px] z-10">
-          <p className="text-[21px] font-semibold mt-[10px] mb-[6px] ml-1">
+        {/* TOC */}
+        <div className="w-full md:w-[25%] hidden md:block p-[20px] max-h-[95vh] overflow-y-auto hide-scrollbar md:sticky top-[40px] bottom-[300px] mb-[20px] md:mb-[0px] z-10">
+          <p className=" font-semibold mt-[10px] mb-[6px] ml-1 subheading">
             Table of Contents
           </p>
           <hr />
           <div className="flex flex-col gap-[10px] my-[5px]">
-            {headings.map((item, index) => (
-              <div key={index}>
+            {toc.map((h, i) => (
+              <div key={i}>
                 <a
-                  href={`#${item.id}`}
-                  className="text-[14px] text-[#4b5563] hover:underline"
+                  href={`#${h.id}`}
+                  className="para text-[#4b5563] hover:text-blue-500 cursor-pointer"
                 >
-                  {item.text}
+                  {h.text}
                 </a>
                 <hr className="mt-[7px]" />
               </div>
@@ -161,10 +235,12 @@ export default async function BlogDetailPage(props: any) {
         </div>
       </div>
 
-      <Footer2 />
+      <Footer />
     </div>
   );
 }
+
+
 export async function generateStaticParams() {
   const res = await fetch(`${baseURL}/blogs`);
   const blogs = await res.json();

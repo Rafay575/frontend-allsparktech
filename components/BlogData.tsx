@@ -1,7 +1,7 @@
 "use client";
 import Navbar2 from "@/components/Navbar2";
 import Topnav from "@/components/Topnav";
-import Footer2 from "@/components/Footer2";
+import Footer from "@/components/Footer";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Hero2Section from "@/components/Hero2Section";
 import LazyBlogCard from "@/components/LazyBlogCard";
@@ -48,7 +48,7 @@ export default function BlogPage() {
       }
     };
 
-    fetchBlogs(); // Don't forget to call the async function
+    fetchBlogs(); 
   }, []);
 
   if (isLoading) return <div className="text-center py-10">Loading...</div>;
@@ -67,21 +67,21 @@ export default function BlogPage() {
           { label: "About Us", href: "/About" },
         ]}
       />
-      <div className="w-[95%] md:w-[80%] mx-auto my-[20px]">
-        <div className="mx-auto max-w-7xl text-start mt-[100px]">
-          <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
+      <div className="container mar">
+        <div className="text-center sm:text-start ">
+          <div className="mb-2 flex items-center justify-center sm:justify-start space-x-4 para font-semibold uppercase tracking-wide color">
             <ArrowLeft className="h-4 w-4" />
             <span>{data.subTitle}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
           <div className="relative">
-            <h2 className="mt-3 text-4xl font-semibold text-gray-900">
+            <h2 className="mt-3 heading font-semibold text-gray-900">
               {data.title}
             </h2>
           </div>
         </div>
 
-        <div className="my-[50px]">
+        <div className="my-[20px]">
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-[15px]">
             {blogs.map((blog) => (
               <LazyBlogCard key={blog.id} blog={blog} />
@@ -190,7 +190,7 @@ export default function BlogPage() {
           ),
         }}
       />
-      <Footer2 />
+      <Footer />
     </div>
   );
 }

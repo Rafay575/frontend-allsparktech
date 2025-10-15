@@ -30,15 +30,15 @@ export default function BlogCard(props: BlogCardProps) {
               <IoAddOutline className="text-[20px] text-[#384BFF] duration-300 hover:rotate-90" />
             </div>
             <div className="overflow-hidden h-full flex flex-col justify-end pt-[60px]">
-              <p className="text-white text-[20px] font-extrabold mb-[10px] group-hover:-translate-y-5 duration-500">
+              <p className="text-white subheading font-extrabold mb-[10px] group-hover:-translate-y-5 duration-500">
                 {props.title}
               </p>
-              <p className="text-white text-[17px] font-normal mb-[2px] group-hover:-translate-y-5 duration-500">
+              <p className="text-white para font-normal mb-[2px] group-hover:-translate-y-5 duration-500">
                 {props.description.length > 70
                   ? props.description.slice(0, 70) + "..."
                   : props.description}
               </p>
-              <div className="text-[13px] text-white translate-y-9 group-hover:-translate-y-5 duration-500">
+              <div className="text-[12px] text-white translate-y-9 group-hover:-translate-y-5 duration-500">
                 {props.created_at
                   ? new Date(props.created_at).toLocaleDateString("en-US", {
                       weekday: "short", // "Wed"

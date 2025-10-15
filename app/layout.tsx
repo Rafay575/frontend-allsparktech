@@ -10,6 +10,7 @@ import { Toaster } from "sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useState } from "react";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // Font setup
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -35,13 +36,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!w-[100vw] overflow-x-hidden">
       <head>
-      
+
         <link rel="icon" href="/images/favicon.png" type="image/png" />
         <meta
           name="google-site-verification"
           content="G1uaovu8fDlyB3-5phzFHMeTubsdrU5pyZmKLe4l7FA"
+        />
+        {/* Rajdhani Font CDN */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
         />
         {/* Google Analytics */}
         <Script
@@ -84,7 +92,7 @@ export default function RootLayout({
         </Script>
       </head>
 
-      <body className={`${plusJakartaSans.className} antialiased`}>
+      <body className={`${plusJakartaSans.className} antialiased `}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-T96MJWT5"
@@ -97,7 +105,10 @@ export default function RootLayout({
         <GlobalPreloader />
 
         {/* React Query Provider */}
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ReactQueryProvider>
+          {children}
+          <ScrollToTop/>
+          </ReactQueryProvider>
 
         <Toaster position="bottom-right" className="bg-[#384BFF] text-white" />
       </body>

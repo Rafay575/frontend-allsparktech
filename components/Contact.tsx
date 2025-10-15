@@ -77,24 +77,24 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
 
   return (
     <>
-      <motion.section
-        className="max-w-7xl mx-auto px-4 my-8 py-8"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
+      <section
+        className="container pad"
       >
         {/* Grid layout: two columns on md+ screens, one column on smaller screens */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Left Column */}
-          <div>
-            <h2 className="mb-4 text-2xl font-bold text-gray-900">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}>
+            <h2 className="mb-4 heading font-bold text-gray-900 text-center sm:text-start">
               {pagedata?.title}
             </h2>
             <div>
-              <p className="text-sm leading-6">{pagedata?.description}</p>
+              <p className="para leading-6  text-center sm:text-start">{pagedata?.description}</p>
             </div>
-            <div className="py-12 pb-20 space-y-6">
+            <div className="py-12 pb-20 space-y-6 flex flex-col items-start">
               {/* Call Us */}
               <motion.a
                 href={pagedata?.methods[0].href}
@@ -110,10 +110,10 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="subheading font-semibold">
                     {pagedata?.methods[0].label}
                   </h3>
-                  <p className="text-sm">{pagedata?.methods[0].value}</p>
+                  <p className="para">{pagedata?.methods[0].value}</p>
                 </div>
               </motion.a>
 
@@ -132,10 +132,10 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="subheading font-semibold">
                     {pagedata?.methods[1].label}
                   </h3>
-                  <p className="text-sm">{pagedata?.methods[1].value}</p>
+                  <p className="para">{pagedata?.methods[1].value}</p>
                 </div>
               </motion.a>
 
@@ -148,7 +148,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+                <div className="mr-3 flex h-[60px] w-[60px] items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative  group-hover:bg-[#384BFF] transition-all">
                   <MapPin
                     className="text-[#384BFF] group-hover:text-white transition-all"
                     size={22}
@@ -156,19 +156,22 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="subheading font-semibold">
                     {pagedata?.methods[2].label}
                   </h3>
-                  <p className="text-sm">{pagedata?.methods[2].value}</p>
+                  <p className="para">{pagedata?.methods[2].value}</p>
                 </div>
               </motion.a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Contact Form */}
-          <div>
+          <motion.div initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
                 <div>
                   <label
                     htmlFor="name"
@@ -212,7 +215,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div>
                   <Controller
                     name="phone"
@@ -232,7 +235,7 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                   )}
                 </div>
 
-                <div>
+                <div >
                   <Controller
                     name="service"
                     control={control}
@@ -240,16 +243,18 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                       <Dropdown
                         label="Choose a service"
                         items={[
-                          "Customer Support",
-                          "Digital Marketing & SEO",
                           "Custom Software Development",
-                          "Web & App Development",
+                          "Website Development",
+                          "Mobile App Development",
                           "AI & Machine Learning",
-                          "Cloud & DevOps Solutions",
                           "UI/UX Design",
                           "Ecommerce Development",
-                          "Email Marketing",
-                          "Live Chat Support",
+                          "Customer-Support",
+                          "Email-Support",
+                          "Live-Chat-Support",
+                          "Taxi-Support",
+                          "SEO",
+                          "Digital Marketing",
                         ]}
                         value={field.value}
                         onChange={field.onChange}
@@ -293,9 +298,9 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Google Map */}
       <motion.div

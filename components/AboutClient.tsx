@@ -3,7 +3,7 @@
 import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
 import Hero2Section from "@/components/Hero2Section";
-import Footer2 from "@/components/Footer2";
+import Footer from "@/components/Footer";
 import ServiceCards from "@/components/ServiceCards";
 import AboutPageComponent from "@/components/AboutPageComponent";
 import CoreValuesSemiCircle from "@/components/CoreValuesSemiCircle";
@@ -35,35 +35,37 @@ export interface aboutData {
 
 
 const AboutClient = ({ aboutData }: { aboutData: aboutData }) => {
- 
+
 
   return (
     <>
       <Topnav />
       <Navbar2 />
-      <Hero2Section
-        title="About"
-        backgroundImage={`${baseURL}/images/about/${aboutData.heroimg}`}
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/About" },
-        ]}
-      />
-      <ServiceCards aboutData={aboutData}/>
-      <Suspense fallback={<div>Loading About Page...</div>}>
-        <AboutPageComponent aboutData={aboutData}/>
-      </Suspense>
-      <CoreValuesSemiCircle />
-      {aboutData?.script && (
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(aboutData.script),
-          }}
+      <div className="w-[100vw]  overflow-x-hidden">
+        <Hero2Section
+          title="About"
+          backgroundImage={`${baseURL}/images/about/${aboutData.heroimg}`}
+          breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "About", href: "/About" },
+          ]}
         />
-      )}
-      <Footer2 />
+        <ServiceCards aboutData={aboutData} />
+        <Suspense fallback={<div>Loading About Page...</div>}>
+          <AboutPageComponent aboutData={aboutData} />
+        </Suspense>
+        <CoreValuesSemiCircle />
+        {aboutData?.script && (
+          <Script
+            id="structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(aboutData.script),
+            }}
+          />
+        )}
+        <Footer />
+      </div>
     </>
   );
 };

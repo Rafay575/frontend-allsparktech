@@ -1,5 +1,6 @@
 import { baseURL } from "@/API/baseURL";
 import ContactPageClient from "../../components/ContactPageClient";
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
   return {

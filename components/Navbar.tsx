@@ -7,6 +7,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { usePathname, useRouter } from "next/navigation";
+import { FaSearchengin } from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
+import { FaTaxi } from "react-icons/fa";
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
@@ -113,7 +116,7 @@ const Navbar = () => {
               {/* Full-width dropdown with smooth open/close */}
               {/* Full-width dropdown with smooth open/close */}
               <div
-                className={` absolute left-0 w-full top-full z-10 mt-2 
+                className={` absolute left-0 w-full top-full z-10 mt-[6px] 
                  transform-gpu origin-top 
                 scale-y-0 group-hover:scale-y-100 
                 transition-transform duration-300 ease-out `}
@@ -122,15 +125,15 @@ const Navbar = () => {
                   <div className="mx-auto max-w-6xl px-6 grid grid-cols-3 gap-8">
                     {/* Column 1 */}
                     <div>
-                      <h3 className="mb-3 text-base font-bold text-gray-800">
+                      <h3 className="mb-3 text-[15px] xl:text-[17px] font-bold text-gray-800">
                         Software Development & AI
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
+                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
                         <Link
                           href={{
                             pathname: "/custom-software-development"
                           }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                          className="flex items-center hover:text-[#384BFF] transition duration-300 "
                         >
                           <Image
                             className="mr-2"
@@ -138,12 +141,12 @@ const Navbar = () => {
                             alt="icon"
                             width={30}
                             height={30}
-                          />
+                          />{" "}
                           Custom Software Development
                         </Link>
                         <Link
                           href={{
-                            pathname: "/web-and-app-development"
+                            pathname: "/website-development"
                           }}
                           className="flex items-center hover:text-[#384BFF] transition duration-300"
                         >
@@ -154,7 +157,16 @@ const Navbar = () => {
                             width={30}
                             height={30}
                           />
-                          Web & App Development
+                          Website Development
+                        </Link>
+                        <Link
+                          href={{
+                            pathname: "/mobile-app-development"
+                          }}
+                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                        >
+                          <FaMobileAlt className="text-[27px] mr-[7px] text-[#6b7cff]" />
+                          Mobile App Development
                         </Link>
                         <Link
                           href={{
@@ -172,21 +184,7 @@ const Navbar = () => {
                           AI & Machine Learning
                         </Link>
 
-                        <Link
-                          href={{
-                            pathname: "/cloud-and-devops-solutions"
-                          }}
-                          className="flex items-center hover:text-[#384BFF] transition duration-300 "
-                        >
-                          <Image
-                            className="mr-2"
-                            src={"/images/devops-icon.svg"}
-                            alt="icon"
-                            width={30}
-                            height={30}
-                          />{" "}
-                          Cloud & DevOps Solutions
-                        </Link>
+
                         <Link
                           href={{
                             pathname: "/ui-ux-design"
@@ -218,13 +216,15 @@ const Navbar = () => {
                           />{" "}
                           Ecommerce Development
                         </Link>
-                      </ul>
+                      </div>
                     </div>
+
+                    {/* Column 2 */}
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
                         BPO & Tech-Enabled Services
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
+                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700 list-none">
                         <li>
                           <Link
                             href={{
@@ -245,7 +245,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href={{
-                              pathname: "/email-marketing"
+                              pathname: "/email-support"
                             }}
                             className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
                           >
@@ -256,7 +256,7 @@ const Navbar = () => {
                               width={30}
                               height={30}
                             />
-                            Email Marketing
+                            Email Support
                           </Link>
                         </li>
                         <li>
@@ -276,20 +276,43 @@ const Navbar = () => {
                             Live Chat Support
                           </Link>
                         </li>
+                        <li>
+                          <Link
+                            href={{
+                              pathname: "/taxi-support"
+                            }}
+                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                          >
+                            <FaTaxi className="text-[25px] mr-[12px] text-[#6b7cff]"/>
+                            Taxi Support
+                          </Link>
+                        </li>
 
                         {/* Add more as needed */}
                       </ul>
                     </div>
-                    {/* Column 2 */}
+
+                    {/* Column 3 */}
                     <div>
-                      <h3 className="mb-3 text-base font-bold text-gray-800">
+                      <h3 className="mb-3 text-[15px] xl:text-[17px] font-bold text-gray-800">
                         Marketing & Engagement
                       </h3>
-                      <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
-                        <li>
+                      <div className="space-y-4 pl-2 mt-5 text-sm text-gray-700 !list-unstyled">
+                        <div>
                           <Link
                             href={{
-                              pathname: "/digital-marketing-and-seo",
+                              pathname: "/seo",
+                            }}
+                            className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
+                          >
+                            <FaSearchengin className="text-[30px] mr-[7px] text-[#6b7cff]" />
+                            SEO
+                          </Link>
+                        </div>
+                        <div>
+                          <Link
+                            href={{
+                              pathname: "/digital-marketing",
                             }}
                             className="flex items-center hover:text-[#384BFF] transition duration-300 mr-2"
                           >
@@ -300,10 +323,10 @@ const Navbar = () => {
                               width={30}
                               height={30}
                             />
-                            Digital Marketing & SEO
+                            Digital Marketing
                           </Link>
-                        </li>
-                      </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -407,7 +430,7 @@ const Navbar = () => {
                 </div>
                 <hr className="mt-3 " />
                 <nav className="flex flex-col mx-5 mt-10 h-full">
-                  <ul className="space-y-2 text-gray-900">
+                  <ul className="space-y-2 text-gray-900 list-none">
                     <li className="border-b pb-3">
                       <Link href="/" onClick={() => setIsSidebarOpen(false)}>
                         Home
@@ -455,30 +478,41 @@ const Navbar = () => {
                             className="overflow-hidden pl-2 text-xs text-gray-700"
                           >
                             <div className="mt-2">
-                              <ul className="space-y-2">
-                                <li>
+                              <div className="space-y-2 !list-unstyled">
+                                <div>
                                   <Link
                                     href={{
-                                      pathname: "/custom-software-development"
+                                      pathname: "/custom-software-development",
                                     }}
                                     onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center hover:text-blue-600 transition duration-300"
                                   >
                                     Custom Software Development
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
-                                      pathname: "/web-and-app-development"
+                                      pathname: "/website-development"
                                     }}
                                     onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center hover:text-blue-600 transition duration-300"
                                   >
-                                    Web &amp; App Development
+                                    Website Development
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
+                                  <Link
+                                    href={{
+                                      pathname: "/mobile-app-development"
+                                    }}
+                                    onClick={() => setIsSidebarOpen(false)}
+                                    className="flex items-center hover:text-blue-600 transition duration-300"
+                                  >
+                                    Mobile App Development
+                                  </Link>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/ai-and-machine-learning",
@@ -488,19 +522,9 @@ const Navbar = () => {
                                   >
                                     AI &amp; Machine Learning
                                   </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href={{
-                                      pathname: "/cloud-and-devops-solutions",
-                                    }}
-                                    onClick={() => setIsSidebarOpen(false)}
-                                    className="flex items-center hover:text-blue-600 transition duration-300"
-                                  >
-                                    Cloud &amp; DevOps Solutions
-                                  </Link>
-                                </li>
-                                <li>
+                                </div>
+                                
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/ui-ux-design",
@@ -510,8 +534,8 @@ const Navbar = () => {
                                   >
                                     UI/UX Design
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/ecommerce-development"
@@ -521,9 +545,9 @@ const Navbar = () => {
                                   >
                                     Ecommerce Development
                                   </Link>
-                                </li>
+                                </div>
 
-                                <li>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/customer-support",
@@ -533,19 +557,19 @@ const Navbar = () => {
                                   >
                                     Customer Support
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
-                                      pathname: "/email-marketing"
+                                      pathname: "/email-support"
                                     }}
                                     onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center hover:text-blue-600 transition duration-300"
                                   >
-                                    Email Marketing
+                                    Email Support
                                   </Link>
-                                </li>
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
                                       pathname: "/live-chat-support",
@@ -555,20 +579,42 @@ const Navbar = () => {
                                   >
                                     Live Chat Support
                                   </Link>
-                                </li>
-
-                                <li>
+                                </div>
+                                <div>
                                   <Link
                                     href={{
-                                      pathname: "/digital-marketing-and-seo",
+                                      pathname: "/taxi-support",
                                     }}
                                     onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center hover:text-blue-600 transition duration-300"
                                   >
-                                    Digital Marketing &amp; SEO
+                                    Taxi Support
                                   </Link>
-                                </li>
-                              </ul>
+                                </div>
+
+                                <div>
+                                  <Link
+                                    href={{
+                                      pathname: "/seo",
+                                    }}
+                                    onClick={() => setIsSidebarOpen(false)}
+                                    className="flex items-center hover:text-blue-600 transition duration-300"
+                                  >
+                                    SEO
+                                  </Link>
+                                </div>
+                                <div>
+                                  <Link
+                                    href={{
+                                      pathname: "/digital-marketing",
+                                    }}
+                                    onClick={() => setIsSidebarOpen(false)}
+                                    className="flex items-center hover:text-blue-600 transition duration-300"
+                                  >
+                                    Digital Marketing
+                                  </Link>
+                                </div>
+                              </div>
                             </div>
                           </motion.div>
                         )}

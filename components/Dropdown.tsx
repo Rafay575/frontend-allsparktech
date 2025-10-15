@@ -67,11 +67,11 @@ export default function Dropdown({
       </button>
 
       <div
-        className={`absolute right-0  mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition-transform duration-200 ease-out z-10
+        className={`absolute right-0  mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition-transform duration-200 ease-out z-10
           ${open ? "scale-100 opacity-100 visible" : "scale-95 opacity-0 invisible"}`}
         style={{ transformOrigin: "top right" }}
       >
-        <ul className="py-1">
+        <ul className="py-1 list-none">
           {items.map((item) => (
             <li
               key={item}
