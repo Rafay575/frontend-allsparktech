@@ -70,7 +70,7 @@ export default async function BlogDetailPage({ params }: any) {
     urlName: string;
     image: string;
     created_at: string;
-    items: any[];
+    content: string;
     faqs: Faq[];
   }
 
@@ -80,22 +80,45 @@ export default async function BlogDetailPage({ params }: any) {
   if (!res.ok) return <h1>No detail fetch</h1>;
   const blog: BlogData = await res.json();
 
-  const takenIds = new Set<string>();
-  const itemsWithIds = Array.isArray(blog.items)
-    ? blog.items.map((it: any) => {
-      if (it?.type === "h2" && typeof it.value === "string") {
-        const id = makeUnique(slugify(it.value), takenIds);
-        return { ...it, id };
-      }
-      return it;
-    })
-    : [];
+// ✅ Parse content to add unique IDs for all h2s and create clean TOC
+const takenIds = new Set<string>();
+const headings: { id: string; text: string }[] = [];
 
-  const toc = itemsWithIds
-    .filter((it: any) => it.type === "h2" && it.id)
-    .map((it: any) => ({ id: it.id, text: it.value }));
+const updatedContent = blog.content.replace(
+  /<h2([^>]*)>([\s\S]*?)<\/h2>/gi,
+  (match, attributes, innerHTML) => {
+    // 🧠 Extract plain text (remove HTML tags inside h2)
+    const plainText = innerHTML.replace(/<[^>]+>/g, "").trim();
+    if (!plainText) return match; // skip if empty
 
-  console.log(blog.items)
+    const id = makeUnique(slugify(plainText), takenIds);
+    headings.push({ id, text: plainText });
+
+    // ✅ Check if h2 already has an id
+    if (/\sid\s*=\s*["'][^"']*["']/.test(attributes)) {
+      // replace existing id
+      attributes = attributes.replace(/\sid\s*=\s*["'][^"']*["']/, ` id="${id}"`);
+    } else {
+      // add id before the closing bracket
+      attributes = `${attributes} id="${id}"`;
+    }
+
+    // ✅ Preserve existing class (like ql-align-center) and append scroll-mt-20 if not present
+    if (/class\s*=/.test(attributes)) {
+      attributes = attributes.replace(
+        /class\s*=\s*["']([^"']*)["']/,
+        (m:any, classes:any) => `class="${classes} scroll-mt-20"`
+      );
+    } else {
+      attributes = `${attributes} class="scroll-mt-20"`;
+    }
+
+    // ✅ Return h2 with preserved alignment and new id
+    return `<h2${attributes}>${innerHTML}</h2>`;
+  }
+);
+
+
 
   return (
     <div>
@@ -105,9 +128,9 @@ export default async function BlogDetailPage({ params }: any) {
       <div className="w-[95%] xl:w-[80%] mx-auto flex flex-col md:flex-row">
         {/* Content */}
         <div className="w-full md:w-[75%] md:border-r md:border-[#dbdbdb] flex flex-col gap-[10px] px-[20px] py-[30px] lg:pr-[60px]">
-          <p className="heading font-bold leading-[32px] text-[#111827]">
+          <h1 className="heading font-bold leading-[32px] text-[#111827]">
             {blog.title}
-          </p>
+          </h1>
           <div className="-mt-4">
             <div className="w-10 border-b-4 border-blue-500 inline-block"></div>
           </div>
@@ -134,63 +157,12 @@ export default async function BlogDetailPage({ params }: any) {
 
           <p className="para text-[#1f2937]">{blog.description}</p>
 
-          <div className="blogsdata">
-            {itemsWithIds.map((item: any, index: number) => (
-              <div key={index}>
-                {item.type === "h1" && <h1 className="h1 heading">{item.value}</h1>}
-                {item.type === "h2" && (
-                  <div>
-                    <h2 id={item.id} className="h2 scroll-mt-24">
-                      {item.value}
-                    </h2>
-                    <div className="-mt-4">
-                      <div className="w-10 border-b-4 border-blue-500 inline-block"></div>
-                    </div>
-                  </div>
-                )}
-                {item.type === "h3" && <h3 className="h3">{item.value}</h3>}
-                {item.type === "p" && (
-                  <p
-                    className="text-[16px] text-[#4B5563] font-[400] para"
-                    dangerouslySetInnerHTML={{ __html: item.value }}
-                  />
-                )}
-                {item.type === "strong" && (
-                  <strong className="strong text-[#4B5563] font-[400] text-[16px]">
-                    {item.value}
-                  </strong>
-                )}
-                {item.type === "ul" && (
-                  <ul className="ul">
-                    {item.value?.map((li: any, liIndex: number) => (
-                      <li key={liIndex} className="text-[#4B5563] font-[500] para">
-                        {li}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                {item.type === "ol" && (
-                  <ol className="ol">
-                    {item.value?.map((li: any, liIndex: number) => (
-                      <li key={liIndex} className="text-[#4B5563] font-[500] para">
-                        {li}
-                      </li>
-                    ))}
-                  </ol>
-                )}
-                {item.type === "singleimage" && (
-                  <Image
-                    src={`${baseURL}/images/blogs/${item.value}`}
-                    unoptimized
-                    alt="img"
-                    width={1200}
-                    height={2000}
-                    className="w-full"
-                  />
-                )}
-                
-              </div>
-            ))}
+          <div className="blogcontent">
+            <div
+              className=""
+              dangerouslySetInnerHTML={{ __html: updatedContent }}
+            />
+
           </div>
 
           {/* FAQs */}
@@ -220,17 +192,19 @@ export default async function BlogDetailPage({ params }: any) {
           </p>
           <hr />
           <div className="flex flex-col gap-[10px] my-[5px]">
-            {toc.map((h, i) => (
-              <div key={i}>
+             {headings.length > 0 ? (
+              headings.map((h) => (
                 <a
+                  key={h.id}
                   href={`#${h.id}`}
-                  className="para text-[#4b5563] hover:text-blue-500 cursor-pointer"
+                  className="para text-[#4b5563] hover:text-blue-500 cursor-pointer scroll-smooth"
                 >
                   {h.text}
                 </a>
-                <hr className="mt-[7px]" />
-              </div>
-            ))}
+              ))
+            ) : (
+              <p className="text-sm text-gray-500 italic">No sections</p>
+            )}
           </div>
         </div>
       </div>
