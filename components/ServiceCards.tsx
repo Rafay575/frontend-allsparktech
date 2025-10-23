@@ -65,7 +65,8 @@ export default function ServiceCards({ aboutData }: { aboutData: aboutData }) {
               width={95}
               height={95}
               className="w-[17%] sm:w-[10%] lg:w-[15%] mb-4 mt-2 text-[#1D4ED8] "
-              loading="lazy"
+               loading="lazy" unoptimized
+
                
 
             />

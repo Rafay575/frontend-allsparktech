@@ -31,7 +31,8 @@ export default function Logos({ logos }: { logos: logos[] }) {
               width={150}
               height={50}
               className="object-contain w-[150px] sm:w-[170px] lg:w-[200px] lg:opacity-60 hover:opacity-100 duration-300"
-              loading="lazy"
+               loading="lazy" unoptimized
+
                
 
             />

@@ -316,7 +316,8 @@ export default function Contact({ pagedata }: { pagedata: ContactPageData }) {
           height="450"
           style={{ border: 0 }}
           allowFullScreen
-          loading="lazy"
+           loading="lazy" unoptimized
+
           referrerPolicy="no-referrer-when-downgrade"
         />
       </motion.div>

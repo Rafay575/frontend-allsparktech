@@ -47,7 +47,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
               width={1400}
               height={1400}
               className="!w-full object-cover"
-              loading="lazy"
+               loading="lazy" unoptimized
+
                
 
             />
@@ -60,7 +61,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
             className="object-contain absolute bottom-[-30px] right-[-30px] !w-[40%]"
             width={400}
             height={400}
-            loading="lazy"
+             loading="lazy" unoptimized
+
              
 
           />
@@ -77,7 +79,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
               width={400}
               height={400}
               className="object-cover rounded-full border-2 border-white"
-              loading="lazy"
+               loading="lazy" unoptimized
+
                
 
             />
@@ -133,7 +136,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
                   width={600}
                   height={600}
                   className="bg-white p-2 rounded-lg !w-[50px]"
-                  loading="lazy"
+                   loading="lazy" unoptimized
+
                    
 
                 />

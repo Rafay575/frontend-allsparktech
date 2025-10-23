@@ -97,7 +97,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                   width={150}
                   height={10}
                   className="w-[130px]"
-                  loading="lazy"
+                   loading="lazy" unoptimized
+
                
 
                 />
@@ -108,7 +109,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                     height={400}
                     alt="img1"
                     className="absolute w-[60px] hidden xl:block xl:w-[80px] -right-[10%] top-[12%]"
-                    loading="lazy"
+                     loading="lazy" unoptimized
+
                
 
                   />
@@ -152,7 +154,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                 width={4000}
                 height={4000}
                 className="w-full cursor-pointer"
-                loading="lazy"
+                 loading="lazy" unoptimized
+
                
 
               />

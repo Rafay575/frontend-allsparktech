@@ -32,7 +32,8 @@ export default function Logos({ serviceLogos }: ServiceLogosProps) {
               height={50}
               // className="object-contain w-[70%] sm:w-[50%] md:w-[75%]"
               className="object-contain w-[150px] sm:w-[170px] lg:w-[200px] lg:opacity-60 hover:opacity-100 duration-300"
-              loading="lazy"
+               loading="lazy" unoptimized
+
                
 
             />

@@ -47,7 +47,8 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               width={400}
               height={400}
               className="!w-[100%]"
-              loading="lazy"
+               loading="lazy" unoptimized
+
                
 
             />
@@ -58,7 +59,8 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               width={400}
               height={400}
               className="absolute !w-[50%] right-[-10%] bottom-[-10px] sm:bottom-[-17px] xl:bottom-[-15px]"
-              loading="lazy"
+               loading="lazy" unoptimized
+
                
 
             />
@@ -70,7 +72,8 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               height={400}
               className="absolute top-0 right-0 !w-[18%] animate-spin"
               style={{ animationDuration: "4s" }}
-              loading="lazy"
+               loading="lazy" unoptimized
+
                
 
             />
