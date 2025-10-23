@@ -48,7 +48,8 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               height={400}
               className="!w-[100%]"
               loading="lazy"
-              placeholder="blur"
+               
+
             />
 
             <Image
@@ -58,7 +59,8 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               height={400}
               className="absolute !w-[50%] right-[-10%] bottom-[-10px] sm:bottom-[-17px] xl:bottom-[-15px]"
               loading="lazy"
-              placeholder="blur"
+               
+
             />
 
             <Image
@@ -69,7 +71,8 @@ export default function ServiceFaqs({ serviceFAQs }: ServiceFAQsProps) {
               className="absolute top-0 right-0 !w-[18%] animate-spin"
               style={{ animationDuration: "4s" }}
               loading="lazy"
-              placeholder="blur"
+               
+
             />
           </div>
         </motion.div>

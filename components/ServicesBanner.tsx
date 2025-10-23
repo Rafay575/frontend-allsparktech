@@ -24,7 +24,8 @@ export default function ServicesBanner({ serviceBanner }: ServiceBannerProps) {
             <div className='w-full md:w-[22%] relative z-10 flex flex-col  items-center sm:items-start '>
                 <Image src={`${baseURL}/images/services/${serviceBanner.image}`} width={200}
                     height={101} alt='img' loading="lazy"
-                    placeholder="blur" />
+                     
+ />
             </div>
             <div className='w-full md:w-[73%]  flex gap-[10px] flex-wrap items-center  relative z-10'>
                 <div className='w-full 2xl:w-[74%] flex flex-col  items-center sm:items-start text-center sm:text-start'>

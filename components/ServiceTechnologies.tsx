@@ -105,7 +105,8 @@ export default function ServiceTechnologies({
                       height={200}
                       className="!w-[80%] h-[80%] object-contain "
                       loading="lazy"
-                      placeholder="blur"
+                       
+
                     />
                   </div>
                   <p className="mt-2 para capitalize px-[5px]">{tec.name}</p>

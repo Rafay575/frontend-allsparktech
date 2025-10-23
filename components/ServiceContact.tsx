@@ -70,7 +70,8 @@ export default function ServiceContact({ serviceContact }: ServiceContactProps) 
             <div className='w-full lg:w-1/2 relative hidden lg:block  '>
                 <Image src={`${baseURL}/images/services/${serviceContact.image}`} alt='img' width={400}
                     height={400} className='absolute bottom-0 !w-[80%]  left-[50px] z-[3] ' loading="lazy"
-              placeholder="blur" />
+               
+ />
             </div>
             <div className='w-full lg:w-1/2 text-white '>
                 <div className='w-[90%] mx-auto lg:mx-0 flex flex-col items-center sm:items-start '>

@@ -62,7 +62,8 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                         height={400}
                         className="rounded-3xl w-full h-auto"
                         loading="lazy"
-                        placeholder="blur"
+                         
+
                     />
                 </div>
 
@@ -76,7 +77,8 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                         height={400}
                         className="object-contain "
                         loading="lazy"
-                        placeholder="blur"
+                         
+
 
                     />
                 </div>
@@ -89,7 +91,8 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                     height={400}
                     className=" absolute top-0  right-0 !w-[30%] "
                     loading="lazy"
-                    placeholder="blur"
+                     
+
                 />
             </motion.div>
         </div>

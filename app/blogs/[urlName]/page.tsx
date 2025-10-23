@@ -171,7 +171,6 @@ export default async function BlogDetailPage({ params }: any) {
             className="rounded-[10px] !w-[100%]"
             alt="MainImg "
             loading="lazy"
-            placeholder="blur"
           />
 
           <p className="para text-[#1f2937]">{blog.description}</p>

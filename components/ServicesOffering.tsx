@@ -90,7 +90,8 @@ export default function ServicesOffering({ serviceOffering }: ServiceOfferingPro
                 height={20}
                 className="!w-[70px] !h-[70px] object-contain border border-[#d4dcff] p-[10px] rounded-[5px]"
                 loading="lazy"
-                placeholder="blur"
+                 
+
               />
               <p className="subheading font-[700] mt-[20px]">{card.heading}</p>
               <p className="my-[10px] para">{card.des}</p>

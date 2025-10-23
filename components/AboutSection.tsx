@@ -47,7 +47,6 @@ export default function AboutSection({ about }: { about: about }) {
               height={400}
               className=" !w-full "
               loading="lazy"
-              placeholder="blur"
             />
 
             {/* Overlapping Image */}
@@ -59,7 +58,8 @@ export default function AboutSection({ about }: { about: about }) {
                 width={200}
                 height={200}
                 loading="lazy"
-              placeholder="blur"
+               
+
               />
             </div>
 
@@ -72,7 +72,8 @@ export default function AboutSection({ about }: { about: about }) {
               width={200}
               height={200}
               loading="lazy"
-              placeholder="blur"
+               
+
             />
           </div>
         </motion.div>

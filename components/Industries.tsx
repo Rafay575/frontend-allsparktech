@@ -73,7 +73,8 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
         >
           <button className="subheading flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0 hover:scale-[1.02] duration-500 text-white">
             <Image src={sericon} className="w-[25px]" alt="icon" loading="lazy"
-              placeholder="blur" />
+               
+ />
             {serviceIndustries.btnText}
           </button>
           <p className="heading font-[700] text-white leading-[45px] mt-[10px] text-center sm:text-start">
@@ -92,7 +93,8 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
           className="hidden lg:block lg:w-[60%]"
         >
           <Image src={`${baseURL}/images/services/${serviceIndustries.mainImage}`} width={1400} height={1400} className="w-full" alt="industry" loading="lazy"
-            placeholder="blur" />
+             
+ />
         </motion.div>
       </div>
 
@@ -120,7 +122,8 @@ export default function Industries({ serviceIndustries }: ServiceIndustriesProps
                     className="w-full h-[100%] bg-white rounded-[15px] p-[25px] py-[20px] md:py-[30px] flex flex-col items-center text-center border-2 border-[#384BFF] cards"
                   >
                     <Image src={`${baseURL}/images/services/${industry.image}`} width={400} height={400} className="w-[50%]" alt="icon" loading="lazy"
-                      placeholder="blur" />
+                       
+ />
                     <h3 className="subheading font-[600] mb-2 text-center color" >
                       {industry.title}
                     </h3>

@@ -67,7 +67,8 @@ export default function FaqSection({ faq }: { faq: faq }) {
               height={400}
               className="rounded-3xl w-full "
               loading="lazy"
-              placeholder="blur"
+               
+
             />
           </div>
 
@@ -80,7 +81,8 @@ export default function FaqSection({ faq }: { faq: faq }) {
               width={200}
               height={200}
               loading="lazy"
-              placeholder="blur"
+               
+
             />
           </div>
 
@@ -93,7 +95,8 @@ export default function FaqSection({ faq }: { faq: faq }) {
             width={200}
             height={200}
             loading="lazy"
-            placeholder="blur"
+             
+
           />
         </motion.div>
 

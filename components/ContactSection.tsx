@@ -31,7 +31,8 @@ export default function ContactSection({contactBanner}:{contactBanner: contactBa
               className="mb-4 md:mb-0 md:mr-6"
               
               loading="lazy"
-              placeholder="blur"
+               
+
             />
 
             <div className="text-center md:text-left">

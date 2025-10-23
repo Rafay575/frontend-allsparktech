@@ -98,7 +98,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                   height={10}
                   className="w-[130px]"
                   loading="lazy"
-              placeholder="blur"
+               
+
                 />
                 {process.dir && (
                   <Image
@@ -108,7 +109,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                     alt="img1"
                     className="absolute w-[60px] hidden xl:block xl:w-[80px] -right-[10%] top-[12%]"
                     loading="lazy"
-              placeholder="blur"
+               
+
                   />
                 )}
                 <p className="subheading font-[600] mt-[20px] lg:mt-[30px] w-[80%] md:w-[70%]">
@@ -151,7 +153,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                 height={4000}
                 className="w-full cursor-pointer"
                 loading="lazy"
-              placeholder="blur"
+               
+
               />
 
 

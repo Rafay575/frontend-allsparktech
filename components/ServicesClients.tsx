@@ -89,7 +89,8 @@ export default function ServiceClient({ serviceClient }: ServiceClientProps) {
             height={400}
             className="rounded-3xl !w-full !h-auto"
             loading="lazy"
-            placeholder="blur"
+             
+
           />
         </div>
 
@@ -102,7 +103,8 @@ export default function ServiceClient({ serviceClient }: ServiceClientProps) {
             width={400}
             height={400}
             loading="lazy"
-            placeholder="blur"
+             
+
           />
         </div>
 
@@ -114,7 +116,8 @@ export default function ServiceClient({ serviceClient }: ServiceClientProps) {
           height={400}
           className="absolute top-0 right-0 !w-[30%]"
           loading="lazy"
-          placeholder="blur"
+           
+
         />
 
         {/* Floating Tag */}
@@ -126,7 +129,8 @@ export default function ServiceClient({ serviceClient }: ServiceClientProps) {
             height={400}
             className="!w-[35px] !h-[35px]"
             loading="lazy"
-            placeholder="blur"
+             
+
           />
           <p className="para">{serviceClient.imageText}</p>
         </span>

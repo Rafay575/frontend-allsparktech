@@ -48,7 +48,6 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
               width={800}
               height={600}
               loading="lazy"
-              placeholder="blur"
               className="w-[90%] z-10"
               style={{ zIndex: 10 }}
             />
@@ -61,7 +60,6 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
               height={192}
               className="w-[40%] absolute bottom-[-5%] right-0  border-4 shadow-md border-white "
               loading="lazy"
-              placeholder="blur"
             />
 
             {/* Third Image  */}
@@ -71,7 +69,6 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
               height={500}
               width={500}
               loading="lazy"
-              placeholder="blur"
               className="absolute top-0 right-0 w-[25%] -z-1"
             />
 
@@ -83,7 +80,6 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
                 unoptimized
                 height={30}
                 loading="lazy"
-                placeholder="blur"
               />
               <div>
                 <p className="text-base font-bold">

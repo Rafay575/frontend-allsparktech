@@ -48,7 +48,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
               height={1400}
               className="!w-full object-cover"
               loading="lazy"
-              placeholder="blur"
+               
+
             />
           </div>
 
@@ -60,7 +61,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
             width={400}
             height={400}
             loading="lazy"
-            placeholder="blur"
+             
+
           />
 
           {/* Floating Shape */}
@@ -76,7 +78,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
               height={400}
               className="object-cover rounded-full border-2 border-white"
               loading="lazy"
-              placeholder="blur"
+               
+
             />
           </motion.div>
         </motion.div>
@@ -131,7 +134,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
                   height={600}
                   className="bg-white p-2 rounded-lg !w-[50px]"
                   loading="lazy"
-                  placeholder="blur"
+                   
+
                 />
                 <h6 className="text-white font-semibold para">{feature.title}</h6>
               </motion.div>
