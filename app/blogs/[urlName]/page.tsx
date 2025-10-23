@@ -122,8 +122,7 @@ export default async function BlogDetailPage({ params }: any) {
     (match, attributes) => {
       // If already has loading attr, skip adding again
       if (!/loading\s*=/.test(attributes)) {
-        attributes += '  loading="lazy" unoptimized
-';
+        attributes += '  loading="lazy" ';
       }
       // Add decoding and styling
       if (!/decoding\s*=/.test(attributes)) {
@@ -171,7 +170,7 @@ export default async function BlogDetailPage({ params }: any) {
             unoptimized
             className="rounded-[10px] !w-[100%]"
             alt="MainImg "
-             loading="lazy" unoptimized
+             loading="lazy" 
 
           />
 

@@ -70,7 +70,8 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
               alt={aboutData.alt3}
               height={500}
               width={500}
-               loading="lazy" unoptimized
+               loading="lazy" 
+               unoptimized
 
               className="absolute top-0 right-0 w-[25%] -z-1"
             />
@@ -82,7 +83,7 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
                 width={30}
                 unoptimized
                 height={30}
-                 loading="lazy" unoptimized
+                 loading="lazy" 
 
               />
               <div>
