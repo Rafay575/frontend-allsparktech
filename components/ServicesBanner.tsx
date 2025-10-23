@@ -20,10 +20,11 @@ interface ServiceBannerProps {
 export default function ServicesBanner({ serviceBanner }: ServiceBannerProps) {
 
     return (
-        <div className='  py-[50px] container mar flex flex-col md:flex-row items-center flex-wrap py-[20px]  px-[30px] lg:px-[40px] rounded-[10px] bg text-white gap-[30px] relative'>
+        <div className='   container mar flex flex-col md:flex-row items-center flex-wrap py-[20px]  px-[30px] lg:px-[40px] rounded-[10px] bg text-white gap-[30px] relative'>
             <div className='w-full md:w-[22%] relative z-10 flex flex-col  items-center sm:items-start '>
                 <Image src={`${baseURL}/images/services/${serviceBanner.image}`} width={200}
-                    height={101} alt='img' />
+                    height={101} alt='img' loading="lazy"
+                    placeholder="blur" />
             </div>
             <div className='w-full md:w-[73%]  flex gap-[10px] flex-wrap items-center  relative z-10'>
                 <div className='w-full 2xl:w-[74%] flex flex-col  items-center sm:items-start text-center sm:text-start'>
@@ -41,7 +42,7 @@ export default function ServicesBanner({ serviceBanner }: ServiceBannerProps) {
                 </div>
                 <div className='w-full 2xl:w-[24%] flex items-center flex flex-col  items-center sm:items-start text-center sm:text-start'>
                     <Link href={"/contact"}>
-                        <button className='bg-white text-black flex items-center gap-[5px] py-[7px] px-[25px] rounded-[25px] hover:bg-transparent hover:border hover:border-white hover:text-white group para '>{serviceBanner.btnText}<MdArrowForward className='text-black text-[27px] group-hover:text-white'/></button>
+                        <button className='bg-white text-black flex items-center gap-[5px] py-[7px] px-[25px] rounded-[25px] hover:bg-transparent hover:border hover:border-white hover:text-white group para '>{serviceBanner.btnText}<MdArrowForward className='text-black text-[27px] group-hover:text-white' /></button>
                     </Link>
                 </div>
             </div>

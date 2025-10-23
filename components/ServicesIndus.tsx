@@ -49,10 +49,10 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
 
             {/* Right Text Column */}
             <motion.div
-            initial={{ opacity: 0, x: 80 }} // Start from right
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }} className="relative w-full lg:w-[45%] mx-auto ml-0 lg:mx-0  md:pr-[0px] p-[20px]  order-1 lg:order-2">
+                initial={{ opacity: 0, x: 80 }} // Start from right
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }} className="relative w-full lg:w-[45%] mx-auto ml-0 lg:mx-0  md:pr-[0px] p-[20px]  order-1 lg:order-2">
                 {/* Main Image */}
                 <div className="relative overflow-hidden rounded-3xl w-full md:w-[89%] h-auto">
                     <Image
@@ -61,7 +61,8 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                         width={400}
                         height={400}
                         className="rounded-3xl w-full h-auto"
-                        unoptimized
+                        loading="lazy"
+                        placeholder="blur"
                     />
                 </div>
 
@@ -74,7 +75,8 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                         width={400}
                         height={400}
                         className="object-contain "
-                        unoptimized
+                        loading="lazy"
+                        placeholder="blur"
 
                     />
                 </div>
@@ -86,6 +88,8 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                     width={400}
                     height={400}
                     className=" absolute top-0  right-0 !w-[30%] "
+                    loading="lazy"
+                    placeholder="blur"
                 />
             </motion.div>
         </div>

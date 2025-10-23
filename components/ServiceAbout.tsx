@@ -31,7 +31,7 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
   return (
     <section className="relative bg overflow-hidden pad text-white w-[100vw] overflow-x-hidden">
       <div className="mx-auto container flex  flex-col-reverse justify-between items-center gap-10 px-3 lg:px-6 lg:flex-row relative z-[20] py-[30px]">
-        
+
         {/* Left Image Column */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -47,6 +47,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
               width={1400}
               height={1400}
               className="!w-full object-cover"
+              loading="lazy"
+              placeholder="blur"
             />
           </div>
 
@@ -57,6 +59,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
             className="object-contain absolute bottom-[-30px] right-[-30px] !w-[40%]"
             width={400}
             height={400}
+            loading="lazy"
+            placeholder="blur"
           />
 
           {/* Floating Shape */}
@@ -71,6 +75,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
               width={400}
               height={400}
               className="object-cover rounded-full border-2 border-white"
+              loading="lazy"
+              placeholder="blur"
             />
           </motion.div>
         </motion.div>
@@ -124,6 +130,8 @@ export default function ServiceAbout({ serviceAbout }: ServiceAboutProps) {
                   width={600}
                   height={600}
                   className="bg-white p-2 rounded-lg !w-[50px]"
+                  loading="lazy"
+                  placeholder="blur"
                 />
                 <h6 className="text-white font-semibold para">{feature.title}</h6>
               </motion.div>

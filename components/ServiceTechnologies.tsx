@@ -72,9 +72,8 @@ export default function ServiceTechnologies({
               <p
                 key={category.name}
                 onClick={() => setSelect(category.name)}
-                className={`cursor-pointer py-[5px] px-[7px] flex items-center md:px-[25px] text-[8px] md:text-[15px] rounded-t-xl duration-300 ${
-                  select === category.name ? "bg-[#384bff]" : ""
-                }`}
+                className={`cursor-pointer py-[5px] px-[7px] flex items-center md:px-[25px] text-[8px] md:text-[15px] rounded-t-xl duration-300 ${select === category.name ? "bg-[#384bff]" : ""
+                  }`}
               >
                 {category.name.toUpperCase()}
               </p>
@@ -105,6 +104,8 @@ export default function ServiceTechnologies({
                       width={200}
                       height={200}
                       className="!w-[80%] h-[80%] object-contain "
+                      loading="lazy"
+                      placeholder="blur"
                     />
                   </div>
                   <p className="mt-2 para capitalize px-[5px]">{tec.name}</p>

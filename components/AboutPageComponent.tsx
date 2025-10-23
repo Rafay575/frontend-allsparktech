@@ -40,34 +40,38 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            
+
             {/* First Image  */}
             <Image
               src={`${baseURL}/images/about/${aboutData.img1}`}
               alt={aboutData.alt1}
               width={800}
-              unoptimized
               height={600}
+              loading="lazy"
+              placeholder="blur"
               className="w-[90%] z-10"
               style={{ zIndex: 10 }}
             />
 
-              {/* Second Image   */}
-              <Image
-                src={`${baseURL}/images/about/${aboutData.img2}`}
-                alt={aboutData.alt2}
-                width={192}
-                height={192}
-                className="w-[40%] absolute bottom-[-5%] right-0  border-4 shadow-md border-white "
-              />
-            
+            {/* Second Image   */}
+            <Image
+              src={`${baseURL}/images/about/${aboutData.img2}`}
+              alt={aboutData.alt2}
+              width={192}
+              height={192}
+              className="w-[40%] absolute bottom-[-5%] right-0  border-4 shadow-md border-white "
+              loading="lazy"
+              placeholder="blur"
+            />
+
             {/* Third Image  */}
             <Image
               src={`${baseURL}/images/about/${aboutData.img3}`}
               alt={aboutData.alt3}
-              width={500}
-              unoptimized
               height={500}
+              width={500}
+              loading="lazy"
+              placeholder="blur"
               className="absolute top-0 right-0 w-[25%] -z-1"
             />
 
@@ -78,6 +82,8 @@ export default function AboutPageComponent({ aboutData }: { aboutData: aboutData
                 width={30}
                 unoptimized
                 height={30}
+                loading="lazy"
+                placeholder="blur"
               />
               <div>
                 <p className="text-base font-bold">

@@ -66,7 +66,8 @@ export default function FaqSection({ faq }: { faq: faq }) {
               width={400}
               height={400}
               className="rounded-3xl w-full "
-              unoptimized
+              loading="lazy"
+              placeholder="blur"
             />
           </div>
 
@@ -75,9 +76,11 @@ export default function FaqSection({ faq }: { faq: faq }) {
             <Image
               src={`${baseURL}/images/home/${faq.img2}`}
               alt={faq.alt2}
-             className="!w-full "
-                width={200}
-                height={200}
+              className="!w-full "
+              width={200}
+              height={200}
+              loading="lazy"
+              placeholder="blur"
             />
           </div>
 
@@ -89,6 +92,8 @@ export default function FaqSection({ faq }: { faq: faq }) {
             style={{ animationDuration: "4s" }}
             width={200}
             height={200}
+            loading="lazy"
+            placeholder="blur"
           />
         </motion.div>
 

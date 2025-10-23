@@ -18,25 +18,26 @@ export default function Logos({ serviceLogos }: ServiceLogosProps) {
   return (
     <section className="py-[30px] mb-[30px] ">
       {/* <div className="mx-auto container flex  flex-wrap items-center justify-center lg:justify-between  gap-y-[40px]  "> */}
-        <Marquee speed={100} gradient={false} pauseOnHover={true}>
-          {serviceLogos.logos.map((logo, index) => (
-            <div
-              key={index}
-              // className="flex w-[50%] md:w-[20%] items-center justify-center"
-              className="flex w-[200px] sm:w-[200px] lg:w-[320px] items-center justify-center"
-            >
-              <Image
-                src={`${baseURL}/images/services/${logo}`}
-                alt={`logo-${index + 1}`}
-                width={150}
-                height={50}
+      <Marquee speed={100} gradient={false} pauseOnHover={true}>
+        {serviceLogos.logos.map((logo, index) => (
+          <div
+            key={index}
+            // className="flex w-[50%] md:w-[20%] items-center justify-center"
+            className="flex w-[200px] sm:w-[200px] lg:w-[320px] items-center justify-center"
+          >
+            <Image
+              src={`${baseURL}/images/services/${logo}`}
+              alt={`logo-${index + 1}`}
+              width={150}
+              height={50}
               // className="object-contain w-[70%] sm:w-[50%] md:w-[75%]"
-                className="object-contain w-[150px] sm:w-[170px] lg:w-[200px] lg:opacity-60 hover:opacity-100 duration-300"
-                unoptimized
-              />
-            </div>
-          ))}
-        </Marquee>
+              className="object-contain w-[150px] sm:w-[170px] lg:w-[200px] lg:opacity-60 hover:opacity-100 duration-300"
+              loading="lazy"
+              placeholder="blur"
+            />
+          </div>
+        ))}
+      </Marquee>
       {/* </div> */}
     </section>
   );

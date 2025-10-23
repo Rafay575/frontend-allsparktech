@@ -51,7 +51,7 @@ const itemVariants = {
 };
 
 export default function HomeProcess({ homeProcess }: homeProcessProps) {
-  console.log(`${baseURL}/images/home/${homeProcess.image}`)
+  // console.log(`${baseURL}/images/home/${homeProcess.image}`)
   return (
     <>
       <div className="pad bg-[#181965] text-white relative z-[10]">
@@ -97,6 +97,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                   width={150}
                   height={10}
                   className="w-[130px]"
+                  loading="lazy"
+              placeholder="blur"
                 />
                 {process.dir && (
                   <Image
@@ -105,6 +107,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                     height={400}
                     alt="img1"
                     className="absolute w-[60px] hidden xl:block xl:w-[80px] -right-[10%] top-[12%]"
+                    loading="lazy"
+              placeholder="blur"
                   />
                 )}
                 <p className="subheading font-[600] mt-[20px] lg:mt-[30px] w-[80%] md:w-[70%]">
@@ -146,6 +150,8 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                 width={4000}
                 height={4000}
                 className="w-full cursor-pointer"
+                loading="lazy"
+              placeholder="blur"
               />
 
 
@@ -181,6 +187,7 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
                   src={`/images/videos/below_process.mp4`}
                   controls
                   className="!w-full rounded-lg "
+                  
                 />
               </DialogDescription>
             </Suspense>
