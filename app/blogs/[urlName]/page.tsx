@@ -6,7 +6,6 @@ import { baseURL } from "@/API/baseURL";
 import type { Metadata } from "next";
 import { MdOutlineDateRange } from "react-icons/md";
 import Image from "next/image";
-import authorimg from "@/public/images/blogs/blogauthor.jpg"
 import BlogFaqs from "@/components/BlogFaqs";
 
 // ✅ Metadata SSR
@@ -168,21 +167,7 @@ const updatedContent = blog.content.replace(
           {/* FAQs */}
           <BlogFaqs faqs={blog.faqs} />
 
-          {/* Author */}
-          <div className="flex gap-[10px] justify-start  items-center">
-            <Image
-              src={authorimg}
-              unoptimized
-
-              alt="author"
-              className="w-[50px] h-[50px] object-cover border border-[#384BFF] rounded-full"
-            />
-            <div>
-              <p className="subheading leading-[29px] font-medium border-b-2 border-[#384BFF] relative bottom-[3px]">
-                by Admin
-              </p>
-            </div>
-          </div>
+          
         </div>
 
         {/* TOC */}

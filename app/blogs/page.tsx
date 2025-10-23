@@ -1,5 +1,8 @@
 import React from 'react'
+import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
+import { getBlogDataQuery, getBlogsQuery } from "@/utils/queries";
 import BlogData from "@/components/BlogData"
+
 
 export async function generateMetadata() {
   return {
@@ -43,10 +46,16 @@ export async function generateMetadata() {
 
 
 
-export default function page() {
+export default async function page() {
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery(getBlogDataQuery());
+  await queryClient.prefetchQuery(getBlogsQuery());
+
   return (
     <>
-      <BlogData />
+    <HydrationBoundary state={dehydrate(queryClient)}>
+            <BlogData />
+    </HydrationBoundary>
     </>
   )
 }

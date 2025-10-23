@@ -1,7 +1,8 @@
 import { baseURL } from "@/API/baseURL";
 import ContactPageClient from "../../components/ContactPageClient";
 export const dynamic = "force-dynamic";
-
+import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
+import { getContactDataQuery } from "@/utils/queries";
 export async function generateMetadata() {
   return {
     title: "Contact AllSpark Technologies | Custom Software Development & AI Experts",
@@ -52,6 +53,12 @@ async function fetchContactData() {
 }
 
 export default async function ContactPage() {
+  const queryClient = new QueryClient();
+    await queryClient.prefetchQuery(getContactDataQuery());
     const contactData = await fetchContactData();
-  return <ContactPageClient contactData={contactData} />;
+  return (
+      <HydrationBoundary state={dehydrate(queryClient)}>
+        <ContactPageClient contactData={contactData} />;
+      </HydrationBoundary>
+    );
 }

@@ -1,4 +1,7 @@
 
+"use client";
+import { useQuery } from "@tanstack/react-query";
+import { getHomeDataQuery } from "@/utils/queries";
 import React from "react";
 import Logos from "@/components/Logos";
 import ServicesSection from "@/components/ServicesSection";
@@ -105,29 +108,32 @@ export interface HomePageData {
 
 
 export default function Home({ homeData }: { homeData: HomePageData }) {
-
-
+  const { data } = useQuery({
+    ...getHomeDataQuery(),
+    initialData: homeData, // 👈 use server data immediately
+  });
+  const dataToUse = data || homeData;
   return (
     <div className="w-[100vw]  overflow-x-hidden">
       {/* <Navbar /> */}
       <MetaTitle />
-      <HomePage hero={homeData.hero} />
-      <ServicesSection homeServices={homeData.homeServices} />
-      <AboutSection about={homeData.about} />
-      <Marquee titles={homeData.titles} />
-      <HomeProcess homeProcess={homeData.process} />
-      <FaqSection faq={homeData.faq} />
-      <ContactSection contactBanner={homeData.contactBanner} />
-      <TestimonialsSection testimonials={homeData.testimonials} />
-      <Logos logos={homeData.logos} />
+      <HomePage hero={dataToUse.hero} />
+      <ServicesSection homeServices={dataToUse.homeServices} />
+      <AboutSection about={dataToUse.about} />
+      <Marquee titles={dataToUse.titles} />
+      <HomeProcess homeProcess={dataToUse.process} />
+      <FaqSection faq={dataToUse.faq} />
+      <ContactSection contactBanner={dataToUse.contactBanner} />
+      <TestimonialsSection testimonials={dataToUse.testimonials} />
+      <Logos logos={dataToUse.logos} />
       <Footer />
 
-      {homeData.script && (
+      {dataToUse.script && (
         <Script
           id="ld-json"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(homeData.script),
+            __html: JSON.stringify(dataToUse.script),
           }}
         />
       )}

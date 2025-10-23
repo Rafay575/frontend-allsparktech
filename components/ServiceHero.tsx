@@ -8,7 +8,7 @@ import arrowleft from "@/public/images/leftarrow.png"
 import arrowright from "@/public/images/rightarrow.png"
 import { usePathname } from "next/navigation";
 import { baseURL } from '@/API/baseURL'
-import { toast } from "sonner"; // Sonner for toasts
+import { toast } from "sonner"; 
 import Link from 'next/link'
 import { motion } from "framer-motion";
 
