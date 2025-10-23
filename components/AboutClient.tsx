@@ -1,5 +1,6 @@
 "use client";
-
+import { useQuery } from "@tanstack/react-query";
+import { getAboutDataQuery } from "@/utils/queries";
 import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
 import Hero2Section from "@/components/Hero2Section";
@@ -35,7 +36,11 @@ export interface aboutData {
 
 
 const AboutClient = ({ aboutData }: { aboutData: aboutData }) => {
-
+  const { data } = useQuery({
+    ...getAboutDataQuery(),
+    initialData: aboutData,
+  });
+  const dataToUse = data || aboutData;
 
   return (
     <>
@@ -44,23 +49,23 @@ const AboutClient = ({ aboutData }: { aboutData: aboutData }) => {
       <div className="w-[100vw]  overflow-x-hidden">
         <Hero2Section
           title="About"
-          backgroundImage={`${baseURL}/images/about/${aboutData.heroimg}`}
+          backgroundImage={`${baseURL}/images/about/${dataToUse.heroimg}`}
           breadcrumbs={[
             { label: "Home", href: "/" },
             { label: "About", href: "/About" },
           ]}
         />
-        <ServiceCards aboutData={aboutData} />
+        <ServiceCards aboutData={dataToUse} />
         <Suspense fallback={<div>Loading About Page...</div>}>
-          <AboutPageComponent aboutData={aboutData} />
+          <AboutPageComponent aboutData={dataToUse} />
         </Suspense>
         <CoreValuesSemiCircle />
-        {aboutData?.script && (
+        {dataToUse?.script && (
           <Script
             id="structured-data"
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(aboutData.script),
+              __html: JSON.stringify(dataToUse.script),
             }}
           />
         )}

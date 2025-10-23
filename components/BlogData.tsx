@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import Navbar2 from "@/components/Navbar2";
 import Topnav from "@/components/Topnav";
 import Footer from "@/components/Footer";
@@ -6,16 +6,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Hero2Section from "@/components/Hero2Section";
 import LazyBlogCard from "@/components/LazyBlogCard";
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { baseURL } from "@/API/baseURL";
-import { useEffect, useState } from "react";
 import Script from "next/script";
+import { getBlogDataQuery, getBlogsQuery } from "@/utils/queries";
 
-interface BlogPageData {
-  heroimg: string;
-  title: string;
-  subTitle: string;
-}
+
 interface Blog {
   id: any;
   urlName: string;
@@ -25,35 +20,13 @@ interface Blog {
   content: object;
   created_at?: string;
 }
-const fetchBlogsdata = async (): Promise<BlogPageData> => {
-  const res = await axios.get(`${baseURL}/blogdata`);
-  return res.data;
-};
 
-export default function BlogPage() {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
 
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["blogs"],
-    queryFn: fetchBlogsdata,
-  });
+export default  function BlogPage() {
+const { data: BlogPageData } = useQuery(getBlogDataQuery());
+  const { data: blogs } = useQuery(getBlogsQuery());
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const res = await axios.get(`${baseURL}/blogs`);
-        setBlogs(res.data);
-      } catch (error) {
-        console.error("Failed to fetch blogs", error);
-      }
-    };
-
-    fetchBlogs(); 
-  }, []);
-
-  if (isLoading) return <div className="text-center py-10">Loading...</div>;
-  if (isError || !data)
-    return <div className="text-center py-10">Failed to load blogs.</div>;
+  if (!BlogPageData || !blogs) return <div>Loading blogs...</div>;
 
   return (
     <div>
@@ -61,7 +34,7 @@ export default function BlogPage() {
       <Navbar2 />
       <Hero2Section
         title="Blogs"
-        backgroundImage={`${baseURL}/images/blogs/${data.heroimg}`}
+        backgroundImage={`${baseURL}/images/blogs/${BlogPageData.heroimg}`}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us", href: "/About" },
@@ -71,19 +44,19 @@ export default function BlogPage() {
         <div className="text-center sm:text-start ">
           <div className="mb-2 flex items-center justify-center sm:justify-start space-x-4 para font-semibold uppercase tracking-wide color">
             <ArrowLeft className="h-4 w-4" />
-            <span>{data.subTitle}</span>
+            <span>{BlogPageData.subTitle}</span>
             <ArrowRight className="h-4 w-4" />
           </div>
           <div className="relative">
             <h2 className="mt-3 heading font-semibold text-gray-900">
-              {data.title}
+              {BlogPageData.title}
             </h2>
           </div>
         </div>
 
         <div className="my-[20px]">
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-[15px]">
-            {blogs.map((blog) => (
+            {blogs.map((blog:Blog) => (
               <LazyBlogCard key={blog.id} blog={blog} />
             ))}
           </div>

@@ -29,7 +29,11 @@ export default function ContactSection({contactBanner}:{contactBanner: contactBa
               width={250}
               height={250}
               className="mb-4 md:mb-0 md:mr-6"
-              unoptimized
+              
+               loading="lazy" unoptimized
+
+               
+
             />
 
             <div className="text-center md:text-left">

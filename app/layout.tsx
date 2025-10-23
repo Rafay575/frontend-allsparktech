@@ -11,7 +11,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useState } from "react";
 import ScrollToTop from "@/components/ScrollToTop";
-
+import QueryProvider from "@/app/providers/QueryProvider";
 // Font setup
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -106,7 +106,7 @@ export default function RootLayout({
 
         {/* React Query Provider */}
         <ReactQueryProvider>
-          {children}
+          <QueryProvider>{children}</QueryProvider>
           <ScrollToTop/>
           </ReactQueryProvider>
 

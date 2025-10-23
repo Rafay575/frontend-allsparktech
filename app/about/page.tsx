@@ -1,6 +1,8 @@
 import { baseURL } from "@/API/baseURL";
 import AboutClient from "@/components/AboutClient";
 export const dynamic = "force-dynamic";
+import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
+import { getAboutDataQuery } from "@/utils/queries";
 
 export async function generateMetadata() {
   return {
@@ -53,8 +55,14 @@ async function fetchAboutData() {
 }
 
 export default async function AboutPage() {
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery(getAboutDataQuery());
     const aboutData = await fetchAboutData();
 
- return <AboutClient aboutData={aboutData}/>
+ return (
+     <HydrationBoundary state={dehydrate(queryClient)}>
+       <AboutClient aboutData={aboutData}/>
+     </HydrationBoundary>
+   );
 }
 

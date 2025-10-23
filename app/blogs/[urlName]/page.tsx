@@ -6,7 +6,6 @@ import { baseURL } from "@/API/baseURL";
 import type { Metadata } from "next";
 import { MdOutlineDateRange } from "react-icons/md";
 import Image from "next/image";
-import authorimg from "@/public/images/blogs/blogauthor.jpg"
 import BlogFaqs from "@/components/BlogFaqs";
 
 // ✅ Metadata SSR
@@ -80,44 +79,63 @@ export default async function BlogDetailPage({ params }: any) {
   if (!res.ok) return <h1>No detail fetch</h1>;
   const blog: BlogData = await res.json();
 
-// ✅ Parse content to add unique IDs for all h2s and create clean TOC
-const takenIds = new Set<string>();
-const headings: { id: string; text: string }[] = [];
+  // ✅ Parse content to add unique IDs for all h2s and create clean TOC
+  const takenIds = new Set<string>();
+  const headings: { id: string; text: string }[] = [];
 
-const updatedContent = blog.content.replace(
-  /<h2([^>]*)>([\s\S]*?)<\/h2>/gi,
-  (match, attributes, innerHTML) => {
-    // 🧠 Extract plain text (remove HTML tags inside h2)
-    const plainText = innerHTML.replace(/<[^>]+>/g, "").trim();
-    if (!plainText) return match; // skip if empty
+  let updatedContent = blog.content.replace(
+    /<h2([^>]*)>([\s\S]*?)<\/h2>/gi,
+    (match, attributes, innerHTML) => {
+      // 🧠 Extract plain text (remove HTML tags inside h2)
+      const plainText = innerHTML.replace(/<[^>]+>/g, "").trim();
+      if (!plainText) return match; // skip if empty
 
-    const id = makeUnique(slugify(plainText), takenIds);
-    headings.push({ id, text: plainText });
+      const id = makeUnique(slugify(plainText), takenIds);
+      headings.push({ id, text: plainText });
 
-    // ✅ Check if h2 already has an id
-    if (/\sid\s*=\s*["'][^"']*["']/.test(attributes)) {
-      // replace existing id
-      attributes = attributes.replace(/\sid\s*=\s*["'][^"']*["']/, ` id="${id}"`);
-    } else {
-      // add id before the closing bracket
-      attributes = `${attributes} id="${id}"`;
+      // ✅ Check if h2 already has an id
+      if (/\sid\s*=\s*["'][^"']*["']/.test(attributes)) {
+        // replace existing id
+        attributes = attributes.replace(/\sid\s*=\s*["'][^"']*["']/, ` id="${id}"`);
+      } else {
+        // add id before the closing bracket
+        attributes = `${attributes} id="${id}"`;
+      }
+
+      // ✅ Preserve existing class (like ql-align-center) and append scroll-mt-20 if not present
+      if (/class\s*=/.test(attributes)) {
+        attributes = attributes.replace(
+          /class\s*=\s*["']([^"']*)["']/,
+          (m: any, classes: any) => `class="${classes} scroll-mt-20"`
+        );
+      } else {
+        attributes = `${attributes} class="scroll-mt-20"`;
+      }
+
+      // ✅ Return h2 with preserved alignment and new id
+      return `<h2${attributes}>${innerHTML}</h2>`;
     }
-
-    // ✅ Preserve existing class (like ql-align-center) and append scroll-mt-20 if not present
-    if (/class\s*=/.test(attributes)) {
-      attributes = attributes.replace(
-        /class\s*=\s*["']([^"']*)["']/,
-        (m:any, classes:any) => `class="${classes} scroll-mt-20"`
-      );
-    } else {
-      attributes = `${attributes} class="scroll-mt-20"`;
+  );
+  // ✅ Add lazy loading and responsive styling to all <img> tags
+  updatedContent = updatedContent.replace(
+    /<img(.*?)>/gi,
+    (match, attributes) => {
+      // If already has loading attr, skip adding again
+      if (!/loading\s*=/.test(attributes)) {
+        attributes += '  loading="lazy" unoptimized
+';
+      }
+      // Add decoding and styling
+      if (!/decoding\s*=/.test(attributes)) {
+        attributes += ' decoding="async"';
+      }
+      // Add responsive class (if not already)
+      if (!/class\s*=/.test(attributes)) {
+        attributes += ' class="w-full h-auto rounded-md my-4"';
+      }
+      return `<img${attributes}>`;
     }
-
-    // ✅ Return h2 with preserved alignment and new id
-    return `<h2${attributes}>${innerHTML}</h2>`;
-  }
-);
-
+  );
 
 
   return (
@@ -153,6 +171,8 @@ const updatedContent = blog.content.replace(
             unoptimized
             className="rounded-[10px] !w-[100%]"
             alt="MainImg "
+             loading="lazy" unoptimized
+
           />
 
           <p className="para text-[#1f2937]">{blog.description}</p>
@@ -168,21 +188,7 @@ const updatedContent = blog.content.replace(
           {/* FAQs */}
           <BlogFaqs faqs={blog.faqs} />
 
-          {/* Author */}
-          <div className="flex gap-[10px] justify-start  items-center">
-            <Image
-              src={authorimg}
-              unoptimized
 
-              alt="author"
-              className="w-[50px] h-[50px] object-cover border border-[#384BFF] rounded-full"
-            />
-            <div>
-              <p className="subheading leading-[29px] font-medium border-b-2 border-[#384BFF] relative bottom-[3px]">
-                by Admin
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* TOC */}
@@ -192,7 +198,7 @@ const updatedContent = blog.content.replace(
           </p>
           <hr />
           <div className="flex flex-col gap-[10px] my-[5px]">
-             {headings.length > 0 ? (
+            {headings.length > 0 ? (
               headings.map((h) => (
                 <a
                   key={h.id}

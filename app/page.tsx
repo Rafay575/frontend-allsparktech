@@ -1,6 +1,9 @@
+
 import { baseURL } from "@/API/baseURL";
 import HomeSection from "@/components/HomeSection"
 export const dynamic = "force-dynamic";
+import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
+import { getHomeDataQuery } from "@/utils/queries";
 
 export async function generateMetadata() {
   return {
@@ -54,6 +57,12 @@ async function fetchHomeData() {
 }
 
 export default async function Home() {
-const homeData = await fetchHomeData();
-  return <HomeSection homeData={homeData}/>
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery(getHomeDataQuery());
+  const homeData = await fetchHomeData();
+  return (
+    <HydrationBoundary state={dehydrate(queryClient)}>
+      <HomeSection homeData={homeData} />
+    </HydrationBoundary>
+  );
 }

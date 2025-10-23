@@ -1,5 +1,6 @@
 "use client";
-
+import { useQuery } from "@tanstack/react-query";
+import { getContactDataQuery } from "@/utils/queries";
 import React from "react";
 import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
@@ -21,12 +22,17 @@ export interface ContactPageData {
   title: string;
   description: string;
   methods: ContactMethod[];
-  metadata: any; // simplified for flexibility
-  script: any;   // simplified for flexibility
+  metadata: any; 
+  script: any;   
 }
 
 
 const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) => {
+  const { data } = useQuery({
+      ...getContactDataQuery(),
+      initialData: contactData, 
+    });
+    const dataToUse = data || contactData;
   return (
     <>
       <Topnav />
@@ -35,19 +41,19 @@ const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) =>
 
         <Hero2Section
           title="Contact"
-          backgroundImage={`${baseURL}/images/contact/${contactData.heroimg}`}
+          backgroundImage={`${baseURL}/images/contact/${dataToUse.heroimg}`}
           breadcrumbs={[
             { label: "Home", href: "/" },
             { label: "Contact", href: "/contact" },
           ]}
         />
-        <Contact pagedata={contactData} />
+        <Contact pagedata={dataToUse} />
         <Footer />
         <Script
           id="ldjson"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(contactData.script),
+            __html: JSON.stringify(dataToUse.script),
           }}
         />
 
