@@ -88,7 +88,7 @@ export default function ServiceClient({ serviceClient }: ServiceClientProps) {
             width={400}
             height={400}
             className="rounded-3xl !w-full !h-auto"
-             loading="lazy" unoptimized
+             loading="lazy"  
 
              
 
@@ -103,7 +103,7 @@ export default function ServiceClient({ serviceClient }: ServiceClientProps) {
             className="object-contain"
             width={400}
             height={400}
-             loading="lazy" unoptimized
+             loading="lazy"  
 
              
 
@@ -117,7 +117,7 @@ export default function ServiceClient({ serviceClient }: ServiceClientProps) {
           width={400}
           height={400}
           className="absolute top-0 right-0 !w-[30%]"
-           loading="lazy" unoptimized
+           loading="lazy"  
 
            
 
@@ -131,7 +131,7 @@ export default function ServiceClient({ serviceClient }: ServiceClientProps) {
             width={400}
             height={400}
             className="!w-[35px] !h-[35px]"
-             loading="lazy" unoptimized
+             loading="lazy"  
 
              
 

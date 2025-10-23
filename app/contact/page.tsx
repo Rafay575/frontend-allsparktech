@@ -58,7 +58,7 @@ export default async function ContactPage() {
     const contactData = await fetchContactData();
   return (
       <HydrationBoundary state={dehydrate(queryClient)}>
-        <ContactPageClient contactData={contactData} />;
+        <ContactPageClient contactData={contactData} />
       </HydrationBoundary>
     );
 }

@@ -109,7 +109,7 @@ export default async function Page({ params }: PageProps) {
                         ))}
                     </div>
                     <div className='w-full lg:w-[50%] lg:pl-[20px]'>
-                        <Image src={`${baseURL}/images/subservices/${subServiceJson.section3.image}`} alt='img3' width={100} height={100} className='w-full mt-[30px] lg:mt-[0px]' unoptimized />
+                        <Image src={`${baseURL}/images/subservices/${subServiceJson.section3.image}`} alt='img3' width={100} height={100} className='w-full mt-[30px] lg:mt-[0px]'   />
                     </div>
                 </div>
 
@@ -150,7 +150,7 @@ export default async function Page({ params }: PageProps) {
 
                     </div>
                     <div className='w-full lg:w-[50%] lg:pl-[40px] '>
-                        <Image src={`${baseURL}/images/subservices/${subServiceJson.section6.image}`} alt='img5' width={100} height={100} unoptimized className='w-full mt-[30px] lg:mt-[0px]' />
+                        <Image src={`${baseURL}/images/subservices/${subServiceJson.section6.image}`} alt='img5' width={100} height={100}   className='w-full mt-[30px] lg:mt-[0px]' />
                     </div>
                 </div>
 
@@ -176,7 +176,7 @@ export default async function Page({ params }: PageProps) {
                             ))}
                         </div>
                         <div className='w-full lg:w-[50%]  lg:pl-[40px] '>
-                            <Image src={`${baseURL}/images/subservices/${subServiceJson.section8.image}`} width={100} height={100} unoptimized alt='img6' className='w-full mt-[30px] lg:mt-[0px]' />
+                            <Image src={`${baseURL}/images/subservices/${subServiceJson.section8.image}`} width={100} height={100}   alt='img6' className='w-full mt-[30px] lg:mt-[0px]' />
                         </div>
                     </div>
                 </div>

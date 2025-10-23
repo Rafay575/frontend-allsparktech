@@ -104,7 +104,7 @@ export default function ServiceTechnologies({
                       width={200}
                       height={200}
                       className="!w-[80%] h-[80%] object-contain "
-                       loading="lazy" unoptimized
+                       loading="lazy"  
 
                        
 

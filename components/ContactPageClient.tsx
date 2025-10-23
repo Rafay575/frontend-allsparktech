@@ -56,7 +56,7 @@ const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) =>
             __html: JSON.stringify(dataToUse.script),
           }}
         />
-
+ 
       </div>
     </>
   );

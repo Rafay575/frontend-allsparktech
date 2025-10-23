@@ -30,7 +30,7 @@ export default function ContactSection({contactBanner}:{contactBanner: contactBa
               height={250}
               className="mb-4 md:mb-0 md:mr-6"
               
-               loading="lazy" unoptimized
+               loading="lazy"  
 
                
 

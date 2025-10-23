@@ -89,7 +89,7 @@ export default function ServicesOffering({ serviceOffering }: ServiceOfferingPro
                 width={400}
                 height={20}
                 className="!w-[70px] !h-[70px] object-contain border border-[#d4dcff] p-[10px] rounded-[5px]"
-                 loading="lazy" unoptimized
+                 loading="lazy"  
 
                  
 

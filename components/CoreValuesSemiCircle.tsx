@@ -19,7 +19,7 @@ export default function CoreValuesSection() {
           width={1920}
           height={1080}
           className="w-full"
-          unoptimized
+           
         />
       </motion.div>
     </section>

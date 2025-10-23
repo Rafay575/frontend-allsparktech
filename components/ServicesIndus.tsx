@@ -61,7 +61,7 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                         width={400}
                         height={400}
                         className="rounded-3xl w-full h-auto"
-                         loading="lazy" unoptimized
+                         loading="lazy"  
 
                          
 
@@ -77,7 +77,7 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                         width={400}
                         height={400}
                         className="object-contain "
-                         loading="lazy" unoptimized
+                         loading="lazy"  
 
                          
 
@@ -92,7 +92,7 @@ export default function ServiceIndus({ serviceIndus }: ServiceIndusProps) {
                     width={400}
                     height={400}
                     className=" absolute top-0  right-0 !w-[30%] "
-                     loading="lazy" unoptimized
+                     loading="lazy"  
 
                      
 
