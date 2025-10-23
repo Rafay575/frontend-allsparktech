@@ -190,7 +190,7 @@ export default function HomeProcess({ homeProcess }: homeProcessProps) {
 
                 <video
                   autoPlay
-                  src={`/images/videos/below_process.mp4`}
+                  src={`/video.mp4`}
                   controls
                   className="!w-full rounded-lg "
                   
