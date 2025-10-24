@@ -20,7 +20,6 @@ export default function EcommerceDevelopment({ service }: { service: string }) {
     <> 
       <Topnav />
       <Navbar2 />
-      <h1 className="hidden">Ecommerce Development</h1>
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
     </>

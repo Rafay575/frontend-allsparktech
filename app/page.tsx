@@ -45,9 +45,6 @@ export async function generateMetadata() {
   };
 }
 
-
-
-
 async function fetchHomeData() {
   const res = await fetch(`${baseURL}/homedata`, {
     cache: "no-store",

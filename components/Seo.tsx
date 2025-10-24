@@ -18,7 +18,6 @@ export default function Seo({ service }: { service: string }) {
     <> 
       <Topnav />
       <Navbar2 />
-      <h1 className="hidden">Seo</h1>
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
     </>

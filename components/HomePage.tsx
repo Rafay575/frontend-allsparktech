@@ -63,14 +63,14 @@ export default function HomePage({ hero }: { hero: heroSection[] }) {
                   </motion.div>
 
                   {/* Heading */}
-                  <motion.h1
+                  <motion.p
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className=" lg:w-[85%] xl:w-[65%] mt-5 text-4xl font-extrabold !leading-[1.3] tracking-[0.01em] sm:text-5xl md:text-6xl text-center sm:text-start"
                   >
                     {data.title}
-                  </motion.h1>
+                  </motion.p>
 
                   {/* Description */}
                   <motion.p

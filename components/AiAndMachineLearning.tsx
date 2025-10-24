@@ -19,7 +19,6 @@ export default function AiAndMachineLearning({ service }: { service: string }) {
     <>
       <Topnav />
       <Navbar2 />
-      <h1 className="hidden">Ai and Mashine Learning.</h1>
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
     </>

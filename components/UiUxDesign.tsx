@@ -20,7 +20,6 @@ export default function UiUxDesign({ service }: { service: string }) {
     <>
       <Topnav />
       <Navbar2 />
-      <h1 className="hidden">Ui Ux Design</h1>
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
     </>

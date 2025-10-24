@@ -18,7 +18,6 @@ export default function MobileAppDevelopment({ service }: { service: string }) {
     <>
       <Topnav />
       <Navbar2 />
-      <h1 className="hidden">Mobile App Development</h1>
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
     </>

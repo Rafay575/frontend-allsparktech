@@ -22,17 +22,17 @@ export interface ContactPageData {
   title: string;
   description: string;
   methods: ContactMethod[];
-  metadata: any; 
-  script: any;   
+  metadata: any;
+  script: any;
 }
 
 
 const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) => {
   const { data } = useQuery({
-      ...getContactDataQuery(),
-      initialData: contactData, 
-    });
-    const dataToUse = data || contactData;
+    ...getContactDataQuery(),
+    initialData: contactData,
+  });
+  const dataToUse = data || contactData;
   return (
     <>
       <Topnav />
@@ -53,10 +53,38 @@ const ContactPageClient = ({ contactData }: { contactData: ContactPageData }) =>
           id="ldjson"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(dataToUse.script),
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "ContactPage",
+                  "mainEntity": {
+                    "@type": "Organization",
+                    "name": "AllSpark Technologies",
+                    "url": "https://allsparktechnologies.com",
+                    "contactPoint": {
+                      "@type": "ContactPoint",
+                      "telephone": "+1-762-777-7275",
+                      "email": "info@allsparktechnologies.com",
+                      "contactType": "Customer Support",
+                      "availableLanguage": "English",
+                      "areaServed": "US"
+                    },
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "638 Knollwood Road",
+                      "addressLocality": "Franklin Lakes",
+                      "addressRegion": "NJ",
+                      "postalCode": "07417",
+                      "addressCountry": "USA"
+                    }
+                  }
+                }
+              ]
+            }),
           }}
         />
- 
+
       </div>
     </>
   );

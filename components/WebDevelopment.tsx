@@ -18,7 +18,6 @@ export default function WebDevelopment({ service }: { service: string }) {
     <> 
       <Topnav />
       <Navbar2 />
-      <h1 className="hidden">Website Development</h1>
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
     </>

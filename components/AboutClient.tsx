@@ -60,15 +60,47 @@ const AboutClient = ({ aboutData }: { aboutData: aboutData }) => {
           <AboutPageComponent aboutData={dataToUse} />
         </Suspense>
         <CoreValuesSemiCircle />
-        {dataToUse?.script && (
-          <Script
-            id="structured-data"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(dataToUse.script),
-            }}
-          />
-        )}
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "name": "AllSpark Technologies",
+                  "url": "https://allsparktechnologies.com",
+                  "logo": "https://allsparktechnologies.com/logo.png",
+                  "sameAs": [
+                    "https://www.linkedin.com/company/allspark-technologies",
+                    "https://twitter.com/allsparktech"
+                  ],
+                  "description": "AllSpark Technologies is a US-based software development and AI company offering custom software solutions, cloud systems, and tech-enabled services.",
+                  "foundingDate": "2010",
+                  "founders": [
+                    {
+                      "@type": "Person",
+                      "name": "AllSpark Founders"
+                    }
+                  ],
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "USA"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Customer Support",
+                    "availableLanguage": [
+                      "English"
+                    ],
+                    "email": "info@allsparktechnologies.com"
+                  }
+                }
+              ]
+            }),
+          }}
+        />
         <Footer />
       </div>
     </>

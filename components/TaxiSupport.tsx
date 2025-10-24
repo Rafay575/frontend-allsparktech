@@ -19,7 +19,6 @@ export default function TaxiSupport({ service }: { service: string }) {
     <> 
       <Topnav />
       <Navbar2 />
-      <h1 className="hidden">Texi Support</h1>
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
     </>

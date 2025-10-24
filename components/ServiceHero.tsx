@@ -88,7 +88,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                     <div>
                         <div className='subheading flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0  '><Image src={sericon} className='w-[25px] ' alt='icon' />{serviceHero.btnText}</div>
                     </div>
-                    <p className='text-[30px] lg:text-[40px] 2xl:text-[50px] font-[700] mt-[20px] w-full md:w-[70%] lg:w-full font'>{serviceHero.title}</p>
+                    <h1 className='text-[30px] lg:text-[40px] 2xl:text-[50px] font-[700] mt-[20px] w-full md:w-[70%] lg:w-full font'>{serviceHero.title}</h1>
                     <p className='w-full md:w-[80%] lg:w-full mt-[10px] text-[18px] '>{serviceHero.description}</p>
                     <Link href='/contact'>
                         <button className=' text-[14px] lg:text-[15px] flex items-center gap-[5px] bg-[#F98600] py-[12px] px-[25px] rounded-[27px] font-[500] mt-[30px] hover:scale-[1.02] duration-500'>{serviceHero.btnText2} <Image src={arrow} className='w-[15px] lg:w-[20px]' alt='icon' /></button>

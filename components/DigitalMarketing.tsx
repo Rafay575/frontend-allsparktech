@@ -19,7 +19,6 @@ export default function DigitalMarketing({ service }: { service: string }) {
     <> 
       <Topnav />
       <Navbar2 />
-      <h1 className="hidden">Digital Marketing.</h1>
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
     </>
