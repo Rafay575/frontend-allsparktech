@@ -7,7 +7,7 @@ import { getHomeDataQuery } from "@/utils/queries";
 
 export async function generateMetadata() {
   return {
-    title: "Custom Software Development Company & AI Solutions | AllSpark Technologies",
+    title: "Custom Software Development Company | AllSpark Technologies",
     description:
       "AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA",
     robots: {

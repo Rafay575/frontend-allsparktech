@@ -213,6 +213,92 @@ export default function Home({ homeData }: { homeData: HomePageData }) {
           ),
         }}
       />
+      <Script
+        id="ld-json"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": "https://allsparktechnologies.com/#localbusiness",
+            "name": "Allspark Technologies",
+            "image": "https://allsparktechnologies.com/images/footer-logo.svg",
+            "url": "https://allsparktechnologies.com",
+            "logo": "https://allsparktechnologies.com/images/footer-logo.svg",
+            "priceRange": "$$",
+            "telephone": "+1-616-308-1863",
+            "email": "info@allsparktechnologies.com",
+            "description": "Allspark Technologies is a US-based technology company in Franklin Lakes, New Jersey. We provide software development, web and app design, AI solutions, cloud and DevOps, BPO, and digital marketing services to businesses across the United States.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "638 Knollwood Road",
+              "addressLocality": "Franklin Lakes",
+              "addressRegion": "NJ",
+              "postalCode": "07417",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "41.0160",
+              "longitude": "-74.2057"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "United States"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/all-spark-technologies",
+              "https://www.facebook.com/allsparktechnologies.official",
+              "https://www.instagram.com/allspark_technologies/"
+            ],
+            "founder": {
+              "@type": "Person",
+              "name": "Allspark Technologies Team"
+            },
+            "foundingDate": "2016",
+            "makesOffer": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom Software Development",
+                  "description": "Tailored software solutions designed to match your business workflow."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI and Machine Learning Solutions",
+                  "description": "AI-powered systems to automate, predict and optimize business operations."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Digital Marketing and SEO",
+                  "description": "Data-driven online marketing and search optimization services for US businesses."
+                }
+              }
+            ],
+            "hasMap": "https://www.google.com/maps/place/638+Knollwood+Rd,+Franklin+Lakes,+NJ+07417"
+          }
+          ),
+        }}
+      />
     </div>
   );
 }
