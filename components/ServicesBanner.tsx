@@ -1,3 +1,4 @@
+"use client";
 import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 import rightarrow from "@/public/images/rightarrow.png"

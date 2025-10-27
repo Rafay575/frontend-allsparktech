@@ -21,6 +21,7 @@ export default function CustomSoftwareDevelopment({ service }: { service: string
       <Navbar2 />
       <NewServicePage servicePageData={servicePageData as ServicePageData} />
       <Footer />
+      
     </>
   );
 }

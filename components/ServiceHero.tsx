@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
 import img1 from "@/public/images/serviceshape1.png"

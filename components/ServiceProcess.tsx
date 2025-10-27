@@ -1,3 +1,4 @@
+"use client";
 import { baseURL } from '@/API/baseURL';
 import Image, { StaticImageData } from 'next/image'
 import React from 'react'
