@@ -29,7 +29,7 @@ export const getContactDataQuery = () => ({
 export const getBlogDataQuery = () => ({
   queryKey: ["blogPageData"],
   queryFn: async () => {
-    const res = await fetch(`${baseURL}/blogdata`, { cache: "no-store" });
+    const res = await fetch(`${baseURL}/blogdata`);
     if (!res.ok) throw new Error("Failed to fetch blog page data");
     return res.json();
   },
@@ -38,7 +38,7 @@ export const getBlogDataQuery = () => ({
 export const getBlogsQuery = () => ({
   queryKey: ["blogs"],
   queryFn: async () => {
-    const res = await fetch(`${baseURL}/blogs`, { cache: "no-store" });
+    const res = await fetch(`${baseURL}/blogs`);
     if (!res.ok) throw new Error("Failed to fetch blogs");
     return res.json();
   },
@@ -51,7 +51,7 @@ export const getServiceDataQuery = (service: string) => ({
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: service }),
-      cache: "no-store",
+
     });
     if (!res.ok) throw new Error("Failed to fetch service data");
     return res.json();

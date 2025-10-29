@@ -1,6 +1,6 @@
 import React from "react";
 import AiAndMachineLearning from "@/components/AiAndMachineLearning";
-export const dynamic = "force-dynamic";
+
 
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import { getServiceDataQuery } from "@/utils/queries";

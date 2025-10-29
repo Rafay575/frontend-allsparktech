@@ -1,6 +1,6 @@
 import { baseURL } from "@/API/baseURL";
 import AboutClient from "@/components/AboutClient";
-export const dynamic = "force-dynamic";
+
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import { getAboutDataQuery } from "@/utils/queries";
 
@@ -47,9 +47,7 @@ export async function generateMetadata() {
 
 
 async function fetchAboutData() {
-  const res = await fetch(`${baseURL}/aboutdata`, {
-    cache: "no-store",
-  });
+  const res = await fetch(`${baseURL}/aboutdata`);
   if (!res.ok) throw new Error("Failed to fetch contact data");
   return res.json();
 }

@@ -1,6 +1,6 @@
 import React from "react";;
 import TaxiSupport from "@/components/TaxiSupport";
-export const dynamic = "force-dynamic";
+
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import { getServiceDataQuery } from "@/utils/queries";
 import { Metadata } from "next";

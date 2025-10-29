@@ -1,6 +1,6 @@
 import React from "react";
 import CustomSoftwareDevelopment from "@/components/CustomSoftwareDevelopment";
-export const dynamic = "force-dynamic";
+
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import { getServiceDataQuery } from "@/utils/queries";
 import { Metadata } from "next";

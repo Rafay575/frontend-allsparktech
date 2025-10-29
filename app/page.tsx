@@ -1,7 +1,6 @@
 
 import { baseURL } from "@/API/baseURL";
 import HomeSection from "@/components/HomeSection"
-export const dynamic = "force-dynamic";
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import { getHomeDataQuery } from "@/utils/queries";
 
@@ -46,9 +45,7 @@ export async function generateMetadata() {
 }
 
 async function fetchHomeData() {
-  const res = await fetch(`${baseURL}/homedata`, {
-    cache: "no-store",
-  });
+  const res = await fetch(`${baseURL}/homedata`);
   if (!res.ok) throw new Error("Failed to fetch contact data");
   return res.json();
 }

@@ -1,7 +1,4 @@
 import React from "react";
-export const dynamic = "force-dynamic";
-
-
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import { getServiceDataQuery } from "@/utils/queries";
 import EmailSupport from "@/components/EmailSupport";
